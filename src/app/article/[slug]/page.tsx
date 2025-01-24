@@ -8,14 +8,19 @@ import { generateStaticParams } from '@/lib/articles';
 import remarkGfm from 'remark-gfm';
 
 // Custom plugin to remove footnote definitions
-function remarkRemoveFootnotes() {
+function remarkProcessFootnotes() {
     return (tree: any) => {
+        // Keep footnotes but ensure they're properly formatted
         const footnoteDefinitions = tree.children.filter(
             (node: any) => node.type === 'footnoteDefinition'
         );
-        tree.children = tree.children.filter(
-            (node: any) => node.type !== 'footnoteDefinition'
-        );
+
+        // Move all footnote definitions to the end of the content
+        tree.children = [
+            ...tree.children.filter((node: any) => node.type !== 'footnoteDefinition'),
+            ...footnoteDefinitions
+        ];
+
         return tree;
     };
 }
@@ -37,8 +42,8 @@ const components = {
     ol: (props: any) => <ol className="list-decimal list-inside mb-4 ml-4" {...props} />,
     // Style links
     a: (props: any) => (
-        <a 
-            className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200" 
+        <a
+            className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
             {...props}
         />
     ),
@@ -81,7 +86,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                             mdxOptions: {
                                 remarkPlugins: [
                                     remarkGfm,
-                                    remarkRemoveFootnotes
+                                    remarkProcessFootnotes
                                 ],
                             }
                         }}
