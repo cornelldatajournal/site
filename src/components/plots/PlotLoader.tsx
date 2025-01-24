@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import dynamic from 'next/dynamic';
 import { PlotData } from '@/types';
 import { usePlotData } from '@/contexts/ArticlePlotsContext';
