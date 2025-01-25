@@ -10,20 +10,24 @@ export interface BaseArticle {
     section: string;
     slug: string;
     type: ArticleType;
-    layout?: 'default' | 'custom';
+    path: string;
+    caption: string;
+    quote?: string;
+    attribution?: string;
+    layout?: 'default' | 'image' | 'quote' | 'custom';
 }
 
-export interface ImageData extends BaseArticle {
-    type: 'image';
+/* export interface ImageData extends BaseArticle {
+    layout: 'image';
     path: string;
     caption?: string;
-}
+} */
 
 export interface QuoteData extends BaseArticle {
     type: 'quote';
-    quote: string;
+    line: string;
     attribution?: string;
-}
+} 
 
 export interface DefaultArticle extends BaseArticle {
     type: 'default';
@@ -33,7 +37,7 @@ export interface DefaultArticle extends BaseArticle {
 export interface MultimediaArticle extends BaseArticle {
     type: 'multimedia';
     headerImage: ImageData;
-    quote?: QuoteData;
+    line?: QuoteData;
     gallery?: ImageData[];
 }
 
@@ -59,7 +63,7 @@ export interface ArticlePlots {
 export interface InteractiveArticle extends BaseArticle {
     type: 'feature';
     headerImage?: ImageData;
-    quote?: QuoteData;
+    line?: QuoteData;
     plots?: ArticlePlots;
 }
 

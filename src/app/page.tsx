@@ -1,31 +1,23 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import DataVis from '/Users/Rahul/Documents/GitHub/site/public/images/DataVisualizationInfographicsBlogheader.png';
 import { getAllArticles } from '@/lib/articles';
 import { formatDate } from '@/lib/utils';
-
-
-// Define the Article type
-interface Article {
-  slug: string;
-  title: string;
-  description: string;
-  section: string;
-  headerImage?: {
-    path: string;
-  };
-}
+import { Article } from '@/types';
 
 export default async function HomePage() {
   const articles = await getAllArticles();
   const [latestArticle, ...otherArticles] = articles;
 
-  const renderArticle = (article: Article) => {
-    if (article.section === 'image' && article.headerImage?.path) {
+  const renderArticle = (article : Article) => {
+    if (article.layout === 'image') {
       return (
         <div className="mb-4">
-          <img
-            src={article.headerImage.path}
-            alt={article.title}
-            className="w-full h-auto object-cover rounded-lg shadow-md mb-4"
+          <Image
+            src={DataVis}
+            alt="Data Visualization Infographics Blog"
+            width={800}
+            height={400}
           />
           <Link href={`/article/${article.slug}`}>
             <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
@@ -38,22 +30,23 @@ export default async function HomePage() {
         </div>
       );
     }
-
-    return (
-      <div>
-        <div className="text-md text-neutral-600 dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
-          {article.section}
+    else {
+      return (
+        <div>
+          <div className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
+            {article.section}
+          </div>
+          <Link href={`/article/${article.slug}`}>
+            <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
+              {article.title}
+            </h2>
+          </Link>
+          <p className="text-neutral-600 dark:text-neutral-400">
+            {article.description}
+          </p>
         </div>
-        <Link href={`/article/${article.slug}`}>
-          <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
-            {article.title}
-          </h2>
-        </Link>
-        <p className="text-neutral-600 dark:text-neutral-400">
-          {article.description}
-        </p>
-      </div>
-    );
+      );
+    }
   };
 
   return (
