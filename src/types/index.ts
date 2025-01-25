@@ -1,4 +1,6 @@
-export interface Article {
+export type ArticleType = 'default' | 'image' | 'feature' | 'quote' | 'multimedia';
+
+export interface BaseArticle {
     title: string;
     description: string;
     content: string;
@@ -7,10 +9,35 @@ export interface Article {
     tags: string[];
     section: string;
     slug: string;
+    type: ArticleType;
     layout?: 'default' | 'custom';
 }
 
-export type PlotType = 'line' | 'scatter';
+export interface ImageData extends BaseArticle {
+    type: 'image';
+    path: string;
+    caption?: string;
+}
+
+export interface QuoteData extends BaseArticle {
+    type: 'quote';
+    quote: string;
+    attribution?: string;
+}
+
+export interface DefaultArticle extends BaseArticle {
+    type: 'default';
+    headerImage?: ImageData;
+}
+
+export interface MultimediaArticle extends BaseArticle {
+    type: 'multimedia';
+    headerImage: ImageData;
+    quote?: QuoteData;
+    gallery?: ImageData[];
+}
+
+export type PlotType = 'line' | 'scatter' | 'bar' | 'pie';
 
 export interface PlotData {
     id: string;
@@ -28,3 +55,12 @@ export interface PlotData {
 export interface ArticlePlots {
     plots: PlotData[];
 }
+
+export interface InteractiveArticle extends BaseArticle {
+    type: 'feature';
+    headerImage?: ImageData;
+    quote?: QuoteData;
+    plots?: ArticlePlots;
+}
+
+export type Article = DefaultArticle | MultimediaArticle | InteractiveArticle;

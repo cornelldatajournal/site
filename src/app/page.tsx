@@ -2,9 +2,59 @@ import Link from 'next/link';
 import { getAllArticles } from '@/lib/articles';
 import { formatDate } from '@/lib/utils';
 
+
+// Define the Article type
+interface Article {
+  slug: string;
+  title: string;
+  description: string;
+  section: string;
+  headerImage?: {
+    path: string;
+  };
+}
+
 export default async function HomePage() {
   const articles = await getAllArticles();
   const [latestArticle, ...otherArticles] = articles;
+
+  const renderArticle = (article : Article) => {
+    if (article.section === 'image' && article.headerImage?.path) {
+      return (
+        <div className="mb-4">
+          <img
+            src={article.headerImage.path}
+            alt={article.title}
+            className="w-full h-auto object-cover rounded-lg shadow-md mb-4"
+          />
+          <Link href={`/article/${article.slug}`}>
+            <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
+              {article.title}
+            </h2>
+          </Link>
+          <p className="text-neutral-600 dark:text-neutral-400">
+            {article.description}
+          </p>
+        </div>
+      );
+    }
+
+    return (
+      <div>
+        <div className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
+          {article.section}
+        </div>
+        <Link href={`/article/${article.slug}`}>
+          <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
+            {article.title}
+          </h2>
+        </Link>
+        <p className="text-neutral-600 dark:text-neutral-400">
+          {article.description}
+        </p>
+      </div>
+    );
+  };
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">
@@ -47,17 +97,7 @@ export default async function HomePage() {
           <div className="space-y-8">
             {otherArticles.slice(0, Math.ceil(otherArticles.length / 2)).map(article => (
               <div key={article.slug} className="border-b pb-8 border-neutral-200 dark:border-neutral-800">
-                <div className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
-                  {article.section}
-                </div>
-                <Link href={`/article/${article.slug}`}>
-                  <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
-                    {article.title}
-                  </h2>
-                </Link>
-                <p className="text-neutral-600 dark:text-neutral-400">
-                  {article.description}
-                </p>
+                {renderArticle(article)}
               </div>
             ))}
           </div>
@@ -66,17 +106,7 @@ export default async function HomePage() {
           <div className="border-l border-r px-8 border-neutral-200 dark:border-neutral-800">
             {latestArticle && (
               <div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
-                  {latestArticle.section}
-                </div>
-                <Link href={`/article/${latestArticle.slug}`}>
-                  <h2 className="text-3xl font-serif mb-4 hover:text-blue-600 dark:hover:text-blue-400">
-                    {latestArticle.title}
-                  </h2>
-                </Link>
-                <p className="text-lg text-neutral-600 dark:text-neutral-400">
-                  {latestArticle.description}
-                </p>
+                {renderArticle(latestArticle)}
               </div>
             )}
           </div>
@@ -85,17 +115,7 @@ export default async function HomePage() {
           <div className="space-y-8">
             {otherArticles.slice(Math.ceil(otherArticles.length / 2)).map(article => (
               <div key={article.slug} className="border-b pb-8 border-neutral-200 dark:border-neutral-800">
-                <div className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
-                  {article.section}
-                </div>
-                <Link href={`/article/${article.slug}`}>
-                  <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
-                    {article.title}
-                  </h2>
-                </Link>
-                <p className="text-neutral-600 dark:text-neutral-400">
-                  {article.description}
-                </p>
+                {renderArticle(article)}
               </div>
             ))}
           </div>
