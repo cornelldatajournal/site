@@ -17,7 +17,13 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		fontFamily: {
+			'space-mono': ['var(--font-space-mono)'],
+			'space-grotesk': ['var(--font-space-grotesk)'],
+			'eb-garamond': ['var(--font-eb-garamond)'],
+			'helvetica': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],

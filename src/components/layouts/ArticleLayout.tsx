@@ -46,23 +46,18 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
       <div className="w-full max-w-5xl px-4 py-8">
         {/* Header Section */}
         <header className="mb-8">
-          <div className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
+          <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
             {article.section}
           </div>
-          <h1 className="text-4xl font-bold mb-4 font-geist-sans">{article.title}</h1>
-          <div className="flex flex-col gap-2">
-            <p className="text-lg text-neutral-600 dark:text-neutral-400">
-              {article.description}
-            </p>
-            <div className="flex gap-2 items-center">
-              {article.author.map((author: string, idx: number) => (
-                <React.Fragment key={author}>
-                  <span className="text-sm font-medium">{author}</span>
-                  {idx < article.author.length - 1 && <span>•</span>}
-                </React.Fragment>
-              ))}
+          <div className="flex lg:flex-col gap-4 lg:max-w-[65ch]">
+            <h1 className="text-5xl mb-2 font-eb-garamond">{article.title}</h1>
+            <h2 className="text-xl mb-4 font-space-mono">{article.description}</h2>
+            <div className="flex gap-2 items-center font-eb-garamond">
+              <span className="text-md">
+                By {article.author.join(', ')}
+              </span>
             </div>
-            <time className="text-sm text-neutral-500" dateTime={article.publishedDate}>
+            <time className="text-sm text-black uppercase font-space-mono font-medium" dateTime={article.publishedDate}>
               {new Date(article.publishedDate).toLocaleDateString('en-US', {
                 year: 'numeric',
                 month: 'long',
@@ -73,9 +68,9 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
         </header>
 
         {/* Main Content */}
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-8 font-helvetica">
           {/* Article Content */}
-          <article className="flex-1 prose dark:prose-invert max-w-none lg:max-w-[65ch]">
+          <article className="flex-1 prose dark:prose-invert max-w-none lg:max-w-[65ch] font-regular">
             {children}
           </article>
 
@@ -83,20 +78,22 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
           {references.length > 0 && (
             <aside className="lg:w-72 shrink-0">
               <div className="sticky top-8">
-                <h3 className="font-bold mb-4 text-lg">References</h3>
                 <div className="flex flex-col gap-3">
                   {references.map((ref) => (
                     <div
                       key={ref.id}
                       id={`ref-${ref.id}`}
                       className={cn(
-                        "text-sm p-3 rounded-lg transition-colors",
+                        "text-sm p-3 rounded-lg transition-colors font-space-mono",
                         activeRef === ref.id
                           ? "bg-neutral-100 dark:bg-neutral-800"
                           : "hover:bg-neutral-50 dark:hover:bg-neutral-900"
                       )}
                     >
-                      <span className="font-medium">[{ref.id}]</span> {ref.text}
+                      <div className="grid grid-cols-[auto,1fr] gap-4">
+                        <span className="font-bold">{ref.id}</span>
+                        <span>{ref.text}</span>
+                      </div>
                     </div>
                   ))}
                 </div>

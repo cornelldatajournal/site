@@ -46,8 +46,8 @@ export default async function ArticleListPage() {
                             >
                                 <article className="h-full p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors">
                                     {/* Section Tag */}
-                                    <div className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
-                                        {article.section}
+                                    <div className="text-md text-neutral-600 dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
+                                    {article.section}
                                     </div>
 
                                     {/* Title */}

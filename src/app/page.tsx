@@ -18,7 +18,7 @@ export default async function HomePage() {
   const articles = await getAllArticles();
   const [latestArticle, ...otherArticles] = articles;
 
-  const renderArticle = (article : Article) => {
+  const renderArticle = (article: Article) => {
     if (article.section === 'image' && article.headerImage?.path) {
       return (
         <div className="mb-4">
@@ -41,7 +41,7 @@ export default async function HomePage() {
 
     return (
       <div>
-        <div className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
+        <div className="text-md text-neutral-600 dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
           {article.section}
         </div>
         <Link href={`/article/${article.slug}`}>

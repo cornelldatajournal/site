@@ -51,7 +51,21 @@ const components = {
     sup: (props: any) => (
         <sup className="text-sm text-blue-600 dark:text-blue-400" {...props} />
     ),
+    // Hide footnote section
+    section: (props: any) => {
+        // Check if this is the footnotes section
+        const isFootnotes = props.className?.includes('footnotes');
+        return (
+            <section
+                {...props}
+                className={`${props.className || ''} ${
+                    isFootnotes ? 'hidden' : ''
+                }`}
+            />
+        );
+    },
 };
+
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
     const { slug } = await params;
