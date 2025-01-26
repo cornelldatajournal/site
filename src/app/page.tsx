@@ -4,6 +4,7 @@ import { formatDate } from '@/lib/utils';
 import { BaseArticle } from '@/types/index';
 import { PlotLoader } from '@/components/plots/PlotLoader';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import { ArticlePlotsProvider } from '@/contexts/ArticlePlotsContext';
 
 export default async function HomePage() {
   const articles = await getAllArticles();
@@ -47,16 +48,24 @@ export default async function HomePage() {
       );
     }
     else if (article.layout === 'plot') {
-      // console.log("Plot: ", article.plot);
-      // const { articlePlots } = await import(`../content/${article.plot}`) as { articlePlots: ArticlePlots };
-      
-      // Find the plot ID from the imported plots
+      // Load the plots data for this article
+      let articlePlots = { plots: [] };
+      try {
+        const plotsModule = await import(`@/content/${article.slug}/plots`).catch(() => null);
+        if (plotsModule?.articlePlots) {
+          articlePlots = plotsModule.articlePlots;
+        }
+      } catch (error) {
+        console.debug(`No plots found for ${article.slug}`);
+      }
+
       return (
         <div className="mb-4">
-          <MDXRemote
-            source = {<PlotLoader plotId={article.featured_plot} />}
-            components={PlotLoader}
-          />
+          <div className="mb-4">
+            <ArticlePlotsProvider plots={articlePlots}>
+              <PlotLoader plotId={article.featured_plot} />
+            </ArticlePlotsProvider>
+          </div>
           <Link href={`/article/${article.slug}`}>
             <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
               {article.title}
