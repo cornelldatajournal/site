@@ -73,12 +73,13 @@ export default function RootLayout({
 
                 {/* Logo and Title - Centered */}
                 <div className="flex items-center gap-4">
-                  <Link href="/" className="flex items-center gap-4">
+                  <Link href="/" className="flex items-center gap-2">
                     <Image
                       src={cdjicon}
                       alt="CDJ Icon"
                       height={40}
-                      className="w-10 h-10"
+                      width={40}
+                      className="w-10 h-10 object-contain"
                     />
                     <h1 className="text-4xl font-helvetica font-medium transition-all">
                       Cornell Data Journal
@@ -115,13 +116,13 @@ export default function RootLayout({
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Logo and Description */}
               <div className="space-y-4">
-                <Link href="/" className="flex items-center gap-4">
+                <Link href="/" className="flex items-center gap-2">
                   <Image
                     src={cdjicon}
                     alt="CDJ Icon"
                     height={30}
                     width={30}
-                    className="w-8 h-8"
+                    className="w-8 h-8 object-contain"
                   />
                   <span className="text-2xl font-helvetica font-medium">
                     Cornell Data Journal

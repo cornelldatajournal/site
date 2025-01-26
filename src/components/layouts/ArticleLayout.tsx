@@ -46,9 +46,27 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
       <div className="w-full max-w-9xl mx-auto py-8 flex flex-col items-center">
         {/* Header Section */}
         <header className="mb-8 lg:max-w-[65ch] w-full">
-          <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
-            {article.section}
-          </div>
+
+        </header>
+
+        {/* Main Content */}
+        <div className="flex flex-col lg:flex-row gap-8 font-helvetica">
+          {/* Article Content */}
+          <article className="flex-1 prose dark:prose-invert max-w-none lg:max-w-[65ch] font-regular">
+            <div>
+            <div className="flex items-center gap-2">
+              <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
+                {article.section}
+              </div>
+              <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono">•</div>
+              <time className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-medium" dateTime={article.publishedDate}>
+                {new Date(article.publishedDate).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long', 
+                  day: 'numeric',
+                })}
+              </time>
+            </div>
           <div className="flex flex-col gap-4">
             <h1 className="text-5xl mb-2 font-eb-garamond">{article.title}</h1>
             <h2 className="text-xl mb-4 font-space-mono">{article.description}</h2>
@@ -57,21 +75,14 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
                 By {article.author.join(', ')}
               </span>
             </div>
-            <time className="text-sm text-black uppercase font-space-mono font-medium" dateTime={article.publishedDate}>
-              {new Date(article.publishedDate).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </time>
-          </div>
-        </header>
 
-        {/* Main Content */}
-        <div className="flex flex-col lg:flex-row gap-8 font-helvetica">
-          {/* Article Content */}
-          <article className="flex-1 prose dark:prose-invert max-w-none lg:max-w-[65ch] font-regular">
+          </div>
+            </div>
+            <div>
+
             {children}
+            </div>
+
           </article>
 
           {/* References Sidebar */}
