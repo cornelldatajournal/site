@@ -90,9 +90,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     }
 
     return (
-        <ArticlePlotsProvider plots={articlePlots}>
-            <ArticleLayout article={article}>
-                <div className="prose dark:prose-invert max-w-none">
+        <div className="max-w-7xl mx-auto">
+            <ArticlePlotsProvider plots={articlePlots}>
+                <ArticleLayout article={article}>
+                <div className="prose dark:prose-invert">
                     <MDXRemote
                         source={article.content}
                         components={components}
@@ -106,10 +107,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                         }}
                     />
                 </div>
-            </ArticleLayout>
-        </ArticlePlotsProvider>
+                </ArticleLayout>
+            </ArticlePlotsProvider>
+        </div>
     );
 }
-
-// Generate static paths
-export { generateStaticParams };

@@ -42,17 +42,17 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
   }, []);
 
   return (
-    <div className="flex justify-center min-h-screen">
-      <div className="w-full max-w-5xl px-4 py-8">
+    <div className="flex flex-col items-center min-h-screen">
+      <div className="w-full max-w-7xl mx-auto py-8 flex flex-col items-center">
         {/* Header Section */}
-        <header className="mb-8">
+        <header className="mb-8 lg:max-w-[65ch] w-full">
           <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
             {article.section}
           </div>
-          <div className="flex lg:flex-col gap-4 lg:max-w-[65ch]">
+          <div className="flex flex-col gap-4">
             <h1 className="text-5xl mb-2 font-eb-garamond">{article.title}</h1>
             <h2 className="text-xl mb-4 font-space-mono">{article.description}</h2>
-            <div className="flex gap-2 items-center font-eb-garamond">
+            <div className="flex gap-2 font-eb-garamond">
               <span className="text-md">
                 By {article.author.join(', ')}
               </span>
