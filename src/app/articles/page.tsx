@@ -8,7 +8,7 @@ export default async function ArticleListPage() {
     const articles = await getAllArticles();
 
     return (
-        <div className="container max-w-7xl mx-auto px-4 py-8">
+        <div className="container max-w-9xl mx-auto px-4 py-8">
             <div className="flex justify-between items-center mb-12">
                 <h1 className="text-4xl font-eb-garamond">The <i>Archives</i></h1>
             </div>

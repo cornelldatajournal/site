@@ -58,9 +58,8 @@ const components = {
         return (
             <section
                 {...props}
-                className={`${props.className || ''} ${
-                    isFootnotes ? 'hidden' : ''
-                }`}
+                className={`${props.className || ''} ${isFootnotes ? 'hidden' : ''
+                    }`}
             />
         );
     },
@@ -90,23 +89,23 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     }
 
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-9xl mx-auto">
             <ArticlePlotsProvider plots={articlePlots}>
                 <ArticleLayout article={article}>
-                <div className="prose dark:prose-invert">
-                    <MDXRemote
-                        source={article.content}
-                        components={components}
-                        options={{
-                            mdxOptions: {
-                                remarkPlugins: [
-                                    remarkGfm,
-                                    remarkProcessFootnotes
-                                ],
-                            }
-                        }}
-                    />
-                </div>
+                    <div className="prose dark:prose-invert">
+                        <MDXRemote
+                            source={article.content}
+                            components={components}
+                            options={{
+                                mdxOptions: {
+                                    remarkPlugins: [
+                                        remarkGfm,
+                                        remarkProcessFootnotes
+                                    ],
+                                }
+                            }}
+                        />
+                    </div>
                 </ArticleLayout>
             </ArticlePlotsProvider>
         </div>

@@ -16,12 +16,16 @@ export default async function HomePage() {
     if (article.layout === 'image') {
       return (
         <div className="mb-4">
+
           <Image
             src={`/${article.image_path.replace('public/', '')}`}
             alt="Data Visualization Infographics Blog"
             width={800}
             height={400}
           />
+          <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
+            {article.section}
+          </div>
           <Link href={`/articles/${article.slug}`}>
             <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
               {article.title}
@@ -37,8 +41,11 @@ export default async function HomePage() {
       // console.log("Quote: ", article.quote, article);
       return (
         <div className="mb-4">
+          <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
+            {article.section}
+          </div>
           <Link href={`/articles/${article.slug}`}>
-            <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
+            <h2 className="text-4xl font-eb-garamond mb-2 hover:text-blue-600 dark:hover:text-blue-400">
               "{article.caption}"
             </h2>
           </Link>
@@ -62,17 +69,21 @@ export default async function HomePage() {
 
       return (
         <div className="mb-4">
+
           <div className="mb-4">
             <ArticlePlotsProvider plots={articlePlots}>
               <PlotLoader plotId={article.featured_plot} />
             </ArticlePlotsProvider>
           </div>
+          <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
+            {article.section}
+          </div>
           <Link href={`/articles/${article.slug}`}>
-            <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
+            <h2 className="text-6xl font-medium font-space-grotesk mb-2 hover:text-blue-600 dark:hover:text-blue-400">
               {article.title}
             </h2>
           </Link>
-          <p className="text-neutral-600 dark:text-neutral-400">
+          <p className="text-neutral-600 dark:text-neutral-400 font-helvetica">
             {article.description}
           </p>
         </div>
@@ -81,15 +92,15 @@ export default async function HomePage() {
     else {
       return (
         <div>
-          <div className="text-sm text-neutral-600 dark:text-neutral-400 mb-2">
+          <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
             {article.section}
           </div>
           <Link href={`/articles/${article.slug}`}>
-            <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
+            <h2 className="text-4xl font-eb-garamond mb-2 hover:text-blue-600 dark:hover:text-blue-400">
               {article.title}
             </h2>
           </Link>
-          <p className="text-neutral-600 dark:text-neutral-400">
+          <p className="text-neutral-600 dark:text-neutral-400 font-helvetica">
             {article.description}
           </p>
         </div>
@@ -101,7 +112,7 @@ export default async function HomePage() {
     <div className="min-h-screen bg-white dark:bg-black">
 
       {/* Main Content */}
-      <main className="container max-w-7xl mx-auto px-4 py-8">
+      <main className="container max-w-9xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-[1fr,1.5fr,1fr] gap-8">
           {/* Left Column */}
           <div className="space-y-8">
@@ -115,7 +126,7 @@ export default async function HomePage() {
           {/* Center Column - Featured Article */}
           <div className="border-l border-r px-8 border-neutral-200 dark:border-neutral-800">
             {latestArticle && (
-              <div>
+              <div className="text-center">
                 {renderArticle(latestArticle)}
               </div>
             )}

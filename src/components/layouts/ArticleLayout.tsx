@@ -43,7 +43,7 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
 
   return (
     <div className="flex flex-col items-center min-h-screen">
-      <div className="w-full max-w-7xl mx-auto py-8 flex flex-col items-center">
+      <div className="w-full max-w-9xl mx-auto py-8 flex flex-col items-center">
         {/* Header Section */}
         <header className="mb-8 lg:max-w-[65ch] w-full">
           <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
