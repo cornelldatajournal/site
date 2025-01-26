@@ -21,7 +21,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
             publishedDate: data.publishedDate,
             tags: data.tags,
             section: data.section,
-            path: data.path,
+            image_path: data.image_path,
             caption: data.caption,
             quote: data.quote,
             attribution: data.attribution,

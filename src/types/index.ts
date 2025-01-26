@@ -10,7 +10,7 @@ export interface BaseArticle {
     section: string;
     slug: string;
     type: ArticleType;
-    path: string;
+    image_path: string;
     caption: string;
     quote: string;
     attribution: string;

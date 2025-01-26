@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getAllArticles } from '@/lib/articles';
 import { formatDate } from '@/lib/utils';
 import { BaseArticle } from '@/types/index';
@@ -12,11 +13,11 @@ export default async function HomePage() {
 
   const renderArticle = async (article: BaseArticle) => {
     if (article.layout === 'image') {
+      console.log("Image: ", article);
       return (
-        // console.log("Image: ", article.path, article),
         <div className="mb-4">
-          <img
-            src={article.path}
+          <Image
+            src={`/${article.image_path.replace('public/', '')}`}
             alt="Data Visualization Infographics Blog"
             width={800}
             height={400}
