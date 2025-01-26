@@ -56,16 +56,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable} antialiased`}>
-        <div>
+      <body className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable} antialiased min-h-screen flex flex-col`}>
+        <div className="flex-1">
           <header className="border-b border-neutral-500 dark:border-neutral-800 max-w-9xl mx-auto">
             <div className="container max-w-9xl mx-auto px-4 py-6">
               <div className="grid grid-cols-[1fr,auto,1fr] items-start w-full">
                 {/* Left Navigation */}
-                <nav className="flex gap-8 justify-start">
+                <nav className="flex justify-start">
                   <Link
                     href="/articles"
-                    className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 px-4 py-2"
+                    className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 px-0 py-2"
                   >
                     Articles
                   </Link>
@@ -104,10 +104,96 @@ export default function RootLayout({
               </div>
             </div>
           </header>
+          <div>
+            {children}
+          </div>
         </div>
-        <div className="">
-          {children}
-        </div>
+
+        {/* Footer */}
+        <footer className="border-t border-neutral-500 dark:border-neutral-800">
+          <div className="container max-w-9xl mx-auto px-4 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Logo and Description */}
+              <div className="space-y-4">
+                <Link href="/" className="flex items-center gap-4">
+                  <Image
+                    src={cdjicon}
+                    alt="CDJ Icon"
+                    height={30}
+                    width={30}
+                    className="w-8 h-8"
+                  />
+                  <span className="text-2xl font-helvetica font-medium">
+                    Cornell Data Journal
+                  </span>
+                </Link>
+                <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk">
+                Offering data-driven perspectives on current events, academics, politics, and beyond.
+                </p>
+              </div>
+
+              {/* Quick Links */}
+              <div>
+                <h3 className="text-lg font-space-grotesk font-medium mb-4">Quick Links</h3>
+                <nav className="space-y-3">
+                  <Link href="/articles" className="block text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 font-space-grotesk">
+                    Articles
+                  </Link>
+                  <Link href="/about" className="block text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 font-space-grotesk">
+                    About Us
+                  </Link>
+                  <Link href="/contribute" className="block text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 font-space-grotesk">
+                    Get Involved
+                  </Link>
+                </nav>
+              </div>
+
+              {/* Contact */}
+              <div>
+                <h3 className="text-lg font-space-grotesk font-medium mb-4">Connect</h3>
+                <div className="space-y-3 font-space-grotesk">
+                  <a
+                    href="https://www.instagram.com/cornelldatajournal/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+                  >
+                    Instagram
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/cornell-data-journal/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+                  >
+                    LinkedIn
+                  </a>
+                  <a
+                    href="https://github.com/cornelldatajournal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+                  >
+                    GitHub
+                  </a>
+                  <a
+                    href="mailto:cornelldatajournal@gmail.com"
+                    className="block text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+                  >
+                    Email Us
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Copyright */}
+            <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800">
+              <p className="text-center text-neutral-600 dark:text-neutral-400 font-space-mono text-sm">
+                Copyright {new Date().getFullYear()} Cornell Data Journal. All rights reserved. | This organization is a registered student organization of <a href="https://www.cornell.edu" target="_blank" rel="noopener noreferrer" className="underline hover:text-neutral-900 dark:hover:text-neutral-100">Cornell University</a>.
+              </p>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
