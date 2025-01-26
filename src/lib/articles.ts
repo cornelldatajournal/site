@@ -21,6 +21,11 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
             publishedDate: data.publishedDate,
             tags: data.tags,
             section: data.section,
+            path: data.path,
+            caption: data.caption,
+            quote: data.quote,
+            attribution: data.attribution,
+            featured_plot: data.featured_plot,
             layout: data.layout,
         };
     } catch (error) {

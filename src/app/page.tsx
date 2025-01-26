@@ -1,23 +1,61 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import DataVis from '/Users/Rahul/Documents/GitHub/site/public/images/DataVisualizationInfographicsBlogheader.png';
 import { getAllArticles } from '@/lib/articles';
 import { formatDate } from '@/lib/utils';
-import { Article } from '@/types';
+import { BaseArticle } from '@/types/index';
+import { PlotLoader } from '@/components/plots/PlotLoader';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 
 export default async function HomePage() {
   const articles = await getAllArticles();
   const [latestArticle, ...otherArticles] = articles;
 
-  const renderArticle = (article : Article) => {
+  const renderArticle = async (article: BaseArticle) => {
     if (article.layout === 'image') {
       return (
+        // console.log("Image: ", article.path, article),
         <div className="mb-4">
-          <Image
-            src={DataVis}
+          <img
+            src={article.path}
             alt="Data Visualization Infographics Blog"
             width={800}
             height={400}
+          />
+          <Link href={`/article/${article.slug}`}>
+            <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
+              {article.title}
+            </h2>
+          </Link>
+          <p className="text-neutral-600 dark:text-neutral-400">
+            {article.description}
+          </p>
+        </div>
+      );
+    }
+    else if (article.layout === 'quote') {
+      // console.log("Quote: ", article.quote, article);
+      return (
+        <div className="mb-4">
+          <Link href={`/article/${article.slug}`}>
+            <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">
+              "{article.caption}"
+            </h2>
+          </Link>
+          <p className="text-neutral-600 dark:text-neutral-400">
+            {article.attribution}
+          </p>
+        </div>
+      );
+    }
+    else if (article.layout === 'plot') {
+      // console.log("Plot: ", article.plot);
+      // const { articlePlots } = await import(`../content/${article.plot}`) as { articlePlots: ArticlePlots };
+      
+      // Find the plot ID from the imported plots
+      return (
+        <div className="mb-4">
+          <MDXRemote
+            source = {<PlotLoader plotId={article.featured_plot} />}
+            components={PlotLoader}
           />
           <Link href={`/article/${article.slug}`}>
             <h2 className="text-xl font-serif mb-2 hover:text-blue-600 dark:hover:text-blue-400">

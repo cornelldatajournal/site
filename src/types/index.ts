@@ -12,9 +12,10 @@ export interface BaseArticle {
     type: ArticleType;
     path: string;
     caption: string;
-    quote?: string;
-    attribution?: string;
-    layout?: 'default' | 'image' | 'quote' | 'custom';
+    quote: string;
+    attribution: string;
+    featured_plot: string;
+    layout?: 'default' | 'image' | 'quote' | 'plot' | 'custom';
 }
 
 /* export interface ImageData extends BaseArticle {
@@ -26,7 +27,7 @@ export interface BaseArticle {
 export interface QuoteData extends BaseArticle {
     type: 'quote';
     line: string;
-    attribution?: string;
+    writer?: string;
 } 
 
 export interface DefaultArticle extends BaseArticle {
