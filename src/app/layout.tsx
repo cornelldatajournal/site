@@ -1,3 +1,4 @@
+"use client"
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -7,6 +8,7 @@ import { formatDate } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import cdjicon from "../../public/cdj_icon.png";
+import { usePathname } from 'next/navigation';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,43 +38,45 @@ const ebGaramond = EB_Garamond({
   variable: '--font-eb-garamond',
 });
 
-export const metadata: Metadata = {
-  title: "Cornell Data Journal",
-  description: "Cornell's premier data journalism publication",
-  icons: {
-    icon: [
-      {
-        url: "/cdj_icon.png",
-        href: "/cdj_icon.png",
-      }
-    ],
-  },
-};
+// export const metadata: Metadata = {
+//   title: "Cornell Data Journal",
+//   description: "Cornell's premier data journalism publication",
+//   icons: {
+//     icon: [
+//       {
+//         url: "/cdj_icon.png",
+//         href: "/cdj_icon.png",
+//       }
+//     ],
+//   },
+// };
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+
   return (
     <html lang="en">
       <body className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable} antialiased min-h-screen flex flex-col`}>
         <div className="flex-1">
-          <header className="border-b border-neutral-500 dark:border-neutral-800 max-w-9xl mx-auto">
-            <div className="container max-w-9xl mx-auto px-4 py-6">
+          <header className="border-b border-neutral-500 dark:border-neutral-800 max-w-8xl mx-auto">
+            <div className="container max-w-8xl mx-auto px-4 py-6">
               <div className="grid grid-cols-[1fr,auto,1fr] items-start w-full">
                 {/* Left Navigation */}
                 <nav className="flex justify-start">
                   <Link
                     href="/articles"
-                    className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 px-0 py-2"
+                    className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 px-0 py-2 hover:italic"
                   >
                     Articles
                   </Link>
                 </nav>
 
                 {/* Logo and Title - Centered */}
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col items-center gap-2">
                   <Link href="/" className="flex items-center gap-2">
                     <Image
                       src={cdjicon}
@@ -85,19 +89,30 @@ export default function RootLayout({
                       Cornell Data Journal
                     </h1>
                   </Link>
+                  {pathname === '/' && (
+                    <h3 className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm">
+                      "Radical Candor" • {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                    </h3>
+                  )}
                 </div>
 
                 {/* Right Navigation */}
-                <nav className="flex gap-8 justify-end">
+                <nav className="flex gap-5 justify-end">
                   <Link
                     href="/about"
-                    className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 px-4 py-2"
+                    className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
                   >
                     About Us
                   </Link>
                   <Link
+                    href="/masthead"
+                    className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic px-4 py-2"
+                  >
+                    Masthead
+                  </Link>
+                  <Link
                     href="/contribute"
-                    className="text-white font-space-grotesk bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 px-4 py-2 rounded-md transition-colors"
+                    className="text-white font-space-grotesk bg-[#3E32BA] hover:bg-[#3E32BA]/90 dark:bg-[#3E32BA] dark:hover:bg-[#3E32BA]/90 px-4 py-2 rounded-md transition-colors"
                   >
                     Get Involved
                   </Link>
@@ -112,7 +127,7 @@ export default function RootLayout({
 
         {/* Footer */}
         <footer className="border-t border-neutral-500 dark:border-neutral-800">
-          <div className="container max-w-9xl mx-auto px-4 py-12">
+          <div className="container max-w-8xl mx-auto px-4 py-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Logo and Description */}
               <div className="space-y-4">
@@ -129,7 +144,7 @@ export default function RootLayout({
                   </span>
                 </Link>
                 <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk">
-                Offering data-driven perspectives on current events, academics, politics, and beyond.
+                  Offering data-driven perspectives on current events, academics, politics, and beyond.
                 </p>
               </div>
 
@@ -142,6 +157,9 @@ export default function RootLayout({
                   </Link>
                   <Link href="/about" className="block text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 font-space-grotesk">
                     About Us
+                  </Link>
+                  <Link href="/masthead" className="block text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 font-space-grotesk">
+                    Masthead
                   </Link>
                   <Link href="/contribute" className="block text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 font-space-grotesk">
                     Get Involved

@@ -91,7 +91,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     }
 
     return (
-        <div className="max-w-9xl mx-auto">
+        <div className="max-w-1xl mx-auto">
             <ArticlePlotsProvider plots={articlePlots}>
                 <ArticleLayout article={article}>
                     <div className="prose dark:prose-invert">
