@@ -11,7 +11,7 @@ export default function GetInvolvedPage() {
 
             <section className="mb-16">
                 <p className="font-space-grotesk">
-                    If you&apos;re interested in learning about us as an organization,{" "}
+                    If you&apos;ve never heard of us before,{" "}
                     <a href="/about" className="text-blue-600 hover:underline">
                         check this out!
                     </a>
