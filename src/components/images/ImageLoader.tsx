@@ -35,7 +35,7 @@ export function ImageLoader({
         return `${baseUrl}/${cleanPath}`;
     };
 
-    console.log("Image path: ", imagePath);
+    // console.log("Image path: ", imagePath);
 
     if (error) {
         return (
