@@ -4,9 +4,18 @@ import { getAllArticles } from '@/lib/articles';
 import { BaseArticle } from '@/types/index';
 import { PlotLoader } from '@/components/plots/PlotLoader';
 import { ArticlePlotsProvider } from '@/contexts/ArticlePlotsContext';
+
 export default async function HomePage() {
   const articles = await getAllArticles();
   const [latestArticle, ...otherArticles] = articles;
+
+  // Distribute remaining articles across columns
+  const centerColumnCount = Math.floor(otherArticles.length / 3);
+  const sideColumnCount = Math.ceil((otherArticles.length - centerColumnCount) / 2);
+  
+  const leftColumnArticles = otherArticles.slice(0, sideColumnCount);
+  const centerColumnArticles = otherArticles.slice(sideColumnCount, sideColumnCount + centerColumnCount);
+  const rightColumnArticles = otherArticles.slice(sideColumnCount + centerColumnCount);
 
   const renderArticle = async (article: BaseArticle, isFeatured = false) => {
     const articleLink = article.external_link || `/articles/${article.slug}`;
@@ -65,7 +74,6 @@ export default async function HomePage() {
 
       return (
         <div className="mb-4">
-
           <div className="mb-4">
             <ArticlePlotsProvider plots={articlePlots}>
               <PlotLoader plotId={article.featured_plot} />
@@ -128,25 +136,32 @@ export default async function HomePage() {
         <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr),minmax(0,1.5fr),minmax(0,1fr)] gap-8 max-w-full">
           {/* Left Column */}
           <div className="space-y-8 max-w-full">
-            {otherArticles.slice(0, Math.ceil(otherArticles.length / 2)).map(article => (
+            {leftColumnArticles.map(article => (
               <div key={article.slug} className="border-b pb-8 border-neutral-200 dark:border-neutral-800">
                 {renderArticle(article, false)}
               </div>
             ))}
           </div>
 
-          {/* Center Column - Featured Article */}
+          {/* Center Column - Featured Article + Additional Articles */}
           <div className="border-l border-r px-8 border-neutral-200 dark:border-neutral-800">
+            {/* Featured Article */}
             {latestArticle && (
-              <div className="text-center">
+              <div className="text-center mb-8 border-b pb-8 border-neutral-200 dark:border-neutral-800">
                 {renderArticle(latestArticle, true)}
               </div>
             )}
+            {/* Additional Center Column Articles */}
+            {centerColumnArticles.map(article => (
+              <div key={article.slug} className="border-b pb-8 border-neutral-200 dark:border-neutral-800">
+                {renderArticle(article, false)}
+              </div>
+            ))}
           </div>
 
           {/* Right Column */}
           <div className="space-y-8 max-w-full">
-            {otherArticles.slice(Math.ceil(otherArticles.length / 2)).map(article => (
+            {rightColumnArticles.map(article => (
               <div key={article.slug} className="border-b pb-8 border-neutral-200 dark:border-neutral-800">
                 {renderArticle(article, false)}
               </div>
