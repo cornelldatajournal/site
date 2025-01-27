@@ -23,9 +23,11 @@ export function ImageLoader({
     const cleanImagePath = imagePath.replace(/^(public\/|\/)/g, '');
 
     // For production, use the GitHub Pages URL with /site/ prefix
-    const imageUrl = process.env.NODE_ENV === 'production'
-        ? new URL(cleanImagePath, 'https://cornelldatajournal.github.io/site/').href
-        : `${typeof window !== 'undefined' ? window.location.origin : ''}/${cleanImagePath}`;
+    const baseUrl = process.env.NODE_ENV === 'production'
+        ? 'https://cornelldatajournal.github.io/site'
+        : '';
+
+    const imageUrl = `${baseUrl}/${cleanImagePath}`;
 
     if (error) {
         return (
