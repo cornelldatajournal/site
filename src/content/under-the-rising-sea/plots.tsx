@@ -3,19 +3,19 @@ import type { ArticlePlots } from "@/types";
 export const articlePlots: ArticlePlots = {
   plots: [
     {
-      id: "bar-plot-1",
-      type: "bar",
+      id: "stacked-bar-plot-1",
+      type: "stacked-bar",
       data: [
-        { year: "2018", unique_vessels: 1.877256317689529, number_of_detections: 21.35379061371841, category: "A" },
-        { year: "2019", unique_vessels: 1.9945848375451263, number_of_detections: 1.2906137184115494, category: "B" },
-        { year: "2020", unique_vessels: 1.877256317689529, number_of_detections: 61.94945848375451, category: "A" },
-        { year: "2021", unique_vessels: 1.1732851985559591, number_of_detections: 16.54332129963899, category: "B" },
-        { year: "2022", unique_vessels: 2.8158844765342934, number_of_detections: 31.91335740072202, category: "A" }
+        { Year: "2018", Unique_Vessels: 1.88, Number_Of_Detections: 21.35, category: "A" },
+        { Year: "2019", Unique_Vessels: 1.99, Number_Of_Detections: 1.29, category: "B" },
+        { Year: "2020", Unique_Vessels: 1.88, Number_Of_Detections: 61.95, category: "A" },
+        { Year: "2021", Unique_Vessels: 1.17, Number_Of_Detections: 16.54, category: "B" },
+        { Year: "2022", Unique_Vessels: 2.82, Number_Of_Detections: 31.91, category: "A" }
       ],
       config: {
-        xAxis: "x",
-        yAxis: "y",
-        title: "Basic Bar Plot",
+        xAxis: "Year",
+        yAxis: "Count",
+        title: "Stacked Bar Plot",
         colorKey: "category"
       }
     }

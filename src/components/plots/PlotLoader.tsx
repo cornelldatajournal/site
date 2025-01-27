@@ -2,6 +2,7 @@
 import dynamic from 'next/dynamic';
 import { PlotData } from '@/types';
 import { usePlotData } from '@/contexts/ArticlePlotsContext';
+import { Bar } from 'recharts';
 
 const LinePlot = dynamic(() => import('./LinePlot'), {
     loading: () => <div>Loading plot...</div>
@@ -11,16 +12,26 @@ const ScatterPlot = dynamic(() => import('./ScatterPlot'), {
     loading: () => <div>Loading plot...</div>
 });
 
+const BarPlot = dynamic(() => import('./BarPlot'), {
+    loading: () => <div>Loading plot...</div>
+});
+
+const StackedBarPlot = dynamic(() => import('./StackedBarPlot'), {
+    loading: () => <div>Loading plot...</div>
+});
+
 interface PlotLoaderProps {
     plotId: string;
     className?: string;
 }
 
-type PlotType = 'line' | 'scatter';
+type PlotType = 'line' | 'scatter' | 'bar' | 'stacked-bar';
 
 const plotComponents = {
     line: LinePlot,
     scatter: ScatterPlot,
+    bar: BarPlot,
+    'stacked-bar': StackedBarPlot,
 } as const;
 
 export function PlotLoader({ plotId, className }: PlotLoaderProps) {
