@@ -145,7 +145,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
             <div className={`relative w-full aspect-square rounded-lg mb-3 ${member.color} flex items-center justify-center overflow-hidden`}>
                 <div ref={avatarRef}>
                     <Avatar className="w-20 h-20">
-                        <AvatarImage src={`/site/${member.image}`} alt={member.name} />
+                        <AvatarImage src={`${member.image}`} alt={member.name} />
                         <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                     </Avatar>
                 </div>

@@ -15,7 +15,7 @@ export default async function HomePage() {
       return (
         <div className="mb-4">
           <Image
-            src={`/${article.image_path.replace('public/', 'site/')}`}
+            src={`/${article.image_path.replace('public/', '')}`}
             alt=""
             width={800}
             height={400}
