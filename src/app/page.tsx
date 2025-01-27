@@ -14,7 +14,7 @@ export default async function HomePage() {
 
   const renderArticle = async (article: BaseArticle, isFeatured = false) => {
     const articleLink = article.external_link || `/articles/${article.slug}`;
-    
+
     if (article.layout === 'image') {
       return (
         <div className="mb-4">

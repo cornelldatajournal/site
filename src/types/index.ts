@@ -1,13 +1,14 @@
 export type ArticleType = 'default' | 'image' | 'feature' | 'quote' | 'multimedia';
 
+export type SectionType = 'Environment' | 'Culture' | 'Politics' | 'Campus' | 'People';
+
 export interface BaseArticle {
     title: string;
     description: string;
     content: string;
     author: string[];
     publishedDate: string;
-    tags: string[];
-    section: string;
+    section: SectionType;
     slug: string;
     type: ArticleType;
     image_path: string;
