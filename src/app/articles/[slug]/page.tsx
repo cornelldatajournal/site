@@ -1,11 +1,18 @@
 import { ArticleLayout } from '@/components/layouts/ArticleLayout';
-import { getArticleBySlug } from '@/lib/articles';
+import { getArticleBySlug, getAllArticles } from '@/lib/articles';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { PlotLoader } from '@/components/plots/PlotLoader';
 import { ImageLoader } from '@/components/images/ImageLoader';
 import { ArticlePlotsProvider } from '@/contexts/ArticlePlotsContext';
 import { notFound } from 'next/navigation';
 import remarkGfm from 'remark-gfm';
+
+export async function generateStaticParams() {
+    const articles = await getAllArticles();
+    return articles.map((article) => ({
+        slug: article.slug,
+    }));
+}
 
 // Custom plugin to remove footnote definitions
 function remarkProcessFootnotes() {
