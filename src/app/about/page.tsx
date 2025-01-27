@@ -123,7 +123,7 @@ export default function AboutPage() {
                         >
                             <div className="group relative w-full h-full flex items-center justify-center">
                                 <Image
-                                    src={company.logo}
+                                    src={`/site/${company.logo}`}
                                     alt={company.name}
                                     width={96}
                                     height={96}
