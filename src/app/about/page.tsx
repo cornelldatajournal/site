@@ -21,7 +21,7 @@ export default function AboutPage() {
     ];
 
     return (
-        <main className="container py-12 max-w-6xl mx-auto">
+        <main className="container py-12 px-4 sm:px-6 max-w-6xl mx-auto">
             {/* Motto Section */}
             <div className="text-center mb-16">
                 <div className="max-w-2xl mx-auto">
@@ -112,7 +112,7 @@ export default function AboutPage() {
                 <div className="mb-8">
                     <h2 className="text-2xl font-eb-garamond mb-2 justify-start">Alumni Placement</h2>
                     <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm">
-                        Our alumni work at top companies
+                        Our alumni mess around with data at top companies
                     </p>
                 </div>
                 <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center bg-neutral-50 dark:bg-neutral-900 rounded-xl p-8">
