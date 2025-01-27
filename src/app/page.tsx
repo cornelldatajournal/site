@@ -50,7 +50,7 @@ export default async function HomePage() {
               "{article.quote}"
             </h2>
           </Link>
-          <p className="text-neutral-600 dark:text-neutral-400">
+          <p className="text-neutral-600 dark:text-neutral-400 font-helvetica">
             — {article.attribution}
           </p>
         </div>

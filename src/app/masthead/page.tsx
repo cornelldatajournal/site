@@ -24,61 +24,61 @@ const execBoard: TeamMember[] = [
         major: "Environment & Sustainability",
         image: "/images/wall.jpg",
         color: "bg-[#FFE5D9]",
-        bio: "Passionate about using data to drive environmental change and sustainability initiatives."
+        bio: "When he is home, he spends around 25% of his waking hours gardening."
     },
     {
-        name: "Michael Rodriguez",
+        name: "Nikhil Chinchalkar",
         role: "Executive Vice President",
-        class: "2025",
-        major: "Computer Science",
+        class: "2027",
+        major: "Economics & Computer Science",
         image: "/images/wall.jpg",
         color: "bg-[#E5F6FF]",
-        bio: "Exploring the intersection of technology and data-driven storytelling."
+        bio: ""
     },
     {
-        name: "Emma Thompson",
+        name: "Rahi Dasgupta",
         role: "VP of External Affairs",
-        class: "2024",
-        major: "Statistics",
+        class: "2027",
+        major: "Information Science	& Applied Economics",
         image: "/images/wall.jpg",
         color: "bg-[#F0E5FF]",
-        bio: "Leveraging statistical analysis to uncover meaningful patterns in complex datasets."
+        bio: ""
     },
     {
-        name: "David Liu",
+        name: "Jason Wang",
         role: "VP of Internal Affairs",
-        class: "2025",
-        major: "Economics",
+        class: "2027",
+        major: "Computer Science",
         image: "/images/wall.jpg",
         color: "bg-[#E5FFE9]",
-        bio: "Interested in using economic data to understand market trends and social impact."
+        bio: ""
     },
     {
-        name: "Priya Patel",
+        name: "Carina Lau",
         role: "Social Coordinator",
-        class: "2026",
-        major: "Communication",
+        class: "2027",
+        major: "Information Science and Communication & Computer Science and Business",
         image: "/images/wall.jpg",
         color: "bg-[#FFE8E5]",
-        bio: "Creating engaging content that bridges data science and effective communication."
+        bio: "."
     },
     {
-        name: "James Wilson",
+        name: "Rithya Sriram",
         role: "Project Coordinator",
-        class: "2025",
-        major: "Data Science",
+        class: "2026",
+        major: "ORIE & Astronomy/Statistics",
         image: "/images/wall.jpg",
         color: "bg-[#E5FFFA]",
-        bio: "Managing data-driven projects that make complex information accessible to everyone."
+        bio: ""
     },
     {
-        name: "Dr. Sarah Johnson",
+        name: "Dana Yang",
         role: "Faculty Mentor",
         class: "",
-        major: "Information Science",
+        major: "",
         image: "/images/wall.jpg",
         color: "bg-[#E5E7FF]",
-        bio: "Leading research in data visualization and human-computer interaction, guiding CDJ's mission to make data accessible and impactful."
+        bio: "Dana is an assistant professor at Cornell in the department of statistics and data science."
     }
 ];
 
@@ -163,8 +163,12 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
             </div>
             <h3 className="font-space-grotesk font-medium text-sm text-center">{member.name}</h3>
             <p className="font-space-grotesk text-xs text-neutral-600 text-center">{member.role}</p>
-            <p className="font-space-grotesk text-xs text-neutral-600 text-center">'{member.class.slice(-2)}</p>
-            <p className="font-space-grotesk text-xs text-neutral-600 text-center">{member.major}</p>
+            {member.class && (
+                <p className="font-space-grotesk text-xs text-neutral-600 text-center">'{member.class.slice(-2)}</p>
+            )}
+            {member.major && (
+                <p className="font-space-grotesk text-xs text-neutral-600 text-center">{member.major}</p>
+            )}
         </div>
     );
 }
@@ -184,7 +188,7 @@ export default function MastheadPage() {
                 </div>
 
                 {/* Project Leads */}
-                <div>
+                {/* <div>
                     <h2 className="text-2xl font-eb-garamond mb-6">Project Leads</h2>
                     <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-10 gap-4">
                         {projectLeads.map((member) => (
@@ -194,10 +198,10 @@ export default function MastheadPage() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
 
                 {/* Analysts */}
-                <div>
+                {/* <div>
                     <h2 className="text-2xl font-eb-garamond mb-6">Team Members</h2>
                     <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-10 gap-3">
                         {analysts.map((member) => (
@@ -207,7 +211,7 @@ export default function MastheadPage() {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
             </div>
         </main>
     );

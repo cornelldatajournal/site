@@ -150,7 +150,7 @@ export default function RootLayout({
 
               {/* Quick Links */}
               <div>
-                <h3 className="text-lg font-space-grotesk font-medium mb-4">Quick Links</h3>
+                <h3 className="text-lg font-space-mono font-bold mb-4 uppercase">Quick Links</h3>
                 <nav className="space-y-3">
                   <Link href="/articles" className="block text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 font-space-grotesk">
                     Articles
@@ -169,7 +169,7 @@ export default function RootLayout({
 
               {/* Contact */}
               <div>
-                <h3 className="text-lg font-space-grotesk font-medium mb-4">Connect</h3>
+                <h3 className="text-lg font-space-mono font-bold mb-4 uppercase">Connect</h3>
                 <div className="space-y-3 font-space-grotesk">
                   <a
                     href="https://www.instagram.com/cornelldatajournal/"
