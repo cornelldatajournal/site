@@ -172,7 +172,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
 
 export default function MastheadPage() {
     return (
-        <main className="container py-12 max-w-6xl mx-auto">
+        <main className="container py-12 px-4 sm:px-6 max-w-6xl mx-auto overflow-x-hidden">
             <div className="space-y-12">
                 {/* Executive Board */}
                 <div>
