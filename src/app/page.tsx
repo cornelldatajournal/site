@@ -94,6 +94,9 @@ export default async function HomePage() {
       return (
         <div className="mb-4">
           <a href={article.external_link} target="_blank" rel="noopener noreferrer">
+            <div className="text-sm text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
+              {article.section}
+            </div>
             <h2 className={`text-4xl ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:decoration-[#3E32BA]`}>
               {article.title}
             </h2>
