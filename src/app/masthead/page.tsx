@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Image from "next/image";
 
 interface TeamMember {
     name: string;
@@ -69,6 +70,15 @@ const execBoard: TeamMember[] = [
         image: "/images/wall.jpg",
         color: "bg-[#E5FFFA]",
         bio: "Managing data-driven projects that make complex information accessible to everyone."
+    },
+    {
+        name: "Dr. Sarah Johnson",
+        role: "Faculty Mentor",
+        class: "",
+        major: "Information Science",
+        image: "/images/wall.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: "Leading research in data visualization and human-computer interaction, guiding CDJ's mission to make data accessible and impactful."
     }
 ];
 
@@ -166,7 +176,7 @@ export default function MastheadPage() {
                 {/* Executive Board */}
                 <div>
                     <h2 className="text-2xl font-eb-garamond mb-6">Executive Board</h2>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-6">
                         {execBoard.map((member) => (
                             <TeamMemberCard key={member.name} member={member} />
                         ))}
@@ -192,7 +202,7 @@ export default function MastheadPage() {
                     <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-10 gap-3">
                         {analysts.map((member) => (
                             <div key={member.name} className="flex flex-col items-center">
-                                <h3 className="font-space-grotesk font-medium text-[10px] text-center">{member.name}</h3>
+                                <h3 className="font-space-grotesk font-medium text-xs text-center">{member.name}</h3>
                                 <p className="font-space-grotesk text-[8px] text-neutral-600 text-center">'{member.class}</p>
                             </div>
                         ))}

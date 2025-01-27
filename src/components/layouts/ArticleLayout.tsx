@@ -76,7 +76,7 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
           </header>
 
           {/* Article Content */}
-          <article className="prose dark:prose-invert">
+          <article className="prose dark:prose-invert font-helvetica font-normal">
             {children}
           </article>
         </div>
