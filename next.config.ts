@@ -17,6 +17,7 @@ const nextConfig: NextConfig = {
   basePath: basePath,
   images: {
     unoptimized: true,
+    path: '/site/images'
   },
 };
 

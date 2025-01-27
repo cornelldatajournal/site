@@ -22,6 +22,16 @@ export function ImageLoader({
     // Clean up the image path
     const cleanImagePath = imagePath.replace(/^(public\/|\/)/g, '');
 
+    // Get the base URL from window.location in client component
+    const baseUrl = typeof window !== 'undefined'
+        ? window.location.origin
+        : '';
+
+    // For production, use the GitHub Pages URL
+    const imageUrl = process.env.NODE_ENV === 'production'
+        ? `https://cornelldatajournal.github.io/site/${cleanImagePath}`
+        : `${baseUrl}/${cleanImagePath}`;
+
     if (error) {
         return (
             <div className="p-4 border border-red-200 bg-red-50 dark:bg-red-900/20 dark:border-red-900/50 rounded-lg">
@@ -35,7 +45,7 @@ export function ImageLoader({
     return (
         <div className={`relative ${className}`}>
             <Image
-                src={`site/${cleanImagePath}`}
+                src={imageUrl}
                 alt={alt}
                 width={width}
                 height={height}

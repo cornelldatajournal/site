@@ -125,9 +125,9 @@ export default async function HomePage() {
     <div className="min-h-screen bg-white dark:bg-black overflow-x-hidden">
       {/* Main Content */}
       <main className="container max-w-8xl mx-auto px-4 py-8 overflow-x-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr,1.5fr,1fr] gap-8 max-w-full">
+        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr),minmax(0,1.5fr),minmax(0,1fr)] gap-8 max-w-full">
           {/* Left Column */}
-          <div className="space-y-8">
+          <div className="space-y-8 max-w-full">
             {otherArticles.slice(0, Math.ceil(otherArticles.length / 2)).map(article => (
               <div key={article.slug} className="border-b pb-8 border-neutral-200 dark:border-neutral-800">
                 {renderArticle(article, false)}
@@ -145,7 +145,7 @@ export default async function HomePage() {
           </div>
 
           {/* Right Column */}
-          <div className="space-y-8">
+          <div className="space-y-8 max-w-full">
             {otherArticles.slice(Math.ceil(otherArticles.length / 2)).map(article => (
               <div key={article.slug} className="border-b pb-8 border-neutral-200 dark:border-neutral-800">
                 {renderArticle(article, false)}
