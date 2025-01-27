@@ -54,17 +54,17 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
 
   return (
     <div className="flex justify-center min-h-screen relative">
-      <div className="w-full max-w-[100ch] mx-auto py-8 flex gap-16">
+      <div className="w-full max-w-[100ch] mx-auto py-8 px-4 sm:px-0 flex gap-16">
         {/* Main Content */}
         <div className="flex-1 max-w-[65ch]" ref={articleRef}>
           {/* Article Header */}
           <header className="mb-8">
             <div className="flex items-center gap-2">
-              <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
+              <div className="text-base sm:text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
                 {article.section}
               </div>
-              <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono">•</div>
-              <time className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-medium" dateTime={article.publishedDate}>
+              <div className="text-base sm:text-xl text-black dark:text-neutral-400 mb-2 font-space-mono">•</div>
+              <time className="text-base sm:text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-medium" dateTime={article.publishedDate}>
                 {new Date(article.publishedDate).toLocaleDateString('en-US', {
                   year: 'numeric',
                   month: 'long',
@@ -87,6 +87,23 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
           <article className="prose dark:prose-invert font-helvetica font-normal">
             {children}
           </article>
+
+          {/* Mobile References */}
+          {references.length > 0 && (
+            <div className="mt-12 lg:hidden">
+              <h2 className="text-2xl font-eb-garamond mb-6">References</h2>
+              <div className="space-y-4">
+                {references.map((ref) => (
+                  <div key={ref.id} className="font-space-mono text-sm">
+                    <div className="flex gap-4">
+                      <span className="font-bold shrink-0">[{ref.id}]</span>
+                      <span className="text-neutral-600 dark:text-neutral-400 break-all overflow-wrap-anywhere">{ref.text}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* References Column */}
