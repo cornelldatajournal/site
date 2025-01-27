@@ -22,7 +22,7 @@ const execBoard: TeamMember[] = [
         role: "President",
         class: "2027",
         major: "Environment & Sustainability",
-        image: "/images/wall.jpg",
+        image: "/team/Rishi_Gurjar.png",
         color: "bg-[#FFE5D9]",
         bio: "When he is home, he spends around 25% of his waking hours gardening."
     },
@@ -31,7 +31,7 @@ const execBoard: TeamMember[] = [
         role: "Executive Vice President",
         class: "2027",
         major: "Economics & Computer Science",
-        image: "/images/wall.jpg",
+        image: "/team/Nikhil_Chinchalkar.jpeg",
         color: "bg-[#E5F6FF]",
         bio: ""
     },
@@ -40,7 +40,7 @@ const execBoard: TeamMember[] = [
         role: "VP of External Affairs",
         class: "2027",
         major: "Information Science	& Applied Economics",
-        image: "/images/wall.jpg",
+        image: "/team/Rahi_Dasgupta.jpeg",
         color: "bg-[#F0E5FF]",
         bio: ""
     },
@@ -49,7 +49,7 @@ const execBoard: TeamMember[] = [
         role: "VP of Internal Affairs",
         class: "2027",
         major: "Computer Science",
-        image: "/images/wall.jpg",
+        image: "/team/Jason_Wang.jpeg",
         color: "bg-[#E5FFE9]",
         bio: ""
     },
@@ -58,7 +58,7 @@ const execBoard: TeamMember[] = [
         role: "Social Coordinator",
         class: "2027",
         major: "Information Science and Communication & Computer Science and Business",
-        image: "/images/wall.jpg",
+        image: "/team/Carina_Lau.jpeg",
         color: "bg-[#FFE8E5]",
         bio: "."
     },
@@ -67,7 +67,7 @@ const execBoard: TeamMember[] = [
         role: "Project Coordinator",
         class: "2026",
         major: "ORIE & Astronomy/Statistics",
-        image: "/images/wall.jpg",
+        image: "/team/Rithya_Sriram.jpeg",
         color: "bg-[#E5FFFA]",
         bio: ""
     },
@@ -76,7 +76,7 @@ const execBoard: TeamMember[] = [
         role: "Faculty Mentor",
         class: "",
         major: "",
-        image: "/images/wall.jpg",
+        image: "/team/Dana_Yang.png",
         color: "bg-[#E5E7FF]",
         bio: "Dana is an assistant professor at Cornell in the department of statistics and data science."
     }
