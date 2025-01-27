@@ -19,18 +19,13 @@ export function ImageLoader({
 }: ImageLoaderProps) {
     const [error, setError] = useState(false);
 
-    // Clean up the image path
+    // Clean up the image path - remove leading 'public/' or '/' but keep the rest of the path intact
     const cleanImagePath = imagePath.replace(/^(public\/|\/)/g, '');
 
-    // Get the base URL from window.location in client component
-    const baseUrl = typeof window !== 'undefined'
-        ? window.location.origin
-        : '';
-
-    // For production, use the GitHub Pages URL
+    // For production, use the GitHub Pages URL with /site/ prefix
     const imageUrl = process.env.NODE_ENV === 'production'
-        ? `https://cornelldatajournal.github.io/site/${cleanImagePath}`
-        : `${baseUrl}/${cleanImagePath}`;
+        ? new URL(cleanImagePath, 'https://cornelldatajournal.github.io/site/').href
+        : `${typeof window !== 'undefined' ? window.location.origin : ''}/${cleanImagePath}`;
 
     if (error) {
         return (
