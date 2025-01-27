@@ -21,7 +21,7 @@ export default function BarPlot({ plotData, className }: BarPlotProps) {
     return (
         <div className={`w-full h-[400px] ${className}`}>
             <ResponsiveContainer width="100%" height="100%">
-                <BarChart 
+                <BarChart
                     data={data}
                     margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
                 >
@@ -37,7 +37,7 @@ export default function BarPlot({ plotData, className }: BarPlotProps) {
                     <Legend />
                     <Bar
                         name={config.title}
-                        dataKey={config.yAxis}
+                        dataKey={config.yAxis || 'value'}
                         fill="#8884d8"
                     />
                 </BarChart>

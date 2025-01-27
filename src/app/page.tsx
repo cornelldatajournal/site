@@ -1,13 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllArticles } from '@/lib/articles';
-import { formatDate } from '@/lib/utils';
 import { BaseArticle } from '@/types/index';
 import { PlotLoader } from '@/components/plots/PlotLoader';
-import { MDXRemote } from 'next-mdx-remote/rsc';
 import { ArticlePlotsProvider } from '@/contexts/ArticlePlotsContext';
-import cdjicon from '/public/cdj_icon.png';
-import { Button } from '@/components/ui/button';
 export default async function HomePage() {
   const articles = await getAllArticles();
   const [latestArticle, ...otherArticles] = articles;
@@ -39,7 +35,6 @@ export default async function HomePage() {
       );
     }
     else if (article.layout === 'quote') {
-      // console.log("Quote: ", article.quote, article);
       return (
         <div className="mb-4">
           <div className="text-sm text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
@@ -47,7 +42,7 @@ export default async function HomePage() {
           </div>
           <Link href={articleLink}>
             <h2 className={`${isFeatured ? 'text-[38px]' : 'text-2xl'} ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:underline dark:hover:decoration-[#3E32BA]`}>
-              "{article.quote}"
+              &ldquo;{article.quote}&rdquo;
             </h2>
           </Link>
           <p className="text-neutral-600 dark:text-neutral-400 font-helvetica">
@@ -64,7 +59,7 @@ export default async function HomePage() {
         if (plotsModule?.articlePlots) {
           articlePlots = plotsModule.articlePlots;
         }
-      } catch (error) {
+      } catch {
         console.debug(`No plots found for ${article.slug}`);
       }
 

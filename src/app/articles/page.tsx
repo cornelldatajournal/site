@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { getAllArticles } from '@/lib/articles';
-import { Article } from '@/types';
 
 export default async function ArticleListPage() {
     const articles = await getAllArticles();

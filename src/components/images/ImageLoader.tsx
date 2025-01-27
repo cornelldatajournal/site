@@ -19,21 +19,21 @@ export function ImageLoader({
 }: ImageLoaderProps) {
     const [error, setError] = useState(false);
 
-    // Convert the pathname to a valid URL
-    const getImageUrl = (path: string) => {
-        // Remove leading slash if present
-        const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+    // // Convert the pathname to a valid URL
+    // const getImageUrl = (path: string) => {
+    //     // Remove leading slash if present
+    //     const cleanPath = path.startsWith('/') ? path.slice(1) : path;
         
-        // If it's already a full URL, return it as is
-        if (cleanPath.startsWith('http://') || cleanPath.startsWith('https://')) {
-            return cleanPath;
-        }
+    //     // If it's already a full URL, return it as is
+    //     if (cleanPath.startsWith('http://') || cleanPath.startsWith('https://')) {
+    //         return cleanPath;
+    //     }
 
-        // If it's a relative path, construct the full URL
-        // Using process.env.NEXT_PUBLIC_BASE_URL if defined, otherwise use relative path
-        const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
-        return `${baseUrl}/${cleanPath}`;
-    };
+    //     // If it's a relative path, construct the full URL
+    //     // Using process.env.NEXT_PUBLIC_BASE_URL if defined, otherwise use relative path
+    //     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || '';
+    //     return `${baseUrl}/${cleanPath}`;
+    // };
 
     // console.log("Image path: ", imagePath);
 

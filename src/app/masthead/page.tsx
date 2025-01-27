@@ -1,10 +1,7 @@
 "use client";
-
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import Image from "next/image";
 
 interface TeamMember {
     name: string;
@@ -82,25 +79,23 @@ const execBoard: TeamMember[] = [
     }
 ];
 
-const colors = ['#FFE5D9', '#E5F6FF', '#F0E5FF', '#E5FFE9', '#FFE8E5'];
+// const projectLeads: TeamMember[] = Array(10).fill(null).map((_, i) => ({
+//     name: `Project Lead ${i + 1}`,
+//     role: "Project Lead",
+//     class: `${Math.floor(Math.random() * 4) + 24}`,
+//     major: "Various",
+//     image: "/images/wall.jpg",
+//     color: `bg-[${['#FFE5D9', '#E5F6FF', '#F0E5FF', '#E5FFE9', '#FFE8E5'][i % 5]}]`
+// }));
 
-const projectLeads: TeamMember[] = Array(10).fill(null).map((_, i) => ({
-    name: `Project Lead ${i + 1}`,
-    role: "Project Lead",
-    class: "2024",
-    major: "Various",
-    image: "/images/wall.jpg",
-    color: `bg-[${colors[i % colors.length]}]`
-}));
-
-const analysts: TeamMember[] = Array(30).fill(null).map((_, i) => ({
-    name: `Team Member ${i + 1}`,
-    role: "Analyst",
-    class: "2024",
-    major: "Various",
-    image: "/images/wall.jpg",
-    color: `bg-[${colors[i % colors.length]}]`
-}));
+// const analysts: TeamMember[] = Array(30).fill(null).map((_, i) => ({
+//     name: `Team Member ${i + 1}`,
+//     role: "Analyst",
+//     class: `${Math.floor(Math.random() * 4) + 24}`,
+//     major: "Various",
+//     image: "/images/wall.jpg",
+//     color: `bg-[${['#FFE5D9', '#E5F6FF', '#F0E5FF', '#E5FFE9', '#FFE8E5'][i % 5]}]`
+// }));
 
 function TeamMemberCard({ member }: { member: TeamMember }) {
     const bioRef = useRef<HTMLDivElement>(null);
@@ -166,7 +161,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
             <h3 className="font-space-grotesk font-medium text-sm text-center">{member.name}</h3>
             <p className="font-space-grotesk text-xs text-neutral-600 text-center">{member.role}</p>
             {member.class && (
-                <p className="font-space-grotesk text-xs text-neutral-600 text-center">'{member.class.slice(-2)}</p>
+                <p className="font-space-grotesk text-xs text-neutral-600 text-center">&apos;{member.class.slice(-2)}</p>
             )}
             {member.major && (
                 <p className="font-space-grotesk text-xs text-neutral-600 text-center">{member.major}</p>

@@ -5,7 +5,6 @@ import { PlotLoader } from '@/components/plots/PlotLoader';
 import { ImageLoader } from '@/components/images/ImageLoader';
 import { ArticlePlotsProvider } from '@/contexts/ArticlePlotsContext';
 import { notFound } from 'next/navigation';
-import { generateStaticParams } from '@/lib/articles';
 import remarkGfm from 'remark-gfm';
 
 // Custom plugin to remove footnote definitions

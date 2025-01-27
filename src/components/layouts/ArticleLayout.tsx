@@ -1,7 +1,6 @@
 "use client"
 import React, { useEffect, useState, useRef } from 'react';
 import { Article } from '@/types';
-import { cn } from '@/lib/utils';
 
 interface ArticleLayoutProps {
   article: Article;

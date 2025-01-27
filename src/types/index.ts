@@ -30,7 +30,7 @@ export interface QuoteData extends BaseArticle {
     type: 'quote';
     line: string;
     writer?: string;
-} 
+}
 
 export interface DefaultArticle extends BaseArticle {
     type: 'default';
@@ -44,18 +44,18 @@ export interface MultimediaArticle extends BaseArticle {
     gallery?: ImageData[];
 }
 
-export type PlotType = 'line' | 'scatter' | 'bar' | 'pie';
+export type PlotType = 'line' | 'scatter' | 'bar' | 'pie' | 'stacked-bar';
 
 export interface PlotData {
     id: string;
     type: PlotType;
-    data: any[];
+    data: Record<string, string | number | undefined>[];
     config: {
         xAxis?: string;
         yAxis?: string;
         title?: string;
         colorKey?: string;
-        [key: string]: any;
+        [key: string]: string | number | undefined;
     };
 }
 

@@ -1,24 +1,10 @@
 "use client"
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Space_Mono, Space_Grotesk, EB_Garamond } from 'next/font/google';
 import Link from "next/link";
-import { formatDate } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import cdjicon from "../../public/cdj_icon.png";
 import { usePathname } from 'next/navigation';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const spaceMono = Space_Mono({
   subsets: ['latin'],
@@ -91,7 +77,7 @@ export default function RootLayout({
                   </Link>
                   {pathname === '/' && (
                     <h3 className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm">
-                      "Radical Candor" • {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                      &ldquo;Radical Candor&rdquo; • {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
                     </h3>
                   )}
                 </div>

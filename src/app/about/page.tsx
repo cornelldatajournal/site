@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { NewspaperIcon, UsersIcon, ChartBarIcon, RocketLaunchIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 

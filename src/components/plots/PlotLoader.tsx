@@ -1,8 +1,6 @@
 "use client";
 import dynamic from 'next/dynamic';
-import { PlotData } from '@/types';
 import { usePlotData } from '@/contexts/ArticlePlotsContext';
-import { Bar } from 'recharts';
 
 const LinePlot = dynamic(() => import('./LinePlot'), {
     loading: () => <div>Loading plot...</div>
