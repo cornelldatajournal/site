@@ -122,11 +122,10 @@ export default async function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black">
-
+    <div className="min-h-screen bg-white dark:bg-black overflow-x-hidden">
       {/* Main Content */}
-      <main className="container max-w-8xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr,1.5fr,1fr] gap-8">
+      <main className="container max-w-8xl mx-auto px-4 py-8 overflow-x-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr,1.5fr,1fr] gap-8 max-w-full">
           {/* Left Column */}
           <div className="space-y-8">
             {otherArticles.slice(0, Math.ceil(otherArticles.length / 2)).map(article => (

@@ -1,7 +1,6 @@
 "use client";
 import Image from 'next/image';
 import { useState } from 'react';
-import { prefix } from '@/utils/prefix';
 
 interface ImageLoaderProps {
     imagePath: string;
@@ -36,7 +35,7 @@ export function ImageLoader({
     return (
         <div className={`relative ${className}`}>
             <Image
-                src={`${prefix}/${cleanImagePath}`}
+                src={`site/${cleanImagePath}`}
                 alt={alt}
                 width={width}
                 height={height}
