@@ -97,7 +97,7 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
                 >
                   <div className="flex gap-4">
                     <span className="font-bold shrink-0">{ref.id}</span>
-                    <span className="text-neutral-600 dark:text-neutral-400">{ref.text}</span>
+                    <span className="text-neutral-600 dark:text-neutral-400 break-words whitespace-pre-wrap max-w-[26ch]">{ref.text}</span>
                   </div>
                 </div>
               ))}
