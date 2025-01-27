@@ -8,7 +8,7 @@ export default async function ArticleListPage() {
     const articles = await getAllArticles();
 
     return (
-        <div className="container max-w-9xl mx-auto px-4 py-8">
+        <div className="container max-w-8xl mx-auto px-4 py-8">
             <div className="flex justify-between items-center mb-12">
                 <h1 className="text-4xl font-eb-garamond">The <i>Archives</i></h1>
             </div>
@@ -22,7 +22,7 @@ export default async function ArticleListPage() {
                         <Link href={`/articles/${article.slug}`} className="group">
                             <div className="flex justify-between items-start gap-8">
                                 <div>
-                                    <h3 className="text-xl font-space-mono mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                                    <h3 className="text-xl font-space-mono mb-2 hover:italic">
                                         {article.title}
                                     </h3>
                                     <div className="flex items-center gap-4 text-sm text-neutral-500 font-helvetica">

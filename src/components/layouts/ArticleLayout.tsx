@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Article } from '@/types';
 import { cn } from '@/lib/utils';
 
@@ -14,15 +14,15 @@ interface Reference {
 }
 
 export function ArticleLayout({ article, children }: ArticleLayoutProps) {
-  const [activeRef, setActiveRef] = React.useState<string | null>(null);
   const [references, setReferences] = useState<Reference[]>([]);
+  const articleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Find all footnote references in the content
     const footnotes = document.querySelectorAll('[id^="user-content-fn-"]');
     const refs = Array.from(footnotes).map((footnote) => ({
       id: footnote.id.replace('user-content-fn-', ''),
-      text: footnote.textContent || '',
+      text: (footnote.textContent || '').replace('↩', ''),
     }));
     setReferences(refs);
 
@@ -31,29 +31,26 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
     refLinks.forEach((link) => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
-        const refId = link.getAttribute('href')?.replace('#user-content-fn-', '');
-        if (refId) {
-          setActiveRef(refId);
-          const element = document.getElementById(`user-content-fn-${refId}`);
-          element?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
       });
     });
   }, []);
 
+  const getReferencePosition = (id: string) => {
+    if (!articleRef.current) return 0;
+    const link = articleRef.current.querySelector(`a[href="#user-content-fn-${id}"]`);
+    if (!link) return 0;
+    const articleRect = articleRef.current.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    return linkRect.top - articleRect.top;
+  };
+
   return (
-    <div className="flex flex-col items-center min-h-screen">
-      <div className="w-full max-w-9xl mx-auto py-8 flex flex-col items-center">
-        {/* Header Section */}
-        <header className="mb-8 lg:max-w-[65ch] w-full">
-
-        </header>
-
+    <div className="flex justify-center min-h-screen relative">
+      <div className="w-full max-w-[100ch] mx-auto py-8 flex gap-16">
         {/* Main Content */}
-        <div className="flex flex-col lg:flex-row gap-8 font-helvetica">
-          {/* Article Content */}
-          <article className="flex-1 prose dark:prose-invert max-w-none lg:max-w-[65ch] font-regular">
-            <div>
+        <div className="flex-1 max-w-[65ch]" ref={articleRef}>
+          {/* Article Header */}
+          <header className="mb-8">
             <div className="flex items-center gap-2">
               <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
                 {article.section}
@@ -62,56 +59,51 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
               <time className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-medium" dateTime={article.publishedDate}>
                 {new Date(article.publishedDate).toLocaleDateString('en-US', {
                   year: 'numeric',
-                  month: 'long', 
+                  month: 'long',
                   day: 'numeric',
                 })}
               </time>
             </div>
-          <div className="flex flex-col gap-4">
-            <h1 className="text-5xl mb-2 font-eb-garamond">{article.title}</h1>
-            <h2 className="text-xl mb-4 font-space-mono">{article.description}</h2>
-            <div className="flex gap-2 font-eb-garamond">
-              <span className="text-md">
-                By {article.author.join(', ')}
-              </span>
-            </div>
-
-          </div>
-            </div>
-            <div>
-
-            {children}
-            </div>
-
-          </article>
-
-          {/* References Sidebar */}
-          {references.length > 0 && (
-            <aside className="lg:w-72 shrink-0">
-              <div className="sticky top-8">
-                <div className="flex flex-col gap-3">
-                  {references.map((ref) => (
-                    <div
-                      key={ref.id}
-                      id={`ref-${ref.id}`}
-                      className={cn(
-                        "text-sm p-3 rounded-lg transition-colors font-space-mono",
-                        activeRef === ref.id
-                          ? "bg-neutral-100 dark:bg-neutral-800"
-                          : "hover:bg-neutral-50 dark:hover:bg-neutral-900"
-                      )}
-                    >
-                      <div className="grid grid-cols-[auto,1fr] gap-4">
-                        <span className="font-bold">{ref.id}</span>
-                        <span>{ref.text}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+            <div className="flex flex-col gap-4">
+              <h1 className="text-5xl mb-2 font-eb-garamond">{article.title}</h1>
+              <h2 className="text-xl mb-4 font-space-mono">{article.description}</h2>
+              <div className="flex gap-2 font-eb-garamond">
+                <span className="text-md">
+                  By {article.author.join(', ')}
+                </span>
               </div>
-            </aside>
-          )}
+            </div>
+          </header>
+
+          {/* Article Content */}
+          <article className="prose dark:prose-invert">
+            {children}
+          </article>
         </div>
+
+        {/* References Column */}
+        {references.length > 0 && (
+          <aside className="w-[35ch] relative hidden lg:block">
+            <div className="relative">
+              {references.map((ref) => (
+                <div
+                  key={ref.id}
+                  style={{
+                    position: 'absolute',
+                    top: getReferencePosition(ref.id),
+                    width: '100%'
+                  }}
+                  className="p-3 rounded-lg font-space-mono text-[12px]"
+                >
+                  <div className="flex gap-4">
+                    <span className="font-bold shrink-0">{ref.id}</span>
+                    <span className="text-neutral-600 dark:text-neutral-400">{ref.text}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </aside>
+        )}
       </div>
     </div>
   );

@@ -12,22 +12,21 @@ export default async function HomePage() {
   const articles = await getAllArticles();
   const [latestArticle, ...otherArticles] = articles;
 
-  const renderArticle = async (article: BaseArticle) => {
+  const renderArticle = async (article: BaseArticle, isFeatured = false) => {
     if (article.layout === 'image') {
       return (
         <div className="mb-4">
-
           <Image
             src={`/${article.image_path.replace('public/', '')}`}
             alt="Data Visualization Infographics Blog"
             width={800}
             height={400}
           />
-          <div className="text-xl text-black dark:text-neutral-400 mb-2 mt-3 font-space-mono uppercase font-bold">
+          <div className="text-sm text-black dark:text-neutral-400 mb-2 mt-3 font-space-mono uppercase font-bold">
             {article.section}
           </div>
           <Link href={`/articles/${article.slug}`}>
-            <h2 className={`text-4xl ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:underline dark:hover:decoration-[#3E32BA]`}>
+            <h2 className={`${isFeatured ? 'text-[38px]' : 'text-2xl'} ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:underline dark:hover:decoration-[#3E32BA]`}>
               {article.title}
             </h2>
           </Link>
@@ -41,12 +40,12 @@ export default async function HomePage() {
       // console.log("Quote: ", article.quote, article);
       return (
         <div className="mb-4">
-          <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
+          <div className="text-sm text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
             {article.section}
           </div>
           <Link href={`/articles/${article.slug}`}>
-          <h2 className={`text-4xl ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:underline dark:hover:decoration-[#3E32BA]`}>
-          "{article.caption}"
+            <h2 className={`${isFeatured ? 'text-[38px]' : 'text-2xl'} ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:underline dark:hover:decoration-[#3E32BA]`}>
+              "{article.caption}"
             </h2>
           </Link>
           <p className="text-neutral-600 dark:text-neutral-400">
@@ -75,11 +74,11 @@ export default async function HomePage() {
               <PlotLoader plotId={article.featured_plot} />
             </ArticlePlotsProvider>
           </div>
-          <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
+          <div className="text-sm text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
             {article.section}
           </div>
           <Link href={`/articles/${article.slug}`}>
-          <h2 className={`text-6xl ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:underline dark:hover:decoration-[#3E32BA]`}>
+            <h2 className={`${isFeatured ? 'text-[38px]' : 'text-2xl'} ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:underline dark:hover:decoration-[#3E32BA]`}>
               {article.title}
             </h2>
           </Link>
@@ -92,11 +91,11 @@ export default async function HomePage() {
     else {
       return (
         <div>
-          <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
+          <div className="text-sm text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
             {article.section}
           </div>
           <Link href={`/articles/${article.slug}`}>
-            <h2 className={`text-4xl ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:decoration-[#3E32BA]`}>
+            <h2 className={`${isFeatured ? 'text-[38px]' : 'text-2xl'} ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:decoration-[#3E32BA]`}>
               {article.title}
             </h2>
           </Link>
@@ -112,13 +111,13 @@ export default async function HomePage() {
     <div className="min-h-screen bg-white dark:bg-black">
 
       {/* Main Content */}
-      <main className="container max-w-9xl mx-auto px-4 py-8">
+      <main className="container max-w-8xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-[1fr,1.5fr,1fr] gap-8">
           {/* Left Column */}
           <div className="space-y-8">
             {otherArticles.slice(0, Math.ceil(otherArticles.length / 2)).map(article => (
               <div key={article.slug} className="border-b pb-8 border-neutral-200 dark:border-neutral-800">
-                {renderArticle(article)}
+                {renderArticle(article, false)}
               </div>
             ))}
           </div>
@@ -127,7 +126,7 @@ export default async function HomePage() {
           <div className="border-l border-r px-8 border-neutral-200 dark:border-neutral-800">
             {latestArticle && (
               <div className="text-center">
-                {renderArticle(latestArticle)}
+                {renderArticle(latestArticle, true)}
               </div>
             )}
           </div>
@@ -136,7 +135,7 @@ export default async function HomePage() {
           <div className="space-y-8">
             {otherArticles.slice(Math.ceil(otherArticles.length / 2)).map(article => (
               <div key={article.slug} className="border-b pb-8 border-neutral-200 dark:border-neutral-800">
-                {renderArticle(article)}
+                {renderArticle(article, false)}
               </div>
             ))}
           </div>
