@@ -82,22 +82,24 @@ const execBoard: TeamMember[] = [
     }
 ];
 
+const colors = ['#FFE5D9', '#E5F6FF', '#F0E5FF', '#E5FFE9', '#FFE8E5'];
+
 const projectLeads: TeamMember[] = Array(10).fill(null).map((_, i) => ({
     name: `Project Lead ${i + 1}`,
     role: "Project Lead",
-    class: `${Math.floor(Math.random() * 4) + 24}`,
+    class: "2024",
     major: "Various",
     image: "/images/wall.jpg",
-    color: `bg-[${['#FFE5D9', '#E5F6FF', '#F0E5FF', '#E5FFE9', '#FFE8E5'][i % 5]}]`
+    color: `bg-[${colors[i % colors.length]}]`
 }));
 
 const analysts: TeamMember[] = Array(30).fill(null).map((_, i) => ({
     name: `Team Member ${i + 1}`,
     role: "Analyst",
-    class: `${Math.floor(Math.random() * 4) + 24}`,
+    class: "2024",
     major: "Various",
     image: "/images/wall.jpg",
-    color: `bg-[${['#FFE5D9', '#E5F6FF', '#F0E5FF', '#E5FFE9', '#FFE8E5'][i % 5]}]`
+    color: `bg-[${colors[i % colors.length]}]`
 }));
 
 function TeamMemberCard({ member }: { member: TeamMember }) {
