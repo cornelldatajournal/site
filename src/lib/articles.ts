@@ -26,6 +26,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
             quote: data.quote,
             attribution: data.attribution,
             featured_plot: data.featured_plot,
+            external_link: data.external_link,
             layout: data.layout,
         };
     } catch (error) {

@@ -15,7 +15,8 @@ export interface BaseArticle {
     quote: string;
     attribution: string;
     featured_plot: string;
-    layout?: 'default' | 'image' | 'quote' | 'plot' | 'custom';
+    external_link: string;
+    layout?: 'default' | 'image' | 'quote' | 'plot' | 'link' | 'custom';
 }
 
 /* export interface ImageData extends BaseArticle {

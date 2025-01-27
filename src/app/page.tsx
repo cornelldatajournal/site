@@ -13,20 +13,21 @@ export default async function HomePage() {
   const [latestArticle, ...otherArticles] = articles;
 
   const renderArticle = async (article: BaseArticle) => {
+    const articleLink = article.external_link || `/articles/${article.slug}`;
+    
     if (article.layout === 'image') {
       return (
         <div className="mb-4">
-
           <Image
             src={`/${article.image_path.replace('public/', '')}`}
-            alt="Data Visualization Infographics Blog"
+            alt=""
             width={800}
             height={400}
           />
           <div className="text-xl text-black dark:text-neutral-400 mb-2 mt-3 font-space-mono uppercase font-bold">
             {article.section}
           </div>
-          <Link href={`/articles/${article.slug}`}>
+          <Link href={articleLink}>
             <h2 className={`text-4xl ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:underline dark:hover:decoration-[#3E32BA]`}>
               {article.title}
             </h2>
@@ -44,9 +45,9 @@ export default async function HomePage() {
           <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
             {article.section}
           </div>
-          <Link href={`/articles/${article.slug}`}>
+          <Link href={articleLink}>
           <h2 className={`text-4xl ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:underline dark:hover:decoration-[#3E32BA]`}>
-          "{article.caption}"
+          "{article.quote}"
             </h2>
           </Link>
           <p className="text-neutral-600 dark:text-neutral-400">
@@ -78,12 +79,26 @@ export default async function HomePage() {
           <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
             {article.section}
           </div>
-          <Link href={`/articles/${article.slug}`}>
+          <Link href={articleLink}>
           <h2 className={`text-6xl ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:underline dark:hover:decoration-[#3E32BA]`}>
               {article.title}
             </h2>
           </Link>
           <p className="text-neutral-600 dark:text-neutral-400 font-helvetica">
+            {article.description}
+          </p>
+        </div>
+      );
+    }
+    else if (article.layout === 'link') {
+      return (
+        <div className="mb-4">
+          <a href={article.external_link} target="_blank" rel="noopener noreferrer">
+            <h2 className={`text-4xl ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:decoration-[#3E32BA]`}>
+              {article.title}
+            </h2>
+          </a>
+          <p className="text-neutral-600 dark:text-neutral-400">
             {article.description}
           </p>
         </div>
@@ -95,7 +110,7 @@ export default async function HomePage() {
           <div className="text-xl text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
             {article.section}
           </div>
-          <Link href={`/articles/${article.slug}`}>
+          <Link href={articleLink}>
             <h2 className={`text-4xl ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:decoration-[#3E32BA]`}>
               {article.title}
             </h2>
