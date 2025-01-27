@@ -33,15 +33,24 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
         e.preventDefault();
       });
     });
+
+    // Add scroll listener
+    const handleScroll = () => {
+      // Force a re-render to update reference positions
+      setReferences(prev => [...prev]);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const getReferencePosition = (id: string) => {
     if (!articleRef.current) return 0;
-    const link = articleRef.current.querySelector(`a[href="#user-content-fn-${id}"]`);
-    if (!link) return 0;
+    const element = articleRef.current.querySelector(`[id^="user-content-fnref-${id}"]`);
+    if (!element) return 0;
     const articleRect = articleRef.current.getBoundingClientRect();
-    const linkRect = link.getBoundingClientRect();
-    return linkRect.top - articleRect.top;
+    const elementRect = element.getBoundingClientRect();
+    return elementRect.top - articleRect.top;
   };
 
   return (
