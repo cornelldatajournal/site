@@ -1,6 +1,6 @@
 export default function GetInvolvedPage() {
     return (
-        <main className="container max-w-6xl mx-auto items-center mt-12">
+        <main className="container py-12 px-4 sm:px-6 max-w-6xl mx-auto overflow-x-hidden items-center mt-12">
             <h1 className="text-2xl font-eb-garamond mb-6">Get Involved</h1>
 
             <section className="mb-12">
