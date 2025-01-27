@@ -19,8 +19,8 @@ export function ImageLoader({
 }: ImageLoaderProps) {
     const [error, setError] = useState(false);
 
-    // Clean up the image path
-    const cleanImagePath = imagePath.replace(/^public\//, '');
+    // Clean up the image path and ensure it starts with /site
+    const cleanImagePath = `/site/${imagePath.replace(/^(public\/|\/site\/|\/)/g, '')}`;
 
     if (error) {
         return (
@@ -35,7 +35,7 @@ export function ImageLoader({
     return (
         <div className={`relative ${className}`}>
             <Image
-                src={`/${cleanImagePath}`}
+                src={cleanImagePath}
                 alt={alt}
                 width={width}
                 height={height}
