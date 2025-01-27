@@ -4,6 +4,10 @@
 #
 name: Deploy Next.js site to Pages
 
+# Environment variables
+env:
+  GITHUB_REPOSITORY: ${{ github.repository }}
+
 on:
   # Runs on pushes targeting the default branch
   push:
