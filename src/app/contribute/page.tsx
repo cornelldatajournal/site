@@ -18,6 +18,21 @@ export default function GetInvolvedPage() {
                 </p>
             </section>
 
+            <section className="mb-16 bg-[#3E32BA] text-white rounded-lg p-6 shadow-lg">
+                <p className="font-space-grotesk text-lg font-bold">
+                    🎉 Spring 2025 Applications Now Open! 🎉
+                </p>
+                <p className="font-space-grotesk mt-2">
+                    Due on February 5, 2025 -{" "}
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScVZzhbwTYL5-kRxSnB_kLoUmO3MEb0InVEP_Ap_VpkFGhwRg/viewform" className="text-white underline hover:text-neutral-200">
+                        Apply here!
+                    </a>
+                </p>
+                <p className="font-space-grotesk mt-4 text-sm">
+                    CDJ accepts (and welcomes!) students at Cornell from all backgrounds, majors, and levels of experience. We prioritize learning and exposure to the disciplines of data science, data visualization, and data journalism. Please do not hesitate to apply, even if you have no formal background in those fields—there is a place for everyone in CDJ!
+                </p>
+            </section>
+
             <section>
                 <h2 className="text-2xl font-eb-garamond mb-6">Upcoming Events</h2>
                 <div className="w-full overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800 mb-8">

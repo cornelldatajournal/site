@@ -50,6 +50,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable}`}>
       <body className="bg-white dark:bg-black text-black dark:text-white min-h-screen">
+        {/* Top Banner */}
+        <div className="bg-[#3E32BA] text-white py-2">
+          <div className="container max-w-8xl mx-auto px-4">
+            <p className="font-space-grotesk text-sm text-center">
+              🎉 Spring 2025 Applications Now Open! <a href="https://docs.google.com/forms/d/e/1FAIpQLScVZzhbwTYL5-kRxSnB_kLoUmO3MEb0InVEP_Ap_VpkFGhwRg/viewform" className="underline hover:text-neutral-200">Apply here</a> 🎉
+            </p>
+          </div>
+        </div>
+
         <header className="border-b border-neutral-200 dark:border-neutral-800 sticky top-0 bg-white dark:bg-black z-50">
           <div className="container max-w-8xl mx-auto px-4 py-6">
             <div className="flex justify-between items-center relative">
