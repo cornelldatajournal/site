@@ -13,8 +13,8 @@ export default function GetInvolvedPage() {
                 <p className="font-space-grotesk">
                     If you&apos;ve never heard of us before,{" "}
                     <a href="/about" className="text-blue-600 hover:underline">
-                        check this out!
-                    </a>
+                        check this out! 
+                    </a> Or go to our <a href="https://www.instagram.com/cornelldatajournal" className="text-blue-600 hover:underline">Instagram</a> for the most up to date information on events and opportunities.
                 </p>
             </section>
 
@@ -33,7 +33,27 @@ export default function GetInvolvedPage() {
                 </p>
             </section>
 
-            <section>
+            <section className="mb-16">
+                <h2 className="text-2xl font-eb-garamond mb-6">Newsletter Signup</h2>
+                <p className="font-space-grotesk">
+                    Sign up for our newsletter to stay up to date on all the latest CDJ news, events, and publications!
+                </p>
+                <br />
+                <div className="w-full overflow-hidden">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSe5yMgZ-Iw9xBZR3F-h5Nal3man5whIw1P6w9fEGqvM4mDcVA/viewform?embedded=true" 
+                        width="100%" 
+                        height="1070" 
+                        frameBorder="0" 
+                        marginHeight={0} 
+                        marginWidth={0}
+                    >
+                        Loading…
+                    </iframe>
+                </div>
+            </section>
+
+            {/* <section>
                 <h2 className="text-2xl font-eb-garamond mb-6">Upcoming Events</h2>
                 <div className="w-full overflow-hidden rounded-lg border border-neutral-200 dark:border-neutral-800 mb-8">
                     <iframe
@@ -45,7 +65,7 @@ export default function GetInvolvedPage() {
                         className="border-0 w-full bg-white dark:bg-neutral-900"
                     ></iframe>
                 </div>
-            </section>
+            </section> */}
         </main>
     );
 }
