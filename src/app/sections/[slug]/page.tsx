@@ -8,7 +8,7 @@ export async function generateStaticParams() {
 }
 
 interface SectionPageProps {
-    params: Promise<{ slug: string }>;
+    params: { slug: string };
 }
 
 export default async function SectionPage({ params }: SectionPageProps) {

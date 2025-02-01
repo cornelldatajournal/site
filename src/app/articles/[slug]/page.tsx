@@ -31,7 +31,7 @@ function remarkProcessFootnotes() {
 }
 
 interface ArticlePageProps {
-    params: Promise<{ slug: string }>;
+    params: { slug: string };
 }
 
 // Custom MDX components
