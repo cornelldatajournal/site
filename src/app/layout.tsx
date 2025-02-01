@@ -165,33 +165,31 @@ export default function RootLayout({
           <div className="container max-w-8xl mx-auto px-4 py-3">
             <nav className="flex flex-wrap justify-center gap-6">
             <Link
-              href="/articles/environment"
-              className={`text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2 ${
-                pathname === '/articles/environment' ? 'font-bold text-[#3E32BA]' : ''
-              }`}
+              href="/sections/environment"
+              className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
             >
               Environment
             </Link>
               <Link
-                href="/articles/culture"
+                href="/sections/culture"
                 className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
               >
                 Culture
               </Link>
               <Link
-                href="/articles/politics"
+                href="/sections/politics"
                 className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
               >
                 Politics
               </Link>
               <Link
-                href="/articles/campus"
+                href="/sections/campus"
                 className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
               >
                 Campus
               </Link>
               <Link
-                href="/articles/people"
+                href="/sections/people"
                 className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
               >
                 People
