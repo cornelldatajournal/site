@@ -31,7 +31,7 @@ function remarkProcessFootnotes() {
 }
 
 interface ArticlePageProps {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }
 
 // Custom MDX components
@@ -72,7 +72,7 @@ const components = {
 };
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
-    const { slug } = params;
+    const { slug } = await params;
     const article = await getArticleBySlug(slug);
 
     if (!article) {

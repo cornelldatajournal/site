@@ -8,11 +8,11 @@ export async function generateStaticParams() {
 }
 
 interface SectionPageProps {
-    params: { slug: string };
+    params: Promise<{ slug: string }>;
 }
 
 export default async function SectionPage({ params }: SectionPageProps) {
-    const { slug } = params;
+    const { slug } = await params;
     const sections = ["environment", "culture", "politics", "campus", "people"];
 
     if (!sections.includes(slug)) {
