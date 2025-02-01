@@ -63,7 +63,7 @@ export default function RootLayout({
           <div className="container max-w-8xl mx-auto px-4 py-6">
             <div className="flex justify-between items-center relative">
               {/* Left Navigation - Hidden on Mobile */}
-              <nav className="hidden lg:block">
+              <nav className="hidden lg:flex">
                 <Link
                   href="/articles"
                   className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
@@ -159,6 +159,46 @@ export default function RootLayout({
             )}
           </div>
         </header>
+
+        {/* Article Sections */}
+        <div className="bg-neutral-100 dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800">
+          <div className="container max-w-8xl mx-auto px-4 py-3">
+            <nav className="flex flex-wrap justify-center gap-6">
+            <Link
+              href="/articles/environment"
+              className={`text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2 ${
+                pathname === '/articles/environment' ? 'font-bold text-[#3E32BA]' : ''
+              }`}
+            >
+              Environment
+            </Link>
+              <Link
+                href="/articles/culture"
+                className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+              >
+                Culture
+              </Link>
+              <Link
+                href="/articles/politics"
+                className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+              >
+                Politics
+              </Link>
+              <Link
+                href="/articles/campus"
+                className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+              >
+                Campus
+              </Link>
+              <Link
+                href="/articles/people"
+                className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+              >
+                People
+              </Link>
+            </nav>
+          </div>
+        </div>
 
         {children}
 

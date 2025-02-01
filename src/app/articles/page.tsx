@@ -1,17 +1,23 @@
 import Link from 'next/link';
 import { getAllArticles } from '@/lib/articles';
 
-export default async function ArticleListPage() {
+export default async function ArticleListPage({ params }: { params: { section?: string } }) {
     const articles = await getAllArticles();
+    const section = params.section || "all";
+
+    // Filter articles based on section, unless viewing 'all' articles
+    const filteredArticles = section === "all" 
+        ? articles 
+        : articles.filter(article => article.section.toLowerCase() === section.toLowerCase());
 
     return (
         <div className="container max-w-8xl mx-auto px-4 py-8">
             <div className="flex justify-between items-center mb-12">
-                <h1 className="text-4xl font-eb-garamond">The <i>Archives</i></h1>
+                <h1 className="text-4xl font-eb-garamond">The <i>Archives</i> {section !== "all" && ` - ${section}`}</h1>
             </div>
 
             <div className="space-y-6">
-                {articles.map((article) => {
+                {filteredArticles.map((article) => {
                     const articleLink = article.external_link || `/articles/${article.slug}`;
 
                     return (
@@ -44,7 +50,7 @@ export default async function ArticleListPage() {
                 })}
             </div>
 
-            {articles.length === 0 && (
+            {filteredArticles.length === 0 && (
                 <div className="text-center py-12">
                     <h3 className="text-xl font-medium text-neutral-600 dark:text-neutral-400">
                         No articles found
