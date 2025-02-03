@@ -31,7 +31,9 @@ export default function LinePlot({ plotData, className }: LinePlotProps) {
                         label={{ value: config.yAxis, angle: -90, position: 'left' }}
                     />
                     <Tooltip />
-                    <Legend />
+                    <Legend
+                        verticalAlign="top"
+                    />
                     <Line
                         type="monotone"
                         dataKey={config.yAxis}

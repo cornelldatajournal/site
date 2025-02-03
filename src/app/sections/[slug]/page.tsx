@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
 export async function generateStaticParams() {
-    const sections = ["environment", "culture", "politics", "campus", "people"];
+    const sections = ["environment", "culture", "politics", "sports", "people"];
     return sections.map((section) => ({ slug: section }));
 }
 
@@ -13,7 +13,7 @@ interface SectionPageProps {
 
 export default async function SectionPage({ params }: SectionPageProps) {
     const { slug } = await params;
-    const sections = ["environment", "culture", "politics", "campus", "people"];
+    const sections = ["environment", "culture", "politics", "sports", "people"];
 
     if (!sections.includes(slug)) {
         notFound();

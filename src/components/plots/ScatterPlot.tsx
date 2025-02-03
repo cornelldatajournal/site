@@ -34,7 +34,9 @@ export default function ScatterPlot({ plotData, className }: ScatterPlotProps) {
                         label={{ value: config.yAxis, angle: -90, position: 'left' }}
                     />
                     <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-                    <Legend />
+                    <Legend 
+                        verticalAlign="top"
+                    />
                     <Scatter
                         name={config.title}
                         data={data}

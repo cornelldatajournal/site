@@ -13,7 +13,7 @@ interface TeamMember {
     bio?: string;
 }
 
-const execBoard: TeamMember[] = [
+const teamMembers: TeamMember[] = [
     {
         name: "Rishi Gurjar",
         role: "President",
@@ -62,7 +62,7 @@ const execBoard: TeamMember[] = [
     {
         name: "Rithya Sriram",
         role: "Project Coordinator",
-        class: "2026",
+        class: "2027",
         major: "ORIE & Astronomy/Statistics",
         image: "/team/Rithya_Sriram.jpeg",
         color: "bg-[#E5FFFA]",
@@ -76,26 +76,44 @@ const execBoard: TeamMember[] = [
         image: "/team/Dana_Yang.png",
         color: "bg-[#E5E7FF]",
         bio: "Dana is an assistant professor at Cornell in the department of statistics and data science."
+    },
+    {
+        name: "Rahul Ramarao",
+        role: "Project Lead",
+        class: "2027",
+        major: "Computer Science",
+        image: "/team/Rahul_Ramarao.jpeg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Winston Ni",
+        role: "Project Lead",
+        class: "2027",
+        major: "Computer Science & Statistical Science",
+        image: "/team/Winston_Ni.jpeg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Jenny Williams",
+        role: "Project Lead",
+        class: "2027",
+        major: "English",
+        image: "/images/wall.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
     }
 ];
 
-// const projectLeads: TeamMember[] = Array(10).fill(null).map((_, i) => ({
-//     name: `Project Lead ${i + 1}`,
-//     role: "Project Lead",
-//     class: `${Math.floor(Math.random() * 4) + 24}`,
-//     major: "Various",
-//     image: "/images/wall.jpg",
-//     color: `bg-[${['#FFE5D9', '#E5F6FF', '#F0E5FF', '#E5FFE9', '#FFE8E5'][i % 5]}]`
-// }));
-
-// const analysts: TeamMember[] = Array(30).fill(null).map((_, i) => ({
-//     name: `Team Member ${i + 1}`,
-//     role: "Analyst",
-//     class: `${Math.floor(Math.random() * 4) + 24}`,
-//     major: "Various",
-//     image: "/images/wall.jpg",
-//     color: `bg-[${['#FFE5D9', '#E5F6FF', '#F0E5FF', '#E5FFE9', '#FFE8E5'][i % 5]}]`
-// }));
+const additionalProjectLeads: TeamMember[] = Array(7).fill(null).map((_, i) => ({
+    name: `Project Lead ${i + 1}`,
+    role: "Project Lead",
+    class: `${Math.floor(Math.random() * 4) + 24}`,
+    major: "Various",
+    image: "/images/wall.jpg",
+    color: `bg-[${['#FFE5D9', '#E5F6FF', '#F0E5FF', '#E5FFE9', '#FFE8E5'][i % 5]}]`
+}));
 
 function TeamMemberCard({ member }: { member: TeamMember }) {
     const bioRef = useRef<HTMLDivElement>(null);
@@ -108,11 +126,9 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
 
         if (!bioElement || !container || !avatarElement) return;
 
-        // Initial state
         gsap.set(bioElement, { opacity: 0, zIndex: 0 });
         gsap.set(avatarElement, { zIndex: 10 });
 
-        // Create hover animations
         const timeline = gsap.timeline({ paused: true });
         timeline
             .to(avatarElement, {
@@ -171,6 +187,15 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
 }
 
 export default function MastheadPage() {
+    // Filter executive board members (excluding Project Leads)
+    const execBoard = teamMembers.filter(member => member.role !== "Project Lead");
+    
+    // Filter project leads from both teamMembers and include additional project leads
+    const projectLeads = [
+        ...teamMembers.filter(member => member.role === "Project Lead"),
+        ...additionalProjectLeads
+    ];
+
     return (
         <main className="container py-12 px-4 sm:px-6 max-w-6xl mx-auto overflow-x-hidden">
             <div className="space-y-12">
@@ -185,31 +210,15 @@ export default function MastheadPage() {
                 </div>
 
                 {/* Project Leads */}
-                {/* <div>
+                <div>
                     <h2 className="text-2xl font-eb-garamond mb-6">Project Leads</h2>
-                    <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-10 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
                         {projectLeads.map((member) => (
-                            <div key={member.name} className="flex flex-col items-center">
-                                <h3 className="font-space-grotesk font-medium text-xs text-center">{member.name}</h3>
-                                <p className="font-space-grotesk text-[10px] text-neutral-600 text-center">'{member.class}</p>
-                            </div>
+                            <TeamMemberCard key={member.name} member={member} />
                         ))}
                     </div>
-                </div> */}
-
-                {/* Analysts */}
-                {/* <div>
-                    <h2 className="text-2xl font-eb-garamond mb-6">Team Members</h2>
-                    <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-10 gap-3">
-                        {analysts.map((member) => (
-                            <div key={member.name} className="flex flex-col items-center">
-                                <h3 className="font-space-grotesk font-medium text-xs text-center">{member.name}</h3>
-                                <p className="font-space-grotesk text-[8px] text-neutral-600 text-center">'{member.class}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div> */}
+                </div>
             </div>
         </main>
     );
-} 
+}
