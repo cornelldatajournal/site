@@ -31,7 +31,7 @@ export default function StackedLinePlot({ plotData, className, colors }: Stacked
     );
 
     // Function to replace underscores with spaces
-    const formatLabel = (label: string) => label.replace(/_/g, ' ');
+    // const formatLabel = (label: string) => label.replace(/_/g, ' ');
 
     return (
         <div className={`w-full h-[400px] ${className}`}>
@@ -40,12 +40,12 @@ export default function StackedLinePlot({ plotData, className, colors }: Stacked
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis
                         dataKey={config.xAxis}
-                        label={{ value: formatLabel(config.xAxis), position: 'bottom' }}
+                        label={{ value: config.xAxis?.replace('_', ' '), position: 'bottom' }}
                         axisLine={{ stroke: '#E5E7EB' }}
                         tickLine={{ stroke: '#E5E7EB' }}
                     />
                     <YAxis
-                        label={{ value: formatLabel(config.yAxis), angle: -90, position: 'left' }}
+                        label={{ value: config.yAxis?.replace('_', ' '), angle: -90, position: 'left' }}
                         axisLine={{ stroke: '#E5E7EB' }}
                         tickLine={{ stroke: '#E5E7EB' }}
                     />
@@ -54,12 +54,16 @@ export default function StackedLinePlot({ plotData, className, colors }: Stacked
                             backgroundColor: 'white',
                             border: '1px solid #E5E7EB'
                         }}
+                        formatter={(value, name) => [
+                            value, 
+                            typeof name === 'string' ? name.replace('_', ' ') : name
+                        ]}
                     />
                     <Legend 
                         layout="horizontal"
                         verticalAlign="top"
                         align="center"
-                        formatter={(value) => formatLabel(value)}
+                        formatter={(value) => value.replace('_', ' ')}
                         wrapperStyle={{
                             marginTop: -10, // Use negative margin to move the legend up
                             backgroundColor: 'transparent',
@@ -70,7 +74,7 @@ export default function StackedLinePlot({ plotData, className, colors }: Stacked
                             key={key}
                             type="monotone"
                             dataKey={key}
-                            name={formatLabel(key)}
+                            name={key.replace('_', ' ')}
                             stroke={lineColors[index % lineColors.length]}
                             strokeWidth={2}
                             dot={{ r: 4 }}

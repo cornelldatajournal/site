@@ -15,7 +15,7 @@ export default function DataTableComponent({ plotData, className }: DataTablePro
     // Generate columns dynamically based on keys in data, with formatted column names
     const columns = Object.keys(data[0] || {}).map((key) => ({
         name: formatLabel(key), // Apply formatLabel to column names
-        selector: (row: Record<string, string | number | undefined>) => row[key],
+        selector: (row: Record<string, string | number | undefined>) => row[key] ?? '', // Ensure selector returns a Primitive
         sortable: true,
     }));
 
