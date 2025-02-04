@@ -49,7 +49,7 @@ const teamMembers: TeamMember[] = [
         major: "Computer Science",
         image: "/team/Jason_Wang.jpeg",
         color: "bg-[#E5FFE9]",
-        bio: ""
+        bio: "He usually drinks ~200% the daily water intake of the average American male"
     },
     {
         name: "Carina Lau",
@@ -104,7 +104,7 @@ const teamMembers: TeamMember[] = [
         specialized_role: "Content Editor",
         class: "2027",
         major: "English",
-        image: "/images/wall.jpg",
+        image: "/team/Jenny_Williams.png",
         color: "bg-[#E5E7FF]",
         bio: ""
     }
