@@ -19,9 +19,9 @@ interface ScatterPlotProps {
 export default function ScatterPlot({ plotData, className, colors }: ScatterPlotProps) {
     const { data, config } = plotData;
 
-    const defaultColors = '#add8e6';
+    const defaultColors = ['#add8e6'];
 
-    const lineColors = colors[0] || defaultColors;
+    const lineColors = colors || defaultColors;
 
     return (
         <div className={`w-full h-[400px] ${className}`}>
@@ -46,7 +46,7 @@ export default function ScatterPlot({ plotData, className, colors }: ScatterPlot
                     <Scatter
                         name={config.title}
                         data={data}
-                        fill={lineColors}
+                        fill={lineColors[0]}
                     />
                 </ScatterChart>
             </ResponsiveContainer>

@@ -1,6 +1,6 @@
 export type ArticleType = 'default' | 'image' | 'feature' | 'quote' | 'multimedia';
 
-export type SectionType = 'Environment' | 'Culture' | 'Politics' | 'Campus' | 'People';
+export type SectionType = 'Environment' | 'Culture' | 'Politics' | 'Sports' | 'People';
 
 export interface BaseArticle {
     title: string;
@@ -17,6 +17,7 @@ export interface BaseArticle {
     attribution: string;
     featured_plot: string;
     external_link: string;
+    article_layout: string;
     layout?: 'default' | 'image' | 'quote' | 'plot' | 'link' | 'custom';
 }
 
@@ -30,7 +31,7 @@ export interface QuoteData extends BaseArticle {
     type: 'quote';
     line: string;
     writer?: string;
-}
+} 
 
 export interface DefaultArticle extends BaseArticle {
     type: 'default';
@@ -44,18 +45,18 @@ export interface MultimediaArticle extends BaseArticle {
     gallery?: ImageData[];
 }
 
-export type PlotType = 'line' | 'scatter' | 'bar' | 'pie' | 'stacked-bar';
+export type PlotType = 'line' | 'scatter' | 'bar' | 'stacked-bar' | 'stacked-line' | 'table';
 
 export interface PlotData {
     id: string;
     type: PlotType;
-    data: Record<string, string | number | undefined>[];
+    data: any[];
     config: {
         xAxis?: string;
         yAxis?: string;
         title?: string;
         colorKey?: string;
-        [key: string]: string | number | undefined;
+        [key: string]: any;
     };
 }
 
