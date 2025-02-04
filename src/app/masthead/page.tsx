@@ -6,6 +6,7 @@ import gsap from "gsap";
 interface TeamMember {
     name: string;
     role: string;
+    specialized_role?: string;
     class: string;
     major: string;
     image: string;
@@ -79,7 +80,8 @@ const teamMembers: TeamMember[] = [
     },
     {
         name: "Rahul Ramarao",
-        role: "Project Lead",
+        role: "Editor",
+        specialized_role: "Website Editor",
         class: "2027",
         major: "Computer Science",
         image: "/team/Rahul_Ramarao.jpeg",
@@ -88,7 +90,8 @@ const teamMembers: TeamMember[] = [
     },
     {
         name: "Winston Ni",
-        role: "Project Lead",
+        role: "Editor",
+        specialized_role: "Technical Editor",
         class: "2027",
         major: "Computer Science & Statistical Science",
         image: "/team/Winston_Ni.jpeg",
@@ -97,7 +100,8 @@ const teamMembers: TeamMember[] = [
     },
     {
         name: "Jenny Williams",
-        role: "Project Lead",
+        role: "Editor",
+        specialized_role: "Content Editor",
         class: "2027",
         major: "English",
         image: "/images/wall.jpg",
@@ -175,7 +179,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
                 </div>
             </div>
             <h3 className="font-space-grotesk font-medium text-sm text-center">{member.name}</h3>
-            <p className="font-space-grotesk text-xs text-neutral-600 text-center">{member.role}</p>
+            <p className="font-space-grotesk text-xs text-neutral-600 text-center">{member.role ? member.role != "Editor" ? member.role : member.specialized_role : member.specialized_role}</p>
             {member.class && (
                 <p className="font-space-grotesk text-xs text-neutral-600 text-center">&apos;{member.class.slice(-2)}</p>
             )}
@@ -188,12 +192,11 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
 
 export default function MastheadPage() {
     // Filter executive board members (excluding Project Leads)
-    const execBoard = teamMembers.filter(member => member.role !== "Project Lead");
+    const execBoard = teamMembers.filter(member => member.role !== "Editor");
     
     // Filter project leads from both teamMembers and include additional project leads
-    const projectLeads = [
-        ...teamMembers.filter(member => member.role === "Project Lead"),
-        ...additionalProjectLeads
+    const editorialteamLeads = [
+        ...teamMembers.filter(member => member.role === "Editor")
     ];
 
     return (
@@ -211,9 +214,9 @@ export default function MastheadPage() {
 
                 {/* Project Leads */}
                 <div>
-                    <h2 className="text-2xl font-eb-garamond mb-6">Project Leads</h2>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-                        {projectLeads.map((member) => (
+                    <h2 className="text-2xl font-eb-garamond mb-6">Editorial Team</h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-8 gap-6">
+                        {editorialteamLeads.map((member) => (
                             <TeamMemberCard key={member.name} member={member} />
                         ))}
                     </div>
