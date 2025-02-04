@@ -13,10 +13,15 @@ import { PlotData } from '@/types';
 interface ScatterPlotProps {
     plotData: PlotData;
     className?: string;
+    colors?: string[];
 }
 
-export default function ScatterPlot({ plotData, className }: ScatterPlotProps) {
+export default function ScatterPlot({ plotData, className, colors }: ScatterPlotProps) {
     const { data, config } = plotData;
+
+    const defaultColors = '#add8e6';
+
+    const lineColors = colors[0] || defaultColors;
 
     return (
         <div className={`w-full h-[400px] ${className}`}>
@@ -31,19 +36,20 @@ export default function ScatterPlot({ plotData, className }: ScatterPlotProps) {
                     <YAxis
                         dataKey={config.yAxis}
                         type="number"
-                        label={{ value: config.yAxis, angle: -90, position: 'left' }}
+                        label={{ value: config.yAxis?.replace('_', ' '), angle: -90, position: 'left' }}
                     />
                     <Tooltip cursor={{ strokeDasharray: '3 3' }} />
                     <Legend 
                         verticalAlign="top"
+                        formatter={(value) => value.replace('_', ' ')}
                     />
                     <Scatter
                         name={config.title}
                         data={data}
-                        fill="#8884d8"
+                        fill={lineColors}
                     />
                 </ScatterChart>
             </ResponsiveContainer>
         </div>
     );
-} 
+}
