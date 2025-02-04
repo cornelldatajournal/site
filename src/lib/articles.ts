@@ -15,11 +15,11 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
         return {
             slug,
             content,
+            type: data.type || 'default',
             title: data.title,
             description: data.description,
             author: data.author,
             publishedDate: data.publishedDate,
-            tags: data.tags,
             section: data.section,
             image_path: data.image_path,
             caption: data.caption,

@@ -1,16 +1,21 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getAllArticles } from '@/lib/articles';
-import { formatDate } from '@/lib/utils';
 import { BaseArticle } from '@/types/index';
 import { PlotLoader } from '@/components/plots/PlotLoader';
-import { MDXRemote } from 'next-mdx-remote/rsc';
 import { ArticlePlotsProvider } from '@/contexts/ArticlePlotsContext';
-import cdjicon from '/public/cdj_icon.png';
-import { Button } from '@/components/ui/button';
+
 export default async function HomePage() {
   const articles = await getAllArticles();
   const [latestArticle, ...otherArticles] = articles;
+
+  // Distribute remaining articles across columns
+  const centerColumnCount = Math.floor(otherArticles.length / 3);
+  const sideColumnCount = Math.ceil((otherArticles.length - centerColumnCount) / 2);
+  
+  const leftColumnArticles = otherArticles.slice(0, sideColumnCount);
+  const centerColumnArticles = otherArticles.slice(sideColumnCount, sideColumnCount + centerColumnCount);
+  const rightColumnArticles = otherArticles.slice(sideColumnCount + centerColumnCount);
 
   const renderArticle = async (article: BaseArticle, isFeatured = false) => {
     const articleLink = article.external_link || `/articles/${article.slug}`;
@@ -39,7 +44,6 @@ export default async function HomePage() {
       );
     }
     else if (article.layout === 'quote') {
-      // console.log("Quote: ", article.quote, article);
       return (
         <div className="mb-4">
           <div className="text-sm text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
@@ -47,10 +51,10 @@ export default async function HomePage() {
           </div>
           <Link href={articleLink}>
             <h2 className={`${isFeatured ? 'text-[38px]' : 'text-2xl'} ${Math.random() < 0.5 ? 'font-space-grotesk font-medium' : 'font-eb-garamond font-normal'} mb-2 hover:underline hover:decoration-[#3E32BA] dark:hover:underline dark:hover:decoration-[#3E32BA]`}>
-              "{article.quote}"
+              &ldquo;{article.quote}&rdquo;
             </h2>
           </Link>
-          <p className="text-neutral-600 dark:text-neutral-400">
+          <p className="text-neutral-600 dark:text-neutral-400 font-helvetica">
             — {article.attribution}
           </p>
         </div>
@@ -64,13 +68,12 @@ export default async function HomePage() {
         if (plotsModule?.articlePlots) {
           articlePlots = plotsModule.articlePlots;
         }
-      } catch (error) {
+      } catch {
         console.debug(`No plots found for ${article.slug}`);
       }
 
       return (
         <div className="mb-4">
-
           <div className="mb-4">
             <ArticlePlotsProvider plots={articlePlots}>
               <PlotLoader plotId={article.featured_plot} />
@@ -127,32 +130,38 @@ export default async function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black">
-
+    <div className="min-h-screen bg-white dark:bg-black overflow-x-hidden">
       {/* Main Content */}
-      <main className="container max-w-8xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-[1fr,1.5fr,1fr] gap-8">
+      <main className="container max-w-8xl mx-auto px-4 py-8 overflow-x-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr),minmax(0,1.5fr),minmax(0,1fr)] gap-8 max-w-full">
           {/* Left Column */}
-          <div className="space-y-8">
-            {otherArticles.slice(0, Math.ceil(otherArticles.length / 2)).map(article => (
+          <div className="space-y-8 max-w-full">
+            {leftColumnArticles.map(article => (
               <div key={article.slug} className="border-b pb-8 border-neutral-200 dark:border-neutral-800">
                 {renderArticle(article, false)}
               </div>
             ))}
           </div>
 
-          {/* Center Column - Featured Article */}
+          {/* Center Column - Featured Article + Additional Articles */}
           <div className="border-l border-r px-8 border-neutral-200 dark:border-neutral-800">
+            {/* Featured Article */}
             {latestArticle && (
-              <div className="text-center">
+              <div className="text-center mb-8 border-b pb-8 border-neutral-200 dark:border-neutral-800">
                 {renderArticle(latestArticle, true)}
               </div>
             )}
+            {/* Additional Center Column Articles */}
+            {centerColumnArticles.map(article => (
+              <div key={article.slug} className="border-b pb-8 border-neutral-200 dark:border-neutral-800">
+                {renderArticle(article, false)}
+              </div>
+            ))}
           </div>
 
           {/* Right Column */}
-          <div className="space-y-8">
-            {otherArticles.slice(Math.ceil(otherArticles.length / 2)).map(article => (
+          <div className="space-y-8 max-w-full">
+            {rightColumnArticles.map(article => (
               <div key={article.slug} className="border-b pb-8 border-neutral-200 dark:border-neutral-800">
                 {renderArticle(article, false)}
               </div>

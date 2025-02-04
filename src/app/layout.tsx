@@ -1,24 +1,12 @@
 "use client"
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Space_Mono, Space_Grotesk, EB_Garamond } from 'next/font/google';
 import Link from "next/link";
-import { formatDate } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import cdjicon from "../../public/cdj_icon.png";
 import { usePathname } from 'next/navigation';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 
 const spaceMono = Space_Mono({
   subsets: ['latin'],
@@ -57,73 +45,160 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <html lang="en">
-      <body className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable} antialiased min-h-screen flex flex-col`}>
-        <div className="flex-1">
-          <header className="border-b border-neutral-500 dark:border-neutral-800 max-w-8xl mx-auto">
-            <div className="container max-w-8xl mx-auto px-4 py-6">
-              <div className="grid grid-cols-[1fr,auto,1fr] items-start w-full">
-                {/* Left Navigation */}
-                <nav className="flex justify-start">
-                  <Link
-                    href="/articles"
-                    className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 px-0 py-2 hover:italic"
-                  >
-                    Articles
-                  </Link>
-                </nav>
-
-                {/* Logo and Title - Centered */}
-                <div className="flex flex-col items-center gap-2">
-                  <Link href="/" className="flex items-center gap-2">
-                    <Image
-                      src={cdjicon}
-                      alt="CDJ Icon"
-                      height={40}
-                      width={40}
-                      className="w-10 h-10 object-contain"
-                    />
-                    <h1 className="text-4xl font-helvetica font-medium transition-all">
-                      Cornell Data Journal
-                    </h1>
-                  </Link>
-                  {pathname === '/' && (
-                    <h3 className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm">
-                      "Radical Candor" • {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
-                    </h3>
-                  )}
-                </div>
-
-                {/* Right Navigation */}
-                <nav className="flex gap-5 justify-end">
-                  <Link
-                    href="/about"
-                    className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
-                  >
-                    About Us
-                  </Link>
-                  <Link
-                    href="/masthead"
-                    className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic px-4 py-2"
-                  >
-                    Masthead
-                  </Link>
-                  <Link
-                    href="/contribute"
-                    className="text-white font-space-grotesk bg-[#3E32BA] hover:bg-[#3E32BA]/90 dark:bg-[#3E32BA] dark:hover:bg-[#3E32BA]/90 px-4 py-2 rounded-md transition-colors"
-                  >
-                    Get Involved
-                  </Link>
-                </nav>
-              </div>
-            </div>
-          </header>
-          <div>
-            {children}
+    <html lang="en" className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable}`}>
+      <body className="bg-white dark:bg-black text-black dark:text-white min-h-screen">
+        {/* Top Banner */}
+        <div className="bg-[#3E32BA] text-white py-2">
+          <div className="container max-w-8xl mx-auto px-4">
+            <p className="font-space-grotesk text-sm text-center">
+              🎉 Spring 2025 Applications Now Open! <a href="https://docs.google.com/forms/d/e/1FAIpQLScVZzhbwTYL5-kRxSnB_kLoUmO3MEb0InVEP_Ap_VpkFGhwRg/viewform" className="underline hover:text-neutral-200">Apply here</a> 🎉
+            </p>
           </div>
         </div>
+
+        <header className="border-b border-neutral-200 dark:border-neutral-800 sticky top-0 bg-white dark:bg-black z-50">
+          <div className="container max-w-8xl mx-auto px-4 py-6">
+            <div className="flex justify-between items-center relative">
+              {/* Left Navigation - Hidden on Mobile */}
+              <nav className="hidden lg:flex">
+                <Link
+                  href="/articles"
+                  className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+                >
+                  Articles
+                </Link>
+              </nav>
+
+              {/* Logo and Title - Left on Mobile, Centered on Desktop */}
+              <div className="absolute left-0 lg:left-1/2 lg:-translate-x-1/2 flex flex-col items-start lg:items-center">
+                <Link href="/" className="flex items-center gap-2">
+                  <Image
+                    src={cdjicon}
+                    alt="CDJ Icon"
+                    height={40}
+                    width={40}
+                    className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+                  />
+                  <h1 className="text-lg sm:text-2xl lg:text-4xl font-helvetica font-medium transition-all whitespace-nowrap">
+                    Cornell Data Journal
+                  </h1>
+                </Link>
+                {pathname === '/' && (
+                  <h3 className="hidden lg:block text-neutral-600 dark:text-neutral-400 font-space-grotesk text-xs sm:text-sm">
+                    &ldquo;Radical Candor&rdquo; • {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+                  </h3>
+                )}
+              </div>
+
+              {/* Mobile Menu Button - Right Aligned */}
+              <button
+                className="lg:hidden p-2 ml-auto"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+
+              {/* Desktop Navigation */}
+              <nav className="hidden lg:flex gap-5 justify-end">
+                <Link
+                  href="/about"
+                  className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/masthead"
+                  className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic px-4 py-2"
+                >
+                  Masthead
+                </Link>
+                <Link
+                  href="/contribute"
+                  className="text-white font-space-grotesk bg-[#3E32BA] hover:bg-[#3E32BA]/90 dark:bg-[#3E32BA] dark:hover:bg-[#3E32BA]/90 px-4 py-2 rounded-md transition-colors"
+                >
+                  Get Involved
+                </Link>
+              </nav>
+            </div>
+
+            {/* Mobile Navigation Menu */}
+            {isMenuOpen && (
+              <div className="md:hidden py-4 space-y-4">
+                <Link
+                  href="/articles"
+                  className="block text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Articles
+                </Link>
+                <Link
+                  href="/about"
+                  className="block text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="/masthead"
+                  className="block text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Masthead
+                </Link>
+                <Link
+                  href="/contribute"
+                  className="block text-white font-space-grotesk bg-[#3E32BA] hover:bg-[#3E32BA]/90 dark:bg-[#3E32BA] dark:hover:bg-[#3E32BA]/90 px-4 py-2 rounded-md transition-colors w-full text-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get Involved
+                </Link>
+              </div>
+            )}
+          </div>
+        </header>
+
+        {/* Article Sections */}
+        <div className="bg-neutral-100 dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800">
+          <div className="container max-w-8xl mx-auto px-4 py-3">
+            <nav className="flex flex-wrap justify-center gap-6">
+            <Link
+              href="/sections/environment"
+              className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+            >
+              Environment
+            </Link>
+              <Link
+                href="/sections/culture"
+                className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+              >
+                Culture
+              </Link>
+              <Link
+                href="/sections/politics"
+                className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+              >
+                Politics
+              </Link>
+              <Link
+                href="/sections/sports"
+                className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+              >
+                Sports
+              </Link>
+              <Link
+                href="/sections/people"
+                className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+              >
+                People
+              </Link>
+            </nav>
+          </div>
+        </div>
+
+        {children}
 
         {/* Footer */}
         <footer className="border-t border-neutral-500 dark:border-neutral-800">
@@ -150,7 +225,7 @@ export default function RootLayout({
 
               {/* Quick Links */}
               <div>
-                <h3 className="text-lg font-space-grotesk font-medium mb-4">Quick Links</h3>
+                <h3 className="text-lg font-space-mono font-bold mb-4 uppercase">Quick Links</h3>
                 <nav className="space-y-3">
                   <Link href="/articles" className="block text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 font-space-grotesk">
                     Articles
@@ -169,7 +244,7 @@ export default function RootLayout({
 
               {/* Contact */}
               <div>
-                <h3 className="text-lg font-space-grotesk font-medium mb-4">Connect</h3>
+                <h3 className="text-lg font-space-mono font-bold mb-4 uppercase">Connect</h3>
                 <div className="space-y-3 font-space-grotesk">
                   <a
                     href="https://www.instagram.com/cornelldatajournal/"

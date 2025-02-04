@@ -1,6 +1,6 @@
 import {
-    ScatterChart,
-    Scatter,
+    BarChart,
+    Bar,
     XAxis,
     YAxis,
     CartesianGrid,
@@ -10,40 +10,38 @@ import {
 } from 'recharts';
 import { PlotData } from '@/types';
 
-interface ScatterPlotProps {
+interface BarPlotProps {
     plotData: PlotData;
     className?: string;
 }
 
-export default function ScatterPlot({ plotData, className }: ScatterPlotProps) {
+export default function BarPlot({ plotData, className }: BarPlotProps) {
     const { data, config } = plotData;
 
     return (
         <div className={`w-full h-[400px] ${className}`}>
             <ResponsiveContainer width="100%" height="100%">
-                <ScatterChart margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+                <BarChart
+                    data={data}
+                    margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
+                >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis
                         dataKey={config.xAxis}
-                        type="number"
                         label={{ value: config.xAxis, position: 'bottom' }}
                     />
                     <YAxis
-                        dataKey={config.yAxis}
-                        type="number"
                         label={{ value: config.yAxis, angle: -90, position: 'left' }}
                     />
-                    <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-                    <Legend 
-                        verticalAlign="top"
-                    />
-                    <Scatter
+                    <Tooltip />
+                    <Legend />
+                    <Bar
                         name={config.title}
-                        data={data}
+                        dataKey={config.yAxis || 'value'}
                         fill="#8884d8"
                     />
-                </ScatterChart>
+                </BarChart>
             </ResponsiveContainer>
         </div>
     );
-} 
+}
