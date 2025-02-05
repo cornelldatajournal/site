@@ -31,20 +31,14 @@ export default function ScatterPlot({ plotData, className, colors }: ScatterPlot
                     <XAxis
                         dataKey={config.xAxis}
                         type="number"
-                        label={{ value: config.xAxis?.replace('_', ' '), position: 'bottom' }}
+                        label={{ value: config.xAxis, position: 'bottom' }}
                     />
                     <YAxis
                         dataKey={config.yAxis}
                         type="number"
                         label={{ value: config.yAxis?.replace('_', ' '), angle: -90, position: 'left' }}
                     />
-                    <Tooltip 
-                        cursor={{ strokeDasharray: '3 3' }} 
-                        formatter={(value, name) => [
-                            value, 
-                            typeof name === 'string' ? name.replace('_', ' ') : name
-                        ]}
-                    />
+                    <Tooltip cursor={{ strokeDasharray: '3 3' }} />
                     <Legend 
                         verticalAlign="top"
                         formatter={(value) => value.replace('_', ' ')}
