@@ -17,7 +17,6 @@ export interface BaseArticle {
     attribution: string;
     featured_plot: string;
     external_link: string;
-    article_layout: string;
     layout?: 'default' | 'image' | 'quote' | 'plot' | 'link' | 'custom';
 }
 
