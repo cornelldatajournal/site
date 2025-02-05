@@ -1,5 +1,4 @@
 import { ArticleLayout } from '@/components/layouts/ArticleLayout';
-import { JalyxHuntLayout } from '@/components/layouts/JalyxHuntLayout';
 import { getArticleBySlug, getAllArticles } from '@/lib/articles';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { PlotLoader } from '@/components/plots/PlotLoader';
@@ -94,12 +93,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         console.debug(`No plots found for ${article.slug}`);
     }
 
-    const Layout = slug === 'jalyx-hunt' ? JalyxHuntLayout : ArticleLayout;
-
     return (
         <div className="max-w-1xl mx-auto">
             <ArticlePlotsProvider plots={articlePlots}>
-                <Layout article={article}>
+                <ArticleLayout article={article}>
                     <div className="prose dark:prose-invert">
                         <MDXRemote
                             source={article.content}
@@ -114,7 +111,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                             }}
                         />
                     </div>
-                </Layout>
+                </ArticleLayout>
             </ArticlePlotsProvider>
         </div>
     );
