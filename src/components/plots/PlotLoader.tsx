@@ -30,6 +30,7 @@ interface PlotLoaderProps {
     plotId: string;
     className?: string;
     colors?: string[];
+    referenceX?: number | string;
 }
 
 type PlotType = 'line' | 'scatter' | 'bar' | 'stacked-bar' | 'stacked-line' | 'table';
@@ -43,7 +44,7 @@ const plotComponents = {
     table : Table,
 } as const;
 
-export function PlotLoader({ plotId, className, colors }: PlotLoaderProps) {
+export function PlotLoader({ plotId, className, colors, referenceX }: PlotLoaderProps) {
     const plotData = usePlotData(plotId);
 
     if (!plotData) {
@@ -68,5 +69,5 @@ export function PlotLoader({ plotId, className, colors }: PlotLoaderProps) {
         );
     }
 
-    return <PlotComponent plotData={plotData} className={className} colors={colors}/>;
-} 
+    return <PlotComponent plotData={plotData} className={className} colors={colors} referenceX={referenceX} />;
+}

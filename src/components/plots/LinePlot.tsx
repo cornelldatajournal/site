@@ -6,17 +6,28 @@ import {
     CartesianGrid,
     Tooltip,
     ResponsiveContainer,
-    Legend
+    Legend,
+    ReferenceLine
 } from 'recharts';
 import { PlotData } from '@/types';
 
 interface LinePlotProps {
     plotData: PlotData;
     className?: string;
+    referenceX?: (number | string)[] | number | string;
 }
 
-export default function LinePlot({ plotData, className }: LinePlotProps) {
+export default function LinePlot({ plotData, className, referenceX }: LinePlotProps) {
     const { data, config } = plotData;
+
+    // console.log("ReferenceX: ", referenceX);
+
+    // Convert single value to array for consistent handling
+    const referenceValues = referenceX 
+        ? Array.isArray(referenceX) 
+            ? referenceX 
+            : [referenceX]
+        : [];
 
     return (
         <div className={`w-full h-[400px] ${className}`}>
@@ -25,15 +36,47 @@ export default function LinePlot({ plotData, className }: LinePlotProps) {
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis
                         dataKey={config.xAxis}
-                        label={{ value: config.xAxis, position: 'bottom' }}
+                        label={{ 
+                            value: config.xAxis?.replace(/_/g, ' ') || '', 
+                            position: 'bottom' 
+                        }}
+                        type="number"
+                        allowDataOverflow={true}
+                        domain={['dataMin', 'dataMax']}
                     />
                     <YAxis
-                        label={{ value: config.yAxis, angle: -90, position: 'left' }}
+                        label={{ 
+                            value: config.yAxis?.replace(/_/g, ' ') || '', 
+                            angle: -90, 
+                            position: 'left',
+                            style: { textAnchor: 'middle' }
+                        }}
                     />
-                    <Tooltip />
+                    <Tooltip 
+                        cursor={{ strokeDasharray: '3 3' }} 
+                        formatter={(value, name) => [
+                            value, 
+                            typeof name === 'string' ? name.replace(/_/g, ' ') : name
+                        ]}
+                    />
                     <Legend
                         verticalAlign="top"
+                        formatter={(value) => (typeof value === 'string' ? value.replace(/_/g, ' ') : value)}
                     />
+                    {referenceValues.map((refValue, index) => (
+                        <ReferenceLine
+                            key={`ref-line-${index}`}
+                            x={refValue}
+                            stroke={`hsl(${(index * 60) % 360}, 70%, 50%)`} // Different color for each line
+                            strokeDasharray="3 3"
+                            isFront={true}
+                            label={{
+                                value: `Reference: ${refValue}`,
+                                position: 'top',
+                                dy: -10 - index * 15 // Move labels up to prevent overlap
+                            }}
+                        />
+                    ))}
                     <Line
                         type="monotone"
                         dataKey={config.yAxis}
@@ -46,4 +89,4 @@ export default function LinePlot({ plotData, className }: LinePlotProps) {
             </ResponsiveContainer>
         </div>
     );
-} 
+}

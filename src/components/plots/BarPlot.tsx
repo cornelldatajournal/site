@@ -23,18 +23,21 @@ export default function BarPlot({ plotData, className }: BarPlotProps) {
             <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                     data={data}
-                    margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
+                    margin={{ top: 20, right: 30, left: 50, bottom: 20 }}
                 >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis
                         dataKey={config.xAxis}
-                        label={{ value: config.xAxis, position: 'bottom' }}
+                        label={{ value: config.xAxis?.replace(/_/g, ' ') || '', position: 'bottom' }}
                     />
                     <YAxis
-                        label={{ value: config.yAxis, angle: -90, position: 'left' }}
+                        label={{ value: config.yAxis?.replace(/_/g, ' ') || '', angle: -90, position: 'insideLeft', dx: -20, dy: 0, style: { textAnchor: 'middle' } }}
                     />
                     <Tooltip />
-                    <Legend />
+                    <Legend 
+                        verticalAlign="top"
+                        formatter={(value) => (typeof value === 'string' ? value.replace(/_/g, ' ') : value)}
+                    />
                     <Bar
                         name={config.title}
                         dataKey={config.yAxis || 'value'}
