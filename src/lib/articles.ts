@@ -27,8 +27,8 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
             attribution: data.attribution,
             featured_plot: data.featured_plot,
             external_link: data.external_link,
-            drop_cap: data.drop_cap,
-            layout: data.layout
+            layout: data.layout,
+            article_layout: data.article_layout || 'default'
         };
     } catch (error) {
         console.error(`Error loading article ${slug}:`, error);
