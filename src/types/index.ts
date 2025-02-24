@@ -45,19 +45,18 @@ export interface MultimediaArticle extends BaseArticle {
     gallery?: ImageData[];
 }
 
-export type PlotType = 'line' | 'scatter' | 'bar' | 'pie' | 'stacked-bar';
+export type PlotType = 'line' | 'scatter' | 'bar' | 'pie' | 'stacked-bar' | 'stacked-line' | 'table';
 
 export interface PlotData {
     id: string;
     type: PlotType;
-    data: Record<string, string | number | undefined>[];
+    data: any[];
     config: {
         xAxis: string;
         yAxis: string;
         title?: string;
         colorKey?: string;
-        legend?: string;
-        [key: string]: any;
+        [key: string]: string | number | undefined;
     };
 }
 
