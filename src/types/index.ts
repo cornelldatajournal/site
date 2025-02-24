@@ -17,7 +17,7 @@ export interface BaseArticle {
     attribution: string;
     featured_plot: string;
     external_link: string;
-    article_layout: string;
+    drop_cap: boolean;
     layout?: 'default' | 'image' | 'quote' | 'plot' | 'link' | 'custom';
 }
 
@@ -52,11 +52,12 @@ export interface PlotData {
     type: PlotType;
     data: Record<string, string | number | undefined>[];
     config: {
-        xAxis?: string;
-        yAxis?: string;
+        xAxis: string;
+        yAxis: string;
         title?: string;
         colorKey?: string;
-        [key: string]: string | number | undefined;
+        legend?: string;
+        [key: string]: any;
     };
 }
 

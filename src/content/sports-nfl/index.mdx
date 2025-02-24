@@ -1,0 +1,49 @@
+---
+title: Sports NFL
+description: An overview of what this Cornellian brings to the Eagles defense.
+author: ["Orion Hoch", "Carina Lau"]
+publishedDate: "2025-02-12"
+section: "Sports"
+featured_plot: 'sports-nfl-featured-table'
+layout: "plot"
+---
+
+## Background
+
+You might be someone who constantly enjoys building your fantasy league during football season to see how your players performed each week, vying that your team doesn’t rank last place. Maybe Patrick Mahomes runs an unexpected 30-yard scramble on third-and-15, breaking through defenders and keeping the Chiefs' drive alive, earning you crucial fantasy points and beating your friend, who had Josh Allen in their lineup. Maybe betting on seasoned players like Aaron Rodgers, who has shown time and time again that the Green Bay Packers (or now the New York Jets) can stage thrilling fourth-quarter comebacks, pays off in ways your younger, riskier picks cannot. Or even during the Super Bowl, where you may have lots of money on the line, like fans did when Tom Brady led the Buccaneers to victory in Super Bowl LV, solidifying his status as the GOAT.
+
+How do we make these decisions when determining who looks great in our fantasy lineup? Historically, some of the most useful statistical indicators of quarterback success are completion percentage, touchdown-to-interception ratio, and passer rating. These statistics not only drive the general populace of sports betting but also the livelihoods of football players themselves, as their contractual salaries are heavily performance-based.
+
+You would think the longest-tenured football player, like Adam Vinatieri (who retired after 24 NFL seasons), accumulated the most money during his time in the league. However, because of factors like inflation, changes in collective bargaining agreements (CBAs), team salary caps, and the shift toward quarterback-centric league priorities, compensation trends have shifted significantly over the years. For example, while Joe Montana, one of the greatest quarterbacks of all time, earned about $25 million over his career, that amount pales compared to Patrick Mahomes, who signed a 10-year contract worth up to $503 million in 2020 [1].
+
+What has changed? The NFL salary cap, implemented in 1994 [2], ensures that teams cannot exceed a set limit when paying their players, which impacts not just superstar compensation but also middle-tier players, forming the so-called "middle class" of the NFL. Factors like guaranteed money, signing bonuses, and cap flexibility (e.g., restructuring deals to free up cap space) have also become critical components of how quarterback contracts are structured. For example, in 2023, Jalen Hurts’ $255 million extension with the Eagles included $179.3 million guaranteed, which reflects his rising performance and value as a young, dual-threat quarterback [3].
+
+Understanding how these financial decisions are made is critical — not just for fans and fantasy players, but for the athletes themselves, whose livelihoods and career trajectories depend on these negotiations. A quarterback’s contract value is shaped by more than just on-field talent; it reflects a complex interplay of performance metrics, market trends, team salary caps, and contract structuring strategies. This prompts an important question: what truly defines the "middle class" of NFL players, particularly in a league dominated by quarterbacks, where the extremes of compensation often overshadow the broader spectrum of earners?
+
+For the scope of this article, we will focus on data visualizations that reflect the performance of quarterbacks in 2023, analyzing how these metrics correlate with their contract values. By starting with quarterbacks, we aim to lay a foundation for understanding the evolving relationship between player performance and compensation in the NFL.
+
+## Data & Interpretation
+
+\insert matrix image
+
+Looking at this correlation matrix, we decided to specifically examine two counting statistics (passing yards and touchdowns) and efficiency metrics (QB rating and offensive grade) vs. average salary for eligible QBs in 2023. The axes were scaled logarithmically, given salaries can span many orders of magnitude. We produced these visualizations:
+
+\insert scatter plots
+
+Based on visualizing the salary breakdown based on these metrics, a trend of clustering emerged. This suggests that there may be subgroups of quarterback salaries, organized by their output and efficiency. The spread, or variability, of the data, also seems to vary widely as well within these supposed subgroups. In order to quantify these trends more specifically, we implemented a machine learning algorithm known as k-means clustering in order to group data points that are more similar to each other into three distinct salary groups: low, middle, and high. The visual result is shown below:
+
+\insert other scatter plots
+
+Based on a k-means clustering algorithm applied to these logarithmically plotted salaries, the salary groups were split into three classes: low, middle, and high. ##19 players## represented the lower-paid class, ranging from ##$0.83M to $2.25M## per year; ##25 players## belonged to the “middle class,” making between ##$2.39M and $10M##; and finally, ##20 players## have salaries ranging from ##$25M to $60M##, representing the highest-paid and most productive players in the NFL. There seems to be far less variability within higher-paid and lower-paid player salaries, potentially revealing a trend that “middle class” players are compensated differently and more inconsistently based on their output and efficiency. 
+
+The same theory holds true for consideration of more advanced league adjusted based statistics in Completion%+, ANY/A+, Rate+, and On Tgt% which compare the stats to the average. These stats are useful because they weed out bias from increased opportunity in specific situations.
+
+\insert other other scatter plots
+
+## Conclusions and Implications
+
+Through our analysis of quarterback performance and compensation in 2023, several key metrics emerged as strong indicators of contract value. Efficiency metrics, such as QB rating and offensive grade, were particularly effective in identifying quarterbacks who excelled in consistency and decision-making. Counting statistics like total touchdowns and passing yards also demonstrated their relevance, especially for players in the “lower” salary class, where raw production seemed to play a more significant role. Success in high-pressure situations, such as third-down conversions or red-zone efficiency, proved to be critical for higher compensation, highlighting the premium placed on clutch performance.
+
+The application of k-means clustering further revealed distinct salary groups — low, middle, and high — suggesting that contract values are shaped not just by performance metrics but also by the consistency and efficiency seen in top-tier players. Notably, variability in performance metrics decreased as salary increased, reinforcing that teams reward consistency more heavily at higher salary levels. A clear divide is seen between the groups as quarterbacks found in the High pay zone are proven players with multiple good seasons on their track record with less variance in production on a consistent basis in total and rate base production. The middle class is the most interesting with a mix of journeymen, first round drafted rookies, and aging stars on “prove it” deals. This causes larger swings as more disappointments and oftentimes lower opportunities players find themselves in this range, fighting for a chance to make it up to that higher caliber. This is also contrasted by budding young stars on rookie deals making names for themselves before available extensions or backups filling in the need for injured players proving themselves. The bottom tier, has more of the same variability as the middle tier, except with the addition of later round rookies on smaller deals, minimum/practice squad players, and a rare few whos current deal is caused by being waived and traded with a majority of their contract in “dead cap” while a small percentage of it is being paid by their current team. These factors in deals lead to more jumps in performance with many QBs not even reaching the field, while some end up becoming borderline Pro Bowlers.
+
+These findings have significant implications for both NFL teams and players. For teams, understanding these key performance drivers allows for more strategic allocation of salary cap resources, ensuring that compensation aligns with on-field contributions and long-term value. For players, focusing on improving efficiency metrics and high-pressure performance could be critical to securing higher compensation. This analysis also underscores the evolving nature of quarterback contracts, reflecting not only individual production but also the nuanced demands of modern NFL offenses. Future research could explore how these trends might shift with changes in league rules or market dynamics, providing further insights into optimizing quarterback value.
