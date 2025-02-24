@@ -1,6 +1,6 @@
 export type ArticleType = 'default' | 'image' | 'feature' | 'quote' | 'multimedia';
 
-export type SectionType = 'Environment' | 'Culture' | 'Politics' | 'Sports' | 'People';
+export type SectionType = 'Environment' | 'Culture' | 'Politics' | 'Sports' | 'People' | 'Health';
 
 export interface BaseArticle {
     title: string;
@@ -17,6 +17,7 @@ export interface BaseArticle {
     attribution: string;
     featured_plot: string;
     external_link: string;
+    drop_cap: boolean;
     layout?: 'default' | 'image' | 'quote' | 'plot' | 'link' | 'custom';
 }
 
@@ -51,10 +52,11 @@ export interface PlotData {
     type: PlotType;
     data: any[];
     config: {
-        xAxis?: string;
-        yAxis?: string;
+        xAxis: string;
+        yAxis: string;
         title?: string;
         colorKey?: string;
+        legend?: string;
         [key: string]: any;
     };
 }

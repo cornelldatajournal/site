@@ -19,8 +19,8 @@ export const articlePlots: ArticlePlots = {
       ],
       config: {
         xAxis: "Name",
-        yAxis: "Success_Rate",
-        title: "Success Rate per Player"
+        yAxis: "Houston Area Cost of Living",
+        title: "Houston Area Cost of Living"
       }
     },
     {
@@ -43,7 +43,7 @@ export const articlePlots: ArticlePlots = {
         config: {
           xAxis: "Income",
           yAxis: "Density",
-          title: "Income vs. Density"
+          title: "Density vs. Income"
         }
       },
       {
@@ -342,7 +342,9 @@ export const articlePlots: ArticlePlots = {
         config: {
           xAxis: "Year",
           yAxis: "Net_Assets_(in_millions)",
-          title: "Net Assets Over Time"
+          title: "Net Assets Over Time",
+          yAxisMin: -25000,
+          yAxisMax: 300000
         }
       },
       {

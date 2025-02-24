@@ -35,6 +35,11 @@ export default function StackedLinePlot({ plotData, className, colors }: Stacked
 
     return (
         <div className={`w-full h-[400px] ${className}`}>
+            {config.title && (
+                <h2 className="text-lg font-semibold text-center mb-2">
+                    {config.title}
+                </h2>
+            )}
             <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
                     <CartesianGrid strokeDasharray="3 3" />

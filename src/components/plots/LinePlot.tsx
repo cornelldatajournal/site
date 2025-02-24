@@ -31,18 +31,25 @@ export default function LinePlot({ plotData, className, referenceX }: LinePlotPr
 
     return (
         <div className={`w-full h-[400px] ${className}`}>
+            {config.title && (
+                <h2 className="text-lg font-semibold text-center mb-0">
+                    {config.title}
+                </h2>
+            )}
             <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+                <LineChart data={data} margin={{ top: 35, right: 30, left: 20, bottom: 20 }}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis
                         dataKey={config.xAxis}
                         label={{ 
                             value: config.xAxis?.replace(/_/g, ' ') || '', 
-                            position: 'bottom' 
+                            position: 'bottom',
+                            offset: -5
                         }}
                         type="number"
                         allowDataOverflow={true}
                         domain={['dataMin', 'dataMax']}
+                        // tick={{ dy: 10 }}
                     />
                     <YAxis
                         label={{ 
@@ -58,10 +65,6 @@ export default function LinePlot({ plotData, className, referenceX }: LinePlotPr
                             value, 
                             typeof name === 'string' ? name.replace(/_/g, ' ') : name
                         ]}
-                    />
-                    <Legend
-                        verticalAlign="top"
-                        formatter={(value) => (typeof value === 'string' ? value.replace(/_/g, ' ') : value)}
                     />
                     {referenceValues.map((refValue, index) => (
                         <ReferenceLine
