@@ -1,6 +1,6 @@
 export type ArticleType = 'default' | 'image' | 'feature' | 'quote' | 'multimedia';
 
-export type SectionType = 'Environment' | 'Culture' | 'Politics' | 'Sports' | 'People' | 'Health';
+export type SectionType = 'Environment' | 'Culture' | 'Politics' | 'Campus' | 'People';
 
 export interface BaseArticle {
     title: string;
@@ -31,7 +31,7 @@ export interface QuoteData extends BaseArticle {
     type: 'quote';
     line: string;
     writer?: string;
-} 
+}
 
 export interface DefaultArticle extends BaseArticle {
     type: 'default';
@@ -45,12 +45,12 @@ export interface MultimediaArticle extends BaseArticle {
     gallery?: ImageData[];
 }
 
-export type PlotType = 'line' | 'scatter' | 'bar' | 'stacked-bar' | 'stacked-line' | 'table';
+export type PlotType = 'line' | 'scatter' | 'bar' | 'pie' | 'stacked-bar';
 
 export interface PlotData {
     id: string;
     type: PlotType;
-    data: any[];
+    data: Record<string, string | number | undefined>[];
     config: {
         xAxis: string;
         yAxis: string;

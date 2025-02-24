@@ -18,14 +18,6 @@ const StackedBarPlot = dynamic(() => import('./StackedBarPlot'), {
     loading: () => <div>Loading plot...</div>
 });
 
-const StackedLinePlot = dynamic(() => import('./StackedLinePlot'), {
-    loading: () => <div>Loading plot...</div>
-});
-
-const Table = dynamic(() => import('./Table'), {
-    loading: () => <div>Loading plot...</div>
-});
-
 interface PlotLoaderProps {
     plotId: string;
     className?: string;
@@ -33,15 +25,13 @@ interface PlotLoaderProps {
     referenceX?: number | string;
 }
 
-type PlotType = 'line' | 'scatter' | 'bar' | 'stacked-bar' | 'stacked-line' | 'table';
+type PlotType = 'line' | 'scatter' | 'bar' | 'stacked-bar';
 
 const plotComponents = {
     line: LinePlot,
     scatter: ScatterPlot,
     bar: BarPlot,
     'stacked-bar': StackedBarPlot,
-    'stacked-line': StackedLinePlot,
-    table : Table,
 } as const;
 
 export function PlotLoader({ plotId, className, colors, referenceX }: PlotLoaderProps) {

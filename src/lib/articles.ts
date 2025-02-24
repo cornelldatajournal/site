@@ -28,6 +28,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
             featured_plot: data.featured_plot,
             external_link: data.external_link,
             layout: data.layout,
+            article_layout: data.article_layout || 'default'
         };
     } catch (error) {
         console.error(`Error loading article ${slug}:`, error);

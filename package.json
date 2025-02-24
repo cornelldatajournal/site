@@ -20,7 +20,6 @@
     "next": "15.1.6",
     "next-mdx-remote": "^5.0.0",
     "react": "^19.0.0",
-    "react-data-table-component": "^7.6.2",
     "react-dom": "^19.0.0",
     "recharts": "^2.15.0",
     "remark-gfm": "^4.0.0",
