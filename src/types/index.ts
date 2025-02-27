@@ -1,6 +1,6 @@
 export type ArticleType = 'default' | 'image' | 'feature' | 'quote' | 'multimedia';
 
-export type SectionType = 'Environment' | 'Culture' | 'Politics' | 'Campus' | 'People';
+export type SectionType = 'Environment' | 'Culture' | 'Politics' | 'Campus';
 
 export interface BaseArticle {
     title: string;

@@ -188,12 +188,6 @@ export default function RootLayout({
               >
                 Sports
               </Link>
-              <Link
-                href="/sections/people"
-                className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
-              >
-                People
-              </Link>
             </nav>
           </div>
         </div>
