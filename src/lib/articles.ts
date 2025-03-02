@@ -19,6 +19,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
             title: data.title,
             description: data.description,
             author: data.author,
+            editors: data.editors,
             publishedDate: data.publishedDate,
             section: data.section,
             image_path: data.image_path,
