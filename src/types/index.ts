@@ -7,6 +7,7 @@ export interface BaseArticle {
     description: string;
     content: string;
     author: string[];
+    editors: string[];
     publishedDate: string;
     section: SectionType;
     slug: string;

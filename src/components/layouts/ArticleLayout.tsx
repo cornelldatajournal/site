@@ -80,6 +80,11 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
                   By {article.author.join(', ')}
                 </span>
               </div>
+              <div className="flex gap-2 font-eb-garamond">
+                <span className="text-md">
+                  Edited by {article.editors.join(', ')}
+                </span>
+              </div>
             </div>
           </header>
 
