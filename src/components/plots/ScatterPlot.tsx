@@ -26,12 +26,18 @@ export default function ScatterPlot({ plotData, className }: ScatterPlotProps) {
                     <XAxis
                         dataKey={config.xAxis}
                         type="number"
-                        label={{ value: config.xAxis, position: 'bottom' }}
+                        label={{ value: config.xAxis.replace('_', ' '), position: 'bottom' }}
+                        domain={config.xAxisMin !== undefined && config.xAxisMax !== undefined 
+                            ? [config.xAxisMin, config.xAxisMax] 
+                            : ['auto', 'auto']}
                     />
                     <YAxis
                         dataKey={config.yAxis}
                         type="number"
-                        label={{ value: config.yAxis, angle: -90, position: 'left' }}
+                        label={{ value: config.yAxis.replace('_', ' '), angle: -90, position: 'left' }}
+                        domain={config.yAxisMin !== undefined && config.xAxisMax !== undefined 
+                            ? [config.yAxisMin, config.xAxisMax] 
+                            : ['auto', 'auto']}
                     />
                     <Tooltip cursor={{ strokeDasharray: '3 3' }} />
                     <Legend 

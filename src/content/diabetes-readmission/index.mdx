@@ -1,0 +1,67 @@
+---
+title: Diabetes Readmission
+description: 
+author: ["Davis Rattanavijai", "Ben Beer", "Daniel Lines", "Elliott Serna", "Isabella Guan", "Stella Zhang"]
+editors: ["Jenny Williams", "Winston Ni", "Rahul Ramarao"]
+publishedDate: "2025-03-02"
+section: "Health"
+image_path: "public/images/social_security_thumb.png"
+layout: "image"
+---
+
+## Abstract
+
+Effective management of diabetes during hospital stays is crucial for preventing adverse outcomes and reducing healthcare costs associated with readmissions. This study aimed to develop a predictive model for identifying high-risk patients for diabetes-related readmissions, utilizing a comprehensive dataset of 101,766 hospitalized patients across 130 U.S. hospitals from 1999 to 2008. A logistic regression model was constructed, incorporating key variables such as age, weight, insulin administration, number of laboratory procedures, and length of hospital stay. The model demonstrated promising performance, with an area under the receiver operating characteristic curve of 0.77, accuracy of 0.74, and balanced precision and recall scores of 0.77. These findings highlight the potential of the model as a decision support tool, enabling healthcare providers to allocate resources more effectively, implement targeted interventions, and ultimately improve patient outcomes and reduce the financial burden associated with suboptimal diabetes management during hospitalization. Future work should focus on leveraging larger and more diverse datasets, integrating the model into clinical workflows, and exploring strategies for optimizing resource allocation based on risk stratification.
+
+## Introduction
+
+<PlotLoader plotId="patients-table"/>
+
+Apollonius of Memphis coined the term “diabetes” all the way back around 250-300 BC. Following the creation of the term, various ancient Greek, Indian and Egyptian civilizations independently discovered the disease as well. Since then, scientific breakthroughs such as Mering’s and Minkowski’s discovery of the pancreatic nature of the disease has led to the advancements of mitigating treatments. Despite extensive research, long-term knowledge, and its profound impact, this illness remains the seventh leading cause of death in the United States and is one of the most prevalent diseases worldwide[^1].
+
+The common and dangerous nature of this disease calls upon healthcare professionals to be increasingly intentional in preventing adverse outcomes for hospital patients, such as readmission. Knowing the factors that contribute to readmission in high-risk patients can help achieve this goal.
+
+Interventions include  intensified glucose monitoring, medication adjustments, and targeted educational interventions which prevent readmission by improving glycemic control and reducing the incidence of diabetes-related complications.
+
+Through analysis of comprehensive data, predictive models can assist healthcare professionals in exactly this task. UC Irvine archives provides this comprehensive data which details 101,766 instances of hospitalized patients diagnosed with diabetes, spanning a decade (1999-2008) across 130 hospitals in the United States. The rich dataset includes 47 features, encompassing patient demographics, hospital metrics, laboratory test results, and medication information[^2]. An intentional and precise analysis of this data could prevent extensive hospital stays, large medical bills, and untimely deaths.
+
+<PlotLoader plotId="patients-bar-1"/>
+
+<PlotLoader plotId="patients-bar-2"/>
+
+## Methods
+
+A common diagnostic tool for diabetes and long term glycemic control is the glycated hemoglobin test. Also known as the A1C test, this tool can reveal the risk level of diabetes patients. Our study leveraged the A1C test, selecting patients with A1C values greater than 7% and 8% from the dataset, emphasizing individuals at elevated to high risk of diabetes-related complications and readmissions.
+
+Key variables of interest included insulin administration, age group, and weight. Previous research has established relationships between these variables and diabetes management. Higher age groups are often associated with increased weight gain, while excess body weight is a known risk factor for type 2 diabetes and reduced insulin sensitivity. Furthermore, a positive correlation between the number of laboratory procedures and diabetes severity was observed, suggesting that patients requiring more extensive testing may face an increased risk of readmission.
+
+In order to accurately analyze the dataset in a way that provides useful and predictive information, we created a model that numerically denotes the categorical variables. The categorical and quantitative variables with the dataset are age, weight, insulin administration, number of laboratory procedures, time in hospital, discharge identification, and the number of inpatient visits. Additionally, interaction terms were included to account for potential nonlinear relationships between age, insulin, and weight, as these factors are known to influence diabetes management and readmission risk. Numerically denoting this information is called data preprocessing and  allows the model to read the data and provide predictive information.
+
+Our model captured the main effects of the outlined categorical and quantitative variables. By combining statistical modeling techniques with clinical domain knowledge, the proposed approach aimed to develop a robust predictive model capable of accurately identifying high-risk patients for diabetes-related readmissions, ultimately informing targeted interventions and improving diabetes management strategies in hospital settings. 
+
+## Results & Conclusions
+
+When mitigating the risks associated with diabetes it is important to understand the accuracy of the model. Inaccurate models can provide incorrect predictive information, which would be useless and potentially harmful to at risk diabetes patients. 
+
+The model's ability to distinguish high and low risk patients was assessed using the Area Under the Receiver Operating Characteristic (ROC) Curve (AUC), a widely recognized metric for evaluating binary classification models. An AUC of 0.77 indicates that the model can effectively distinguish between patients at high and low risk of readmission. 
+
+Furthermore, the model achieved an overall accuracy of 0.74, suggesting a reasonably high rate of correct predictions. The F1 score, which harmonizes precision and recall, was 0.77, indicating a balanced trade-off between the model's ability to correctly identify true positives and avoid false positives. 
+
+Precision, which quantifies the proportion of positive predictions that are truly positive, was 0.77. This metric is particularly relevant in the context of healthcare, as it reflects the model's reliability in identifying high-risk patients who genuinely require targeted interventions. 
+
+Complementing the precision score, the model's recall of 0.77 highlights its proficiency in capturing a substantial proportion of true positive cases, minimizing the risk of overlooking high-risk patients who may benefit from proactive diabetes management strategies. 
+
+These performance metrics collectively demonstrate the model's potential to serve as a valuable decision support tool in clinical settings. 
+
+## Next Steps/Future Work
+
+While the current model demonstrates promising performance in predicting diabetes-related readmission risk, there are several avenues for further improvement and broader implementation. One crucial step involves leveraging more comprehensive and high-quality data sources to refine and strengthen the model's predictive capabilities. As healthcare systems continue to digitize and integrate electronic health records, the availability of larger and more diverse datasets will enable the development of more robust and reliable models. 
+
+Furthermore, it is essential to highlight the potential for incorporating predictive models as supplementary tools in clinical decision-making processes. Physicians and healthcare providers can leverage these models to enhance their understanding of individual patient risk profiles and tailor treatment plans accordingly. By integrating model predictions with clinical expertise and patient-specific factors, healthcare professionals can make more informed decisions regarding resource allocation, patient education, and follow-up care strategies. 
+
+A particularly intriguing avenue for future exploration is the potential to adjust hospital stay durations and conduct additional diagnostic tests for patients identified as high-risk by the model. Prolonging hospital stays and performing comprehensive evaluations for these individuals could enable earlier detection and management of underlying conditions, potentially mitigating the risk of readmissions and associated complications. 
+
+In conclusion, this study presents a logistic regression model aimed at predicting the risk of diabetes-related readmissions among hospitalized patients. By leveraging a comprehensive dataset spanning over a decade and incorporating key clinical variables, the model demonstrated promising performance metrics, including an AUC of 0.77, accuracy of 0.74, and balanced precision and recall scores of 0.77. These results highlight the potential of the model to serve as a valuable decision support tool, enabling healthcare providers to identify high-risk patients and implement targeted interventions for improved diabetes management during hospital stays. While the current findings are encouraging, future work should focus on accessing larger and more diverse datasets, integrating the model into clinical workflows, and exploring strategies for optimizing resource allocation based on risk stratification. Interdisciplinary collaboration between healthcare professionals, data scientists, and policymakers will be crucial in translating these predictive models into tangible improvements in patient outcomes and healthcare delivery. Ultimately, the adoption of such data-driven approaches has the potential to revolutionize diabetes care, reduce readmission rates, and alleviate the substantial burden on patients and healthcare systems alike.
+
+[^1]: A. Sapra and P. Bhandari, “Diabetes,” in StatPearls, updated June 21, 2023, Treasure Island, FL: StatPearls Publishing, January 2025, https://www.ncbi.nlm.nih.gov/books/NBK551501/.
+[^2]: J. Clore, K. Cios, J. DeShazo, and B. Strack, Diabetes 130-US Hospitals for Years 1999-2008 [Dataset] (UCI Machine Learning Repository, 2014), https://doi.org/10.24432/C5230J.
