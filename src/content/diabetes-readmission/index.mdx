@@ -1,12 +1,12 @@
 ---
-title: Diabetes Readmission
-description: 
-author: ["Davis Rattanavijai", "Ben Beer", "Daniel Lines", "Elliott Serna", "Isabella Guan", "Stella Zhang"]
+title: Constructing Diabetes Readmission Model
+description: "Data informed diabetes care saves money, time, and lives"
+author: ["Afm Khan", "Abdulla Elkhadrawy", "Theodore Jeliazkov", "Daniel Lines", "Andrew Qian", "Rahul Ramarao"]
 editors: ["Jenny Williams", "Winston Ni", "Rahul Ramarao"]
 publishedDate: "2025-03-02"
 section: "Health"
-image_path: "public/images/social_security_thumb.png"
-layout: "image"
+featured_plot: "patients-table"
+layout: "plot"
 ---
 
 ## Abstract
@@ -44,6 +44,8 @@ Our model captured the main effects of the outlined categorical and quantitative
 When mitigating the risks associated with diabetes it is important to understand the accuracy of the model. Inaccurate models can provide incorrect predictive information, which would be useless and potentially harmful to at risk diabetes patients. 
 
 The model's ability to distinguish high and low risk patients was assessed using the Area Under the Receiver Operating Characteristic (ROC) Curve (AUC), a widely recognized metric for evaluating binary classification models. An AUC of 0.77 indicates that the model can effectively distinguish between patients at high and low risk of readmission. 
+
+<PlotLoader plotId="roc-curve"/>
 
 Furthermore, the model achieved an overall accuracy of 0.74, suggesting a reasonably high rate of correct predictions. The F1 score, which harmonizes precision and recall, was 0.77, indicating a balanced trade-off between the model's ability to correctly identify true positives and avoid false positives. 
 

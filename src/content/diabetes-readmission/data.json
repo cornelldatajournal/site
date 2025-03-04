@@ -185,7 +185,7 @@
     ],
     "readmission": [
       {
-        "Race": "AfricanAmerica",
+        "Race": "AfricanAmerican",
         "Percentage_Readmitted": 0.8842
         },
         {
@@ -205,12 +205,9 @@
         "Percentage_Readmitted": 0.9001
         }
     ],
-    "average_readmission":[
-
-    ],
     "disposition": [
         {
-        "Discharge_Disposition_ID": "Unavailable",
+        "Discharge_Disposition_ID": "N/A",
         "Percentage_Readmitted": 0.88
         },
         {
@@ -233,5 +230,67 @@
         "Discharge_Disposition_ID": "DAMA",
         "Percentage_Readmitted": 0.85
         }
+    ],
+    "roc": [
+      {"False_Positive_Rate": "0.0015949167906682403", "True_Positive_Rate": "0.12347731118658713"},
+      {"False_Positive_Rate": "0.018878170591957857", "True_Positive_Rate": "0.12348931267477166"},
+      {"False_Positive_Rate": "0.020588537123505567", "True_Positive_Rate": "0.1724673859558585"},
+      {"False_Positive_Rate": "0.04374689996066157", "True_Positive_Rate": "0.17463965531725933"},
+      {"False_Positive_Rate": "0.04241708998238323", "True_Positive_Rate": "0.19240785857446321"},
+      {"False_Positive_Rate": "0.06592607795850651", "True_Positive_Rate": "0.19747248658833694"},
+      {"False_Positive_Rate": "0.06491268578856449", "True_Positive_Rate": "0.2066776280258752"},
+      {"False_Positive_Rate": "0.08867822874441993", "True_Positive_Rate": "0.21470062287723676"},
+      {"False_Positive_Rate": "0.08827201669317736", "True_Positive_Rate": "0.2800067208333833"},
+      {"False_Positive_Rate": "0.09033728428002122", "True_Positive_Rate": "0.33070100692485865"},
+      {"False_Positive_Rate": "0.08920844236919973", "True_Positive_Rate": "0.3937208213818513"},
+      {"False_Positive_Rate": "0.0902560418697727", "True_Positive_Rate": "0.4469834259448171"},
+      {"False_Positive_Rate": "0.12608822070569722", "True_Positive_Rate": "0.4452372094139673"},
+      {"False_Positive_Rate": "0.15181640925650366", "True_Positive_Rate": "0.46065912173109463"},
+      {"False_Positive_Rate": "0.1797766261309799", "True_Positive_Rate": "0.4817877416799683"},
+      {"False_Positive_Rate": "0.1342937041407974", "True_Positive_Rate": "0.46372550196224327"},
+      {"False_Positive_Rate": "0.16107376810850565", "True_Positive_Rate": "0.4811396613180034"},
+      {"False_Positive_Rate": "0.18501889955017362", "True_Positive_Rate": "0.5329320835783636"},
+      {"False_Positive_Rate": "0.22229206218892708", "True_Positive_Rate": "0.5324400225627978"},
+      {"False_Positive_Rate": "0.25037200472061166", "True_Positive_Rate": "0.5518164252367294"},
+      {"False_Positive_Rate": "0.23121589956727728", "True_Positive_Rate": "0.5476639103248803"},
+      {"False_Positive_Rate": "0.24901653924436007", "True_Positive_Rate": "0.5998343794630534"},
+      {"False_Positive_Rate": "0.2482468743051636", "True_Positive_Rate": "0.6215810760534306"},
+      {"False_Positive_Rate": "0.2742273419193733", "True_Positive_Rate": "0.6243594205681504"},
+      {"False_Positive_Rate": "0.27222621307746253", "True_Positive_Rate": "0.6561333605367065"},
+      {"False_Positive_Rate": "0.27375271520686884", "True_Positive_Rate": "0.6766499045881689"},
+      {"False_Positive_Rate": "0.2972403236013478", "True_Positive_Rate": "0.6804963815513123"},
+      {"False_Positive_Rate": "0.29757812099132847", "True_Positive_Rate": "0.7332609243546199"},
+      {"False_Positive_Rate": "0.29582499529649203", "True_Positive_Rate": "0.7650168620908993"},
+      {"False_Positive_Rate": "0.331447654232302", "True_Positive_Rate": "0.7651368769727446"},
+      {"False_Positive_Rate": "0.36075050883404314", "True_Positive_Rate": "0.7665230488580583"},
+      {"False_Positive_Rate": "0.36199907640207296", "True_Positive_Rate": "0.7989090647240257"},
+      {"False_Positive_Rate": "0.3966553782475585", "True_Positive_Rate": "0.801069332597242"},
+      {"False_Positive_Rate": "0.3966553782475585", "True_Positive_Rate": "0.801069332597242"},
+      {"False_Positive_Rate": "0.42978090204730873", "True_Positive_Rate": "0.7997491688969431"},
+      {"False_Positive_Rate": "0.4318632732994681", "True_Positive_Rate": "0.8280306758037996"},
+      {"False_Positive_Rate": "0.4537730685685943", "True_Positive_Rate": "0.832819269589429"},
+      {"False_Positive_Rate": "0.45565447175329676", "True_Positive_Rate": "0.8532758061999688"},
+      {"False_Positive_Rate": "0.4797065011031864", "True_Positive_Rate": "0.8561141581556112"},
+      {"False_Positive_Rate": "0.47992884875228764", "True_Positive_Rate": "0.8896163124227403"},
+      {"False_Positive_Rate": "0.5161544118904682", "True_Positive_Rate": "0.8936488124527441"},
+      {"False_Positive_Rate": "0.5486086168265859", "True_Positive_Rate": "0.8945249210902151"},
+      {"False_Positive_Rate": "0.5779242991773137", "True_Positive_Rate": "0.8940148578423724"},
+      {"False_Positive_Rate": "0.6119862486530864", "True_Positive_Rate": "0.8898923466509847"},
+      {"False_Positive_Rate": "0.6257931824790053", "True_Positive_Rate": "0.9070484740107773"},
+      {"False_Positive_Rate": "0.6503369422067149", "True_Positive_Rate": "0.9266409034720304"},
+      {"False_Positive_Rate": "0.6503369422067149", "True_Positive_Rate": "0.9266409034720304"},
+      {"False_Positive_Rate": "0.6763858244821865", "True_Positive_Rate": "0.9262868595705867"},
+      {"False_Positive_Rate": "0.6763858244821865", "True_Positive_Rate": "0.9262868595705867"},
+      {"False_Positive_Rate": "0.6952468914088289", "True_Positive_Rate": "0.9435630018122246"},
+      {"False_Positive_Rate": "0.7266406690953872", "True_Positive_Rate": "0.9456032548035955"},
+      {"False_Positive_Rate": "0.7553534472437443", "True_Positive_Rate": "0.9443190955678503"},
+      {"False_Positive_Rate": "0.7935544837258625", "True_Positive_Rate": "0.9454712384335657"},
+      {"False_Positive_Rate": "0.7953717481656319", "True_Positive_Rate": "0.9776652304885806"},
+      {"False_Positive_Rate": "0.8188080455641644", "True_Positive_Rate": "0.979381443298969"},
+      {"False_Positive_Rate": "0.8330725024372724", "True_Positive_Rate": "0.9988898623429304"},
+      {"False_Positive_Rate": "0.8748695845519695", "True_Positive_Rate": "0.998139769331397"},
+      {"False_Positive_Rate": "0.9111806660167274", "True_Positive_Rate": "0.9963755505682704"},
+      {"False_Positive_Rate": "0.9493175637539125", "True_Positive_Rate": "0.997083638371158"},
+      {"False_Positive_Rate": "0.990058494535379", "True_Positive_Rate": "1.000384047621905"}
     ]
   }

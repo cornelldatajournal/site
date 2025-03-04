@@ -36,6 +36,20 @@ export const articlePlots: ArticlePlots = {
           yAxisMin: 0,
           yAxisMax: 1
         }
-      }
+    },
+    {
+        id: "roc-curve",
+        type: "line",
+        data: Patients.roc,
+        config: {
+          xAxis: "False_Positive_Rate",
+          yAxis: "True_Positive_Rate",
+          title: "ROC Curve",
+          xAxisMin: 0,
+          xAxisMax: 1,
+          yAxisMin: 0,
+          yAxisMax: 1.2
+        }
+    }
   ]
 };
