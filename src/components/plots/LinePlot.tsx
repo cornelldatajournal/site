@@ -48,7 +48,9 @@ export default function LinePlot({ plotData, className, referenceX }: LinePlotPr
                         }}
                         type="number"
                         allowDataOverflow={true}
-                        domain={['dataMin', 'dataMax']}
+                        domain={config.xAxisMin !== undefined && config.xAxisMax !== undefined 
+                            ? [config.xAxisMin, config.xAxisMax] 
+                            : ['auto', 'auto']}
                         // tick={{ dy: 10 }}
                     />
                     <YAxis
@@ -58,6 +60,9 @@ export default function LinePlot({ plotData, className, referenceX }: LinePlotPr
                             position: 'left',
                             style: { textAnchor: 'middle' }
                         }}
+                        domain={config.yAxisMin !== undefined && config.yAxisMax !== undefined 
+                            ? [config.yAxisMin, config.yAxisMax] 
+                            : ['auto', 'auto']}
                     />
                     <Tooltip 
                         cursor={{ strokeDasharray: '3 3' }} 

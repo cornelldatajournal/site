@@ -1,0 +1,296 @@
+{
+    "patients": [
+      {
+        "patient_nbr": "80041266",
+        "race": "Caucasian",
+        "gender": "Female",
+        "age": "[80-90)",
+        "weight": "[50-75)"
+      },
+      {
+        "patient_nbr": "103586670",
+        "race": "Caucasian",
+        "gender": "Male",
+        "age": "[70-80)",
+        "weight": "[100-125)"
+      },
+      {
+        "patient_nbr": "67852377",
+        "race": "?",
+        "gender": "Male",
+        "age": "[50-60)",
+        "weight": "[75-100)"
+      },
+      {
+        "patient_nbr": "81133947",
+        "race": "Caucasian",
+        "gender": "Male",
+        "age": "[50-60)",
+        "weight": "[75-100)"
+      },
+      {
+        "patient_nbr": "107804349",
+        "race": "Caucasian",
+        "gender": "Male",
+        "age": "[70-80)",
+        "weight": "[50-75)"
+      },
+      {
+        "patient_nbr": "24514578",
+        "race": "?",
+        "gender": "Female",
+        "age": "[30-40)",
+        "weight": "[50-75)"
+      },
+      {
+        "patient_nbr": "74612331",
+        "race": "Caucasian",
+        "gender": "Female",
+        "age": "[70-80)",
+        "weight": "[75-100)"
+      },
+      {
+        "patient_nbr": "5236596",
+        "race": "Caucasian",
+        "gender": "Male",
+        "age": "[0-10)",
+        "weight": "[0-25)"
+      },
+      {
+        "patient_nbr": "84952215",
+        "race": "Caucasian",
+        "gender": "Male",
+        "age": "[60-70)",
+        "weight": "[75-100)"
+      },
+      {
+        "patient_nbr": "82870227",
+        "race": "Caucasian",
+        "gender": "Female",
+        "age": "[50-60)",
+        "weight": "[75-100)"
+      },
+      {
+        "patient_nbr": "103008159",
+        "race": "Caucasian",
+        "gender": "Male",
+        "age": "[30-40)",
+        "weight": "[75-100)"
+      },
+      {
+        "patient_nbr": "107536383",
+        "race": "Caucasian",
+        "gender": "Male",
+        "age": "[70-80)",
+        "weight": "[75-100)"
+      },
+      {
+        "patient_nbr": "85220019",
+        "race": "Caucasian",
+        "gender": "Female",
+        "age": "[60-70)",
+        "weight": "[0-25)"
+      },
+      {
+        "patient_nbr": "21053511",
+        "race": "Caucasian",
+        "gender": "Male",
+        "age": "[60-70)",
+        "weight": "[25-50)"
+      },
+      {
+        "patient_nbr": "76773537",
+        "race": "Caucasian",
+        "gender": "Female",
+        "age": "[80-90)",
+        "weight": "[50-75)"
+      },
+      {
+        "patient_nbr": "47503989",
+        "race": "Caucasian",
+        "gender": "Female",
+        "age": "[50-60)",
+        "weight": "[150-175)"
+      },
+      {
+        "patient_nbr": "91560816",
+        "race": "Caucasian",
+        "gender": "Male",
+        "age": "[70-80)",
+        "weight": "[0-25)"
+      },
+      {
+        "patient_nbr": "5884920",
+        "race": "Caucasian",
+        "gender": "Female",
+        "age": "[10-20)",
+        "weight": "[50-75)"
+      },
+      {
+        "patient_nbr": "110849184",
+        "race": "Caucasian",
+        "gender": "Female",
+        "age": "[80-90)",
+        "weight": "[25-50)"
+      },
+      {
+        "patient_nbr": "28481058",
+        "race": "Caucasian",
+        "gender": "Male",
+        "age": "[60-70)",
+        "weight": "[75-100)"
+      },
+      {
+        "patient_nbr": "78657957",
+        "race": "Caucasian",
+        "gender": "Male",
+        "age": "[50-60)",
+        "weight": "[100-125)"
+      },
+      {
+        "patient_nbr": "10975032",
+        "race": "Caucasian",
+        "gender": "Female",
+        "age": "[50-60)",
+        "weight": "[100-125)"
+      },
+      {
+        "patient_nbr": "6363873",
+        "race": "Caucasian",
+        "gender": "Female",
+        "age": "[70-80)",
+        "weight": "[50-75)"
+      },
+      {
+        "patient_nbr": "88846479",
+        "race": "AfricanAmerican",
+        "gender": "Female",
+        "age": "[40-50)",
+        "weight": "[50-75)"
+      },
+      {
+        "patient_nbr": "65086533",
+        "race": "Caucasian",
+        "gender": "Male",
+        "age": "[50-60)",
+        "weight": "[50-75)"
+      },
+      {
+        "patient_nbr": "61504731",
+        "race": "Caucasian",
+        "gender": "Male",
+        "age": "[70-80)",
+        "weight": "[50-75)"
+      }
+    ],
+    "readmission": [
+      {
+        "Race": "African American",
+        "Percentage_Readmitted": 0.8842
+        },
+        {
+        "Race": "Asian",
+        "Percentage_Readmitted": 0.8971
+        },
+        {
+        "Race": "Caucasian",
+        "Percentage_Readmitted": 0.8842
+        },
+        {
+        "Race": "Hispanic",
+        "Percentage_Readmitted": 0.8971
+        },
+        {
+        "Race": "Other",
+        "Percentage_Readmitted": 0.9001
+        }
+    ],
+    "disposition": [
+        {
+        "Discharge_Disposition_ID": "N/A",
+        "Percentage_Readmitted": 0.88
+        },
+        {
+        "Discharge_Disposition_ID": "Transfer",
+        "Percentage_Readmitted": 0.83
+        },
+        {
+        "Discharge_Disposition_ID": "Patient",
+        "Percentage_Readmitted": 0.54
+        },
+        {
+        "Discharge_Disposition_ID": "Hospice",
+        "Percentage_Readmitted": 0.94
+        },
+        {
+        "Discharge_Disposition_ID": "Home",
+        "Percentage_Readmitted": 0.90
+        },
+        {
+        "Discharge_Disposition_ID": "DAMA",
+        "Percentage_Readmitted": 0.85
+        }
+    ],
+    "roc": [
+      {"False_Positive_Rate": "0.002", "True_Positive_Rate": "0.123"},
+      {"False_Positive_Rate": "0.019", "True_Positive_Rate": "0.123"},
+      {"False_Positive_Rate": "0.021", "True_Positive_Rate": "0.172"},
+      {"False_Positive_Rate": "0.044", "True_Positive_Rate": "0.175"},
+      {"False_Positive_Rate": "0.042", "True_Positive_Rate": "0.192"},
+      {"False_Positive_Rate": "0.066", "True_Positive_Rate": "0.197"},
+      {"False_Positive_Rate": "0.065", "True_Positive_Rate": "0.207"},
+      {"False_Positive_Rate": "0.089", "True_Positive_Rate": "0.215"},
+      {"False_Positive_Rate": "0.088", "True_Positive_Rate": "0.280"},
+      {"False_Positive_Rate": "0.090", "True_Positive_Rate": "0.331"},
+      {"False_Positive_Rate": "0.089", "True_Positive_Rate": "0.394"},
+      {"False_Positive_Rate": "0.090", "True_Positive_Rate": "0.447"},
+      {"False_Positive_Rate": "0.126", "True_Positive_Rate": "0.445"},
+      {"False_Positive_Rate": "0.152", "True_Positive_Rate": "0.461"},
+      {"False_Positive_Rate": "0.180", "True_Positive_Rate": "0.482"},
+      {"False_Positive_Rate": "0.134", "True_Positive_Rate": "0.464"},
+      {"False_Positive_Rate": "0.161", "True_Positive_Rate": "0.481"},
+      {"False_Positive_Rate": "0.185", "True_Positive_Rate": "0.533"},
+      {"False_Positive_Rate": "0.222", "True_Positive_Rate": "0.532"},
+      {"False_Positive_Rate": "0.250", "True_Positive_Rate": "0.552"},
+      {"False_Positive_Rate": "0.231", "True_Positive_Rate": "0.548"},
+      {"False_Positive_Rate": "0.249", "True_Positive_Rate": "0.600"},
+      {"False_Positive_Rate": "0.248", "True_Positive_Rate": "0.622"},
+      {"False_Positive_Rate": "0.274", "True_Positive_Rate": "0.624"},
+      {"False_Positive_Rate": "0.272", "True_Positive_Rate": "0.656"},
+      {"False_Positive_Rate": "0.274", "True_Positive_Rate": "0.677"},
+      {"False_Positive_Rate": "0.297", "True_Positive_Rate": "0.680"},
+      {"False_Positive_Rate": "0.298", "True_Positive_Rate": "0.733"},
+      {"False_Positive_Rate": "0.296", "True_Positive_Rate": "0.765"},
+      {"False_Positive_Rate": "0.331", "True_Positive_Rate": "0.765"},
+      {"False_Positive_Rate": "0.361", "True_Positive_Rate": "0.767"},
+      {"False_Positive_Rate": "0.362", "True_Positive_Rate": "0.799"},
+      {"False_Positive_Rate": "0.397", "True_Positive_Rate": "0.801"},
+      {"False_Positive_Rate": "0.397", "True_Positive_Rate": "0.801"},
+      {"False_Positive_Rate": "0.430", "True_Positive_Rate": "0.800"},
+      {"False_Positive_Rate": "0.432", "True_Positive_Rate": "0.828"},
+      {"False_Positive_Rate": "0.454", "True_Positive_Rate": "0.833"},
+      {"False_Positive_Rate": "0.456", "True_Positive_Rate": "0.853"},
+      {"False_Positive_Rate": "0.480", "True_Positive_Rate": "0.856"},
+      {"False_Positive_Rate": "0.480", "True_Positive_Rate": "0.890"},
+      {"False_Positive_Rate": "0.516", "True_Positive_Rate": "0.894"},
+      {"False_Positive_Rate": "0.549", "True_Positive_Rate": "0.895"},
+      {"False_Positive_Rate": "0.578", "True_Positive_Rate": "0.894"},
+      {"False_Positive_Rate": "0.612", "True_Positive_Rate": "0.890"},
+      {"False_Positive_Rate": "0.626", "True_Positive_Rate": "0.907"},
+      {"False_Positive_Rate": "0.650", "True_Positive_Rate": "0.927"},
+      {"False_Positive_Rate": "0.650", "True_Positive_Rate": "0.927"},
+      {"False_Positive_Rate": "0.676", "True_Positive_Rate": "0.926"},
+      {"False_Positive_Rate": "0.676", "True_Positive_Rate": "0.926"},
+      {"False_Positive_Rate": "0.695", "True_Positive_Rate": "0.944"},
+      {"False_Positive_Rate": "0.727", "True_Positive_Rate": "0.946"},
+      {"False_Positive_Rate": "0.755", "True_Positive_Rate": "0.944"},
+      {"False_Positive_Rate": "0.794", "True_Positive_Rate": "0.945"},
+      {"False_Positive_Rate": "0.795", "True_Positive_Rate": "0.978"},
+      {"False_Positive_Rate": "0.819", "True_Positive_Rate": "0.979"},
+      {"False_Positive_Rate": "0.833", "True_Positive_Rate": "0.999"},
+      {"False_Positive_Rate": "0.875", "True_Positive_Rate": "0.998"},
+      {"False_Positive_Rate": "0.911", "True_Positive_Rate": "0.996"},
+      {"False_Positive_Rate": "0.949", "True_Positive_Rate": "0.997"},
+      {"False_Positive_Rate": "0.990", "True_Positive_Rate": "1.000"}
+    ]
+  }
