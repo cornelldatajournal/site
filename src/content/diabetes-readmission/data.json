@@ -186,49 +186,49 @@
     "readmission": [
       {
         "Race": "African American",
-        "Percentage_Readmitted": 0.8842
+        "Proportion_Readmitted": 0.8842
         },
         {
         "Race": "Asian",
-        "Percentage_Readmitted": 0.8971
+        "Proportion_Readmitted": 0.8971
         },
         {
         "Race": "Caucasian",
-        "Percentage_Readmitted": 0.8842
+        "Proportion_Readmitted": 0.8842
         },
         {
         "Race": "Hispanic",
-        "Percentage_Readmitted": 0.8971
+        "Proportion_Readmitted": 0.8971
         },
         {
         "Race": "Other",
-        "Percentage_Readmitted": 0.9001
+        "Proportion_Readmitted": 0.9001
         }
     ],
     "disposition": [
         {
         "Discharge_Disposition_ID": "N/A",
-        "Percentage_Readmitted": 0.88
+        "Proportion_Readmitted": 0.88
         },
         {
         "Discharge_Disposition_ID": "Transfer",
-        "Percentage_Readmitted": 0.83
+        "Proportion_Readmitted": 0.83
         },
         {
         "Discharge_Disposition_ID": "Patient",
-        "Percentage_Readmitted": 0.54
+        "Proportion_Readmitted": 0.54
         },
         {
         "Discharge_Disposition_ID": "Hospice",
-        "Percentage_Readmitted": 0.94
+        "Proportion_Readmitted": 0.94
         },
         {
         "Discharge_Disposition_ID": "Home",
-        "Percentage_Readmitted": 0.90
+        "Proportion_Readmitted": 0.90
         },
         {
         "Discharge_Disposition_ID": "DAMA",
-        "Percentage_Readmitted": 0.85
+        "Proportion_Readmitted": 0.85
         }
     ],
     "roc": [

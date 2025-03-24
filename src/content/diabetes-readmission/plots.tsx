@@ -19,7 +19,7 @@ export const articlePlots: ArticlePlots = {
       data: Patients.readmission,
       config: {
         xAxis: "Race",
-        yAxis: "Percentage_Readmitted",
+        yAxis: "Proportion_Readmitted",
         title: "Race vs Readmitted",
         yAxisMin: 0,
         yAxisMax: 1
@@ -31,7 +31,7 @@ export const articlePlots: ArticlePlots = {
         data: Patients.disposition,
         config: {
           xAxis: "Discharge_Disposition_ID",
-          yAxis: "Percentage_Readmitted",
+          yAxis: "Proportion_Readmitted",
           title: "Discharge Disposition ID vs Readmitted",
           yAxisMin: 0,
           yAxisMax: 1
