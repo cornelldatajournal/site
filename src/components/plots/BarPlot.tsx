@@ -6,9 +6,11 @@ import {
     CartesianGrid,
     Tooltip,
     ResponsiveContainer,
-    Legend
+    Legend,
+    Cell
 } from 'recharts';
 import { PlotData } from '@/types';
+import React from 'react';
 
 interface BarPlotProps {
     plotData: PlotData;
@@ -17,6 +19,33 @@ interface BarPlotProps {
 
 export default function BarPlot({ plotData, className }: BarPlotProps) {
     const { data, config } = plotData;
+
+    // Custom tick component for vertical labels (bottom-up orientation)
+    const CustomXAxisTick = (props: any) => {
+        const { x, y, payload } = props;
+        
+        return (
+            <g transform={`translate(${x},${y})`}>
+                <text 
+                    x={0} 
+                    y={0} 
+                    dy={-5} 
+                    textAnchor="start" 
+                    transform="rotate(90)"
+                    fontSize={12}
+                >
+                    {payload.value}
+                </text>
+            </g>
+        );
+    };
+
+    // Console log for debugging
+    // console.log("Rendering BarPlot with data:", data);
+    //console.log("Config:", config);
+
+    // Default colors if not provided in data
+    const defaultColors = ['#8884d8', '#82ca9d', '#ffc658', '#ff8042', '#0088fe'];
 
     return (
         <div className={`w-full h-[400px] ${className}`}>
@@ -28,15 +57,27 @@ export default function BarPlot({ plotData, className }: BarPlotProps) {
             <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                     data={data}
-                    margin={{ top: 20, right: 30, left: 50, bottom: 20 }}
+                    margin={{ top: 20, right: 30, left: 50, bottom: config.xLabelUp ? 50 : 30 }}
+                    barSize={30} // Fixed barSize regardless of xLabelUp
+                    barGap={5}   // Fixed barGap regardless of xLabelUp
+                    className="w-full"
                 >
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis
                         dataKey={config.xAxis}
-                        label={{ value: config.xAxis?.replace(/_/g, ' ') || '', position: 'bottom' }}
+                        label={{ 
+                            value: config.xAxis?.replace(/_/g, ' ') || '', 
+                            position: 'insideBottom', 
+                            offset: -5,
+                            dy: config.xLabelUp ? 10 : 10 
+                        }}
                         domain={config.xAxisMin !== undefined && config.xAxisMax !== undefined 
                             ? [config.xAxisMin, config.xAxisMax] 
                             : ['auto', 'auto']}
+                        tick={config.xLabelUp ? CustomXAxisTick : undefined}
+                        height={config.xLabelUp ? 110 : 40}
+                        interval={0} // Show all ticks, no skipping
+                        padding={{ left: 10, right: 10 }}
                     />
                     <YAxis
                         label={{ value: config.yAxis?.replace(/_/g, ' ') || '', angle: -90, position: 'insideLeft', dx: -20, dy: 0, style: { textAnchor: 'middle' } }}
@@ -61,7 +102,15 @@ export default function BarPlot({ plotData, className }: BarPlotProps) {
                         name={config.title}
                         dataKey={config.yAxis || 'value'}
                         fill="#8884d8"
-                    />
+                        isAnimationActive={true}
+                    >
+                        {data.map((entry, index) => (
+                            <Cell 
+                                key={`cell-${index}`} 
+                                fill={entry.fill || defaultColors[index % defaultColors.length]} 
+                            />
+                        ))}
+                    </Bar>
                 </BarChart>
             </ResponsiveContainer>
         </div>

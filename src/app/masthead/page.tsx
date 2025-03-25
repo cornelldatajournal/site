@@ -28,10 +28,10 @@ const teamMembers: TeamMember[] = [
         name: "Nikhil Chinchalkar",
         role: "Executive Vice President",
         class: "2027",
-        major: "Economics & Computer Science",
+        major: "Economics",
         image: "/team/Nikhil_Chinchalkar.jpeg",
         color: "bg-[#E5F6FF]",
-        bio: ""
+        bio: "He listed to 79,578 minutes of music last year."
     },
     {
         name: "Rahi Dasgupta",

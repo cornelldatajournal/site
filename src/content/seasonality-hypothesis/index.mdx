@@ -1,0 +1,169 @@
+---
+title: Stock Market Seasonality Hypothesis
+description: "A Data-Driven Approach to Testing the Seasonal Tendency of the Market"
+author: ["Abhay Gupta", "Cole Gaines", "Karen Petrosyan"]
+editors: ["Jenny Williams", "Winston Ni", "Rahul Ramarao"]
+publishedDate: "2025-03-15"
+section: "Politics"
+image_path: "public/images/social_security_thumb.png"
+layout: "image"
+---
+
+## Introduction
+
+With inflation remaining stubbornly high at 3.1% and overall investor and consumer confidence substantially lower than in previous years, the U.S. stock market has been forced to weather numerous unexpected shocks. Yet, despite such perceptions surrounding the market’s unreliability and volatility, numerous analytical studies predict its performance in 2024 to be no less than “average”, indicating relatively normal returns, with the S&P 500 projected to provide a return of 11.0% by the end of the year. 
+
+Apart from obscurity in understanding overall market trends, there is little information explaining specific hypotheses as well. Consider the “January effect”, in which stock returns have been hypothesized to spike in January, due to investors purging poorly performing stocks in the months of November and December. There is a regular lack of consensus regarding whether this hypothesis is indeed true, with some positing it to be more effective in the 1940s compared to the modern day. 
+
+In this project we aim to increase understanding of overall market trends and explore common hypotheses. We use technical stock indicators, such as relative strength and seasonality indices, to perform industry-wide analyses of monthly stock returns in order to explore variations across the year as well as test against the January Effect. 
+
+## Keywords
+
+Relative strength index, seasonality index, January effect, data analytics & visualization 
+
+January Effect: The January Effect refers to the hypothesis that, in January, stock market prices have the tendency to rise more than in any other month. It is said to occur due to the selling of losing stocks at the end of the year for tax-loss harvesting purposes and their eventual reacquisition after the New Year. Such “seasonal tendency hypotheses” are contentious and have been studied by economists for decades, though its validity remains inconclusive. Other “seasonal tendencies” include high returns in July following June index rebalancing.
+
+First introduced by investment banker Sidney Wachtel in 1942, the January effect’s supposed existence has been conflicted and contested by numerous analysts. Many now posit that, although prevalent in the 1990s, the January Effect has disappeared in recent years.
+
+### Relative Strength Index
+
+The Relative Strength Index: The Relative Strength Index is a technical indicator, used to measure the speed and magnitude of a security’s recent price changes. It is measured on a scale of 0 to a 100, in which a value over 70 indicates overbought conditions (this is accompanied by high prices and an eventual selling of stock), and a value below 30 indicates underbought conditions (this is accompanied by low prices and an eventual buying of stock).
+
+The RSI is calculated using the following formula: 
+
+<LatexRenderer expression="100 - \frac{100}{1 + RS}" />
+
+where RS is Average Gain/Average Loss.
+
+Monthly RSI values, apart from showing overbought or underbought conditions, can also shed light on whether the January effect may exist. If an RSI value is highest in January compared to other months, this may indicate a higher buying of securities, in turn proving the existence of the January effect. 
+
+Seasonality Index: A seasonality index is usually calculated in order to understand fluctuations in returns that recur on a regular basis, usually spanning a year. This is important in understanding whether January does, in fact, outperform the market when compared to average market behavior over the course of an entire year. 
+
+The formula for each month in our case is: 
+
+<LatexRenderer expression="\frac{\sum_{i=1}^{n} Return_{January,i}}{\sum_{i=1}^{n} \sum_{j=1}^{12} Return_{j,i}}" />
+
+Small Cap Stocks: Small Cap Stocks refer to stocks for companies with market capitalization that ranges between 250 million and 2 billion dollars. This range is smaller than larger firms, however there are benefits in investing in them because of their position on emerging markets and innovation. One downside is that small-cap stocks have higher beta, meaning they are more volatile and unpredictable. When Apple first went public it was a small cap stock!
+
+Does market performance vary based on season or month?  Looking at five different indices of return — a measure that represents the performance of a group of assets, such as property or investments – unveils key comparisons in market performance between seasons and months from 2010 to 2023.
+
+### Methodology
+
+Research primarily began by understanding overall market trends in the stock market and researching common hypotheses. After a shortlisting of technical methods and hypotheses, different candidate APIs were explored for data collection. This research primarily derives its data from the Yahoo Finance API, a now deprecated but still powerful API providing stock return values with flexible filtering criteria such as time intervals. 
+
+20+ years of industry-wide data was hence collected, cleansed, and stored in data frames using Python’s Pandas library. 
+
+## Exploratory Analysis
+
+To determine whether there is any baseline indication of performance variation based on season/month, we first created a seasonality index of returns for 5 different indices over the course of 13 years (2010-2023).
+
+### Market Myths Prove To Be True: Confirming What We Already Know
+
+[^1]
+
+Seasonality Index of Market 2010-2023:
+
+[^2]
+
+<PlotLoader plotId = "seasonality-index-bar" columns={1}/>
+
+[^3]
+
+This graph confirms what has already been widely hypothesized. The January Effect and the phenomena of indices rebalancing in June (which can cause an upswing in market prices in July) are cyclically represented in the data, where January, July and November have the highest overall excess returns.
+
+[^4]
+
+Distribution of Market Returns 2010-2023:
+
+<PlotLoader plotId = "returns-comparison-plot"/>
+
+<PlotLoader plotId = "mean-returns-comparison-plot"/>
+
+Money you invested in January is much more likely to have higher returns. These plots compare the distribution of January returns to other months, revealing that while price spikes or drops typically have overlap in return price, the mean range for January return prices shows a significantly higher yield of returns compared to other months.
+
+### Does Cap Size Matter?
+
+Comparing January Effect based on Cap Size 2010-2023:
+
+<PlotLoader plotId = "excess-returns-bar"/>
+
+As noted previously, small-cap stocks are far more volatile (on average) than their counterparts, large-cap stocks. We hypothesized investors may sell these small-cap stocks more leading up to January, which in turn would depress their value and set them up for high returns in January. Investors selling leading up to January is a tactic called tax-loss selling, where investors sell underperforming stocks to balance out the taxable profit they made from well performing stocks. However, upon analyzing the excess return for stocks of different sizes in January, we did not observe any clear trend. This could indicate that the Seasonal Hypotheses affects the whole market or on specific sectors rather than on specific cap-sizes.
+
+## Relative Strength Index Analyses
+
+The Relative Strength Index can be another way of exploring the frequency of stock selling and buying. 
+
+To explore Relative Strength Index trends as well as their relationship to the January effect, stock returns for each month were averaged and stored in a data frame. Using the formula for Relative Strength Index, the average 20-year RSI (from 2000 - 2020) was calculated for each month. This process was applied in two scenarios:
+    
+    a. Industry-specific analyses: Ticker names of companies in specific industries, such as airlines and entertainment, were taken and their 20-year average monthly RSIs were computed and  represented in a heatmap, allowing for comparisons between companies of the same industry.
+
+    b. Broad-market overview: Averages for each industry were calculated (taking the average RSI monthly values of the different companies to represent the entire industry) and were represented on a heatmap to allow comparisons between different industries as a whole on the market. 
+
+## Industry Specific Seasonal Hypotheses Effects
+
+### Technology Industry - Apple, Microsoft, Oracle, Amazon, Meta, Intel, Adobe, Cisco
+
+[^5] [^6] [^7] [^8] [^9] [^10] [^11] [^12]
+
+<PlotLoader plotId="seasonality-heatmap-1"/>
+
+RSI values between May and June show a sharp increase in RSI values for the majority of the companies — Apple, Microsoft, Oracle, Amazon, Meta, and Adobe. After the month of July we see a drop in RSI values, indicating a reduction of prices and subsequent selling of stocks. The January effect appears not to be at play with  technology companies which hold large market-share, except for Meta and Intel which possess high RSI values in January.
+
+### Airline Industry - Delta Airlines, United Airlines, JetBlue, American Airlines, SouthWest Airlines, Spirit Airlines, Frontier Airlines, Skywest Airlines
+
+[^13] [^14] [^15] [^16] [^17] [^18] [^19]
+
+<PlotLoader plotId="seasonality-heatmap-2"/>
+
+The majority of the airlines experience sharp increases in RSI values in the months of November, where the RSI continues to stay steady or see an uptick through February. This indicates that stock prices are higher during these four months compared to the rest of the months of the year.
+
+### Entertainment Industry - Netflix, Disney, Fox, Warner Bros., Paramount, Electronic Arts, Nintendo, Vivendi
+
+<PlotLoader plotId="seasonality-heatmap-3"/>
+
+[^20]
+
+It is evident that the majority of these companies also see sharp increases in RSI values in the months of December, where the RSI continues to stay steady or see an uptick through February. Similar to the airline industry, stock prices are higher during these three months compared to the rest of the months of the year.
+
+## General Market
+
+[^21] [^22] [^23] [^24] [^25] [^26]
+
+<PlotLoader plotId="seasonality-heatmap-4"/>
+
+The automobile and retail industry showcase high RSI values in the month of November, averaging 60.7 and 61.5 respectively. RSI values being this high indicates these stocks are excessively bought and therefore overpriced. The stock begins to trending downward in the following months signals stock price reductions and increased number of investors attempting to sell their shares. 
+
+On similar notes, a close inspection of the heatmap shows the majority of the industries to have high RSI values in November, December, January, and February, indicating these overpriced conditions. 
+
+It appears as if the January effect is not uniform, and may instead affect specific industries, such as Entertainment. However, it is also important to note that this heatmap is formed by taking companies with the largest market-caps. Hence, this finding is in accordance with the market cap visualizations above, in which the difference in return price is unimportant across cap sizes. Analyzing RSI variation for companies with small-market caps may be a future application of this project.
+
+## Conclusion
+
+An exploratory analysis of monthly returns suggests the existence of the January Effect and other Seasonal Hypotheses. However, it is unclear which market segments they impact the most. Some industries appear to engage in high volumes of buying or selling during expected months, while others do not via an analysis of RSI. Therefore, it is not obvious that it is possible to predict general stock market trends based on season or month, but rather how various seasons or months may affect specific sectors of the market.
+
+[^1]: Yahoo Finance. 2025. "Russell 2000 Futures Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/RTY%3DF/history/.
+[^2]: Yahoo Finance. 2025. "Nasdaq 100 Futures Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/NQ%3DF/history/.
+[^3]: Yahoo Finance. 2025. "Dow Jones Industrial Average Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/%5EDJI/history/.
+[^4]: Yahoo Finance. 2025. "S&P 500 Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/%5EGSPC/history/.
+[^5]: Yahoo Finance. 2025. "Cisco Systems Inc. (CSCO) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/CSCO/history/.
+[^6]: Yahoo Finance. 2025. "Adobe Inc. (ADBE) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/ADBE/history/.
+[^7]: Yahoo Finance. 2025. "Intel Corp. (INTC) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/INTC/history/.
+[^8]: Yahoo Finance. 2025. "Meta Platforms Inc. (META) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/META/history/.
+[^9]: Yahoo Finance. 2025. "Amazon.com Inc. (AMZN) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/AMZN/history/.
+[^10]: Yahoo Finance. 2025. "Oracle Corp. (ORCL) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/ORCL/history/.
+[^11]: Yahoo Finance. 2025. "Microsoft Corp. (MSFT) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/MSFT/history/.
+[^12]: Yahoo Finance. 2025. "Apple Inc. (AAPL) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/AAPL/history/.
+[^13]: Yahoo Finance. 2025. "SkyWest Inc. (SKYW) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/SKYW/history/.
+[^14]: Yahoo Finance. 2025. "Spirit Airlines (SAVE) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/SAVEQ/history/.
+[^15]: Yahoo Finance. 2025. "Southwest Airlines (LUV) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/LUV/history/.
+[^16]: Yahoo Finance. 2025. "American Airlines Group (AAL) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/AAL/history/.
+[^17]: Yahoo Finance. 2025. "JetBlue Airways (JBLU) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/JBLU/history/.
+[^18]: Yahoo Finance. 2025. "United Airlines Holdings (UAL) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/UAL/history/.
+[^19]: Yahoo Finance. 2025. "Delta Air Lines (DAL) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/DAL/history/.
+[^20]: Yahoo Finance. 2025. "The Walt Disney Company (DIS) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/DIS/.
+[^21]: Yahoo Finance. 2025. "Vivendi SE (VIVHY) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/VIVHY/.
+[^22]: Yahoo Finance. 2025. "Nintendo (NTDOY) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/NTDOY/.
+[^23]: Yahoo Finance. 2025. "Electronic Arts (EA) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/EA/.
+[^24]: Yahoo Finance. 2025. "Paramount Global (PARA) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/PARA/.
+[^25]: Yahoo Finance. 2025. "Warner Bros. Discovery (WBD) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/WBD/.
+[^26]: Yahoo Finance. 2025. "Fox Corporation (FOXA) Historical Data." Yahoo Finance. Accessed March 21, 2025. https://finance.yahoo.com/quote/FOXA/.
