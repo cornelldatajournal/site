@@ -58,7 +58,7 @@ const CustomizedCell = (props: any) => {
     );
 };
 
-export default function Heatmap({ plotData, className, colors, cellSize = { width: 40, height: 40 } }: HeatmapProps) {
+export default function Heatmap({ plotData, className, colors, cellSize = { width: 30, height: 30 } }: HeatmapProps) {
     const { data, config } = plotData;
     
     // Find unique x and y values to create the grid
@@ -164,7 +164,7 @@ export default function Heatmap({ plotData, className, colors, cellSize = { widt
                 <text
                     x={-8}
                     y={0}
-                    dy={0}
+                    dy={5}
                     textAnchor="end"
                     fontSize={12}
                 >
