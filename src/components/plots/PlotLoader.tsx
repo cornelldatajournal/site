@@ -14,6 +14,10 @@ const BarPlot = dynamic(() => import('./BarPlot'), {
     loading: () => <div>Loading plot...</div>
 });
 
+const GroupedBarPlot = dynamic(() => import('./GroupedBarPlot'), {
+    loading: () => <div>Loading plot...</div>
+});
+
 const StackedBarPlot = dynamic(() => import('./StackedBarPlot'), {
     loading: () => <div>Loading plot...</div>
 });
@@ -26,25 +30,37 @@ const Table = dynamic(() => import('./Table'), {
     loading: () => <div>Loading table...</div>
 });
 
+const Box = dynamic(() => import('./BoxPlot'), {
+    loading: () => <div>Loading plot...</div>
+});
+
+const HeatMap = dynamic(() => import('./HeatMap'), {
+    loading: () => <div>Loading plot...</div>
+});
+
 interface PlotLoaderProps {
     plotId: string;
     className?: string;
     colors?: string[];
+    columns?: string[];
     referenceX?: number | string;
 }
 
-type PlotType = 'line' | 'scatter' | 'bar' | 'stacked-bar' | 'stacked-line' | 'table';
+type PlotType = 'line' | 'scatter' | 'bar' | 'grouped-bar' | 'stacked-bar' | 'stacked-line' | 'table' | 'box' | 'heatmap';
 
 const plotComponents = {
     line: LinePlot,
     scatter: ScatterPlot,
     bar: BarPlot,
+    'grouped-bar': GroupedBarPlot,
     'stacked-bar': StackedBarPlot,
     'stacked-line': StackedLinePlot,
-    table: Table
+    table: Table,
+    box: Box,
+    heatmap: HeatMap
 } as const;
 
-export function PlotLoader({ plotId, className, colors, referenceX }: PlotLoaderProps) {
+export function PlotLoader({ plotId, className, colors, columns, referenceX }: PlotLoaderProps) {
     const plotData = usePlotData(plotId);
 
     if (!plotData) {
@@ -69,5 +85,5 @@ export function PlotLoader({ plotId, className, colors, referenceX }: PlotLoader
         );
     }
 
-    return <PlotComponent plotData={plotData} className={className} colors={colors} referenceX={referenceX} />;
+    return <PlotComponent plotData={plotData} className={className} colors={colors} columns={columns} referenceX={referenceX} />;
 }

@@ -2,6 +2,7 @@ import { ArticleLayout } from '@/components/layouts/ArticleLayout';
 import { getArticleBySlug, getAllArticles } from '@/lib/articles';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { PlotLoader } from '@/components/plots/PlotLoader';
+import LatexRenderer from '@/components/plots/LatexRenderer';
 import { ImageLoader } from '@/components/images/ImageLoader';
 import { ArticlePlotsProvider } from '@/contexts/ArticlePlotsContext';
 import { notFound } from 'next/navigation';
@@ -38,6 +39,7 @@ interface ArticlePageProps {
 const components = {
     PlotLoader,
     ImageLoader,
+    LatexRenderer,
     // Add proper heading styles
     h1: (props: any) => <h1 className="text-3xl font-bold mt-8 mb-4" {...props} />,
     h2: (props: any) => <h2 className="text-2xl font-bold mt-8 mb-4" {...props} />,

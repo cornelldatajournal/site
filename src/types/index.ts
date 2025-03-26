@@ -46,7 +46,7 @@ export interface MultimediaArticle extends BaseArticle {
     gallery?: ImageData[];
 }
 
-export type PlotType = 'line' | 'scatter' | 'bar' | 'pie' | 'stacked-bar' | 'stacked-line' | 'table';
+export type PlotType = 'line' | 'scatter' | 'bar' | 'grouped-bar' | 'pie' | 'stacked-bar' | 'stacked-line' | 'table' | 'box' | 'heatmap';
 
 export interface PlotData {
     id: string;
@@ -57,7 +57,18 @@ export interface PlotData {
         yAxis: string;
         title?: string;
         colorKey?: string;
-        [key: string]: string | number | undefined;
+        xAxisMin?: number;
+        xAxisMax?: number;
+        yAxisMin?: number;
+        yAxisMax?: number;
+        xLabelUp?: boolean;
+        seriesKeys?: string[];
+        seriesNames?: string[];
+        colors?: string[];
+        colorAxis?: string;
+        colorMin?: number;
+        colorMax?: number;
+        [key: string]: string | number | boolean | string[] | undefined;
     };
 }
 

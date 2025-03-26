@@ -10,6 +10,7 @@ interface ArticleLayoutProps {
 interface Reference {
   id: string;
   text: string;
+  initialPosition: number;
 }
 
 export function ArticleLayout({ article, children }: ArticleLayoutProps) {
@@ -17,13 +18,66 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
   const articleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Find all footnote references in the content
+    // Early return if articleRef is not available
+    if (!articleRef.current) return;
+
+    // Safely get the article rectangle
+    const articleRect = articleRef.current.getBoundingClientRect();
+
+    // Calculate initial positions for all references
     const footnotes = document.querySelectorAll('[id^="user-content-fn-"]');
-    const refs = Array.from(footnotes).map((footnote) => ({
-      id: footnote.id.replace('user-content-fn-', ''),
-      text: (footnote.textContent || '').replace('↩', ''),
-    }));
-    setReferences(refs);
+    const refs: Reference[] = Array.from(footnotes)
+      .map((footnote) => {
+        const id = footnote.id.replace('user-content-fn-', '');
+        
+        // Safely find the reference element
+        const referenceElement = articleRef.current
+          ? articleRef.current.querySelector(`[id^="user-content-fnref-${id}"]`)
+          : null;
+        
+        let initialPosition = 0;
+        if (referenceElement) {
+          const elementRect = referenceElement.getBoundingClientRect();
+          initialPosition = elementRect.top - articleRect.top;
+        }
+
+        return {
+          id,
+          text: (footnote.textContent || '').replace('↩', ''),
+          initialPosition
+        };
+      })
+      .filter(ref => ref.text.trim() !== ''); // Remove any empty references
+
+    // Comprehensive overlap resolution
+    const VERTICAL_SPACING = 150;
+    const adjustedRefs: Reference[] = [];
+
+    for (const ref of refs) {
+      let finalPosition = ref.initialPosition;
+      let isOverlapping = true;
+      let iterationCount = 0;
+
+      while (isOverlapping && iterationCount < 100) {
+        // Check against all previously positioned references
+        isOverlapping = adjustedRefs.some(adjustedRef => 
+          Math.abs(adjustedRef.initialPosition - finalPosition) < VERTICAL_SPACING
+        );
+
+        if (isOverlapping) {
+          finalPosition += VERTICAL_SPACING;
+        }
+
+        iterationCount++;
+      }
+
+      adjustedRefs.push({
+        ...ref,
+        initialPosition: finalPosition
+      });
+    }
+
+    setReferences(adjustedRefs);
 
     // Add click handlers to footnote references
     const refLinks = document.querySelectorAll('a[href^="#user-content-fn-"]');
@@ -42,15 +96,6 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const getReferencePosition = (id: string) => {
-    if (!articleRef.current) return 0;
-    const element = articleRef.current.querySelector(`[id^="user-content-fnref-${id}"]`);
-    if (!element) return 0;
-    const articleRect = articleRef.current.getBoundingClientRect();
-    const elementRect = element.getBoundingClientRect();
-    return elementRect.top - articleRect.top;
-  };
 
   return (
     <div className="flex justify-center min-h-screen relative">
@@ -121,7 +166,7 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
                   key={ref.id}
                   style={{
                     position: 'absolute',
-                    top: getReferencePosition(ref.id),
+                    top: ref.initialPosition,
                     width: '100%'
                   }}
                   className="p-3 rounded-lg font-space-mono text-[12px]"
