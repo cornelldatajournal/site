@@ -29,9 +29,9 @@ export default function BarPlot({ plotData, className }: BarPlotProps) {
                 <text 
                     x={0} 
                     y={0} 
-                    dy={-5} 
+                    dy={10} 
                     textAnchor="start" 
-                    transform="rotate(90)"
+                    transform="rotate(45)"
                     fontSize={12}
                 >
                     {payload.value}
