@@ -47,6 +47,9 @@ export default function BarPlot({ plotData, className }: BarPlotProps) {
     // Default colors if not provided in data
     const defaultColors = ['#8884d8', '#82ca9d', '#ffc658', '#ff8042', '#0088fe'];
 
+    // Calculate bottom margin based on whether xLabelUp is true
+    const bottomMargin = config.xLabelUp ? 150 : 40;
+
     return (
         <div className={`w-full h-[400px] ${className}`}>
             {config.title && (
@@ -57,9 +60,9 @@ export default function BarPlot({ plotData, className }: BarPlotProps) {
             <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                     data={data}
-                    margin={{ top: 20, right: 30, left: 50, bottom: config.xLabelUp ? 50 : 30 }}
-                    barSize={30} // Fixed barSize regardless of xLabelUp
-                    barGap={5}   // Fixed barGap regardless of xLabelUp
+                    margin={{ top: 20, right: 30, left: 50, bottom: bottomMargin }}
+                    barSize={30}
+                    barGap={5}
                     className="w-full"
                 >
                     <CartesianGrid strokeDasharray="3 3" />
@@ -67,16 +70,15 @@ export default function BarPlot({ plotData, className }: BarPlotProps) {
                         dataKey={config.xAxis}
                         label={{ 
                             value: config.xAxis?.replace(/_/g, ' ') || '', 
-                            position: 'insideBottom', 
-                            offset: -5,
-                            dy: config.xLabelUp ? 10 : 10 
+                            position: 'bottom', // <-- Changed from 'insideBottom' to 'bottom'
+                            dy: config.xLabelUp ? 50 : 0 
                         }}
                         domain={config.xAxisMin !== undefined && config.xAxisMax !== undefined 
                             ? [config.xAxisMin, config.xAxisMax] 
                             : ['auto', 'auto']}
                         tick={config.xLabelUp ? CustomXAxisTick : undefined}
-                        height={config.xLabelUp ? 110 : 40}
-                        interval={0} // Show all ticks, no skipping
+                        height={config.xLabelUp ? 120 : 50}
+                        interval={0}
                         padding={{ left: 10, right: 10 }}
                     />
                     <YAxis
