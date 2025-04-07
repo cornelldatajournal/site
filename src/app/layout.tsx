@@ -183,10 +183,10 @@ export default function RootLayout({
                 Politics
               </Link>
               <Link
-                href="/sections/sports"
+                href="/sections/finance"
                 className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
               >
-                Sports
+                Finance
               </Link>
               <Link
                 href="/sections/health"
