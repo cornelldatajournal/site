@@ -17,14 +17,16 @@ interface GroupedBarPlotProps {
     plotData: PlotData;
     className?: string;
     colors?: string[];
-    columns?: string[] | undefined; // Array of column names to highlight
+    columns?: number[] | undefined; // Array of column names to highlight
 }
 
 export default function GroupedBarPlot({ plotData, className, colors, columns }: GroupedBarPlotProps) {
     const { data, config } = plotData;
 
     // Ensure columns is always an array
+    // console.log("Columns: " + columns);
     const safeColumns = Array.isArray(columns) ? columns : [];
+    // console.log("Safe Columns: " + safeColumns);
 
     // Custom tick component for vertical labels (bottom-up orientation)
     const CustomXAxisTick = (props: any) => {
@@ -35,9 +37,9 @@ export default function GroupedBarPlot({ plotData, className, colors, columns }:
                 <text 
                     x={0} 
                     y={0} 
-                    dy={-5} 
+                    dy={10} 
                     textAnchor="start" 
-                    transform="rotate(90)"
+                    transform="rotate(45)"
                     fontSize={12}
                 >
                     {payload.value}

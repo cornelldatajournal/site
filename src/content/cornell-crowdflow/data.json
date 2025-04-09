@@ -1,0 +1,168 @@
+{
+    "majors": [
+        {
+            "Major" : "Statistical Science",
+            "Frequency" : 4
+        },
+        {
+            "Major" : "Mechanical Engineering",
+            "Frequency" : 4
+        },
+        {
+            "Major" : "Information Science",
+            "Frequency" : 13
+        },
+        {
+            "Major" : "Hotel Administration",
+            "Frequency" : 6
+        },
+        {
+            "Major" : "Economics",
+            "Frequency" : 6
+        },
+        {
+            "Major" : "Computer Science",
+            "Frequency" : 14
+        },
+        {
+            "Major" : "Communication",
+            "Frequency" : 3
+        },
+        {
+            "Major" : "Biometry & Statistics",
+            "Frequency" : 3
+        },
+        {
+            "Major" : "Biological Sciences",
+            "Frequency" : 4
+        },
+        {
+            "Major" : "Applied Economics & Management",
+            "Frequency" : 4
+        }
+    ],
+    "colleges": [
+        {
+            "College" : "School of Industrial and Labor Relations",
+            "Frequency" : 4
+        },
+        {
+            "College" : "SC Johnson College of Business",
+            "Frequency" : 8
+        },
+        {
+            "College" : "Jeb E. Brooks School of Public Policy",
+            "Frequency" : 1
+        },
+        {
+            "College" : "College of Human Ecology",
+            "Frequency" : 2
+        },
+        {
+            "College" : "College of Engineering",
+            "Frequency" : 18
+        },
+        {
+            "College" : "College of Arts & Sciences",
+            "Frequency" : 33
+        },
+        {
+            "College" : "College of Art, Architecture, and Planning (AAP)",
+            "Frequency" : 2
+        },
+        {
+            "College" : "College of Agriculture and Life Sciences (CALS)",
+            "Frequency" : 22
+        }
+    ],
+    "years": [
+        {
+            "Graduation Year" : "2024",
+            "Frequency" : 15
+        },
+        {
+            "Graduation Year" : "2025",
+            "Frequency" : 26
+        },
+        {
+            "Graduation Year" : "2026",
+            "Frequency" : 34
+        },
+        {
+            "Graduation Year" : "2027",
+            "Frequency" : 13
+        },
+        {
+            "Graduation Year" : "Graduate",
+            "Frequency" : 2
+        }
+    ],
+    "social": [
+        {
+            "x": 32.5,
+            "y": 81.5,
+            "description": "The hub of the engineering population, no wonder they’re planning to install showers in the next renovation."
+        },
+        {
+            "x": 50.85,
+            "y": 60.77,
+            "description": "Where else can you sip coffee, contemplate farming, and try ten different types of seating all in one place?"
+        },
+        {
+            "x": 20.5,
+            "y": 65.5,
+            "description": "Party on the bottom, business at the top."
+        }
+    ],
+    "leisure": [
+        {
+            "x": 24,
+            "y": 54,
+            "description": "Whether you’re visiting Zeus, or eating at the desks upstairs when Zeus is full, Goldwin-Smith is the place where you tell yourself you’re going to study, but end up yapping with friends instead."
+        },
+        {
+            "x": 21,
+            "y": 62.5,
+            "description": "The first on the list of 161 things every Cornellian should do."
+        },
+        {
+            "x": 16,
+            "y": 69,
+            "description": "A testament to Cornellians' commitment to holistic well-being!"
+        }
+    ],
+    "study": [
+        {
+            "x": 27,
+            "y": 65.5,
+            "description": "The scholarly epicenter, featuring the infamous ‘stacks’, where Cornellians spend prelim season “immersing themselves in the pursuit of knowledge”."
+        },
+        {
+            "x": 19.5,
+            "y": 60.77,
+            "description": "Where you head over when Olin Library and Libe have no more seats! Also home to the iconic Harry Potter Library."
+        },
+        {
+            "x": 51.5,
+            "y": 58,
+            "description": "Hidden all the way in the ag quad, Mann may not be the easiest library to get to but it sure does have fun chairs."
+        }
+    ],
+    "eat": [
+        {
+            "x": 24.5,
+            "y": 68,
+            "description": "After interacting with the lovely Okenshields staff, you will never refer to this infamous dining hall as the ‘worst’ again."
+        },
+        {
+            "x": 43.75,
+            "y": 24.75,
+            "description": "A popular alternative, offering an unlimited stir fry supply."
+        },
+        {
+            "x": 13.5,
+            "y": 65,
+            "description": "How fast can you speed walk up the slope to get to your next lecture, with a stomach full of tacomania?"
+        }
+    ]
+}
