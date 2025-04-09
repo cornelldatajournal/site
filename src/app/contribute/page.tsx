@@ -18,7 +18,7 @@ export default function GetInvolvedPage() {
                 </p>
             </section>
 
-            <section className="mb-16 bg-[#3E32BA] text-white rounded-lg p-6 shadow-lg">
+            {/* <section className="mb-16 bg-[#3E32BA] text-white rounded-lg p-6 shadow-lg">
                 <p className="font-space-grotesk text-lg font-bold">
                     🎉 Spring 2025 Applications Now Open! 🎉
                 </p>
@@ -31,7 +31,7 @@ export default function GetInvolvedPage() {
                 <p className="font-space-grotesk mt-4 text-sm">
                     CDJ accepts (and welcomes!) students at Cornell from all backgrounds, majors, and levels of experience. We prioritize learning and exposure to the disciplines of data science, data visualization, and data journalism. Please do not hesitate to apply, even if you have no formal background in those fields—there is a place for everyone in CDJ!
                 </p>
-            </section>
+            </section> */}
 
             <section className="mb-16">
                 <h2 className="text-2xl font-eb-garamond mb-6">Newsletter Signup</h2>
