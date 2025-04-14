@@ -38,15 +38,19 @@ const HeatMap = dynamic(() => import('./HeatMap'), {
     loading: () => <div>Loading plot...</div>
 });
 
+const ButtonImage = dynamic(() => import('./ButtonImage'), {
+    loading: () => <div>Loading plot...</div>
+});
+
 interface PlotLoaderProps {
     plotId: string;
     className?: string;
     colors?: string[];
-    columns?: string[];
+    columns?: number[];
     referenceX?: number | string;
 }
 
-type PlotType = 'line' | 'scatter' | 'bar' | 'grouped-bar' | 'stacked-bar' | 'stacked-line' | 'table' | 'box' | 'heatmap';
+type PlotType = 'line' | 'scatter' | 'bar' | 'grouped-bar' | 'stacked-bar' | 'stacked-line' | 'table' | 'box' | 'heatmap' | 'button-image';
 
 const plotComponents = {
     line: LinePlot,
@@ -57,7 +61,8 @@ const plotComponents = {
     'stacked-line': StackedLinePlot,
     table: Table,
     box: Box,
-    heatmap: HeatMap
+    heatmap: HeatMap,
+    'button-image': ButtonImage
 } as const;
 
 export function PlotLoader({ plotId, className, colors, columns, referenceX }: PlotLoaderProps) {
@@ -84,6 +89,8 @@ export function PlotLoader({ plotId, className, colors, columns, referenceX }: P
             </div>
         );
     }
+
+    // console.log("Columns: " + columns);
 
     return <PlotComponent plotData={plotData} className={className} colors={colors} columns={columns} referenceX={referenceX} />;
 }
