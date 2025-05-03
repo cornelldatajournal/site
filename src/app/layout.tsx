@@ -7,7 +7,6 @@ import cdjicon from "../../public/cdj_icon.png";
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Analytics } from '@vercel/analytics/next';
 
 const spaceMono = Space_Mono({
   subsets: ['latin'],
@@ -289,7 +288,6 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
-        <Analytics />
       </body>
     </html>
   );
