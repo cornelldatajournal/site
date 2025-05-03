@@ -47,11 +47,11 @@ export const articlePlots: ArticlePlots = {
       data: Seasonality.seasonality_index,
       config: {
         xAxis: "Month",
-        yAxis: "Monthly_Returns (Averaged)",
+        yAxis: "Monthly_Returns",
         title: "Mean Returns Comparison",
         seriesKeys: ["SP500", "Dow_Jones", "NASDAQ", "Russell", "Consumer_Disc", "Tech_Sect"],
         seriesNames: ["S&P 500", "Dow Jones", "NASDAQ", "Russell", "Consumer Disc.", "Technology"], 
-        xLabelUp: false,
+        xLabelUp: true,
         yAxisMin: -0.2,
         yAxisMax: 0.4
       }
