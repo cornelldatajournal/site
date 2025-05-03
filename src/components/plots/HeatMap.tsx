@@ -146,7 +146,7 @@ export default function Heatmap({ plotData, className, colors, cellSize = { widt
                     dx={-20} 
                     dy={-5} 
                     textAnchor="start" 
-                    transform="rotate(90)"
+                    transform="rotate(45)"
                     fontSize={12}
                 >
                     {payload.value}

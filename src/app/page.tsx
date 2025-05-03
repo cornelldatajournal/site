@@ -9,13 +9,12 @@ export default async function HomePage() {
   const articles = await getAllArticles();
   const [latestArticle, ...otherArticles] = articles;
 
-  // Distribute remaining articles across columns
-  const centerColumnCount = Math.floor(otherArticles.length / 3);
-  const sideColumnCount = Math.ceil((otherArticles.length - centerColumnCount) / 2);
+  // Take only the first 8 articles (3 left, 2 center, 3 right)
+  const displayedArticles = otherArticles.slice(0, 8);
   
-  const leftColumnArticles = otherArticles.slice(0, sideColumnCount);
-  const centerColumnArticles = otherArticles.slice(sideColumnCount, sideColumnCount + centerColumnCount);
-  const rightColumnArticles = otherArticles.slice(sideColumnCount + centerColumnCount);
+  const leftColumnArticles = displayedArticles.slice(0, 2);
+  const centerColumnArticles = displayedArticles.slice(3, 4);
+  const rightColumnArticles = displayedArticles.slice(5, 7);
 
   const renderArticle = async (article: BaseArticle, isFeatured = false) => {
     const articleLink = article.external_link || `/articles/${article.slug}`;
