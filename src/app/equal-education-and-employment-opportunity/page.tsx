@@ -9,8 +9,8 @@ export default function EqualEducationAndEmploymentOpportunityPage() {
           
           <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
             <p>
-              In 1868, Ezra Cornell wrote, "I would found an institution where any person can find instruction in any study." 
-              More than 150 years later, the "... any person ... any study" principle continues to guide the university community. 
+              In 1868, Ezra Cornell wrote, &ldquo;I would found an institution where any person can find instruction in any study.&rdquo; 
+              More than 150 years later, the &ldquo;... any person ... any study&rdquo; principle continues to guide the university community. 
               Cornell welcomes students, faculty, and staff with diverse backgrounds from across the globe to pursue world-class 
               education and career opportunities.
             </p>
@@ -21,7 +21,7 @@ export default function EqualEducationAndEmploymentOpportunityPage() {
               not limited to, such factors as race, ethnic or national origin, citizenship and immigration status, color, sex, 
               pregnancy or pregnancy-related conditions, age, creed, religion, actual or perceived disability (including persons 
               associated with such a person), arrest and/or conviction record, military or veteran status, sexual orientation, 
-              gender expression and/or identity, an individual's genetic information, domestic violence victim status, familial 
+              gender expression and/or identity, an individual&rsquo;s genetic information, domestic violence victim status, familial 
               status, marital status, or any other characteristic protected by applicable federal, state, or local law.
             </p>
             
@@ -30,7 +30,7 @@ export default function EqualEducationAndEmploymentOpportunityPage() {
               that supports students, faculty, and staff of all identities and backgrounds. We hire based on merit, and encourage 
               applications from all qualified individuals, including people from underrepresented and/or marginalized identities. 
               Consistent with federal law, Cornell engages in affirmative action in employment for qualified protected veterans 
-              as defined in the Vietnam Era Veterans' Readjustment Assistance Act (VEVRRA) and qualified individuals with 
+              as defined in the Vietnam Era Veterans&rsquo; Readjustment Assistance Act (VEVRRA) and qualified individuals with 
               disabilities under Section 503 of the Rehabilitation Act. Cornell also recognizes a lawful preference in employment 
               practices for Native Americans living on or near Indian reservations in accordance with applicable law.
             </p>
