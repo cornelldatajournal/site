@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { NewspaperIcon, UsersIcon, ChartBarIcon, RocketLaunchIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutPage() {
     const companies = [
@@ -138,6 +139,15 @@ export default function AboutPage() {
                         </div>
                     ))}
                 </div>
+            </div>
+
+            {/* Equal Opportunity Statement */}
+            <div className="text-center mt-16 pt-8 border-t border-neutral-200 dark:border-neutral-800">
+                <p className="text-neutral-500 dark:text-neutral-400 font-space-grotesk text-xs">
+                    <Link href="/equal-education-and-employment-opportunity" className="text-blue-600 hover:underline">
+                        Equal Education and Employment Opportunity Statement
+                    </Link>
+                </p>
             </div>
         </main>
     );
