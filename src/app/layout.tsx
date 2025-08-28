@@ -283,7 +283,7 @@ export default function RootLayout({
             {/* Copyright */}
             <div className="mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800">
               <p className="text-center text-neutral-600 dark:text-neutral-400 font-space-mono text-sm">
-                Copyright {new Date().getFullYear()} Cornell Data Journal. All rights reserved. | This organization is a registered student organization of <a href="https://www.cornell.edu" target="_blank" rel="noopener noreferrer" className="underline hover:text-neutral-900 dark:hover:text-neutral-100">Cornell University</a>.
+                Copyright {new Date().getFullYear()} Cornell Data Journal. All rights reserved. | This organization is a registered student organization of <a href="https://www.cornell.edu" target="_blank" rel="noopener noreferrer" className="underline hover:text-neutral-900 dark:hover:text-neutral-100">Cornell University</a>. | <a href="https://hr.cornell.edu/about/workplace-rights/equal-education-and-employment" target="_blank" rel="noopener noreferrer" className="underline hover:text-neutral-900 dark:hover:text-neutral-100">&quot;Equal Education & Employment&quot;</a>
               </p>
             </div>
           </div>
