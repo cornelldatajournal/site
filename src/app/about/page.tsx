@@ -28,7 +28,7 @@ export default function AboutPage() {
                 <div className="max-w-2xl mx-auto">
                     <h2 className="text-2xl font-space-mono font-medium text-[#3E32BA] mb-2">Radical Candor</h2>
                     <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm">
-                        Like that friend who tells you the prelim average was 47 with no curve
+                        Uncovering raw truths about the world around us.
                     </p>
                 </div>
             </div>
@@ -40,7 +40,7 @@ export default function AboutPage() {
                         <h1 className="font-eb-garamond text-2xl">What is <i>CDJ</i>?</h1>
                     </CardHeader>
                     <CardContent className="font-space-grotesk">
-                        Founded in Fall 2020, and revived in Spring 2023, the <i>Cornell Data Journal</i> is an online investigative journalism publication featuring data visualization, data communication, and interdisciplinary research pieces. Check out our <a href="https://cdj-bqfrtnkmv-cornell-data-journals-projects.vercel.app/" className="text-blue-600 hover:underline">archived website</a> from 2020-2024.
+                        Founded in Fall 2020 and revived in Spring 2023, the <i>Cornell Data Journal</i> is an online investigative journalism publication featuring data visualization, data communication, and interdisciplinary research pieces. Check out our <a href="https://cdj-bqfrtnkmv-cornell-data-journals-projects.vercel.app/" className="text-blue-600 hover:underline">archived website</a> from 2020-2024.
                     </CardContent>
                 </Card>
 
@@ -49,7 +49,7 @@ export default function AboutPage() {
                         <h1 className="font-eb-garamond text-2xl">What is Data Journalism?</h1>
                     </CardHeader>
                     <CardContent className="font-space-grotesk">
-                        Data journalism combines data, visual, and narrative reporting into digital stories. Examples include isometric illustrations, statistical explorations, and interactive essays.
+                        Data journalism combines data, visual, and narrative reporting into digital stories. This includes statistical modelling, interactive essays, and succinct visualizations.
                     </CardContent>
                 </Card>
             </div>

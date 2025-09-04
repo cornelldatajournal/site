@@ -19,6 +19,7 @@ export interface BaseArticle {
     external_link: string;
     drop_cap: boolean;
     layout?: 'default' | 'image' | 'quote' | 'plot' | 'link' | 'custom';
+    order: number; // if order is -1 then the article is hidden
 }
 
 /* export interface ImageData extends BaseArticle {
