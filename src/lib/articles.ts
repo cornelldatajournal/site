@@ -29,7 +29,8 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
             featured_plot: data.featured_plot,
             external_link: data.external_link,
             drop_cap: data.drop_cap,
-            layout: data.layout
+            layout: data.layout,
+            order: data.order // if order is -1 then the article is hidden
         };
     } catch (error) {
         console.error(`Error loading article ${slug}:`, error);
@@ -68,11 +69,12 @@ export async function getAllArticles(): Promise<Article[]> {
             })
         );
 
-        // Sort articles by date, most recent first
+        // Sort articles by given order, HIGHEST NUMBER IS FIRST
         return articles
             .filter((article): article is Article => article !== null)
+            .filter((article) => article.order !== -1)
             .sort((a, b) =>
-                new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+                b.order - a.order
             );
     } catch (error) {
         console.error('Error loading articles:', error);

@@ -560,9 +560,12 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
         <div className="flex flex-col items-center">
             <div className={`relative w-full aspect-square rounded-lg mb-3 ${member.color} flex items-center justify-center overflow-hidden`}>
                 <div ref={avatarRef}>
-                    <Avatar className="w-20 h-20">
-                        <AvatarImage src={`${member.image}`} alt={member.name} />
+                    <Avatar className="z-10 w-20 h-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <AvatarImage className="object-contain" src={`${member.image}`} alt={member.name} />
                         <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                    </Avatar>
+                    <Avatar className="z-5 w-20 h-20 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <AvatarImage className="blur-sm" src={`${member.image}`} alt={member.name} />
                     </Avatar>
                 </div>
                 <div
