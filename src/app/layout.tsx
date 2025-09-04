@@ -49,6 +49,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable}`}>
+      <head>
+        <link rel="icon" href="cdj_icon_1.png"/>
+        <title>Cornell Data Journal</title></head>
       <body className="bg-white dark:bg-black text-black dark:text-white min-h-screen">
         {/* Top Banner */}
         <div className="bg-[#3E32BA] text-white py-2">
@@ -164,12 +167,12 @@ export default function RootLayout({
         <div className="bg-neutral-100 dark:bg-neutral-900 border-b border-neutral-200 dark:border-neutral-800">
           <div className="container max-w-8xl mx-auto px-4 py-3">
             <nav className="flex flex-wrap justify-center gap-6">
-            <Link
-              href="/sections/environment"
-              className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
-            >
-              Environment
-            </Link>
+              <Link
+                href="/sections/environment"
+                className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
+              >
+                Environment
+              </Link>
               <Link
                 href="/sections/culture"
                 className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"

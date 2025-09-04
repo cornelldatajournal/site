@@ -8,6 +8,10 @@ import { ArticlePlotsProvider } from '@/contexts/ArticlePlotsContext';
 export default async function HomePage() {
   const articles = await getAllArticles();
   const [latestArticle, ...otherArticles] = articles;
+<<<<<<< Updated upstream
+=======
+  // console.log(articles)
+>>>>>>> Stashed changes
 
   // Take only the first 8 articles (3 left, 2 center, 3 right)
   const displayedArticles = otherArticles.slice(0, 8);
