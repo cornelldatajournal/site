@@ -8,13 +8,15 @@ import { ArticlePlotsProvider } from '@/contexts/ArticlePlotsContext';
 export default async function HomePage() {
   const articles = await getAllArticles();
   const [latestArticle, ...otherArticles] = articles;
+  console.log(articles)
 
   // Take only the first 8 articles (3 left, 2 center, 3 right)
+  // Above and below can be changed as need be
   const displayedArticles = otherArticles.slice(0, 8);
   
-  const leftColumnArticles = displayedArticles.slice(0, 2);
+  const leftColumnArticles = displayedArticles.slice(0, 3);
   const centerColumnArticles = displayedArticles.slice(3, 4);
-  const rightColumnArticles = displayedArticles.slice(5, 7);
+  const rightColumnArticles = displayedArticles.slice(4, 8);
 
   const renderArticle = async (article: BaseArticle, isFeatured = false) => {
     const articleLink = article.external_link || `/articles/${article.slug}`;
@@ -45,7 +47,7 @@ export default async function HomePage() {
     else if (article.layout === 'quote') {
       return (
         <div className="mb-4">
-          <div className="text-sm text-black dark:text-neutral-400 mb-2 font-space-mono uppercase font-bold">
+          <div className="text-sm text-black dark:text-neutral-400 mb-2 mt-3 font-space-mono uppercase font-bold">
             {article.section}
           </div>
           <Link href={articleLink}>
@@ -152,7 +154,7 @@ export default async function HomePage() {
             )}
             {/* Additional Center Column Articles */}
             {centerColumnArticles.map(article => (
-              <div key={article.slug} className="border-b pb-8 border-neutral-200 dark:border-neutral-800">
+              <div key={article.slug} className="border-b pb-8 mt-8 border-neutral-200 dark:border-neutral-800">
                 {renderArticle(article, false)}
               </div>
             ))}
