@@ -50,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable}`}>
       <head>
-        <link rel="icon" href="cdj_icon_1.png"/>
+        <link rel="icon" href="cdj_icon.png"/>
         <title>Cornell Data Journal</title></head>
       <body className="bg-white dark:bg-black text-black dark:text-white min-h-screen">
         {/* Top Banner */}
