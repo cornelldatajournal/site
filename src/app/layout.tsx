@@ -54,7 +54,7 @@ export default function RootLayout({
         <link rel="icon" href="cdj_icon.png" />
         <title>Cornell Data Journal</title></head>
       <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-NT21TJWDVV"></Script>
-      <Script strategy="afterInteractive">
+      <Script id="google-analytics" strategy="afterInteractive">
         {`
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
