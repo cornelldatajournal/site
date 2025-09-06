@@ -7,6 +7,7 @@ import cdjicon from "../../public/cdj_icon.png";
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import Script from 'next/script'
 
 const spaceMono = Space_Mono({
   subsets: ['latin'],
@@ -50,8 +51,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable}`}>
       <head>
-        <link rel="icon" href="cdj_icon.png"/>
+        <link rel="icon" href="cdj_icon.png" />
         <title>Cornell Data Journal</title></head>
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-NT21TJWDVV"></Script>
+      <Script strategy="afterInteractive">
+        {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NT21TJWDVV');
+        `}
+      </Script>
       <body className="bg-white dark:bg-black text-black dark:text-white min-h-screen">
         {/* Top Banner */}
         <div className="bg-[#3E32BA] text-white py-2">
