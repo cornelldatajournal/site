@@ -14,8 +14,8 @@ export default async function HomePage() {
   const displayedArticles = otherArticles.slice(0, 8);
   
   const leftColumnArticles = displayedArticles.slice(0, 3);
-  const centerColumnArticles = displayedArticles.slice(3, 4);
-  const rightColumnArticles = displayedArticles.slice(4, 8);
+  const centerColumnArticles = displayedArticles.slice(3, 5);
+  const rightColumnArticles = displayedArticles.slice(5, 8);
 
   const renderArticle = async (article: BaseArticle, isFeatured = false) => {
     const articleLink = article.external_link || `/articles/${article.slug}`;

@@ -1,0 +1,187 @@
+---
+title: "From Stop to Diploma: Transportation’s Role in Graduation"
+description: "The commute to school is an often overlooked factor in a student’s educational outcome. We analyzed data provided by New York City and the Department of Education to explore links between transportation factors and high school graduation rates."
+author: ["Tianyi Chen", "Ricky Cheng", "Emi Labbe", "Arnav Shah", "Stella Zhang"]
+editors: ["Jenny Williams"]
+publishedDate: "2025-09-05"
+section: "Politics"
+image_path: "public/images/SP25Transportation_fig_1.png"
+layout: "image"
+order: 8
+---
+
+<ImageLoader
+    imagePath="public/images/SP25Transportation_fig_0.png"
+        alt="Titular image of a bus"
+/>
+
+>For Radeha, the **commute** from Queens to Bronx Science was a big difference from her experience in middle school, when she attended a zoned school about five blocks from her home. To get to high school now, she leaves the house by 6:20 a.m. each day to ensure she’s on time, taking the R train into Manhattan, then transferring to the 4 train. During her freshman year, when after-school activities ended at 6 p.m., it meant she wouldn’t get home until at least 7 p.m., leaving her just a few hours before bed for homework... [^1]
+
+**Stories like Radeha’s illustrate how transportation burdens fall unevenly across students and impact their academics — a dynamic we set out to examine through citywide data.**
+
+We asked ourselves, does transportation affect *high school* graduation rates? Roughly eighty-nine percent of students from well-off families enroll in college, as compared to only fifty-one percent of students from low-income families. High school graduation rates across the New York City boroughs may reveal deeper disparities in the quality of public transportation and education outcomes. Luckily, NYC and the US Department of Education published two comprehensive datasets on [transportation sites](https://data.cityofnewyork.us/Transportation/Transportation-Sites/hg3c-2jsy/about_data) in the city, as well as NYC high school [graduation results](https://infohub.nyced.org/reports/academics/graduation-results). We took a data dive into these two datasets to explore the potential connections between various transportation factors and public, 4-year high school graduation rates.  
+
+## Mapping the Data: Graduation Rates Across NYC’s Boroughs
+
+We thought that if students had better access to bus services, graduation rates would go up. The idea was that free transportation could ease some of the time and money pressures on families, making it easier for students to get to school regularly. 
+
+The maps below show graduation rates and how available bus programs are in five different areas. But the patterns don’t quite line up the way we expected. For example, even though Manhattan doesn’t have many bus services, it still has a pretty high graduation rate. On the other hand, the Bronx has more schools offering bus services than some other regions, but it still has the lowest average graduation rate.
+
+<ImageLoader
+    imagePath="public/images/SP25Transportation_Map_1.2.png"
+        alt="Fig 1.2. Map of Availability of Stop-to-School Bus Programs for High Schools Across Five Regions"
+/>
+
+Fig 1.1. Map of Availability of Stop-to-School Bus Programs for High Schools Across Five Regions.
+*All numbers are in percentages (proportion of services out of total locations of service).*
+
+
+<ImageLoader
+    imagePath="public/images/SP25Transportation_Map_1.1.png"
+        alt="Fig 1.1. Map of Average Graduation Rates of 4-Year Programs Across Five Regions."
+/>
+
+Fig 1.2. Map of Average Graduation Rates of 4-Year Programs Across Five Regions. 
+*All numbers are in percentages.*
+
+<ImageLoader
+    imagePath="public/images/SP25Transportation_Map_1.3.png"
+    alt="Fig 1.3. Map of Availability of Door-to-Door Bus Programs for High Schools Across Five Regions"
+/>
+
+Fig 1.3. Map of Availability of Door-to-Door Bus Programs for High Schools Across Five Regions.
+*All numbers are in percentages (proportion of services out of total locations of service).*
+
+Other factors—like public infrastructure, school costs, safety, and the overall economic situation in a region—might also influence graduation rates. So, moving forward, we’re digging deeper into these kinds of things to see what else might be affecting whether students graduate or not. We’re also looking into other details, like what month students tend to graduate.
+
+<ImageLoader
+    imagePath="public/images/SP25Transportation_BarChart_2.1.png"
+    alt="Fig 2.1. Bar Chart of Graduation vs. Dropout Rate by Borough "
+/>
+
+Fig 2.1. Bar Chart of Graduation vs. Dropout Rate by Borough.
+*All numbers are in percentages.*
+
+Regionally, these economic and social factors have caused graduation rates to vary within boroughs, too. Each NYC Borough contains neighborhoods that look completely different when it comes to the environment students grow up in. Take Manhattan, for example: The Upper East Side has a median household income that is nearly twice that of neighborhoods just north of 9th street, such as Harlem and Washington Heights [^2]. Those income gaps show up in the classroom, whether through outdated textbooks, fewer counselors to support students, or less after-school programs and activities. 
+
+Students in lower income communities face challenges beyond academics. Some are balancing school with part-time jobs to support their families. Others might deal with food insecurity, unreliable transportation, or even unstable housing. All of this adds up. Missing a bus or losing internet access at home can quickly turn into missed classes, falling behind on assignments, and eventually falling off the path to graduation. 
+
+Communities built off wealth have accessibility to better resources and programs that help reduce the external struggles for students with many already facing less internal struggles compared to those in lower income neighborhoods. 
+
+Access to services depends heavily on how the NYS Education Department allocates funding to districts and a multitude of demands students from marginalized communities face. This can further factor into students not graduating on a typical 4 year timeline. 
+
+## Who Graduates in June vs. August? 
+
+Another factor regarding graduation we decided to explore was the month which students graduate. Most students in NYC graduate in June. But for some, graduation doesn’t happen until August– why? And does transportation play a role? In the NYC graduation dataset, schools were categorized based on whether they had graduates in June, August, or both. We wanted to see what factors might influence when students graduate, so we combined this data with the ratio of *Stop-to-School* versus *Door-to-Door*[^3] transportation services per graduating cohort per borough. 
+
+At first, results showed no clear patterns. But a closer look revealed a trend between a student having access to Door-to-Door stops and graduating later in August instead of earlier mJune. This suggests that August graduates who were relying on individualized transportation may have faced challenges leading to delayed graduation. Our finding came as a puzzling conclusion, but with further digging with secondary sources on socio-economic factors, we derived a potential explanation. 
+
+In the 2019 – 2020 academic year, the graduation rate for students with disabilities was 71%, far below the national graduation rate of 87%. Furthermore, students with disabilities drop out at over twice the rate as their non-disabled peers[^4]. Door-to-Door transportation primarily serves students with disabilities—many of whom cannot take public transportation and face academic challenges that may delay graduation[^5]. Academic struggles can delay graduation, leading to some schools offering August graduations as a second chance for students to catch up. This would also explain the opposite trend: a positive graduation pattern with a student accessing Stop to School services. Students who are not disabled and do not need to utilize Door-to-Door services may graduate in August for reasons other than academic challenges tied to disabilities, such as due to taking extra credits or merit-based academic programs. 
+
+<ImageLoader
+    imagePath="public/images/SP25Transportation_CorrelationMatrix_3.1.png"
+    alt="Fig 3.1. Correlation Matrix of Door-To-Door/Stop versus June Grads/August Grads"
+/>
+
+Fig 3.1. Correlation Matrix of Door-To-Door/Stop versus June Grads/August Grads.
+*Correlation matrix showing trends between two independent variables (proportion of Door to Door/Stop to School services versus proportion of students graduating in June versus August).*
+
+## The Influence of Transit on Education 
+
+Providing accessible education for students from all backgrounds means more than just what happens inside the classroom. In underfunded neighborhoods, consistent academic support often depends on whether students can physically get to the resources available. Without reliable transportation, even the best after-school programs or tutoring sessions can become out of reach.
+
+Nationwide, about 83 percent of high school students participate in at least one extracurricular activity. Now picture it’s after 6 p.m., and your child just finished a club meeting or tutoring session. They still have to get home, navigating a massive city that relies heavily on public transit. Would you feel confident they’ll make it back safely?
+
+That’s where school-organized transportation makes a difference. When we looked at how after-school transportation relates to graduation outcomes, the data revealed a clear trend. Door-to-Door late-day programs improved graduation rates in 76 out of 100 cases. Stop-to-Stop programs did so 89 out of 100 times. These services give students the ability to stay later for academic help, mentorship, or community-building activities they might otherwise skip.
+
+<ImageLoader
+    imagePath="public/images/SP25Transportation_CorrelationMatrix_4.1.png"
+    alt="Fig. 4.1 Correlation Matrix Exploring Trends between Graduation Rates (proportion by Borough) and After School Programs"
+/>
+
+Fig. 4.1 Correlation Matrix Exploring Trends between Graduation Rates (proportion by Borough) and After School Programs.
+
+The boroughs that offer these programs show stronger graduation rates and fewer delays in student progress. For many students, a reliable ride home means they can access the full range of opportunities their schools offer. It’s not just about getting from point A to point B. It’s about making sure no student is left behind simply because they couldn’t stay a little longer.
+
+<ImageLoader
+    imagePath="public/images/SP25Transportation_SplitBarChart_4.2.png"
+    alt="Fig. 4.2. Split Bar Chart showing Proportion of Bus and After-School Services per Borough "
+/>
+
+Fig. 4.2. Split Bar Chart showing Proportion of Bus and After-School Services per Borough.
+
+Diving deeper into the impacts of the different stop types, we found that Metro boroughs (Manhattan, Brooklyn, Bronx) saw more stop-to-school, while suburban areas (Queens, Staten Island) favored door-to-door pickups.
+
+This trend aligns closely with each borough’s geography. In denser, metro-based areas, door-to-door service is inefficient due to traffic congestion and greater student density per area, making centralized stops more logical. In contrast, more residential boroughs with single-family homes and quieter streets make door-to-door pickup more practical and accessible.
+
+When comparing across cohorts, graduation outcomes were consistent suggesting that the stop services offered don’t directly impact students’ academic success. However, transit can still influence outcomes indirectly. For instance, cities with higher public transit connectivity tend to have a larger ratio of higher-income households. In turn, these families have greater access to resources like tutoring, test prep, and extracurriculars that help students thrive academically.
+
+<ImageLoader
+    imagePath="public/images/SP25Transportation_LineChart_4.3.png"
+    alt="Fig 4.3. Line Chart showing Percentage of Wage Breakdown versus Average Transit Connectivity Index Across U.S. Cities"
+/>
+
+Fig 4.3. Line Chart showing Percentage of Wage Breakdown versus Average Transit Connectivity Index Across U.S. Cities. 
+*Wages are split between low, medium, and high.*
+
+Beyond the scope of education alone, broader transit systems improve economic outcomes and provide benefits that shape students' academic environments. According to Daniel G. Chatman, professor of City & Regional Planning at UC Berkeley, and Robert B. Noland, professor at the Edward J. Bloustein School of Planning and Public Policy at Rutgers University, transit improvements also boost city economies by expanding the labor force and improving job-matching processes and access to training resources to help workers gain higher-paying skills. Ellen Emeric’s, the Board Treasurer of the Oklahoma Chapter of the American Planning Association, TED Talk further emphasizes that public transportation can reduce poverty, decrease inequality, and support vulnerable populations[^6]. Though indirect, these benefits can deeply shape students' lives, like Radeha’s, whether through greater parental financial support, more opportunities to explore interests and personal endeavors, or simply more time to sleep, study, and complete assignments. Graduating is difficult, especially for those who dream of attending a school like Cornell. Yet with every dollar and minute saved through public transit, families bring their children one step closer to achieving what once seemed unattainable — admission to a top-ranked undergraduate program. Success is never guaranteed, but it is comforting to know that public transit is an invisible hand, helping individuals and entire communities reach for a better future.
+
+## Future Stops
+
+> **As of now, “Radeha says she’s adjusted to the ride—her after-school clubs now end earlier, and she tries to do homework on the train, if she can find a seat—she thinks other high schoolers should weigh potential commute times during the application process.”** Access to adequate transportation services remains a priority for NYC high schoolers.
+
+**In short, although bus stop type does not *directly* determine a student’s success, the broader transportation ecosystem plays a vital role in shaping opportunity.** Reliable transit connects families to better jobs, resources, and schools, indirectly influencing educational outcomes by improving the quality of the environment around us, whether through better job access or improved public infrastructure.
+
+Despite this, our analyses reveal compelling evidence that public transportation is one factor that indirectly affects education outcomes in NYC. Most notably, we found correlations between transportation services and graduation timing. August graduation rates are higher for students who have access to Stop-to-School services than for those without. Transportation options decide not only if a student graduates, but when. 
+
+Given the degree to which transportation and the transportation environment affect education outcomes, our next step is to focus on Cornell students and the Tompkins Consolidated Area Transit (TCAT) bus system. To create more equitable educational spaces, future policies should expand access to transportation by adding more after-school options in underserved areas and investing in specialized transportation services. Expanding transportation access—especially in underserved communities—can help more students make the journey from **stop to diploma.**
+
+
+## References
+
+--- Brookings. (n.d.). *College enrollment gaps: How academic preparation influences 
+opportunity*. https://www.brookings.edu/articles/college-enrollment-gaps-how-academic-preparation-influences-opportunity/
+
+--- Chatman, D. G., & Noland, R. B. (2014, June 5). *Increasing public transport provision in 
+metropolitan areas can be of great benefit for wages and employment density*. LSE Blogs. https://blogs.lse.ac.uk/usappblog/2014/06/05/increasing-public-transport-provision-in-metropolitan-areas-can-be-of-great-benefit-for-wages-and-employment-density/
+
+--- Emeric, E. (2017, May 9). Is public transportation the answer? [Video]. YouTube. TEDx 
+Talks. https://www.youtube.com/watch?v=K8D9RXncGZ4&t=100s
+
+--- Evelly, J. (2020, March 10). *Super commuters in sophomore year: The impact of NYC’s longest 
+rides to school.* City Limits. https://citylimits.org/super-commuters-in-sophomore-year-the-impact-of-nycs-longest-rides-to-school/
+
+--- NYU Steinhardt. (n.d.). *How far do NYC students travel to get to school?*
+https://steinhardt.nyu.edu/research-alliance/research/spotlight-nyc-schools/how-far-do-nyc-students-travel-get-school
+
+--- Malone, A., & Rodrigo, S. (2024, March 28). *Student success means all students: Building 
+systems that are inclusive of students with disabilities.* The GRAD Partnership. https://www.gradpartnership.org/student-success-means-all-students/
+
+--- Modeshift. (2024, June 3). *The impact of public transit on the workforce & local economies.* 
+https://www.modeshift.com/thimpact-of-public-transit-on-the-workforce-and-local-economies-us/
+
+--- NYC Department of Education. (n.d.). *Specialized transportation.* NYC Public Schools. 
+https://www.schools.nyc.gov/learning/special-education/supports-and-services/specialized-transportation
+
+--- Taylor, R., & Mitra, R. (2021). Commute satisfaction and its relationship to post-secondary 
+students’ campus participation and success. *Transportation Research Part D: Transport and Environment*, 96, 102890. https://doi.org/10.1016/j.trd.2021.102890
+
+--- NYU Furman Center. (n.d.). *Upper East Side neighborhood profile.*
+https://furmancenter.org/neighborhoods/view/upper-east-side
+
+--- Urban Institute. (n.d.). *Children's environment and behavior: Participation in extracurricular*
+activities.https://www.urban.org/sites/default/files/publication/70131/900869-Children-s-Environment-and-Behavior-Participation-in-Extracurricular-Activities.PDF
+
+
+
+[^1]: Evelly, Jeanmarie. “Super Commuters in Sophomore Year: The Impact of NYC’s Longest Rides to School.” City Limits, March 12, 2020. https://citylimits.org/2020/03/10/super-commuters-in-sophomore-year-the-impact-of-nycs-longest-rides-to-school/.
+
+[^2]: *Upper East Side Neighborhood Profile*. NYU Furman Center. (n.d.). https://furmancenter.org/neighborhoods/view/upper-east-side 
+
+[^3]: Door-to-Door transportation services take students directly from their homes to their educational institution. Stop-to-School, on the other hand, requires students to board their transportation service at a designated location (such as a bus stop, etc.).
+
+[^4]: Malone Rodrigo. (2024, March 28). *Student Success Means All Students*. The GRAD Partnership. https://www.gradpartnership.org/student-success-means-all-students/
+
+[^5]: *Specialized Transportation*. (n.d.). Schools.nyc.gov. Retrieved April 14, 2025, from https://www.schools.nyc.gov/learning/special-education/supports-and-services/specialized-transportation
+
+[^6]: Noland, Robert B. “Increasing Public Transport Provision in Metropolitan Areas Can Be of Great Benefit for Wages and Employment Density,” 2014.
