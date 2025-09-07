@@ -1,0 +1,86 @@
+---
+title: "The NBA Counterparts of WNBA Players"
+description: "We set out to create NBA comparisons for each WNBA player, with the goal of making the women’s league more accessible to NBA fans."
+author: ["Eden Maynard", "Cooper Davis", "Aryan Shah", "Deborah Biru", "Ojas Bharadwaj"]
+editors: ["Nikhil Chinchalkar"]
+publishedDate: "2025-09-07"
+section: "Culture"
+image_path: "public/images/SP25Wnbacomp_Thumb.png"
+layout: "image"
+order: 6
+---
+
+## Background
+
+Despite being one of the most watched professional sports leagues in the US, the NBA’s viewership has been recently declining at a rate of about <a href="https://frontofficesports.com/nba-tv-ratings-are-down-5-nbc-may-reverse-that-trend-next-year/" style={{color: '#462dbb', textDecoration: 'underline', textDecorationStyle: 'dotted'}}>5%</a> per year, largely due to an <a href="https://www.statista.com/statistics/1430289/most-watched-sports-leagues-usa/" style={{color: '#462dbb', textDecoration: 'underline', textDecorationStyle: 'dotted'}}>industry-wide decline</a> in cable viewership affecting most US sports leagues. One league that has not suffered, but instead thrived in recent years, is the WNBA. Due to an incredibly popular women’s basketball college class of 2024 that entered the WNBA for this past season (including Caitlin Clark, Angel Reese, and Cameron Brink), viewership for the league has grown <a href="https://www.vox.com/culture/352067/the-wnbas-meteoric-rise-in-popularity-in-one-chart" style={{color: '#462dbb', textDecoration: 'underline', textDecorationStyle: 'dotted'}}>226%</a>, steadfastly chasing its men’s counterpart. There are still, however, key differences between the two leagues, including shorter game times (NBA = 48 min vs. WNBA = 40 min), smaller balls, a shorter season (NBA = 82 games vs. WNBA = 44 games), and significantly fewer teams for the WNBA (NBA = 32 Teams vs. WNBA = 12 Teams), that separate them.1 Due to these differences, average statistics like points per game (PPG), assists per game (AST), rebounds per game (REB), blocks per game (BLK), and 3-point shots attempted and made (3PT) vary between the two leagues. The graph below shows the average (per game) statline for a player that plays in over 50% of a game (24 minutes in the NBA and 20 minutes in the WNBA).
+
+<ImageLoader
+    imagePath="public/images/SP25Wnbacomp_bargraph_1.png"
+    alt="This graph shows what an average statline looks like in the WNBA vs in the NBA."
+/>
+
+As such, it may be challenging for NBA fans to properly interpret statistics from the WNBA, making it more difficult for the WNBA to attract viewers from their counterpart league. In order to combat this information disparity, we set out to create NBA comparisons for each WNBA player, with the goal of making the women’s league more accessible to NBA fans.
+
+## Methods
+
+We used data from <a href="https://www.basketball-reference.com/" style={{color: '#462dbb', textDecoration: 'underline', textDecorationStyle: 'dotted'}}>basketball-reference.com</a> to select a subset of yearly performative statistics and attributes comparing individual player seasons from the 2003-2004 to 2023-2024 NBA seasons with this year’s most recent WNBA season (2023-2024). This was in an effort to figure out which NBA player from which season over the study period 2024 WNBA players compared best to. To do this, we used a K-Nearest Neighbors algorithm to match players with a “similarity score” based on the relative distances of previously-mentioned attributes, finding the 5 most similar NBA players and seasons to each WNBA player. To help better match players, we normalized the attributes on a scale from 0-1, ensuring that each attribute was being weighted equally and on a similar scale. 
+
+We assigned greater weights to attributes that more accurately define a player's style, role, and efficiency.
+
+* **FG% and 3P% (3x)**: These stats show overall offensive value and efficiency. We placed more weight on these stats to make sure that efficiency and volume are distinguished to help avoid overvaluing players who inflate their box score stats through free throws or stat-padding. 3P% also helps distinguish play styles due to modern basketball’s emphasis on perimeter shooting, making it an extremely important metric.
+* **Height, Weight, REB, STL, BLK (2x)**: These represent the player’s build and defensive impact helping distinguish between play styles and ensure players with similar physiques are matched.
+* **Position (1.5x)**: This stats helps describe a player's role. This is weighted less than other attributes because position labels are rigid  as many players shift roles depending on their teammates and coaches. While some flexibility exists, placing extra weight on position helps to prevent mismatches like comparing a small point guard to a big man.
+* **All other stats (1x)**: Basic performance metrics like points and assists are still important but are very dependent on minutes played and a team’s style and not individual play style. These were treated as foundational but not defining.
+
+## Sample Visualizations
+
+<ImageLoader
+    imagePath="public/images/SP25Wnbacomp_spiderchart_3.png"
+    alt="This shows side by side player comparisons based off of the normalized data. This one is of Angel Reese and all of her comps."
+/>
+
+<ImageLoader
+    imagePath="public/images/SP25Wnbacomp_spiderchart_4.png"
+    alt="This shows side by side player comparisons based off of the normalized data. This is Deerica Hamby and LeBron James."
+/>
+
+<ImageLoader
+    imagePath="public/images/SP25Wnbacomps_spiderchart_5.png"
+    alt="This shows side by side player comparisons based off of the normalized data. This is Curry and his top three matches. In the article we plan to use this to emphasize the impact Curry has had on the game."
+/>
+
+## True Comps
+
+One interesting note from this data comes in the form of “true comps” that we found. For 8 WNBA players (A’ja Wilson, Breanna Stewart, Catilin Clark, Dearica Hamby, Kamilla Cardoso, Kelsey Plum, Sabrina Ionescu, Satou Sabally), we found that each of their top 3 matches was the same NBA player, just from a different season. 
+
+For example, A’ja Wilson’s top 3 matches were all Anthony Davis from the 2016-17, 2018-19, and 2023-24 seasons in descending order of match score.
+
+<ImageLoader
+    imagePath="public/images/SP25Wnbacomp_A_ja_Comp.png"
+    alt=""
+/>
+
+Similarly, Caitlin Clark’s top 3 comps were all James Harden from the 2016-17, 2017-18, and 2018-19 seasons in descending order of match score.
+
+<ImageLoader
+    imagePath="public/images/SP25Wnbacomp_Catilin_Comp.png"
+    alt=""
+/>
+
+These “true comps” highlight the strength of these matches in comparing the WNBA and NBA players listed. They signify that, more than just the way that the players played in one season, the career play styles of both of these players are inherently similar, given that these WNBA players matched the NBA players at multiple points throughout their careers. One thing, however, to note is that these comparisons may not necessarily hold for an NBA or WNBA player’s entire career. Oftentimes, like in the cases of Breanna Stewart and Caitlin Clark, the top 3 matches are the same player from the same period in their career (consecutive or close to consecutive seasons). As such, in those cases it may be more appropriate to classify the WNBA player as matching the NBA player in that specific period of his career, rather than across the NBA player’s career as a whole.
+
+## Curry and the Three
+
+Another interesting note comes not from a specific WNBA player, but instead from one specific NBA player: Stephen Curry. Curry matched a total of 11 times with 6 specific WNBA players, having 2 “true comps” in Sabrina Ionescu and Kelsey Plum. 
+
+<ImageLoader
+    imagePath="public/images/SP25Wnbacomp_Steph_Comp.png"
+    alt=""
+/>
+
+The fact that, in a relatively new and up-and-coming league, so many players are emulating the play style of Curry just goes to show exactly how influential he has been for the sport of basketball, not just in his league, but in the WNBA as well. Many players in such a new league like the WNBA, given that basketball throughout their entire professional careers thus far has been influenced by Curry, are playing in a very similar fashion to him, showing how his play style has had a lasting impact on the way that basketball is played, and will continue to do so in the future.
+
+
+## Conclusion
+
+Overall, there is a clear difference in both current viewership and viewership trajectory between the NBA and WNBA. While the NBA currently has significantly more viewers, the WNBA is growing much faster than its male counterpart. Given that the leagues are incredibly different, however, those in the NBA’s large viewer base may struggle to properly understand the WNBA and the different style of play it has due to its different <a href="https://fangirlclothing.com/blogs/news/whats-the-difference-between-the-wnba-and-the-nba" style={{color: '#462dbb', textDecoration: 'underline', textDecorationStyle: 'dotted'}}>rules and regulations</a>. As such, this article provides a perfect way for NBA fans looking to expand their viewership into the WNBA to learn more about the women’s sport by providing easy comparisons between potentially unknown WNBA players and well-known NBA players like LeBron James and Stephen Curry. If NBA fans are watching the WNBA and are unsure about the background of a player that they are watching, they can easily consult this article and the “comps” it provides to get a general sense of who that WNBA player would be in terms that they understand. However, these matches and simply looking at statistics don’t tell the full story of a basketball player and their play style. It’s imperative that those looking to get into the WNBA actually watch the sport, and use this article and its WNBA-NBA matches as a guide to help them understand exactly what they’re watching.
