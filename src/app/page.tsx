@@ -9,7 +9,7 @@ export default async function HomePage() {
   const articles = await getAllArticles();
   const [latestArticle, ...otherArticles] = articles;
 
-  // Take only the first 8 articles (3 left, 2 center, 3 right)
+  // Take only the next 8 articles, after the main one (3 left, 2 center, 3 right), center most is latest
   // Above and below can be changed as need be
   const displayedArticles = otherArticles.slice(0, 8);
   
