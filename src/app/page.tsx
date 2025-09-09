@@ -12,7 +12,7 @@ export default async function HomePage() {
   // Take only the next 7 articles, after the main one (3 left, 1 center, 3 right), center most is latest
   // Above and below can be changed as need be
   const displayedArticles = otherArticles.slice(0, 7);
-  console.log(displayedArticles)
+  // console.log(displayedArticles)
   
   const leftColumnArticles = displayedArticles.slice(0, 3);
   const centerColumnArticles = displayedArticles.slice(3, 4);
