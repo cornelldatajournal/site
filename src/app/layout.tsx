@@ -68,7 +68,7 @@ export default function RootLayout({
         <div className="bg-[#3E32BA] text-white py-2">
           <div className="container max-w-8xl mx-auto px-4">
             <p className="font-space-grotesk text-sm text-center">
-              🫵🏼 Sign up for a <a href="https://forms.gle/vq8uf6StLqkQ1B3T8" className="underline hover:text-neutral-200">coffee chat</a> with a CDJ member!
+              🫵🏼 Apply by September 17th to be a CDJ <a href="https://forms.gle/S9ZrDajvXP2Y2RRK7" className="underline hover:text-neutral-200">member</a>!
             </p>
           </div>
         </div>
