@@ -1,0 +1,197 @@
+---
+title: "Trends in Fashion: Looking Back to Look Forward"
+description: "A peek at the volatile fashion scene of the modern day."
+author: ["Xindi Weng", "Kyleena Xin", "Ben Beer", "Ella Sanchez"]
+editors: ["Jenny Willaims","Nikhil Chinchalkar"]
+publishedDate: "2025-09-09"
+section: "Culture"
+image_path: "public/images/SP25Fashion_Thumb.png"
+layout: "image"
+order: 6
+---
+
+As you doom-scroll on TikTok for the umpteenth hour, after having rotated between *Instagram* and even *Pinterest*, it is only a matter of time before you come to the conclusion that a wardrobe change is in the works. From the multitude of styles with names derived from the format [vague adjective] [person] (e.g. “Eclectic Grandpa” or “Soft Girl”) paired with more and more people wearing dresses over jeans with Tabi shoes, your wardrobe may appear to be persistently out of date.
+
+Surely there must be someone out there—unlike you, naturally—who has a better handle on the volatile fashion scene of the modern day.
+
+The logical line of reasoning is to look towards fashion designers. Individuals who have studied, worked within, and painted the fashion landscape for an unfathomable amount of time. From big names like Gucci, Prada, Valentino, to brands on the rise such as Acne Studios and Miu Miu, we know we can always look to them to see what’s next in fashion. In particular, highly popularized runway events, such as the fashion weeks in New York or Milan, are treasure troves of the most radical, revolutionizing looks by these designers. In their efforts to create everlasting impressions on their audiences, many of these looks may have profound effects on the fashion industry—having reach that extends to all corners of the internet, even to your very own Pinterest feed.
+
+So while we are not fashion designers, without the elaborate experience and keen aesthetic eye to predict future styles, we’ve attempted to do the same with what we do have: data.
+
+In looking at the Vogue runways and fashion collections starting in 2006 to 2024, we have scraped the images of various looks into a model, built to predict future runway looks from each designer, in the Fall and Spring seasons. To connect the most with every-day fashion trends, we focused on Vogue’s Ready-to-Wear fashion line. 
+
+Unlike haute couture, where models wear pieces uniquely ordered, ready-to-wear fashion is produced en masse, more available to the general public. With standard sizes, ranging from XS-XL, the purpose of ready-to-wear lines is to quite literally be “ready-to-wear” by consumers right off the rack or even the runway.
+
+## Data Description
+
+Since fashion data is hard to define, we web scraped various looks between 2006 to 2024 directly from the official Vogue website. With limited resources, we decided to exclude the years 2018-2020. We then used AI powered tools to analyze each image to provide a detailed description of the looks, including designer, garments, accessories, styles, keywords and so on. Analyzing every image from the runway is unrealistic because there are so many brands and thousands and millions of pictures. Therefore, we randomly sampled 40 brands for each season (fall/spring), giving us a total of 80 brands for each year. Below are examples of the AI generated descriptions we gathered for our looks:
+
+
+<div style={{display:'flex', alignItems:'center'}}>
+    <img style={{height:'350px', width:'auto', marginRight:'20px'}} src = '/images/SP25Fashion_8.png'/>
+    
+<div>
+Here’s a look taken from Miu Miu’s Fall 2012 Runway:
+
+Brand: Miu Miu  
+Season: Fall 2012  
+Gender Presentation: Feminine  
+Garments: Green suit, checkered shirt, tie  
+Accessories: NA  
+Silhouette: Tailored, structured  
+Style Keywords: Androgynous, bold  
+Notes: Mix of patterns, strong color contrast
+</div>
+</div>
+
+<div style={{display:'flex', alignItems:'center'}}>
+    <img style={{height:'350px', width:'auto', marginRight:'20px'}} src = '/images/SP25Fashion_9.png'/>
+    
+<div>
+Here’s another taken from Vivienne Westood’s Fall 2021 Collection:
+
+Brand: Vivienne Westwood  
+Season: Fall 2021  
+Gender Presentation: Androgynous  
+Garments: Printed shirt, striped jacket, patterned pants  
+Accessories: Red hat  
+Silhouette: Layered, relaxed  
+Style Keywords: Eclectic, artistic  
+Notes: Mix of patterns and textures
+</div>
+</div>
+
+## Our Predictions
+
+The moment you’ve been waiting for.
+
+After gathering our data, we then used numbers to represent the descriptions generated. We did this so we could then use a mathematical model to predict future looks based off of the past looks represented with those numbers. We decided to generate two masculine and two feminine looks, one for fall and one for spring. 
+
+
+<div style={{display:'flex', alignItems:'center'}}>
+    <img style={{height:'350px', width:'auto', marginRight:'0px'}} src = '/images/SP25Fashion_12.png'/>
+    
+<div>
+**Masculine Fall Look**
+
+*Look Confidence : 0.7315*    
+Garments: White shirt, Gray suit  
+Accessories: Black boots with blue soles  
+Silhouette: Tailored, Slim  
+Style Keywords: Classic, Streetwear  
+Notes: casual elegance, monochrome palette
+</div>
+</div>
+
+<div style={{display:'flex', alignItems:'center'}}>
+    <img style={{height:'350px', width:'auto', marginRight:'0px'}} src = '/images/SP25Fashion_4.png'/>
+    
+<div>
+**Masculine Spring Look**
+
+*Look Confidence: 0.9*  
+Garments: Black trousers, light trousers, White shirt  
+Accessories: Black shoes  
+Silhouette: Relaxed, layered  
+Style Keywords: Androgynous, Retro  
+Notes: Matching set, Subtle pattern  
+</div>
+</div>
+
+<div style={{display:'flex', alignItems:'center'}}>
+    <img style={{height:'350px', width:'auto', marginRight:'0px'}} src = '/images/SP25Fashion_5.png'/>
+    
+<div>
+**Feminine Spring Look**
+
+*Look Confidence: 0.8333*  
+Garments: Printed dress, floral mini dress  
+Accessories: Black platform heels  
+Silhouette: Flowing skirt, layered  
+Style Keywords: Modern, Polished  
+Notes: V-neckline, bold accessories
+</div>
+</div>
+
+<div style={{display:'flex', alignItems:'center'}}>
+    <img style={{height:'350px', width:'auto', marginRight:'0px'}} src = '/images/SP25Fashion_5.png'/>
+    
+<div>
+**Feminine Fall Look**
+
+*Look Confidence: 0.9444*  
+Garments: Navy sleeveless blazer, orange top  
+Accessories: Gold bracelet  
+Silhouette: Casual, Fitted  
+Style Keywords: Futuristic, Playful  
+Notes: Colorful crochet detail on top, Abstract print
+</div>
+</div>
+
+## Trend Analysis
+
+Aside from the predicted outfits, scraping the looks from Vogue gave us lots of data to examine and analyze. The following are some interesting trends and findings that we had from analyzing over 10,000 looks!
+
+Most frequent style keywords used across all looks Masculine, Feminine, and Androgynous:
+
+<ImageLoader
+    imagePath="public/images/SP25Fashion_2.png"
+    alt="Word Cloud"
+/>
+
+### Feminine – Earrings (keyword)
+
+<ImageLoader
+    imagePath="public/images/SP25Fashion_10.png"
+    alt="Earrings"
+/>
+
+As shown in the graph, the keyword of earring appears more in fashion design. From 2006 to 2014, the percentage of mentioning earrings remained relatively constant, fluctuating around 3%. However, from 2015 to 2016, there is a sudden outbreak, with a highest peak at around 17% during 2016 Fall. Then, followed by a sudden decrease in 2017. The growth from 2017 to 2022 indicates that earrings become an increasingly popular accessory in the fashion world. Earrings appear more in contemporary fashion than 20 years ago. Currently, the percentage of look includes earrings is around 15%. Both Random Forest (RF) model and Linear Regression (LR) model predict that earrings will maintain around 16% in the following year. 
+
+### Feminine – Belt (keyword)
+
+<ImageLoader
+    imagePath="public/images/SP25Fashion_11.png"
+    alt="Belt"
+/>
+
+In contrast to earrings, the accessory of the belt shows an obvious decreasing trend in the past 20 years. From a relative percentage consistently above 15% in the early 2000s, the prevalence has gradually declined, stabilizing below 10% in more recent years. The RF model and LR model predict similar results that although there might be a small rebound, the usage of belt will still remain relatively low at around 10%. 
+
+### Color - Red (keyword)
+
+<ImageLoader
+    imagePath="public/images/SP25Fashion_3.png"
+    alt="Red"
+/>
+
+The use of red in feminine fashion shows a generally stable trend, with the percentage fluctuating around 45%. However,there is clear seasonality, as red appears more in the Fall/Winter collection than in the Spring/Summer collection. Red is a warm color that triggers an energetic and intense feeling, making it more associated with cooler weather. For example, red corresponds to leaves color in the fall and a lot of holiday themes in winter. Both the Random Forest and Linear Regression models predict an increase in red usage during the fall, but the uncertainty in differences makes it hard to predict the exact trends in the upcoming seasons. 
+
+### Color Trends
+
+Here are some animated plots that demonstrate the frequency of different colors, divided into pre-pandemic (2006 - 2017) and post-pandemic (2021-2024). 
+
+<ImageLoader
+    imagePath="public/images/SP25Fashion_1.gif"
+    alt="Pre Pandemic Colors"
+/>
+
+<ImageLoader
+    imagePath="public/images/SP25Fashion_7.gif"
+    alt="Post Pandemic Colors"
+/>
+
+## Conclusion
+
+While our models use data from over the years to make “rational”, data-driven, predictions, it is important to recognize that fashion is ever-changing and our predictions could be inaccurate. World events, cultural shifts, personal inspirations could all be factors that trigger revolutions in fashion styles. Looking forward, future improvements to our model would include factoring in outside influences that impact the runway and clothing racks such as environmental factors, political movements, and other important societal contributors. 
+
+From data, we look for meaningful patterns in a changing industry. And in this project, we look back to look forward and assume that the world of fashion does the same. Although this may be true in some cases, with the recent revival of cheetah print and low rise jeans, inspiration and influence is everywhere for the fashion industry to soak up, *not* just in our past. 
+
+
+
+
+
+
+
+
+
+
