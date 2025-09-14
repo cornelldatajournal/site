@@ -1,0 +1,75 @@
+---
+title: "Ithaca Insights Model Breakdown"
+description: "How Unaffordable is the Ithaca Housing Market?"
+author: ["Arjun Maitra", "Steven Zhou", "Vivian Guo", "Lillian Wang"]
+editors: ["Nikhil Chinchalkar", "Jenny Williams"]
+publishedDate: "2025-09-13"
+section: "Politics"
+image_path: ""
+layout: "image"
+order: 1
+---
+
+Over the last year, Ithaca has seens a 12.4% price increase for the rent of a one bedroom apartment, according to the Department of Housing and Urban Development. This surge in prices has placed considerable strain on both Ithaca's local population and Cornelll’s student community, particularly those seeking long-term rentals. The housing rent burden on income has reached a staggering 88% for some neighborhoods in the county, meaning for a household with a monthly income of 2000$, 1760$ of that income would go towards rent — leaving little room to afford even basic necessities. Even for students finding reasonably priced housing with satisfactory quality remains a challenge. The influx of Cornell’s upperclassmen into the housing market intensifies the competition on a local level, leaving many local Ithacans without affordable housing options. 
+
+While the idea of on-campus housing may seem an appealing solution, there has been limited availability in on campus housing, leaving freshmen unsure of their living arrangements for the upcoming year. Although Cornell Housing has made efforts to accommodate these students these challenges underscore the importance of understanding the discrepancies between expected or affordable rent and the current unaffordable market.
+
+<ImageLoader
+    imagePath="public/images/SP25IthacaInsights_6.png"
+/>
+
+From a density heatmap, we can observe that Ithaca has most of its housing concentrated in a few neighborhoods: Downtown and Collegetown. There are many spare-for-rent housing supplies outside these neighborhoods. Supply and affordability of housing varies geographically.
+
+<ImageLoader
+    imagePath="public/images/SP25IthacaInsights_4.png"
+/>
+
+A machine learning technique, called Clustering, allows us to turn this perceived pattern of housing prices into data that can be grouped and then measured. We used an algorithm called Density-based spatial clustering of applications with noise (DBSCAN), which considers the density of housing points, creating a density threshold that groups areas into different neighborhoods. The results are shown below, where each color is a distinct neighborhood. Grey points are housing which are not considered to be in a major neighborhood of for-rent housing.
+
+<ImageLoader
+    imagePath="public/images/SP25IthacaInsights_7.png"
+/>
+
+Another map shows that the largest clusters are in College Town, downtown-commons and a cluster near Aurora street to the south.
+
+Downtown and Collegetown have the most housing, but also the most expensive rates. Rent per bed can be up to $1500 a month.
+
+<ImageLoader
+    imagePath="public/images/SP25IthacaInsights_8.png"
+/>
+
+To draw more insights into the variation, we decided to make a model to predict the rent using various factors such as transit, amenities, and square footage.
+
+One common intuitive pattern to see with housing rents is that more expensive properties tend to be located near other expensive properties. In fact, this type of pattern is a fundamental concept in spatial data and referred to as spatial autocorrelation. This means that the prices are correlated with themselves over space, so higher values tend to be near other higher values. To utilise this information, we used a spatial random forest that takes in the spatial weight of the surrounding properties.
+
+This spatial random forest is made of decision trees. Each tree makes a series of if-then decisions to estimate whether the rent is above a certain threshold. This decision tree is then repeated numerous times with different factors considered to form a “forest” of decision trees. Such results from each tree are then averaged to give our predicted fair rent of a listing from the official <a href="https://listings.offcampusliving.cornell.edu/" style={{color: '#462dbb', textDecoration: 'underline', textDecorationStyle: 'dotted'}}>Cornell Off-Campus Website</a>. We reached out to Cornell Off-Campus Living but did not receive a response.
+
+<ImageLoader
+    imagePath="public/images/SP25IthacaInsights_5.png"
+/>
+
+Our first issue came with the distribution of rental prices. We see that most rent prices are around $1,000, but there are a few very extreme rents. In statistics, this kind of distribution can be said to be“extremely right skewed”. To make  the model “realize” this we had to do something commonly used in housing pricing or other economic analysis methods such as logarithmic transformation, which essentially “squeezes” the scale of the rent to be more reasonable. 
+
+<ImageLoader
+    imagePath="public/images/SP25IthacaInsights_10.png"
+/>
+
+Now that we had a proper dependent variable to work with, we had to define our features: what do we want to go into our regression model? 
+
+In our initial regression model, we looked at: Pets (allowed or not), number of bedrooms, number of bathrooms, Avg. Walking Time from Uris Hall, AgQuad and Arts Quad, Transit Score (determined by surrounding TCat bus stops), Surrounding Amenities Score, Safety rating (assigned by Cornell OffCampus Housing) and a surrounding food score.
+
+<ImageLoader
+    imagePath="public/images/SP25IthacaInsights_1.png"
+/>
+
+Our model achieved an R², a common metric measuring how good our model is at performing, of 0.906 on fitted data, meaning it explains over 90% of the variance in house values across all Ithaca properties. Since we are modeling the full population — not just a sample, capturing this level of detail, including some noise, is valuable for understanding the local housing landscape. 
+
+<ImageLoader
+    imagePath="public/images/SP25IthacaInsights_2.png"
+/>
+
+Affordability in Ithaca’s rental market is driven primarily by unit-level features and local amenities.
+
+Our regression ensemble reveals that the combined number of bedrooms and bathrooms is by far the most important predictor of rental pricing. This indicates that unit size and layout carry significantly more weight in determining rent than any other factor.
+
+The next most influential features include amenities score, transit access, and food accessibility, showing that walkable, convenience-rich locations increase rental value. Interestingly, weighted versions of these variables (e.g., `W_amenities_score`, <code>W_transit_score</code>) also ranked highly, suggesting that neighborhood-level context reinforces the importance of local features.

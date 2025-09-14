@@ -51,8 +51,11 @@ const components = {
     // Style links
     a: (props: any) => (
         <a
-            className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-200"
+            className="text-violet-600 hover:text-violet-800 dark:text-violet-600 dark:hover:text-violet-800 decoration-wavy"
             {...props}
+
+            // text-violet-600 hover:text-violet-800 dark:text-violet-600 dark:hover:text-violet-800 decoration-wavy
+            // text-blue-600 hover:text-blue-800 dark:text-blue-600 dark:hover:text-blue-800
         />
     ),
     // Style footnotes

@@ -1,0 +1,160 @@
+---
+title: "Drug Laws in New York and Their Effects on New York Counties"
+description: ""
+author: ["Ellie Cha", "Claron Wang", "Omowunmi Akingbola", "Isabella Agurto", "William Rhee"]
+editors: ["Nikhil Chinchalkar"]
+publishedDate: "2025-09-13"
+section: "Finance"
+image_path: ""
+layout: "image"
+order: 1
+---
+
+
+# Introduction
+
+The goal of the project was to determine the factors that mostly significantly influence tourism trends in NYC. As one of the most frequently visited cities in the United States, NYC offers an opportunity to analyze what draws people in or deters them from planning a trip. With its renowned landmarks, vibrant nightlife, as well as being a global hub for business and fashion, NYC stands out as a great choice for travelers. However, tourism patterns are shaped by more than just the city’s appeal. In this project, we aimed to explore the factors that drive these patterns by focusing on four key components: Events, weather conditions, crime rates, and transportation accessibility. By analyzing data across these categories, we hope to gain a better understanding of the dynamics that shape travel behavior and influence the rise and fall of visitors to NYC.
+
+<ImageLoader
+    imagePath="public/images/SP25NYC_3.png"
+/>
+
+# The Data
+
+The data was collected through public databases found throughout the web. The main sources of data that we found were derived from: The Bureau of Transportation Statistics, NYC government, NUC open data source, Federal Transit Administration’s (FTA), National Transmit Database (NTD), and the National Weather Service. From these databases we were able to get information on tourism, crime, weather, local events in NYC, and transportation. In order to find the NYC tourism numbers, we gathered data from the Bureau of Transportation Statistics to see the number of incoming passengers on flights arriving in the two New York airports, JFK and LGA. Graphs were created to represent the total number of passenger arrivals in JFK and LGA based on the month and the year. The data that we found of the JFK and LGA passenger arrival data will be used to understand the correlation coefficient with public transportation, weather, and crime rates. This will help us gain an understanding of the influence that these factors have on tourism in NYC. 
+
+# Our Findings
+
+## Crime Rate and Tourism 
+
+One of our factors we looked at to see its effects on NYC tourism was the crime rate in New York City. We found data from the Nyc.gov NYPD sector that contained the data on arrested crimes from 2013 to 2024. As the data was very large with sectors that showed the arrest date, arrest type, location of arrest, etc., we had to narrow it down. At first, we cleaned the data and organized it by the number of arrests each year. 
+
+<div style={{display:'flex', justifyContent:'center', marginBottom: '20px'}}>
+<ImageLoader
+    imagePath="public/images/SP25NYC_10.png"
+    width="350"
+/>
+<ImageLoader
+    imagePath="public/images/SP25NYC_6.png"
+    width="300"
+/>
+</div>
+
+The graph on the left shows the total number of passenger arrivals in JFK and LGA each year. The graph on the right shows the total number of arrests in NYC each year. When looking at the graph side by side, there’s an evident similarity in decrease during the years 2020, 2021, and 2022. Although there’s a possibility that several other factors may play a role in this decrease, this similarity in the two graphs during those years show a correlation between the number of passengers and the number of arrests. 
+
+Afterwards, we narrowed the data even more down to the number of arrests each month from the years 2014 to 2024 to match the tourism data. 
+
+In order to see if there’s a correlation between the number of crimes and the number of NYC tourists, we found the Pearson correlation coefficient for each factor. For the Crime Rate data, the correlation coefficient turned out to be 0.55661029. This correlation coefficient does not show any strong linear relationship between the crime rates and the passenger arrival data as it is not close to 1, which ultimately conveys that we do not have enough evidence to support that the number of arrests in NYC affects the number of NYC visitors. 
+
+## Transportation and Tourism 
+
+In this section, we will analyze our findings on monthly ridership data in New York City. We used a published dataset from the Federal Transit Administration's (FTA) [National Transit Database](https://www.transit.dot.gov/ntd/data-product/monthly-module-adjusted-data-release) (NTD). This is an extremely large dataset that contains monthly ridership information based on multiple transportation agencies across states, including New York’s MTA. In addition, the dataset specifies the kind of public transportation, the number of unlinked passenger trips, the vehicle’s revenue hours, and more. For reference, the number of unlinked passenger trips is simply the number of times passengers board public transportation vehicles.
+
+To begin our analysis, we started with data exploration and cleaning. We made the decision to focus on the number of unlinked passenger trips made in **New York City-based agencies** between **January 2015 to January 2025**. A New York City-based agency refers to an agency that’s within the urbanized area “New York–Jersey City–Newark, NY–NJ.” There are 391 urbanized areas specified in our dataset, and so we’ll later need to extract rows that exactly say “New York–Jersey City–Newark, NY–NJ.”
+
+Using these criteria, we wrote a Python script that filters the FTA’s given .csv file into a Pandas DataFrame that contains 113 rows and 125 columns.
+
+This DataFrame contains the following columns:
+* Agency: The New York City-based agency, including MTA NYC Transit, Metropolitan Suburban Bus Authority, City of Long Beach, etc.
+* Mode: The kind of transportation, which includes the bus, subway, and more.
+* TOS: The type of service, which includes demand response, commuter rail, and more.
+* UZA Name: The urbanized area.
+* Dates: The rest of the columns are all the months from January 2015 up to and including January 2025. Each number represents the total monthly ridership within a specific month.
+
+That being said, we can proceed to move onto visualization and insights. The first visualization we plotted first was the total number of linked passenger trips across all NYC agencies over time among specific types of transportation. Here is the time series plot, with a color-coded legend to indicate the kind of transportation:
+
+<ImageLoader
+    imagePath="public/images/SP25NYC_9.png"
+/>
+
+First, let’s break down the acronyms given in the legend:
+* HR: Heavy Rail, such as the subway.
+* MB: Motorbus
+* CR: Commuter Rail
+* DR: Demand Response, such as paratransit.
+* CB: Commuter Bus
+* FB: Ferryboat
+* LR: Light Rail
+
+As we can see, our plot suggests that heavy rails and subways (HR; green) were the most dominating mode. It experienced a relatively stable trend pre-pandemic, and experienced the fastest recovery post pandemic. In addition, motor buses (MB; blue) were the second most dominant mode. They experienced a similar pattern as HR — consistent trend pre-pandemic, and faced the second-fastest recovery post-pandemic. Moreover, commuter rails (CR; orange) took longer to recover post-COVID. This could be because of the initiation of remote work, even years after the pandemic. Lastly, other modes such as ferries and light rails (yellow, purple) experienced low amounts of passenger trips both before and after the pandemic, with the pandemic subsequently decreasing passenger trips even more.
+
+It’s worth mentioning how our transportation dataset relates to other datasets from other sections within our analysis. After combining our datasets, we computed a Pearson correlation coefficient of approximately 0.7318. This means that there is a strong positive correlation between the number of tourists arriving at JFK and LGA and NYC transportation usage. As more tourists arrive, transportation usage also increases significantly. 
+
+## Weather and Tourism 
+
+One of the factors that we analyzed was the influence that weather throughout the years and months has on tourism in NYC. We found a data base from The National Weather Service that provided monthly averages of temperatures from 2000-2024. To narrow down the scope of the study we limited the weather to 2014-2024 to compare it to the tourism rates. From this we calculated the average temperature in Fahrenheit for each month and each year. The temperatures for each month showed standard trends that one would think for each season. 
+
+<ImageLoader
+    imagePath="public/images/SP25NYC_8.png"
+/>
+
+The first graph represents the average temperature for each month from 2014-2024. The graph shows trends that there have not been drastic changes in temperature for each month in the last 10 years. The second graph shows the average temperatures for each year from 2015-2016. The past two years are the highest temperatures which makes sense with recent climate reports on all time highs for the past few years. The average temperature shows more variation compared to the other graphs visually. 
+
+<ImageLoader
+    imagePath="public/images/SP25NYC_5.png"
+/>
+
+In order to see if there’s a correlation between weather and the number of NYC tourists, we found the Pearson correlation coefficient. For the temperature the correlation coefficient was 0.01153 indicating a very weak correlation that is positive. The correlation is not strong enough to indicate that temperature can account for variation in tourism throughout the year. 
+
+## Events and Tourism
+
+Another factor we investigated was whether the number and types of events held in New York City was associated with the number of NYC tourists. The dataset utilized for this analysis comes from the [NYC Open Data Website](https://data.cityofnewyork.us/City-Government/NYC-Permitted-Event-Information-Historical/bkfu-528j/about_data), where all of the city-registered events held from 2008 to 2025 are recorded. 
+
+The fields contained in the dataset consist of: Event ID, Event Name, Start Date/Time, End Date/Time, Event Agency, Event Type, Event Borough, Event Location, Event Street Side, Street Closure Type, Community Board, and Police Precinct. For the purposes of this project, we will mainly be focussing on the Event ID, Event Name, and Event Type fields. 
+
+**Data Cleaning**
+
+* <u>Dropping Irrelevant columns</u>
+    * Because the dataset contained many columns that were not relevant to the data analysis we wanted to perform, we simply removed them to make the rest of the analysis more efficient. These columns included ['Event Street Side','Street Closure Type','Community Board','Police Precinct'].
+* <u>Removing Irrelevant Event Types</u>
+    * Since this dataset contained a lot of irrelevant event types (including things like street cleaning and construction), we want to remove the records with these event types so that we can solely focus on the entertainment-related events to associate with tourism. Some of the event types removed include [‘Construction’, ‘Clean Up’, ‘Mobile Unit’]
+* <u>Removing Duplicated Rows</u>
+    * Something we quickly discovered about this dataset was that there were a lot of repeat records for the same event. This may have been due to the system recording multiple permissions for a given event as distinct rows in the dataset. Thus, since we do not want to overcount these records, we remove all the ones with identical Event ID’s, remunerating the index as needed. 
+
+**Data Visualization**
+
+Plotting the number of events aggregated by month, from January 2008 to July 2025. Aggregated by month means the sum of all the events in a given month (e.g. the number of all the events held in July of 2014). 
+
+<ImageLoader
+    imagePath="public/images/SP25NYC_4.png"
+/>
+
+Looking at the graph, we immediately notice lots of vertical movement that appears to suggest some sort of cyclical, seasonal trend. Whenever the graph spikes, this indicates a summer season where lots of events are held in NYC. Whenever the graph dips, this indicates a winter season where not as many events are held in NYC. 
+
+Analyzing the data further, we can visualize the number of events categorized by NYC Borough (Bronx, Brooklyn, Manhattan, Queens, Staten Island). 
+
+<ImageLoader
+    imagePath="public/images/SP25NYC_7.png"
+/>
+
+Looking at the graph, it appears that Manhattan is the borough which holds the most events in NYC every year, then Brooklyn, Queens, Bronx, and Staten Island. Additionally, it appears that the rises and declines in events throughout the years are due to variations in the number of events from ALL the boroughs, not just one borough in particular. Furthermore, one can visually see how Covid impacted the number of events held in NYC, as the years 2019 and 2020 held a moderate amount of events, but then the following years 2021-2033 had soaring event numbers. 
+
+Taking a closer look at the types of events in the dataset, the top 10 most popular event types are as follows: 
+
+<ImageLoader
+    imagePath="public/images/SP25NYC_11.png"
+/>
+
+**Statistical Significance**
+
+To answer our initial question of whether or not the number of events held in NYC can predict the number of NYC tourists, we can look at the correlation between number of events and number of tourists by month. Utilizing R to perform this statistical analysis, we learned that the correlation between the number of events and the number of NYC tourists is approximately -0.268. This is a weak, negative correlation, indicating that there is not much of an association between events and tourism. Additionally, for what association does exist, the data suggests that it is negative, meaning that as the number of events in NYC increases, the number of tourists decreases–which is not what one would expect. Overall, the tourism in NYC cannot be directly associated with the variation in the number of events held across all five boroughs in New York City.
+
+## Overall Data Analysis
+
+After gathering all our data, we merged the data all into one file to conduct an overall analysis between the response variable, the JFK/LGA passenger arrival data, with the predictor variables: Crime data, Transportation Data, Weather Data, and Events data. After merging the data into one file, we conducted the Pearson correlation analysis as mentioned above. Then, we created a scatterplot matrix to better understand and visualize the correlation between each variable.
+
+<ImageLoader
+    imagePath="public/images/SP25NYC_2.png"
+/>
+
+# Conclusion
+
+In conclusion, our comprehensive analysis of NYC tourism trends reveals that transportation accessibility stands out as the most significant factor influencing tourist arrivals, with a strong positive correlation of approximately 0.7318. This finding suggests that as public transportation usage increases, so does the number of visitors arriving at JFK and LGA airports. In contrast, other factors such as crime rates, weather conditions, and the number of events held in the city showed weak or inconsistent correlations with tourism. Specifically, crime and weather exhibited minimal influence, while the events data unexpectedly demonstrated a weak negative correlation. These results challenge some common assumptions about what drives tourism in a global city like New York, highlighting the importance of reliable infrastructure over other traditionally cited factors. These results may also be due to some errors and biases such as using the JFK/LGA passenger arrival data as the NYC tourist data since it may not fully generalize the amount of NYC tourists. Although more nuanced or complex relationships may exist beyond linear correlation, our findings emphasize the need for continued investment in transportation systems to support tourism growth. Future research could explore these variables using more advanced models to uncover any patterns or interactive effects not captured through simple correlation.
+
+
+
+
+
+
+
+
