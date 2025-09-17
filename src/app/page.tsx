@@ -11,12 +11,12 @@ export default async function HomePage() {
 
   // Take only the next 8 articles, after the main one (3 left, 2 center, 3 right), center most is latest
   // Above and below can be changed as need be
-  const displayedArticles = otherArticles.slice(0, 8);
+  const displayedArticles = otherArticles.slice(0, 9);
   // console.log(displayedArticles)
   
-  const leftColumnArticles = displayedArticles.slice(0, 3);
-  const centerColumnArticles = displayedArticles.slice(3, 5);
-  const rightColumnArticles = displayedArticles.slice(5, 8);
+  const leftColumnArticles = displayedArticles.slice(0, 4);
+  const centerColumnArticles = displayedArticles.slice(4, 5);
+  const rightColumnArticles = displayedArticles.slice(5, 9);
 
   const renderArticle = async (article: BaseArticle, isFeatured = false) => {
     const articleLink = article.external_link || `/articles/${article.slug}`;
