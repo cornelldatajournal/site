@@ -19,7 +19,7 @@ export default async function SectionPage({ params }: SectionPageProps) {
         notFound();
     }
 
-    const articles = await getAllArticles();
+    const articles = (await getAllArticles()).filter((article) => article.order !== -1);
     const filteredArticles = articles.filter(article => article.section.toLowerCase() === slug.toLowerCase());
 
     return (
