@@ -16,17 +16,8 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
     {
-        name: "Rishi Gurjar",
-        role: "President",
-        class: "2027",
-        major: "Environment & Sustainability",
-        image: "/team/Rishi_Gurjar.png",
-        color: "bg-[#FFE5D9]",
-        bio: "When he is home, he spends around 25% of his waking hours gardening."
-    },
-    {
         name: "Nikhil Chinchalkar",
-        role: "Executive Vice President",
+        role: "President",
         class: "2027",
         major: "Economics",
         image: "/team/Nikhil_Chinchalkar.jpeg",
@@ -70,6 +61,16 @@ const teamMembers: TeamMember[] = [
         bio: ""
     },
     {
+        name: "Jenny Williams",
+        role: "Editor-in-Chief",
+        specialized_role: "Content Editor",
+        class: "2027",
+        major: "English",
+        image: "/team/Jenny_Williams.png",
+        color: "bg-[#FFE5D9]",
+        bio: ""
+    },
+    {
         name: "Dana Yang",
         role: "Faculty Mentor",
         class: "",
@@ -79,74 +80,8 @@ const teamMembers: TeamMember[] = [
         bio: "Dana is an assistant professor at Cornell in the department of statistics and data science."
     },
     {
-        name: "Rahul Ramarao",
-        role: "Editor",
-        specialized_role: "Website Editor",
-        class: "2027",
-        major: "Computer Science",
-        image: "/team/Rahul_Ramarao.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Winston Ni",
-        role: "Editor",
-        specialized_role: "Technical Editor",
-        class: "2027",
-        major: "Computer Science & Statistical Science",
-        image: "/team/Winston_Ni.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Jenny Williams",
-        role: "Editor",
-        specialized_role: "Content Editor",
-        class: "2027",
-        major: "English",
-        image: "/team/Jenny_Williams.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Steven Zhou",
-        role: "Emeritus Analyst",
-        class: "2026",
-        major: "Environment & Sustainability & Information Science",
-        image: "/team/Steven_Zhou.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Grace Chen",
-        role: "Analyst",
-        class: "2028",
-        major: "Biometry & Statistics",
-        image: "/team/Grace_Chen.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Sarah Swee",
-        role: "Project Lead",
-        class: "2027",
-        major: "ILR",
-        image: "/team/Sarah_Swee.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Ellie Cha",
-        role: "Project Lead",
-        class: "2027",
-        major: "Biometry & Statistics",
-        image: "/team/Ellie_Cha.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
         name: "Melody Qian",
-        role: "Analyst",
+        role: "Project Lead",
         class: "2028",
         major: "Public Policy",
         image: "/team/Melody_Qian.png",
@@ -154,17 +89,8 @@ const teamMembers: TeamMember[] = [
         bio: ""
     },
     {
-        name: "William Rhee",
-        role: "Analyst",
-        class: "2026",
-        major: "Mathematics & Computer Science",
-        image: "/team/William_Rhee.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
         name: "Remi Ladia",
-        role: "Analyst",
+        role: "Project Lead",
         class: "2028",
         major: "Computer Science",
         image: "/team/Remi_Ladia.jpg",
@@ -172,17 +98,8 @@ const teamMembers: TeamMember[] = [
         bio: ""
     },
     {
-        name: "Michael Chen",
-        role: "Analyst",
-        class: "2028",
-        major: "Mathematics & Computer Science",
-        image: "/team/Michael_Chen.JPG",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
         name: "Mei Knight",
-        role: "Analyst",
+        role: "Project Lead",
         class: "2028",
         major: "Statistical Science",
         image: "/team/Mei_Knight.jpeg",
@@ -199,26 +116,8 @@ const teamMembers: TeamMember[] = [
         bio: ""
     },
     {
-        name: "Ellen Foreman",
-        role: "Project Lead",
-        class: "2027",
-        major: "Computer Science",
-        image: "/team/Ellen_Foreman.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Stella Zhang",
-        role: "Analyst",
-        class: "2026",
-        major: "Information Science",
-        image: "/team/Stella_Zhang.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
         name: "Vivian Guo",
-        role: "Analyst",
+        role: "Project Lead",
         class: "2028",
         major: "Biometry & Statistics",
         image: "/team/Vivian_Guo.jpeg",
@@ -239,43 +138,16 @@ const teamMembers: TeamMember[] = [
         role: "Project Lead",
         class: "2028",
         major: "Statistics",
-        image: "/team/Eden_Maynard.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Deborah Biru",
-        role: "Analyst",
-        class: "2028",
-        major: "Biometry & Statistics",
-        image: "/team/Deborah_Biru.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Omowunmi Akingbola",
-        role: "Analyst",
-        class: "2026",
-        major: "Information Science",
-        image: "/team/Omowunmi_Akingbola.png",
+        image: "/team/Eden_Maynard.jpeg",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
     {
         name: "Kayla Amkraut",
-        role: "Analyst",
+        role: "Project Lead",
         class: "2028",
         major: "Statistical Science",
         image: "/team/Kayla_Amkraut.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Ella Sanchez",
-        role: "Analyst",
-        class: "2028",
-        major: "Communication",
-        image: "/team/Ella_Sanchez.jpg",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -284,43 +156,16 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Government",
-        image: "/team/Marianna_Ruggiero.png",
+        image: "/team/Marianna_Ruggiero.jpeg",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
     {
         name: "Arjun Maitra",
-        role: "Project Lead",
+        role: "Analyst",
         class: "2028",
         major: "Mathematics & Statistics",
-        image: "/team/Arjun_Maitra.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Benjamin Beer",
-        role: "Analyst",
-        class: "2028",
-        major: "Biological Science",
-        image: "/team/Benjamin_Beer.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Gemie Sonamai",
-        role: "Analyst",
-        class: "2028",
-        major: "Statistical Science",
-        image: "/team/Gemie_Sonamai.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Orion Hoch",
-        role: "Analyst",
-        class: "2028",
-        major: "Computer Science",
-        image: "/team/Orion_Hoch.jpg",
+        image: "/team/Arjun_Maitra.jpeg",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -335,55 +180,10 @@ const teamMembers: TeamMember[] = [
     },
     {
         name: "Milo Schilittgen-Li",
-        role: "Analyst",
+        role: "Project Lead",
         class: "2027",
         major: "Mathematics",
-        image: "/team/Milo_Schilittgen-Li.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Cooper Davis",
-        role: "Analyst",
-        class: "2027",
-        major: "Statistical Science",
-        image: "/team/Cooper_Davis.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Ojas Bharadwaj",
-        role: "Analyst",
-        class: "2028",
-        major: "Mathematics",
-        image: "/team/Ojas_Bharadwaj.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Aakshay Gupta",
-        role: "Analyst",
-        class: "2026",
-        major: "Operations Research & Information Engineering",
-        image: "/team/Aakshay_Gupta.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Claron Wang",
-        role: "Analyst",
-        class: "2028",
-        major: "Statistical Science",
-        image: "/team/Claron_Wang.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Arnav Shah",
-        role: "Analyst",
-        class: "2028",
-        major: "Computer Science",
-        image: "/team/Arnav_Shah.png",
+        image: "/team/Milo_Schlittgen-Li.jpeg",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -392,16 +192,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Public Policy",
-        image: "/team/Aryan_Shah.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Salena Tang",
-        role: "Analyst",
-        class: "2027",
-        major: "Computer Science & Mathematics",
-        image: "/team/Salena_Tang.png",
+        image: "/team/Aryan_Shah.jpeg",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -410,100 +201,208 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2026",
         major: "Cognitive & Information Science",
-        image: "/team/Emi_Labbe.png",
+        image: "/team/Emiline_Labbe.jpeg",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
+    // {
+    //     name: "Stella Ma",
+    //     role: "Analyst",
+    //     class: "2028",
+    //     major: "Biometry & Statistics",
+    //     image: "/team/Stella_Ma.png",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: ""
+    // },
     {
-        name: "David Suarez",
-        role: "Analyst",
-        class: "2027",
-        major: "American Studies",
-        image: "/team/David_Suarez.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Lillian Wang",
-        role: "Analyst",
-        class: "2028",
-        major: "Computer Science & Linguistics",
-        image: "/team/Lillian_Wang.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Isabella Wang",
+        name: "Arianna Hsu",
         role: "Analyst",
         class: "2028",
-        major: "Agricultura Sciences & Environment & Sustainability",
-        image: "/team/Isabella_Wang.png",
+        major: "Information Science, Systems, & Technology",
+        image: "/team/Arianna_Hsu.jpg",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
     {
-        name: "Jaithra Nagindas",
+        name: "Adam Azevedo",
         role: "Analyst",
         class: "2028",
-        major: "Mathematics & Computer Science",
-        image: "/team/Jaithra_Nagindas.png",
+        major: "Urban & Regional Studies",
+        image: "/team/Adam_Azevedo.jpg",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
     {
-        name: "Ricky Cheng",
-        role: "Analyst",
-        class: "2027",
-        major: "Biometry & Statistics",
-        image: "/team/Ricky_Cheng.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Stella Ma",
+        name: "Anna Kim",
         role: "Analyst",
         class: "2028",
         major: "Biometry & Statistics",
-        image: "/team/Stella_Ma.png",
+        image: "/team/Anna_Kim.JPG",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
     {
-        name: "Cindy Weng",
+        name: "Elinor Tu",
+        role: "Analyst",
+        class: "2028",
+        major: "Computer Science, Mathematics",
+        image: "/team/Elinor_Tu.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Eric Zhu",
+        role: "Analyst",
+        class: "2029",
+        major: "Biometry & Statistics",
+        image: "/team/Eric_Zhu.png",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Ethan Yang",
+        role: "Analyst",
+        class: "2028",
+        major: "Information Science",
+        image: "/team/Ethan_Yang.png",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Isabella Reyes-Famous",
+        role: "Analyst",
+        class: "2028",
+        major: "Information Science",
+        image: "/team/Isabella Reyes_Famous.jpeg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Isha Nagireddy",
+        role: "Analyst",
+        class: "2029",
+        major: "Biometry & Statistics",
+        image: "/team/Isha_Nagireddy.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Ivy Liu",
+        role: "Analyst",
+        class: "2028",
+        major: "Information Science",
+        image: "/team/Ivy_Liu.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Karl Fadel",
+        role: "Analyst",
+        class: "2028",
+        major: "Information Science",
+        image: "/team/Karl_Fadel.png",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Maia Forssman",
         role: "Analyst",
         class: "2027",
-        major: "Economics & Statistics",
-        image: "/team/Cindy_Weng.png",
+        major: "Computer Science",
+        image: "/team/Maia_Forssman.JPEG",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
     {
-        name: "Kyleena Xin",
-        role: "Project Lead",
+        name: "Manya Pradeep Narayan",
+        role: "Analyst",
+        class: "2029",
+        major: "Computer Science",
+        image: "/team/Manya_Pradeep_Narayan.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Natan Kramskiy",
+        role: "Analyst",
+        class: "2029",
+        major: "Bioengineering",
+        image: "/team/Natan_Kramskiy.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Olivia Yu",
+        role: "Analyst",
+        class: "2029",
+        major: "Computer Science & Math",
+        image: "/team/Olivia_Yu.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Rhea Barot",
+        role: "Analyst",
+        class: "2029",
+        major: "Economics",
+        image: "/team/Rhea_Barot.png",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Steven Xu",
+        role: "Analyst",
+        class: "2028",
+        major: "Biometry & Statistics",
+        image: "/team/Steven_Xu.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Suchit Basineni",
+        role: "Analyst",
+        class: "2029",
+        major: "Computer Science",
+        image: "/team/Suchit_Basineni.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Tristan Albano",
+        role: "Analyst",
+        class: "2029",
+        major: "Information Science",
+        image: "/team/Tristan_Albano.jpeg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Winifred Agyei",
+        role: "Analyst",
         class: "2027",
         major: "Information Science",
-        image: "/team/Kyleena_Xin.png",
+        image: "/team/Winifred_Agyei.png",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
     {
-        name: "Dora Zhang",
-        role: "Project Lead",
-        class: "2028",
-        major: "Computer Science",
-        image: "/team/Dora_Zhang.png",
+        name: "Wonjin Eum",
+        role: "Analyst",
+        class: "2029",
+        major: "Information Science",
+        image: "/team/Wonjin_Eum.JPG",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
     {
-        name: "Rishik Gowrishetti",
-        role: "Project Lead",
-        class: "2028",
-        major: "Statistical Science",
-        image: "/team/Rishik_Gowrishetti.png",
+        name: "Isabella Guan",
+        role: "Analyst",
+        class: "2027",
+        major: "Mathematics & Computer Science",
+        image: "/team/Isabella_Guan.jpeg",
         color: "bg-[#E5E7FF]",
         bio: ""
-    },
+    }
 ];
 
 const additionalProjectLeads: TeamMember[] = Array(7).fill(null).map((_, i) => ({
@@ -610,7 +509,7 @@ export default function MastheadPage() {
             <div className="space-y-12">
                 {/* Executive Board */}
                 <div>
-                    <h2 className="text-2xl font-eb-garamond mb-6">Executive Board</h2>
+                    <h2 className="text-2xl font-eb-garamond mb-6">Leadership</h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-6">
                         {execBoard.map((member) => (
                             <TeamMemberCard key={member.name} member={member} />
@@ -629,14 +528,14 @@ export default function MastheadPage() {
                 </div>
 
                 {/* Editorial Team */}
-                <div>
+                {/*<div>
                     <h2 className="text-2xl font-eb-garamond mb-6">Editorial Team</h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-8 gap-6">
                         {editorialteamLeads.map((member) => (
                             <TeamMemberCard key={member.name} member={member} />
                         ))}
                     </div>
-                </div>
+                </div>*/}
 
                 {/* Analysts */}
                 <div>
