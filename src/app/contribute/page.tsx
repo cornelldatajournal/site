@@ -25,7 +25,7 @@ export default function GetInvolvedPage() {
                 <p className="font-space-grotesk mt-2">
                     Fill out our <a href="https://docs.google.com/forms/d/e/1FAIpQLScgcZN4jJt60SSTKw-99xefTIPFYgbAxxlxdGHiX-moO4Ud7w/viewform?usp=header" className="text-white underline hover:text-neutral-200">
                         interest form
-                    </a> to let us know you're considering joining. 
+                    </a> to let us know you&apos;re considering joining. 
                     
                 </p>
                 <p className="font-space-grotesk mt-4 text-sm">
