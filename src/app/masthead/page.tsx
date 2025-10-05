@@ -49,7 +49,7 @@ const teamMembers: TeamMember[] = [
         major: "Information Science and Communication & Computer Science and Business",
         image: "/team/Carina_Lau.jpeg",
         color: "bg-[#FFE8E5]",
-        bio: "."
+        bio: ""
     },
     {
         name: "Rithya Sriram",
@@ -187,15 +187,15 @@ const teamMembers: TeamMember[] = [
         color: "bg-[#E5E7FF]",
         bio: ""
     },
-    {
-        name: "Aryan Shah",
-        role: "Analyst",
-        class: "2028",
-        major: "Public Policy",
-        image: "/team/Aryan_Shah.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
+    // {
+    //     name: "Aryan Shah",
+    //     role: "Analyst",
+    //     class: "2028",
+    //     major: "Public Policy",
+    //     image: "/team/Aryan_Shah.jpeg",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: ""
+    // },
     {
         name: "Emi Labbe",
         role: "Analyst",
@@ -293,7 +293,7 @@ const teamMembers: TeamMember[] = [
         major: "Information Science",
         image: "/team/Ivy_Liu.jpg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "2151"
     },
     {
         name: "Karl Fadel",
