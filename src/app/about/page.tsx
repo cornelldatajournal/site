@@ -24,14 +24,14 @@ export default function AboutPage() {
     return (
         <main className="container py-12 px-4 sm:px-6 max-w-6xl mx-auto">
             {/* Motto Section */}
-            <div className="text-center mb-16">
+            {/* <div className="text-center mb-16">
                 <div className="max-w-2xl mx-auto">
                     <h2 className="text-2xl font-space-mono font-medium text-[#3E32BA] mb-2">Radical Candor</h2>
                     <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm">
                         Uncovering raw truths about the world around us.
                     </p>
                 </div>
-            </div>
+            </div> */}
 
             {/* Mission Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
