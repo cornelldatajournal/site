@@ -28,7 +28,7 @@ const teamMembers: TeamMember[] = [
         name: "Rahi Dasgupta",
         role: "VP of External Affairs",
         class: "2027",
-        major: "Information Science & Applied Economics",
+        major: "Information Science",
         image: "/team/Rahi_Dasgupta.jpeg",
         color: "bg-[#F0E5FF]",
         bio: ""
@@ -46,7 +46,7 @@ const teamMembers: TeamMember[] = [
         name: "Carina Lau",
         role: "Social Coordinator",
         class: "2027",
-        major: "Information Science and Communication & Computer Science and Business",
+        major: "Information Science and Communication",
         image: "/team/Carina_Lau.jpeg",
         color: "bg-[#FFE8E5]",
         bio: ""
@@ -55,7 +55,7 @@ const teamMembers: TeamMember[] = [
         name: "Rithya Sriram",
         role: "Project Coordinator",
         class: "2027",
-        major: "ORIE & Astronomy/Statistics",
+        major: "Computer Science",
         image: "/team/Rithya_Sriram.jpeg",
         color: "bg-[#E5FFFA]",
         bio: ""
