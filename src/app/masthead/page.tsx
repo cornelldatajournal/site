@@ -33,15 +33,15 @@ const teamMembers: TeamMember[] = [
         color: "bg-[#F0E5FF]",
         bio: ""
     },
-    {
-        name: "Jason Wang",
-        role: "VP of Internal Affairs",
-        class: "2027",
-        major: "Computer Science",
-        image: "/team/Jason_Wang.jpeg",
-        color: "bg-[#E5FFE9]",
-        bio: "He usually drinks ~200% the daily water intake of the average American male"
-    },
+    // {
+    //     name: "Jason Wang",
+    //     role: "VP of Internal Affairs",
+    //     class: "2027",
+    //     major: "Computer Science",
+    //     image: "/team/Jason_Wang.jpeg",
+    //     color: "bg-[#E5FFE9]",
+    //     bio: "He usually drinks ~200% the daily water intake of the average American male"
+    // },
     {
         name: "Carina Lau",
         role: "Social Coordinator",
@@ -394,15 +394,15 @@ const teamMembers: TeamMember[] = [
         color: "bg-[#E5E7FF]",
         bio: ""
     },
-    {
-        name: "Isabella Guan",
-        role: "Analyst",
-        class: "2027",
-        major: "Mathematics & Computer Science",
-        image: "/team/Isabella_Guan.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    }
+    // {
+    //     name: "Isabella Guan",
+    //     role: "Analyst",
+    //     class: "2027",
+    //     major: "Mathematics & Computer Science",
+    //     image: "/team/Isabella_Guan.jpeg",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: ""
+    // }
 ];
 
 const additionalProjectLeads: TeamMember[] = Array(7).fill(null).map((_, i) => ({
