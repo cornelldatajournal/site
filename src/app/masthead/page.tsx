@@ -31,7 +31,7 @@ const teamMembers: TeamMember[] = [
         major: "Information Science",
         image: "/team/Rahi_Dasgupta.jpeg",
         color: "bg-[#F0E5FF]",
-        bio: ""
+        bio: "She has played 679.6 hours of Valorant."
     },
     // {
     //     name: "Jason Wang",
@@ -49,7 +49,7 @@ const teamMembers: TeamMember[] = [
         major: "Information Science and Communication",
         image: "/team/Carina_Lau.jpeg",
         color: "bg-[#FFE8E5]",
-        bio: ""
+        bio: "Her favorite number is 15."
     },
     {
         name: "Rithya Sriram",
@@ -58,7 +58,7 @@ const teamMembers: TeamMember[] = [
         major: "Computer Science",
         image: "/team/Rithya_Sriram.jpeg",
         color: "bg-[#E5FFFA]",
-        bio: ""
+        bio: "In the past 5 years, she's listened to 3,667 hours of audio books."
     },
     {
         name: "Jenny Williams",
@@ -95,7 +95,7 @@ const teamMembers: TeamMember[] = [
         major: "Computer Science",
         image: "/team/Remi_Ladia.jpg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has 1,605 unread iMessages."
     },
     {
         name: "Mei Knight",
@@ -104,7 +104,7 @@ const teamMembers: TeamMember[] = [
         major: "Statistical Science",
         image: "/team/Mei_Knight.jpeg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has been 6 out of 7 continents."
     },
     {
         name: "Tianyi Chen",
@@ -113,7 +113,7 @@ const teamMembers: TeamMember[] = [
         major: "Biometry & Statistics",
         image: "/team/Tianyi_Chen.JPG",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has three 6's in her birthday."
     },
     {
         name: "Vivian Guo",
@@ -122,7 +122,7 @@ const teamMembers: TeamMember[] = [
         major: "Biometry & Statistics",
         image: "/team/Vivian_Guo.jpeg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has 821 notes on her phone."
     },
     {
         name: "Natalie Miller",
@@ -140,7 +140,7 @@ const teamMembers: TeamMember[] = [
         major: "Statistics",
         image: "/team/Eden_Maynard.jpeg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She is in the top 0.1% of Solange listeners on Spotify."
     },
     {
         name: "Kayla Amkraut",
@@ -176,7 +176,7 @@ const teamMembers: TeamMember[] = [
         major: "Statistical Science",
         image: "/team/Emily_Fu.jpg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She watched 37 movies last year."
     },
     {
         name: "Milo Schilittgen-Li",
@@ -203,7 +203,7 @@ const teamMembers: TeamMember[] = [
         major: "Cognitive & Information Science",
         image: "/team/Emiline_Labbe.jpeg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has run 56 MRI sessions at Cornell."
     },
     // {
     //     name: "Stella Ma",
@@ -221,7 +221,7 @@ const teamMembers: TeamMember[] = [
         major: "Information Science, Systems, & Technology",
         image: "/team/Arianna_Hsu.jpg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has lived in 8 different places."
     },
     {
         name: "Adam Azevedo",
@@ -239,7 +239,7 @@ const teamMembers: TeamMember[] = [
         major: "Biometry & Statistics",
         image: "/team/Anna_Kim.JPG",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "Her average typing speed is 140 words per minute."
     },
     {
         name: "Elinor Tu",
@@ -248,7 +248,7 @@ const teamMembers: TeamMember[] = [
         major: "Computer Science, Mathematics",
         image: "/team/Elinor_Tu.jpg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has traveled to 10 different countries."
     },
     {
         name: "Eric Zhu",
@@ -257,7 +257,7 @@ const teamMembers: TeamMember[] = [
         major: "Biometry & Statistics",
         image: "/team/Eric_Zhu.png",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "He has studied 30,000 flashcards last year."
     },
     {
         name: "Ethan Yang",
@@ -275,7 +275,7 @@ const teamMembers: TeamMember[] = [
         major: "Information Science",
         image: "/team/Isabella Reyes_Famous.jpeg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has a 4.93 rating on Uber."
     },
     {
         name: "Isha Nagireddy",
@@ -284,7 +284,7 @@ const teamMembers: TeamMember[] = [
         major: "Biometry & Statistics",
         image: "/team/Isha_Nagireddy.jpg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She hates the number 3."
     },
     {
         name: "Ivy Liu",
@@ -293,7 +293,7 @@ const teamMembers: TeamMember[] = [
         major: "Information Science",
         image: "/team/Ivy_Liu.jpg",
         color: "bg-[#E5E7FF]",
-        bio: "2151"
+        bio: "Her favorite number is 2."
     },
     {
         name: "Karl Fadel",
@@ -311,7 +311,7 @@ const teamMembers: TeamMember[] = [
         major: "Computer Science",
         image: "/team/Maia_Forssman.JPEG",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She visits CTB 9 times a week on average."
     },
     {
         name: "Manya Pradeep Narayan",
@@ -320,7 +320,7 @@ const teamMembers: TeamMember[] = [
         major: "Computer Science",
         image: "/team/Manya_Pradeep_Narayan.jpg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "Her step count increased by 151.9% after getting to Cornell."
     },
     {
         name: "Natan Kramskiy",
@@ -347,7 +347,7 @@ const teamMembers: TeamMember[] = [
         major: "Economics",
         image: "/team/Rhea_Barot.png",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has been to 15 countries."
     },
     {
         name: "Steven Xu",
@@ -356,7 +356,7 @@ const teamMembers: TeamMember[] = [
         major: "Biometry & Statistics",
         image: "/team/Steven_Xu.jpg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "His basketball jersey number is 15."
     },
     {
         name: "Suchit Basineni",
@@ -374,7 +374,7 @@ const teamMembers: TeamMember[] = [
         major: "Information Science",
         image: "/team/Tristan_Albano.jpeg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "He has 3 dogs."
     },
     {
         name: "Winifred Agyei",
