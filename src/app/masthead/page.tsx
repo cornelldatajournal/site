@@ -49,7 +49,7 @@ const teamMembers: TeamMember[] = [
         major: "Information Science and Communication",
         image: "/team/Carina_Lau.jpeg",
         color: "bg-[#FFE8E5]",
-        bio: "Her favorite number is 15."
+        bio: "Her Crossy Road high score is 587."
     },
     {
         name: "Rithya Sriram",
@@ -86,7 +86,7 @@ const teamMembers: TeamMember[] = [
         major: "Public Policy",
         image: "/team/Melody_Qian.png",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She is in the top 0.69% of monkeytype users in WPM."
     },
     {
         name: "Remi Ladia",
@@ -104,7 +104,7 @@ const teamMembers: TeamMember[] = [
         major: "Statistical Science",
         image: "/team/Mei_Knight.jpeg",
         color: "bg-[#E5E7FF]",
-        bio: "She has been 6 out of 7 continents."
+        bio: "She has literally traveled around the globe."
     },
     {
         name: "Tianyi Chen",
@@ -149,7 +149,7 @@ const teamMembers: TeamMember[] = [
         major: "Statistical Science",
         image: "/team/Kayla_Amkraut.jpeg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has lived in 4 states."
     },
     {
         name: "Marianna Ruggiero",
@@ -257,7 +257,7 @@ const teamMembers: TeamMember[] = [
         major: "Biometry & Statistics",
         image: "/team/Eric_Zhu.png",
         color: "bg-[#E5E7FF]",
-        bio: "He has studied 30,000 flashcards last year."
+        bio: "He studied 30,000 flashcards last year."
     },
     {
         name: "Ethan Yang",
@@ -302,7 +302,7 @@ const teamMembers: TeamMember[] = [
         major: "Information Science",
         image: "/team/Karl_Fadel.png",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "He sets 6 alarms to wake up."
     },
     {
         name: "Maia Forssman",
@@ -329,7 +329,7 @@ const teamMembers: TeamMember[] = [
         major: "Bioengineering",
         image: "/team/Natan_Kramskiy.jpg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "He has watched the Lord of the Rings trilogy 8 times."
     },
     {
         name: "Olivia Yu",
@@ -338,7 +338,7 @@ const teamMembers: TeamMember[] = [
         major: "Computer Science & Math",
         image: "/team/Olivia_Yu.jpg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has lost her water bottle 38 times this year."
     },
     {
         name: "Rhea Barot",
@@ -365,7 +365,7 @@ const teamMembers: TeamMember[] = [
         major: "Computer Science",
         image: "/team/Suchit_Basineni.jpg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "He has 1,594 hours on Brawl Stars."
     },
     {
         name: "Tristan Albano",
@@ -392,7 +392,7 @@ const teamMembers: TeamMember[] = [
         major: "Information Science",
         image: "/team/Wonjin_Eum.JPG",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has been to 6 out of 7 continents"
     },
     // {
     //     name: "Isabella Guan",
