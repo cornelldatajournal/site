@@ -72,7 +72,7 @@ export async function getAllArticles(): Promise<Article[]> {
         // Sort articles by given order, HIGHEST NUMBER IS FIRST
         return articles
             .filter((article): article is Article => article !== null)
-            .filter((article) => article.order !== -1)
+            // .filter((article) => article.order !== -1)
             .sort((a, b) =>
                 b.order - a.order
             );

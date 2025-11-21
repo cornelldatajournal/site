@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { getAllArticles } from '@/lib/articles';
 
 export default async function ArticleListPage() {
-    const articles = await getAllArticles();
+    const articles = (await getAllArticles()).filter((article) => article.order !== -1);
 
     return (
         <div className="container max-w-8xl mx-auto px-4 py-8">
