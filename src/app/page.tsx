@@ -9,14 +9,14 @@ export default async function HomePage() {
   const articles = await getAllArticles();
   const [latestArticle, ...otherArticles] = articles;
 
-  // Take only the next 8 articles, after the main one (3 left, 2 center, 3 right), center most is latest
+  // Take only the next 9 articles, after the main one (3 left, 3 center, 3 right), center most is latest
   // Above and below can be changed as need be
-  const displayedArticles = otherArticles.slice(0, 9);
+  const displayedArticles = otherArticles.slice(0, 10);
   // console.log(displayedArticles)
   
   const leftColumnArticles = displayedArticles.slice(0, 4);
-  const centerColumnArticles = displayedArticles.slice(4, 5);
-  const rightColumnArticles = displayedArticles.slice(5, 9);
+  const centerColumnArticles = displayedArticles.slice(4, 6);
+  const rightColumnArticles = displayedArticles.slice(6, 10);
 
   const renderArticle = async (article: BaseArticle, isFeatured = false) => {
     const articleLink = article.external_link || `/articles/${article.slug}`;

@@ -491,7 +491,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
 export default function MastheadPage() {
     // Filter executive board members (excluding Project Leads)
     const execBoard = teamMembers.filter(member => member.role !== "Editor" && !member.role.includes("Analyst") && member.role !== "Project Lead");
-    
+
     // Filter project leads from both teamMembers and include additional project leads
     const editorialteamLeads = [
         ...teamMembers.filter(member => member.role === "Editor")
@@ -506,6 +506,20 @@ export default function MastheadPage() {
 
     return (
         <main className="container py-12 px-4 sm:px-6 max-w-6xl mx-auto overflow-x-hidden">
+            <h2 className="text-2xl font-eb-garamond mb-6">A Network of People</h2>
+            <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm mb-6">
+                Our club is made up of people of various backgrounds, interacting with one another to produce beautiful storytelling with data.
+                To read more about that interaction, click on the article below:
+            </p>
+
+            <a href="https://nikhilc52.github.io/cdj_networks/" target="_blank">
+                <div className="border-b mb-6 mt-8 border-neutral-200 dark:border-neutral-800 flex items-center justify-center flex-col">
+                    <img className="mb-6" src="images/Masthead_post_role.png" height={250} width={250} />
+                    <h4 className="text-sm text-black dark:text-neutral-400 mb-2 mt-3 font-space-mono uppercase font-bold">Culture</h4>
+                    <h2 className="text-2xl font-space-grotesk mb-6">The Cornell Data Journal Network</h2>
+                </div>
+            </a>
+
             <div className="space-y-12">
                 {/* Executive Board */}
                 <div>
