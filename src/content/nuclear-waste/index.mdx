@@ -1,0 +1,208 @@
+---
+title: "Mapping America’s Nuclear Waste Problem"
+description: "Now introducing: FindMyNuclearWaste."
+author: ["Melody Qian", "Suchit Basineni", "Winifred Agyei"]
+editors: ["Jenny Williams","Nikhil Chinchalkar"]
+publishedDate: "2026-01-10"
+section: "Environment"
+image_path: "public/images/FA25_NuclearWaste_Thumb.png"
+layout: "image"
+order: 13
+thumbnailCredit: "Melody Qian"
+---
+
+*"I foolishly once believed the myth that nuclear energy is clean & safe. That myth has completely broken down. Restarting nuclear reactors while we still have no place to dispose nuclear waste is a criminal act toward future generations."*
+<div style={{textAlign:'right'}}>
+-- Morihiro Hosokawa, former Prime Minister of Japan[^1]
+</div>
+
+Every time you turn on a light or charge your laptop, you are drawing from a vast energy network that keeps the world running. For decades, nuclear power has been a pillar of that system, a supposedly reliable and secure source of electricity that supplies nearly 20% of America’s energy. But behind the glow of the grid lies a darker legacy: the radioactive waste that remains long after the lights go out.
+
+<iframe
+  title="Student Sunburst"
+  src="/images/FA25_NuclearWaste_TimeScaleBubble.html"
+  style={{
+    height: `440px`,
+    width: `100%`,
+    maxWidth: `92vw`
+  }}
+></iframe>
+
+Today, 94 reactors operate across the United States, and each one leaves behind both low-level (contaminated material), intermediate (reactor components) and high-level nuclear waste. High-level nuclear waste, or spent fuel, can take more than 300,000 years to decay to safe levels of radioactivity,[^2]  roughly the entire span of human existence since Homo sapiens first appeared in Africa. To put that into perspective, here’s that timespan in comparison with some other things that happened very long ago…
+
+Though the volume of high-level nuclear waste produced relative to the power it provides is relatively small compared to the waste produced by the fossil fuel industry, it’s much more potent and dangerous to handle. And it’s definitely not an insignificant amount; we still produce more than 2,000 metric tons of it each year in the U.S.[^3] It can be hard for our brains to comprehend large numbers, so here is what 2000 tons looks like!
+
+<ImageLoader
+    imagePath="public/images/FA25_NuclearWaste_Weight.png"
+    alt=""
+/>
+
+With no permanent national repository, this waste now sits at over 70 temporary storage sites scattered across the country. Contrary to what you might think, they aren’t in the middle of the desert somewhere or locked in high-security bunkers; they’re often next to rivers, small towns, and major population centers. Take the now decommissioned Indian Point Power Plant, which sits along the Hudson River and is about an hour-and-a-half drive (45 miles) north of New York City. A total of 1776 metric tons of high-level waste are stored there, right next to a major waterway that provides transportation, food, and recreation to millions of people in the Northeast. It was surprising to discover how close it was to a major population center and the coast. Why wouldn’t they move them to less risky locations?  
+
+<ImageLoader
+    imagePath="public/images/FA25_NuclearWaste_map_2.png"
+    alt=""
+/>
+
+The answer is, these sites were never meant to be permanent. Our current storage solutions are only licensed for a few decades and are intended as intermediary steps, not final resting places. The most famous proposed solution, Yucca Mountain in Nevada, was designed to serve as a deep geological repository, a final resting place for this material. But after years of political opposition over environmental justice concerns and $15 billion invested, the project was halted, leaving 90,000 metric tons of waste essentially in limbo and turning US communities into defacto long-term storage sites.[^4] Though it wasn’t politically feasible in our countries, plans to construct geological repositories are well underway in Switzerland and Canada.
+
+<ImageLoader
+    imagePath="public/images/FA25_NuclearWaste_YuccaSite.jpg"
+    alt=""
+/>
+
+<ImageLoader
+    imagePath="public/images/FA25_NuclearWaste_plant.png"
+    alt=""
+/>
+
+To really understand the threat this waste poses, let’s dive into a nuclear energy crash course. What nuclear power plants do is basically split uranium atoms through a **fission chain reaction** which releases tremendous amounts of heat into water. This produces steam, which spins turbines and creates electricity.
+
+<ImageLoader
+    imagePath="public/images/FA25_NuclearWaste_assembly.png"
+    alt=""
+/>
+
+The uranium, after being mined, is prepared for usage in a **fuel assembly**, which is essentially a bundle of fuel rods filled with uranium pellets about the size of a fingertip. After years of use, the assemblies become intensely hot and radioactive and must be moved into deep cooling pools, where they remain for about five years. While cooling pools are effective at reducing the temperature and radioactivity of spent fuel rods, they also pose significant long-term safety risks. These pools rely on continuous circulation and cooling to prevent overheating. If the water level drops or the cooling systems fail, whether due to power outages, mechanical breakdowns, or natural disasters, the exposed fuel rods can rapidly heat up. This can potentially lead to boiling, hydrogen explosions, or the release of radioactive gases. The 2011 Fukushima Daiichi nuclear disaster in Japan underscored this danger when loss of cooling in spent fuel pools contributed to radiation leaks and widespread contamination. 
+
+<ImageLoader
+    imagePath="public/images/FA25_NuclearWaste_Fukushima.png"
+    alt=""
+/>
+
+Once their heat and radiation levels subside enough, they can be transferred to dry casks. These are typically licensed for 20-40 years and can be renewed for up to 40 more, and it is hypothesized that they can safely contain waste for at least 60 years beyond a reactor’s licensed operating life.
+
+Clearly, this timespan is nothing compared to the time even the half-life (time it takes ½ of radioactive atoms to decay into a different element) of the most dangerous materials contained in spent fuel, much less the time it takes to decay to safe levels. Furthermore, the Nuclear Energy Institute admits “there may be some dry cask storage component aging mechanisms that are not yet known due to the relatively short time periods the storage systems have been in service.”[^5]
+
+It’s irresponsible to think we can predict and control conditions to safely contain waste for thousands of years when we haven’t even truly seen the effects of time and environment on these casks yet. 
+
+Regardless of what you think about nuclear power, it is clear that we have a waste problem that will last centuries, but we only have makeshift solutions that will last a couple decades–we must improve management so that our civilians are no longer at risk. Now that we understand the scale of the risk, we wanted to ask whether it affects all civilians equally, or whether certain groups were more likely to live near these waste sites. To do that, we turned to the data. 
+
+## Data Sources
+
+For this article, we got information on individual site storage from the U.S. Nuclear Regulatory Commission[^6] and the U.S. Department of Energy’s 2024 Spent Nuclear Fuel and Reprocessing Waste Inventory Report. Geographic coordinates from this data were reverse geocoded through Geocodio’s API and returned demographic and economic statistics from the 2024 Census and American Community Survey. 
+
+Once merged, this data was used for our **interactive map** and in some **machine learning** models used to identify whether the people living near nuclear waste sites shared certain characteristics. But first, let’s get a lay of the land with some visualizations!
+
+## Initial Visualizations 
+
+<iframe
+  title=""
+  src="/images/FA25_NuclearWaste_storagepie.html"
+  style={{
+    height: `440px`,
+    width: `100%`,
+    maxWidth: `92vw`
+  }}
+></iframe>
+
+<iframe
+  title=""
+  src="/images/FA25_NuclearWaste_urbanpie.html"
+  style={{
+    height: `440px`,
+    width: `100%`,
+    maxWidth: `92vw`
+  }}
+></iframe>
+
+Most U.S. nuclear waste sites (73.8%) use a mix of dry and wet storage, as only 12-13% of the sites use one of them exclusively. This makes sense; it takes quite a bit of time for assemblies to cool to a safe temperature and be ready to transfer into more “stable” dry casks, so functioning power plants usually have some dry storage containing older assemblies and some more recently used ones sitting in pools.
+
+The urban–rural chart shows that over 60% of sites are in mixed areas, about 32% in rural regions, and just 4.6% in urban zones. This indicates that smaller and rural communities bear the greatest share of nuclear waste storage, which corresponds with our assumptions; land is more expensive in urban areas, and faces more political opposition due to the elevated risk of being near a population center. The darker consequences of this are that rural communities tend to be underserved, with higher rates of poverty and being over retirement age. As a result, they have fewer resources for protesting or managing the storage of high-level waste in their communities and on the land they live off of.
+
+<iframe
+  title=""
+  src="/images/FA25_NuclearWaste_DiffRaceEtnLQ.html"
+  style={{
+    height: `620px`,
+    width: `100%`,
+    maxWidth: `92vw`
+  }}
+></iframe>
+
+*\*Note: All races are Non-Hispanic (e.g. Non-Hispanic White, Black, etc.)* <br/>
+*LQ\<1: lower concentration of population in nuclear site compared to state* <br/>
+*LQ\>1: higher concentration of population in nuclear site compared to state*
+
+Instead of simply comparing the median percentages of each racial group between sites and states, **location quotients** were chosen, which measure the relative concentration of a subarea compared to a larger one and can be taken for any attribute. In this case race and ethnicity were used to properly scale the percentages to the states in which they belong, as there is an unequal distribution of race across different states. Observe that White and Non-Hispanic groups are slightly overrepresented near nuclear sites, while Black, Asian, and Pacific Islander populations are underrepresented. The slightly higher Native proportion is not a coincidence; it reflects a long U.S. history of placing nuclear labs, test sites, and waste facilities on or near Indigenous land. This pattern emerged because Native communities were politically marginalized, easier for federal agencies to override, and subject to weaker enforcement of health and safety standards. Race is relevant to this story because it is impossible to understand today’s distribution of nuclear waste without acknowledging who has historically been put in harm’s way and who has had the least power to push back.
+
+<iframe
+  title=""
+  src="/images/FA25_NuclearWaste_IncomeCloropleth_Edited.html"
+  style={{
+    height: `420px`,
+    width: `100%`,
+    maxWidth: `92vw`
+  }}
+></iframe>
+
+<iframe
+  title=""
+  src="/images/FA25_NuclearWaste_HouseCloropleth.html"
+  style={{
+    height: `420px`,
+    width: `100%`,
+    maxWidth: `92vw`
+  }}
+></iframe>
+
+These charts represent two different measures of economic wellbeing; household income (how much you earn per year) and household value (representative of one’s wealth and accumulated resources). The color and saturation of each state on these maps represents the difference between the median income/house value in the waste deposit sites and the state median.
+
+Green states are those in which the locals near the site had a higher income/wealth than the state median, and reds are the reverse; where residents near the site were worse off than the state median. The saturation indicates the magnitude of the difference (some of them, like California, are more than the $40,000 maximum on the colorbar; you can hover over them to see individual numbers).
+
+Interestingly, although they are both supposedly measures of economic prosperity, the maps seem to be quite different; the red and green don’t always correspond across the two maps. There is more red on the second graph, so residents near sites are “worse off” in terms of their wealth than in terms of income. The more interesting component is that colors seem to be much more saturated on the map comparing house values; it seems that income differences seem to be smaller than wealth differences, which may suggest some association between living near a nuclear waste site and property value, but could also stem from a number of reasons (state policy regulating minimum wage, availability of jobs in the area, racial makeup, etc). 
+
+Machine learning methods were used to further explore these relationships.
+
+## Models 
+
+A lasso regression model was chosen to predict whether a census block group was a nuclear site or not based on a combination of demographic and economic variables. The benefit of using it is that since it is linear, its coefficients are easily interpreted in terms of relative magnitude and direction (whether it increases or decreases probability of predicting a nuclear waste site). It had a relatively high accuracy score. Here is the graph of the coefficients!
+
+<ImageLoader
+    imagePath="public/images/FA25_NuclearWaste_Regression.png"
+    alt=""
+/>
+
+*(You will notice there are some variables that are missing (for example, percent of white or non-hispanic), which were removed because of concerns about collinearity. Basically, this is when dependent variables are highly correlated with each other and it can really mess up the coefficients.)*
+
+As shown in the maps from before, house value was a much stronger predictor than median household income! Interestingly, the coefficient is positive. Strictly interpreted, a higher house value increases the probability of a location being a nuclear waste site. But for our purposes, that just tells us that locations of nuclear waste sites tend to have higher property values. This was surprising, but was actually supported by the literature! This property premium occurs because “any perceived risk, negative imagery or stigma that may exist with respect to the nuclear facility is overwhelmed by accessibility effects associated with a desire to reside close to the workplace or other local economic or environmental influences.”[^7] Knowing this, real estate companies were likely able to increase the cost of homes closest to the plant as those employees probably moved to work near the site and were not sourced locally. 
+
+By contrast, nuclear waste sites tended to have average household incomes lower than the median. Many of them are nuclear power plants which were put in places with “depressed or blighted economies.”[^7] The paper argues that these plants help to revitalize the local community and economy; but if the high-paying jobs are filled by specialists who move from elsewhere, this benefit won’t be reflected in incomes. The darker side of this is also that low-income communities are disproportionately put at risk by this waste, and that they may not even want to oppose it due to the potential economic benefits.
+
+Our expectations about race and ethnicity from the earlier expectations were also challenged. Even though there was a relatively higher location quotient for Native Americans, the coefficient for it was shrunk down to zero, indicating it is not likely a significant variable. By contrast, a higher proportion of Asians or Blacks was associated with nuclear waste sites. According to a 2022 overview, they are the most abundant racial minorities in the nuclear workforce after Whites.[^8] The coefficient for the proportion of Hispanics was negative, though this is probably because non-Hispanic Whites make up so much of the workforce.
+
+We acknowledge that the relatively small size of the dataset likely affected these outcomes, as well as the limited number of variables that went into the model. In reality, many more harder-to-measure factors go into the location of nuclear waste sites including historical factors, geologic factors, climate, and accessibility via transportation. But we hope this is a good starting point.
+
+## What next?
+
+We all share a common goal: a sustainable future. Whether or not you think that nuclear power is going to save us all or that it’s a ticking time bomb, the waste it leaves behind is something that we need to contend with. While we can use data to predict the future, we certainly can’t know it, and the assumption that our technology can safeguard this fuel for the decades or centuries to come is a haughty one–and if the worst comes to pass, we should pay attention to who’s in the splash zone, and question why. 
+
+Now you know the nation’s nuclear waste isn’t hidden in distant deserts. Much of it sits in plain sight, sometimes just miles from where people live, work, and go to school. These sites might even be near you. Our interactive map reveals where nuclear waste is stored across the U.S: look and see how close you might be. 
+
+<iframe
+  title=""
+  src="/images/FA25_NuclearWaste_InteractiveMapEcon&Demo.html"
+  style={{
+    height: `420px`,
+    width: `100%`,
+    maxWidth: `92vw`
+  }}
+></iframe>
+
+And if it’s too close for comfort, you might want to ask your representatives what’s going to be done about it. Our government–the world, actually–is still yet to find a permanent resting place for this waste, and as nuclear energy expands in the coming years, it will continue to pile up until it’s impossible to ignore. Let’s hope our generation chooses not to look away.
+
+[^1]: https://www.nirs.org/fukushima-3-former-leaders-say/
+
+[^2]: https://ant.epri.com/article/manage-nuclear-waste#:~:text=How%20Long%20Does%20It%20Take,%2C%20enrichment%2C%20and%20nuclear%20reactors.
+
+[^3]: https://www.energy.gov/ne/articles/5-fast-facts-about-spent-nuclear-fuel 
+
+[^4]: https://republicans-energycommerce.house.gov/yucca-mountain
+
+[^5]: https://dps.ny.gov/system/files/documents/2022/12/dry-storage-of-spent-fuel-at-indian-point.pdf
+
+[^6]: https://www.nrc.gov/reading-rm/doc-collections/maps/isfsi
+
+[^7]: https://www.barnunnwy.gov/wp-content/uploads/2025/05/Impacts-of-Nuclear-Facilities-on-Property-Values-Research.pdf
+
+[^8]:  https://pmc.ncbi.nlm.nih.gov/articles/PMC9880971/ 

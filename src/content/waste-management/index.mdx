@@ -1,0 +1,101 @@
+---
+title: "Journey of a Bottle"
+description: "A state-by-state investigation of U.S. recycling systems and outcomes."
+author: ["Milo Schlittgen-Li", "Adam Azevedo", "Arjun Maitra"]
+editors: ["Jenny Williams","Nikhil Chinchalkar"]
+publishedDate: "2025-12-28"
+section: "Environment"
+image_path: "public/images/FA25_WasteManagement_Thumb.png"
+layout: "image"
+order: 16
+thumbnailCredit: "Nikhil Chinchalkar"
+---
+
+If you live in the United States and buy a can or bottle in a store, what happens to the bottle after you finish it depends less on you than on where you live. In Maine, the same container has a decent chance of becoming something new; in West Virginia, it's most likely to end up as trash. People throw the bottle in the blue bin (or at least they should), and feel happy that they have done their part. But what actually happens after? What contributes to these different recycling outcomes? 
+
+At one end, we have states like Maine, Vermont, or Massachusetts, where nearly half of all recycling packaging gets a second life. These resemble the vision of recycling we were promised. At the other end of the line, the picture looks very different. In West Virginia, only about 2% of these materials are recycled, while states like Louisiana, Tennessee, or Alaska hover at around 5%. 
+
+These vast differences can certainly not be solely determined by consumer effort or state pride; the systems behind the scenes determine them. To understand these, we analyzed state-level data on recycling rates, policy adoption, facilities, and demographic factors that shape how recycling works on the ground. 
+
+<ImageLoader
+    imagePath="public/images/FA25_WasteManagement_fig_map.png"
+        alt="Fig 1. Recycling rates by state"
+/>
+
+Imagine you go to throw out your weekly trash and have four recyclables: a can of Coke, a glass bottle of milk, a water bottle, and a rigid plastic tub you used to store food. From our perspective, they all end up in the same place: they go into the same blue bin, on the same curb, on the same day. From the system’s perspective, though, these different materials already have very different chances of getting recycled.
+
+Due to the different processing complexities, market values and costs, materials like aluminum are highly valuable and easy to recycle. Still, only about a third is recycled. In contrast, although it is everywhere in household packaging, non-bottle plastic packaging is much more complicated to recycle and expensive to sort, leading to much lower rates. So when you throw away your trash, that can of coke already has a decent chance of getting recycled, while the rigid plastic tub will most likely end up in a landfill. 
+
+<ImageLoader
+    imagePath="public/images/FA25_WasteManagement_fig2_material_means.png"
+        alt="Fig 2. Average recycling rate by material across states"
+/>
+
+Now picture you and your friend buying the same bottle of water from the same grocery store chain, but you live in Maine or Oregon while they live in Texas or Montana. When you compare the prices, you notice that you are paying a couple of cents more for your bottle. But on the back, you read that you can get those back if you bring the bottle in for recycling. The difference between you and your friend is that you live in one of the ten “bottle-bill” states, whilst he does not.
+
+<ImageLoader
+    imagePath="public/images/FA25_WasteManagement_fig3_container_deposit_boxplot.png"
+        alt="Fig 3. Boxplot of beverage-container recycling rates in states with and without deposit laws"
+/>
+
+When looking at the top-performing states, the first five all have something in common: they’re all deposit, or “bottle-bill,” states with recycling refunds. These laws started in Oregon in 1971, and added a small deposit to beverage containers, like bottles or cans, when you purchase them. The deposit is then refunded to the consumer when the bottle is returned. 
+
+Our data suggests that your friend’s bottle has only about a one in five chance of ever making it back through the recycling stream, whilst yours has almost a one in two chance of doing so. What is striking is that just that single policy lines up with more than double the recycling performance. This connection emphasizes the importance of these policies and suggests looking more closely at different policies. 
+
+To tear this apart, we build a simple model to answer the following question: how can we determine how high a state’s recycling rate should be? 
+
+The bottle-bill, of course, does not exist in a vacuum. Places pass other environmental rules, and have different infrastructure and demographics. To account for this, we construct a set of factors and run a regression model. We look at: 
+
+ * Whether the state has a deposit law
+ * Whether it has packaging EPR (rules that make producers manage the end-of-life of their packaging) 
+ * Whether it has a plastic bag ban 
+ * How many material recovery facilities it has per million residents 
+ * How many adults have a bachelor’s degree or higher
+ * The poverty rate
+ * The median household income
+
+We find that the model performs quite well, achieving an <LatexRenderer expression="R^2" /> of 0.765. Even when considering all of these, deposit laws stand out. Your bottle still has a 23 percentage point higher chance of getting recycled than your friend’s. Packaging Extended Producer Responsibility, where producers are responsible for managing the recycling process of their product, is also associated with a 10 percentage point increase in container recycling rates. Plastic bag bans show no clear connection to recycling rates in this data set. 
+
+<ImageLoader
+    imagePath="public/images/FA25_WasteManagement_fig_policy_effects.png"
+        alt="Fig 4. Estimated effects of deposit laws, packaging EPR, and plastic bag bans on beverage-container recycling, after accounting for infrastructure and socio-economic factors."
+/>
+
+But what concretely happens after you put your can or bottle into the trash? In most places, it is likely to end up at a recycling facility, such as a transfer station or an MRF (material recovery facility). MRFs are facilities that receive waste, sort and process it, and send them to manufacturers to be made into new products. There are also a variety of other facilities, many of them being specialized for a specific type of recycling, be it metals, paper, or plastic. It would then be legitimate for you to ask your friend whether having more of these facilities leads to a higher recycling rate. But when plotting the number of MRFs per million inhabitants for each state, the story is much subtler than with the bottle bill. We do, however, observe a slight upward trend with states that have more MRFs recycling slightly more on average, just not in a perfectly predictable way as there is a lot of scatter. 
+
+<ImageLoader
+    imagePath="public/images/FA25_WasteManagement_fig_scatter.png"
+        alt="Fig 5. Overall recycling rate vs. MRF facilities per million residents."
+/>
+
+We observe that some states that have similar facility access have very different outcomes. Some turn their infrastructure into high capture rates, while others can’t seem to get their numbers up. The message becomes: some infrastructure is necessary, but not sufficient. It creates the possibility of recycling, but is only part of the whole system. Something has to push people to recycle, and those materials to be recycled. 
+
+Up to now, we have mainly followed these bottles through policies and facilities. However, those systems don’t come up everywhere equally. A clear pattern emerges when we look at the population in each state. There is a strong link between education and overall recycling rates; states where more people have a bachelor’s degree or higher tend to recycle more. Similarly, states with higher poverty rates tend to recycle less.
+
+<ImageLoader
+    imagePath="public/images/FA25_WasteManagement_fig5_1_education_vs_overall_recycling.png"
+        alt="Fig 6. Recycling vs. education (share of adults with a bachelor’s degree or higher)."
+/>
+
+<ImageLoader
+    imagePath="public/images/FA25_WasteManagement_fig5_2_poverty_vs_overall_recycling.png"
+        alt="Fig 7. Recycling vs. poverty rate."
+/>
+
+<ImageLoader
+    imagePath="public/images/FA25_WasteManagement_fig5_3_income_vs_overall_recycling.png"
+        alt="Fig 8. Recycling vs. median household income."
+/>
+
+Consider that same PET bottle again. In a well-educated, wealthy-ish city, it is more likely to come across curbside collection, clear instructions, and strong policy. In a poorer rural county, it may encounter inconsistent service, confusing rules, and no deposit system. Even if the people using the bin might care just as much, the system around them provides their bottles significantly different odds. 
+
+We also see these differences in politics. States with Democratic governors have an average recycling rate of almost 29%, whereas Republican-led states have an average of roughly 15%. Democratic states tend to have the majority of deposit and EPR laws, and are also often wealthier and better educated.
+
+<ImageLoader
+    imagePath="public/images/FA25_WasteManagement_fig6_1_boxplot_recycling_by_party.png"
+        alt="Fig 9. Average overall recycling rate by the governor's party."
+/>
+
+Across all these charts, our bottles keep telling the same story: the systems have a much greater influence on what happens to them after we use them than does individual effort. Infrastructure determines whether recycling is even feasible; policies can double or triple the odds of a bottle being recycled; and education indicates where those strong systems are built. 
+
+Personal decisions are still important, but they are not the main lever. Depending on the laws and infrastructure in their states, two people can do the “right thing” with the same bottle and get very different results. The challenge isn’t just to make individuals feel more responsible; it is to design systems where, once they do their part, the bottle has a path back.

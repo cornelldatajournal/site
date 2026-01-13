@@ -19,7 +19,8 @@ export interface BaseArticle {
     external_link: string;
     drop_cap: boolean;
     layout?: 'default' | 'image' | 'quote' | 'plot' | 'link' | 'custom';
-    order: number; // if order is -1 then the article is hidden
+    order: number; // if order is -1 then the article is hidden from 'articles' tab, but still accessible with proper link (i.e. unlisted)
+    thumbnailCredit: string;//for image caption on main page
 }
 
 /* export interface ImageData extends BaseArticle {

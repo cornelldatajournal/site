@@ -1,0 +1,140 @@
+---
+title: "A User's Guide to Privacy Policies"
+description: "Have you ever actually read an app’s privacy policy before checking the little box to agree?"
+author: ["Natalie Miller", "Maia Forssman", "Emi Labbe", "Isabella Reyes-Famous"]
+editors: ["Jenny Williams","Nikhil Chinchalkar"]
+publishedDate: "2025-12-27"
+section: "Politics"
+image_path: "public/images/FA25_ConsumerData_Thumb.PNG"
+layout: "image"
+order: 20
+thumbnailCredit: "Melody Qian"
+---
+
+Most of us have experienced the same sequence of feelings: a flicker of guilty awareness (*I should really read this...*), shock (*wow, that is a LONG document*), and resignation (*oh well, I don’t have a choice anyways*). Beyond a half-hearted skimming of the first few pages, most of us have never attempted to read one of these. 
+
+Recent litigation, though, suggests that maybe we should. In 2021, the Federal Trade Commission initiated a lawsuit against popular period and ovulation tracker Flo Health, alleging that they had quietly shared users’ reproductive-health information with analytics and marketing firms despite explicitly promising not to. In 2021, the agency fined online therapy provider BetterHelp for disclosing mental health details for advertising. 
+
+Data sharing becomes especially sensitive when it involves information about our bodies, moods, or daily routines. While traditional medical records are protected by the Health Insurance Portability and Accountability Act (HIPAA), a vast trove of more informal health data that we voluntarily provide to apps sits in a regulatory grey zone. 
+
+How many steps we take each day. When we go to bed and wake up. How stressed or anxious we rate ourselves as feeling. When, and for how long, our period is. None of this is covered by HIPAA, and yet all of it can paint a shockingly intimate picture of our lives. 
+
+We were curious: **How do these policies frame sharing this sensitive data with third-parties?**
+
+## Our Study 
+
+We webscraped and analyzed over 100 privacy policies of some of the most popular health-related apps on the App Store. These run a wide range of functions, from fitness trackers to apps doctors use to communicate with their patients to general tools like AppleHealth that quietly accumulate a wide panel of health and activity data from millions of users.
+
+To make the data easier to understand, we grouped apps into four “data sensitivity” levels based on how often they mentioned sensitive keywords, like “biometrics” or “reproduction.” 
+
+## These policies are long. 
+
+Without even looking at the specific language surrounding disclosures, we can immediately see that these policies are potentially unreadable. 
+
+<ImageLoader
+    imagePath="public/images/FA25_ConsumerData_read_time_dists_by_sensitive_data.png"
+    alt="Privacy Policy Length by Sensitive Data Usage"
+/>
+
+Across the data sensitivity levels of health apps that we identified, the median word count of privacy policies hovered around 5,000 words, with some policies reaching upwards of 20,000 words.
+
+<ImageLoader
+    imagePath="public/images/FA25_ConsumerData_read_time_vs_readability_sensitive.png"
+    alt="Reading Time and Readability Scores by Sensitive Data"
+/>
+
+To gain a more realistic picture of what word-length meant for our everyday lives, we used studies on average word-per-minute reading time to quantify how long it would take the average adult to read these policies. Most of the policies clustered around half an hour in reading time. 
+
+## So how do these apps talk about sharing your data? 
+
+When privacy policies do actually get around to discussing data sharing, we noticed a few key strategies that they use. 
+
+## Strategy One: Hiding who they’re sharing with. 
+
+It’s rare to have a policy that *actually* names any of the companies they’re sharing your data with; instead, they’ll use vague nouns like “service providers” and “affiliates”.
+
+<ImageLoader
+    imagePath="public/images/FA25_ConsumerData_vague_nouns_frequency.png"
+    alt="Frequency of Vague nouns by Sensitive Data Category"
+/>
+
+The most commonly used vague noun was “service providers,” followed by “affiliates,” “vendors,” and “business partners.” 
+
+It’s particularly alarming that the category of apps that contributes most to the frequencies of these vague nouns is the group of apps with “High” levels of sensitive data. 
+
+This is only the beginning, though. The tricky part of identifying what’s happening with your data *begins* with obfuscating who it’s being shared with. 
+
+* USER TIP: When you’re reading policies, CTRL + F for these vague nouns and read the sentences around them. While you might not know who exactly your data is being shared with, you stand a better chance at understanding what data is being shared, and for what purpose. 
+
+## Strategy Two: Sharing data as necessary to app functionality.
+
+Building off of the usage of vague terms, policies will often couch their sentences about sharing with terms that make you think that sharing is necessary. We ran an analysis to find paragraphs where these vague nouns co-occurred with obligation-charged key words.
+
+<ImageLoader
+    imagePath="public/images/FA25_ConsumerData_unavoidable_frequency.png"
+    alt="Paragraphs with 'Unavoidable Sharing' Language"
+/>
+
+The most common phrases that co-occurred with these vague nouns were “comply with” and “required to.”
+
+<ImageLoader
+    imagePath="public/images/FA25_ConsumerData_unavoidable_position_heatmap.png"
+    alt="Position of Unavoidable Language with Vague Nouns"
+/>
+
+Fascinatingly, we found that the paragraphs where vague nouns and unavoidable-sharing phrases co-occur are almost all in the middle 50-60% of privacy policies. 
+
+* USER TIP: Sadly, there’s not actually that much regulation around what non-HIPAA apps can and can’t do with your data. If you read a sentence where it sounds like an app HAS to share your data, do a quick Google search to see if this is actually true or not. 
+
+## Strategy Three: Sharing as routine.
+
+Somewhat relatedly, policies will also make their sharing sound like it’s part of a normal process, something integral to the functionality of their app. 
+
+This can be true: many apps actually outsource their analytics to other companies, and the app is just an interface for the user to provide their data. This strategy is about exploiting the fact that it’s *possible* for sharing to be essential to the app’s functionality to make even more unnecessary sharing go unnoticed. 
+
+Again, we looked for instances where certain keywords indicating routine sharing co-occurred with the vague nouns we identified. 
+
+<ImageLoader
+    imagePath="public/images/FA25_ConsumerData_routine_frequency.png"
+    alt="Paragraphs with 'Routine Sharing' Language"
+/>
+
+Like the nouns, these routine-sharing phrases are pretty vague too: personalize, customer support, tailor. What does this actually mean?
+
+<ImageLoader
+    imagePath="public/images/FA25_ConsumerData_routine_position_heatmap.png"
+    alt="Position of Routine Language with Vague Nouns"
+/>
+
+Again, we found that the majority of paragraphs with terms from these two lists occur in the middle 50-60 percent of the policies. 
+
+* USER TIP: Most often, the fact that policies use vague language to describe what they’re doing with their data means that they’re trying to hide something. Again, CTRL + F for some of these key words and reading context can be helpful. 
+
+## So what? 
+
+So what? Your data’s been shared, and now… another company has your data? Here are a couple things that can happen in practice: 
+
+<u>Targeted advertising follows you everywhere.</u>
+
+This was exactly one of the issues at focus in the government’s case against Google, Meta, and Flo. You might be fine with getting more advertisements for running shoes because Strava has told an advertising firm that you run a lot, but what about getting non-stop advertising for birth control, because your period-tracker sold your data? Or for medications to address your private medical conditions you use an app to track?
+
+<u>You pay more for things.</u>
+
+Now that you’ve started to track your sleep, you notice that the price of these nice cotton bedsheets you’ve been keeping your eye on go up. The app just sold a list of user email addresses to Brooklinen, and they know that since you care about your sleep, they can charge you more. 
+
+<u>You have greater exposure to these things happening to you in the future.</u>
+
+Once your data has been sold to multiple third parties, it’s more difficult to erase – even if you delete the app and wipe your user profile, data that’s already been sold is still circling out there. 
+
+## What can I do? 
+
+Short of abandoning health apps entirely (which isn’t realistic or convenient for most of us), here are a few actionable things you can do: 
+
+Read the parts that matter: Search for those vague nouns, and read those sentences carefully. Oftentimes, companies will make you jump through hoops to check a “do not sell” option – but it’s worth it to find out if this is possible. 
+
+Look for app alternatives: Use these methods to find privacy policies that seem more user-friendly. 
+
+Check your state’s privacy laws: California, notably, has some of the strongest privacy laws; here, and in a few other states, you have legal rights to access, delete, or opt out of the sale of your personal information, which companies are legally required to honor. Look for these options. 
+
+It’s unfortunate that privacy policies aren’t written to inform you, but instead to allow companies to use your data. You shouldn’t need an instruction manual to understand your rights, but as long as these policies remain complex, you do. 
+

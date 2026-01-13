@@ -1,0 +1,94 @@
+---
+title: "Beats and Beliefs"
+description: "Music's dual, facile ability to serve as both a powerful tool of propaganda and as an existential threat to power structures and political leaders has made it a prime focus of nervous governmental concern over the entire span of history..."
+author: ["Mei Knight", "Kayla Amkraut", "Marianna Ruggiero", "Emily Fu", "Anna Kim"]
+editors: ["Jenny Williams","Nikhil Chinchalkar"]
+publishedDate: "2026-01-05"
+section: "Politics"
+image_path: "public/images/FA25_BeatsBeliefs_Thumb.png"
+layout: "image"
+order: 14
+thumbnailCredit: "Melody Qian"
+---
+
+## Introduction 
+
+*Hover over each section to see details.*
+<div style={{display:'flex', alignItems:'center', maxWidth:'92vw',height:'400px', overflow:'auto'}}>
+<iframe
+  title="Student Sunburst"
+  src="/images/FA25_BeatsBeliefs_Heat Map Embedded Code.html"
+  style={{
+    height: `100%`,
+    width: `100%`
+  }}
+></iframe>
+</div>
+
+The National Music Council of the United States writes: “Music’s dual, facile ability to serve as both a powerful tool of propaganda and as an existential threat to power structures and political leaders has made it a prime focus of nervous governmental concern over the entire span of history.” American history offers many examples.. Nearly one hundred years before “The Star Spangled Banner” became our national anthem, the lyrics were published in newspapers as a way to unite the country after the War of 1812. Meanwhile, musicians like Bruce Springsteen and Olivia Rodrigo continue to be vocal about which political rallies are permitted to use their music and which are forbidden. 
+
+The lasting tie between music and politics inspired the research question: does the democracy index of different nations affect the music most listened to there? To build our analysis, we identified two datasets that measured both musical preferences and political context across countries. For listening trends, we used the Kaggle dataset *Spotify – Top Songs by Country Charts* which scraped Spotify’s website to compile the top 50 songs for 62 different countries giving details like artist, rank, and whether the track was explicit. For political context, we used the Deliberative Democracy Index from Our World in Data which is a V-Dem produced measure of how well countries practice public reasoning, inclusive dialogue, and decision-making for the common good. This was scored from 0 to 1 between 1900 and 2024 for each country. We paired these with the Spotify API to extract exact song lyrics from each track and the Google Translate API to convert any foreign lyrics into English in order to give us a more unified dataset for analysis.
+
+Finding the democracy indices of each song was more complicated. In order to pinpoint the correct results, we had to train a natural language processing model through Ollama, which took our song data and scored them based on how “democratic” the songs were (a high scoring song had lyrics that celebrated democracy, unity, activism, and participation). Although the correlation between these two variables ended up not being statistically significant, our findings allowed us to see a far more interesting trend within the music industry.
+
+## The Effect of Globalization 
+
+Globalization in the music industry is not a new phenomenon. About 80% of people across 26 different countries report that they listen to music from other cultures regularly, according to the 2023 Music Listening Report (CordWainer Productions, 2024). This poses the question of has globalization made music borderless? One of the first examples was seen through the Beatlemania phenomenon, since then the globalization of music has only continued to grow. Modern artists such as Bad Bunny and Taylor Swift have pushed their music beyond borders, becoming the most globally streamed artists in the 2020 Spotify charts (Packard, 2024). While English dominates the international charts, we have seen other examples of non-English global hits such as "Gangnam Style” and “Despacito.” In our own dataset, the impact of globalization is extremely apparent. **59.1%** of the top songs came from artists who originated from the United States, while **50.9%** of songs were written in English.
+
+<div style={{display:'flex', alignItems:'center'}}>
+<ImageLoader
+    imagePath="public/images/FA25_BeatsBeliefs_marketshare_pie_chart.png"
+        alt=""
+/>
+
+<ImageLoader
+    imagePath="public/images/FA25_BeatsBeliefs_language_distribution_pie_chart_copy.png"
+        alt=""
+/>
+</div>
+
+Once we discovered how prominent the United States’ reach was in our dataset, we realized that our findings were most likely skewed by globalization. If the top songs in each country mostly originate from the United States, then testing for localized differences in democratic indices will not amount to much correlation. Therefore, in order to truly test our hypothesis, we would have to look beyond our dataset, past the more mainstream artists and towards songs born out of the communities the artist came from.
+
+## Is Profanity Political?
+
+At this point you may be wondering, is there any part of the dataset that the effect of globalization wasn’t able to reach? The answer surprisingly comes in the form of profanity.
+
+One of the most prevalent factors considered in the calculation of a country’s deliberative democracy index is its freedom of speech and expression. We hypothesized that countries with limited free speech, and resultantly lower democracy indices, would also have greater restrictions on the lyrics of the songs their citizens can listen to. Specifically, we wondered if people in countries with lower deliberative democracy indices listen to songs with less explicit song lyrics. To test this hypothesis, we studied the relationship between a country's democracy index and the proportion of explicit songs in their Spotify Top 50 from 2020.
+
+<ImageLoader
+    imagePath="public/images/FA25_BeatsBeliefs_democracy_index_vs._prop_of_explicit_regression2.png"
+        alt=""
+/>
+
+Coinciding with our assumptions, the correlation between a country’s democracy index and the proportion of explicit songs in their Top 50 had a coefficient of around **0.302**, indicating a positive, modest relationship between the two variables as seen in the plot above. In the scatterplot, it is also observable that countries within the same continent appear clustered together, indicating some consistency within continents. 
+
+<ImageLoader
+    imagePath="public/images/FA25_BeatsBeliefs_democracy_index_by_continent.png"
+        alt=""
+/>
+
+<ImageLoader
+    imagePath="public/images/FA25_BeatsBeliefs_explicit_prop_by_continent.png"
+        alt=""
+/>
+
+Upon analyzing the average democracy index and average proportion of explicit Top 50 songs by continent, we found that there is some consistency between how a continent ranks in both categories. Although the exact rankings of each continent may have shifted slightly, Africa, Australia, and Europe remained in the top three for both average deliberative democracy index and average proportion of explicit songs, while Asia, North America, and South America remained in the bottom three. 
+
+If given the deliberative democracy index for some country as well as its continent, can we predict the proportion of explicit songs that country will have in its Spotify Top 50? Building a multiple linear regression model based on these two variables, we found that around **23.2%** of the variation in the number of explicit songs in a country’s Top 50 can be explained by their continent and democracy index. Although the prediction model is modest, it provides insight into how we may begin to quantify the extent to which the political climate of a country, as well as its cultural taboos, may impact the music preferences of its citizens, even in an ever-globalized world. 
+
+## Next Steps
+
+While our original analysis aimed to examine the relationship between the top songs in a country and its democratic index, the dominance of songs from the United States in the charts heavily biased the results. There were also several additional limitations that we encountered during the project.
+
+* Our dataset had a small sample size. There are 195 countries in the world, we only had 62 countries included in ours, many of which were concentrated in North America, Europe, and Asia.
+* Countries with authoritarian governments often do not allow free Spotify use, meaning that all of our data was only collected from the countries allowed to have free online discourse
+* Some countries only use Spotify seasonally. For instance, Malta is recorded as only using Spotify to listen to Christmas music. Their top songs were “All I Want For Christmas Is You” by Mariah Carey, followed by “Last Christmas” by Wham!
+
+Keeping these limitations in mind, future research directions we could take include examining the lyrical content of songs, especially those that were made in a time of political crisis, and seeing how their sentiment or topics change with changing times. Exploration could also be done on the political affiliations of artists themselves, and how they affect their music and the political affiliations of their fans. Societal trends such as an obsession with Spotify Wrapped indicate a heavy interest from the world in gathering insights from musical data. 
+
+Music will forever be embedded in society, reflecting its trends and the world's emotional state at a specific moment. It has been and will remain one of the most important forms of expression that humanity offers. Trends such as the globalization of US music mean that the world can unite around experiencing these songs together, but also lead to a weaker national music identity for other countries, and the homogenization of an art form that thrives on variety. 
+
+In a particularly tense political climate for both the United States and the world, it will be interesting to see how the music created right now will reflect it retrospectively. But for now, we put on our headphones and let good music remind ourselves what it means to be inherently human.
+
+
+

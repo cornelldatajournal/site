@@ -1,0 +1,178 @@
+---
+title: "Mapping Cardiovascular Risk"
+description: "Using NHANES data to identify three distinct cardiovascular profiles."
+author: ["Vivian Guo", "Isha Nagireddy", "Ivy Liu", "Natan Kramskiy", "Wonjin Eum"]
+editors: ["Jenny Williams","Nikhil Chinchalkar"]
+publishedDate: "2026-01-04"
+section: "Health"
+image_path: "public/images/FA25_CVRisk_Thumb.png"
+layout: "image"
+order: 15
+thumbnailCredit: "Nikhil Chinchalkar"
+---
+
+Heart disease is a topic that everyone has heard of in some capacity, but that most of the population doesn’t actively worry about until their experience with it becomes personal. It is the leading cause of death in the United States, but the general perspective towards its prevalence often comes down to the influence of individual factors such as diet or exercise habits. However, this narrative doesn’t reflect how cardiovascular disease truly develops. In reality, cardiovascular disease is shaped by a constellation of factors that overlap and affect one another.
+
+There are a few classically well-known risk factors of heart disease: elevated blood pressure, diabetes, smoking, and high cholesterol. However, the combinations of them that exist might not be as well known. Someone with a moderately high blood pressure might not reach the formal cutoff for “high-risk for heart disease”, but if we take their cholesterol levels and BMI into consideration as well, the entire picture changes. Then, can these high-risk combinations be predicted by recognizing and further examining patterns of disease factors?
+
+## Methodology
+
+Data was drawn from the National Health and Nutrition Examination Survey (NHANES) between 1999 and 2013, and included all data points of non-pregnant adults that were at least 20 years old. Since this dataset is representative of the national US population and sets standards for health markers such as height, weight, and blood pressure, it’s suitable for identifying population-level patterns. 
+
+The NHANES dataset is vast and contains hundreds of variables per individual, so the analysis is primarily focused on a few specific risk factors that are known to be highly correlated to cardiovascular disease based on previous research. These variables include an individual's BMI, systolic blood pressure (SYSBP), diastolic blood pressure (DIABP), hemoglobin A1C (A1C), and low density lipoproteins (LPL). In addition to risk factors, we also decided to observe patient demographic data including age, sex, education (EDUC), ethnicity (ETH), and poverty index (POVT). Finally, sample weights were applied to standardize prevalence rather than examine raw sample counts.
+
+## Clustering
+
+To analyze the data, clustering was performed to create 3 distinct profiles of cardiovascular risk. K-means clustering is an unsupervised machine-learning technique, meaning it learns patterns entirely from existing unlabeled data, without being given predefined categories. First, the algorithm takes data points (in our case, individual people), and plots them across multiple dimensions (which are typically the variables to analyze: for us, these are the risk factors of blood pressure, BMI, etc). It then groups them together based on observed similarities, and continues to adjust the size/shape of the clusters until everyone fits into one. 
+
+An important distinction to make is that clustering is not predictive. Despite being a machine learning technique, its purpose is to point out existing patterns, not inherently to apply them to future data. It reveals naturally occurring groups of traits that tend to show up together, which allows us to draw conclusions about the prevalence of these specific traits, and why these three combinations of risk factors are the ones that are most often observed together. 
+
+## Risk factor visualizations
+
+After running the algorithm, the following three clusters emerged. Each of these clusters has a risk factor distribution, i.e., the percentage of risk factors in each population group. Let's take a look at each of them: 
+
+<div style={{display:'flex', alignItems:'center'}}>
+<ImageLoader
+    imagePath="public/images/FA25_CVRisk_cluster_1_pie.png"
+        alt=""
+/>
+
+<ImageLoader
+    imagePath="public/images/FA25_CVRisk_cluster_2_pie.png"
+        alt=""
+/>
+
+<ImageLoader
+    imagePath="public/images/FA25_CVRisk_cluster_3_pie.png"
+        alt=""
+/>
+</div>
+
+It’s seen that in clusters 1 and 3, most people either have more than one cardiovascular risk factor. However, in cluster 2, most people have no risk factors, leading to the conclusion that cluster 2 is **“healthier”** compared to the other two. It represents an average person with no immediate cardiovascular risk, providing a decent baseline for comparison. 
+
+Now, let's actually take a look at the variables in the clusters. Six main variables were already [shown](https://www.cdc.gov/nchs/products/databriefs/db540.htm) to be significant in evaluating cardiovascular disease risk prior to this analysis. Most of these are intuitive, but let's dive into a couple of them: 
+
+Glycohemoglobin is a measure of average blood glucose levels, and it is directly linked to an increased risk of cardiovascular disease by impacting blood vessels through a process called glycation. This is where sugar molecules attach to proteins, lipids, or nucleic acids and form harmful end products.  
+
+Systolic blood pressure is the force of blood against the artery walls during the heart's contraction. Elevated levels put immense strain on your heart and arteries, damaging them over time and increasing the likelihood of conditions such as heart attack, heart failure, and stroke. Diastolic Blood Pressure represents the pressure in your arteries when your heart rests between beats, and high levels can increase the pressure on the cardiovascular system and thus lead to increased cardiovascular risk. 
+
+Low-density lipoproteins, or “bad” cholesterol, are a type of cholesterol that can build up in your arteries, forming plaque that hardens and narrows the arteries. This is dangerous because it restricts – and potentially blocks –  blood flow to the heart and other important organs. 
+
+<div style={{display:'flex', alignItems:'center'}}>
+<div style={{textAlign:'center'}}>
+Cluster 1:
+<ImageLoader
+    imagePath="public/images/FA25_CVRisk_cluster_1_spider.png"
+        alt=""
+/>
+</div>
+<div style={{textAlign:'center'}}>
+Cluster 2:
+<ImageLoader
+    imagePath="public/images/FA25_CVRisk_cluster_2_spider.png"
+        alt=""
+/>
+</div>
+<div style={{textAlign:'center'}}>
+Cluster 3:
+<ImageLoader
+    imagePath="public/images/FA25_CVRisk_cluster_3_spider.png"
+        alt=""
+/>
+</div>
+</div>
+
+Reading the radar charts, the -2 to +2 scale on each variable shows how far each value is from the average. Negative values represent that the average value of the cluster is below the overall average for that measure, while positive values mean they’re above average. A value of 0 represents exactly average, and the farther from 0, the more extreme the value is relative to the rest of the dataset.
+
+In examining these graphs, cluster 1 can be generally labeled as the “diabetes cluster.” It also makes sense that high cholesterol and blood pressure are both present in the same cohort. This is because, as “bad” cholesterol builds up and forms plaque, the heart must work harder to pump blood through the stiffened and narrowed arteries, increasing blood pressure. 
+
+It has already been established that clustering is not inherently predictive, and that it simply groups together individuals based on similarities in characteristics. However, is there a possibility that the clusters attained are predictive of cardiovascular disease just by nature of their co-prevalence?
+
+## Predictivity of clusters
+
+After naturally occurring groups were established, the next step was to determine whether the patterns seen in the clusters matched the actual clinical risk structure in the population, and if having these sets of variables truly had a casual relationship with an individual’s likelihood of having heart disease. 
+
+To understand which clinical measures signal a higher likelihood of coronary heart disease (CHD), a logistic regression model was used to estimate the odds associated with each individual risk factor. The result paints a clear picture of how these common health markers relate to heart disease in the U.S. population.
+
+<ImageLoader
+    imagePath="public/images/FA25_CVRisk_odds_ratios.png"
+        alt=""
+/>
+
+Among all predictors, *A1C* had the largest odds ratio (OR = 1.32), highlighting the risks associated with elevated blood sugar levels, a key indicator of diabetes and metabolic dysfunction. *Systolic blood pressure* also showed a meaningful positive association with CHD, signalling that consistent high systolic pressure can increase the risk of heart disease and stroke. *BMI* demonstrated a weaker but still positive relationship with CHD, suggesting that excess body weight contributes to risk.
+
+In contrast, LDL cholesterol and diastolic blood pressure showed a slight negative associated with CHD. Though these patterns likely reflect the influence of treatment and aging. Individuals with existing heart disease are more likely to be receiving cholesterol-lowering therapy, and diastolic pressure commonly declines in older adults, who make up a  large share of CHD cases. 
+
+This sets the stage for examining how combinations of these behave when they occur together.
+
+## Two-Factor Combination
+
+Certain combinations may reveal stronger or more consistent patterns than any single risk factor alone. To explore this, every possible two-factor combination was created using clinical cutoffs. Weighted counts were then calculated using NHANES survey weights to estimate how common each combination is among individuals with CHD in the US population.
+
+The most frequent pairing was high systolic pressure combined with high diastolic pressure. This reflects the strong presence of overall hypertension among adults with CHD and aligns with clinical evidence that combined elevation in systolic and diastolic blood pressure create a particularly high cardiovascular burden. This finding closely aligns with Cluster 1, where systolic and diastolic pressures were both well above average, forming a clear hypertension-dominant pattern.
+
+<ImageLoader
+    imagePath="public/images/FA25_CVRisk_two_factor.png"
+        alt=""
+/>
+
+The next most common combinations involved obesity paired with elevated blood pressure, especially obesity + systolic BP and obesity + diastolic BP. These patterns fit well with typical cardiometabolic profiles, where excess body weights often appear alongside elevated blood pressure. Together these combinations indicate that hypertension and obesity often cluster in individuals with CHD as seen in Cluster 3.
+
+Pairs that involve A1C were moderately common. Although it was not the most widespread risk factor, its presence in multiple combinations and in Clusters 1 & 3 supports the strong indicative role it displayed in the odd ratio results. The low presence of LDL cholesterol in these combinations again reflect the widespread of the population receiving cholesterol lowering medication. 
+
+Taken together, the two-factor results reveal patterns that mirror the structure of the clusters. Hypertension-dominant combinations correspond to Cluster 1, metabolic combinations involving BMI, A1C, and systolic pressure align with Cluster 3, and the absence of elevated combinations fits with the profile of Cluster 2, where few risk factors were raised. These consistent patterns show that the clusters are grounded in real, recurring combinations, reinforcing their relevance in characterizing CHD-related health profiles.
+
+## Interpretation of additional demographic variables 
+
+<div style={{display:'flex', justifyItems:'center'}}>
+<div style={{marginRight:'4vw'}}>
+<ImageLoader
+    imagePath="public/images/FA25_CVRisk_education.png"
+        alt=""
+/>
+| EDUC  |  Interpretation                                    |
+|-------|----------------------------------------------------|
+| 1     | Less Than 9th Grade                                |
+| 2     | 9-11th Grade (Includes 12th grade with no diploma) |
+| 3     | High School Grad/GED or Equivalent                 |
+| 4     | Some College or AA degree                          |
+| 5     | College Graduate or above                          |
+</div>
+<div>
+<ImageLoader
+    imagePath="public/images/FA25_CVRisk_ethnicity.png"
+        alt=""
+/>
+| ETH | Interpretation                             |
+|-------|-------------------------------------|
+| 1     | Mexican American                    |
+| 2     | Other Hispanic                      |
+| 3     | Non-Hispanic White                  |
+| 4     | Non-Hispanic Black                  |
+| 5     | Other Race - Including Multi-Racial |
+</div>
+</div>
+
+Beyond the clinical risk factors, we also examined how education level (EDUC) and ethnicity (ETH) were distributed across the three clusters. These demographic patterns help us contextualize the clusters and reveal whether certain groups are disproportionately represented in specific risk profiles. 
+
+For education (EDUC), we see a clear gradient across different clusters. Cluster 2 shows the highest proportion of individuals with a college degree or some college education (EDUC level 4-5). This suggests that finishing high education may be associated with lower cardiovascular risk profiles. In contrast, the high-risk profiles of Clusters 1 & 3 contained larger proportions of individuals with lower educational completion. This suggests that education levels may contribute in shaping cardiovascular risk through access to resources and long-term health stability.
+
+While ethnicity distribution largely reflects national proportions, the slightly higher representation of Non-Hispanic Black individuals in Cluster 3 aligns with the information gained from above about metabolic and cardiovascular risk: there are once again broader disparities in diabetes and hypertension prevalence.
+
+<div style={{display:'flex', alignItems:'center'}}>
+<ImageLoader
+    imagePath="public/images/FA25_CVRisk_sex.png"
+        alt=""
+/>
+<div style={{width:'100%', marginLeft:'4vw'}}>
+When looking at how sex is distributed across the three clusters, the differences are small, but a few patterns are shown through the graphs. Men were found to be slightly more represented in higher-risk profiles. 
+</div>
+</div>
+
+These patterns reflect the idea that cardiovascular risk is not purely biological, it is also, to some degree, shaped by social context.
+
+## Conclusion
+
+Whether we examine individual risk factors, the prevalence of two or more together, or the unsupervised clusters, the same story continues to arise. Patterns of cardiovascular risk are not coincidental, they repeatedly echo through individuals, reflecting the clinical and societal recognizable patterns that could affect someone’s individual health risk profile. Each person’s cardiovascular health story is different, but recognizable. 
+
+By identifying these naturally occurring patterns and examining their significance, we build up a stronger perspective on heart health as a connected system rather than simply a set of individual isolated traits. It’s the subtle differences between profiles that leads to differences in prevention and treatment strategies, and better ways to address heart health.

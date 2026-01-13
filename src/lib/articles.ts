@@ -30,7 +30,8 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
             external_link: data.external_link,
             drop_cap: data.drop_cap,
             layout: data.layout,
-            order: data.order // if order is -1 then the article is hidden
+            order: data.order, // if order is -1 then the article is hidden from 'articles' tab, but still accessible with proper link (i.e. unlisted)
+            thumbnailCredit: data.thumbnailCredit //for image caption on main page
         };
     } catch (error) {
         console.error(`Error loading article ${slug}:`, error);
@@ -72,7 +73,7 @@ export async function getAllArticles(): Promise<Article[]> {
         // Sort articles by given order, HIGHEST NUMBER IS FIRST
         return articles
             .filter((article): article is Article => article !== null)
-            // .filter((article) => article.order !== -1)
+            // .filter((article) => article.order !== -1) // this line would prevent articles with order -1 from being rendered at all
             .sort((a, b) =>
                 b.order - a.order
             );
