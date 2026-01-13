@@ -203,7 +203,7 @@ const teamMembers: TeamMember[] = [
         major: "Cognitive & Information Science",
         image: "/team/Emiline_Labbe.jpeg",
         color: "bg-[#E5E7FF]",
-        bio: "She has run 56 MRI sessions at Cornell."
+        bio: "She has read the Harry Potter series 33 times."
     },
     // {
     //     name: "Stella Ma",
