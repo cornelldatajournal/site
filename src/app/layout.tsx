@@ -69,7 +69,7 @@ export default function RootLayout({
         <div className="bg-[#3E32BA] text-white py-2">
           <div className="container max-w-8xl mx-auto px-4">
             <p className="font-space-grotesk text-sm text-center">
-              🫵🏼 Interested in joining our club? Fill out our <a href="https://docs.google.com/forms/d/e/1FAIpQLScgcZN4jJt60SSTKw-99xefTIPFYgbAxxlxdGHiX-moO4Ud7w/viewform?usp=header" className="underline hover:text-neutral-200">interest form</a>!
+              🫵🏼 Apply by February 4th to be a CDJ <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMUz7iKVFugd6Uv7tRoIZlPJzG3l1pS9ALf0xpNCrAnvgTUA/viewform?usp=dialog" className="underline hover:text-neutral-200">member</a>!
             </p>
           </div>
         </div>
