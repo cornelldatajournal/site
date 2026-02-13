@@ -443,7 +443,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Computer Science",
-        image: "/team/SP26/Elom_Eskender.jpg",
+        image: "/team/SP26/Elom_Eskender.JPG",
         color: "bg-[#E5E7FF]",
         bio: ""
     },

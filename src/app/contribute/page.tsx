@@ -20,12 +20,12 @@ export default function GetInvolvedPage() {
 
             <section className="mb-16 bg-[#3E32BA] text-white rounded-lg p-6 shadow-lg">
                 <p className="font-space-grotesk text-lg font-bold">
-                    🎉 Spring 2026 Applications Now Open! 🎉
+                    Our Spring 2026 applications are closed.
                 </p>
                 <p className="font-space-grotesk mt-2">
-                    Due on February 4th, 2026 -{" "}
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMUz7iKVFugd6Uv7tRoIZlPJzG3l1pS9ALf0xpNCrAnvgTUA/viewform?usp=dialog" className="text-white underline hover:text-neutral-200">
-                        Apply here!
+                    If you&apos;re interested in joining, you can fill out our -{" "}
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScWpsWzd-gD7djdJQxX6knC4uXYAjQ9cRacRf0M2ttKOPNelg/viewform?usp=dialog" className="text-white underline hover:text-neutral-200">
+                        interest form!
                     </a>
                 </p>
                 <p className="font-space-grotesk mt-4 text-sm">
