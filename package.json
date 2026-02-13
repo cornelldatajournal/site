@@ -20,7 +20,7 @@
     "lucide-react": "^0.474.0",
     "mathjax": "^3.2.2",
     "next": "15.1.11",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "^6.0.0",
     "react": "^19.0.0",
     "react-data-table-component": "^7.6.2",
     "react-dom": "^19.0.0",
