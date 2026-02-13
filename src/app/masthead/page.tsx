@@ -14,51 +14,27 @@ interface TeamMember {
     bio?: string;
 }
 
+// paused members are commented
 const teamMembers: TeamMember[] = [
+    // LEADERSHIP
+
     {
         name: "Nikhil Chinchalkar",
         role: "President",
         class: "2027",
         major: "Economics",
-        image: "/team/Nikhil_Chinchalkar.jpeg",
+        image: "/team/SP26/Nikhil_Chinchalkar.jpeg",
         color: "bg-[#E5F6FF]",
-        bio: "He listed to 79,578 minutes of music last year."
+        bio: "He listed to 75,835 minutes of music last year."
     },
     {
-        name: "Rahi Dasgupta",
-        role: "VP of External Affairs",
-        class: "2027",
-        major: "Information Science",
-        image: "/team/Rahi_Dasgupta.jpeg",
-        color: "bg-[#F0E5FF]",
-        bio: "She has played 679.6 hours of Valorant."
-    },
-    // {
-    //     name: "Jason Wang",
-    //     role: "VP of Internal Affairs",
-    //     class: "2027",
-    //     major: "Computer Science",
-    //     image: "/team/Jason_Wang.jpeg",
-    //     color: "bg-[#E5FFE9]",
-    //     bio: "He usually drinks ~200% the daily water intake of the average American male"
-    // },
-    {
-        name: "Carina Lau",
-        role: "Social Coordinator",
-        class: "2027",
-        major: "Information Science and Communication",
-        image: "/team/Carina_Lau.jpeg",
-        color: "bg-[#FFE8E5]",
-        bio: "Her Crossy Road high score is 587."
-    },
-    {
-        name: "Rithya Sriram",
-        role: "Project Coordinator",
-        class: "2027",
-        major: "Computer Science",
-        image: "/team/Rithya_Sriram.jpeg",
-        color: "bg-[#E5FFFA]",
-        bio: "In the past 5 years, she's listened to 3,667 hours of audio books."
+        name: "Tianyi Chen",
+        role: "Executive Vice President",
+        class: "2028",
+        major: "Biometry & Statistics",
+        image: "/team/SP26/Tianyi_Chen.JPG",
+        color: "bg-[#E5E7FF]",
+        bio: "She has three 6's in her birthday."
     },
     {
         name: "Jenny Williams",
@@ -66,169 +42,183 @@ const teamMembers: TeamMember[] = [
         specialized_role: "Content Editor",
         class: "2027",
         major: "English",
-        image: "/team/Jenny_Williams.png",
+        image: "/team/SP26/Jenny_Williams.png",
         color: "bg-[#FFE5D9]",
         bio: ""
+    },
+    {
+        name: "Eden Maynard",
+        role: "VP of Internal Affairs",
+        class: "2028",
+        major: "Statistics",
+        image: "/team/SP26/Eden_Maynard.jpeg",
+        color: "bg-[#E5FFE9]",
+        bio: "She is in the top 0.1% of Solange listeners on Spotify."
+    },
+    {
+        name: "Melody Qian",
+        role: "VP of External Affairs",
+        class: "2028",
+        major: "Public Policy",
+        image: "/team/SP26/Melody_Qian.png",
+        color: "bg-[#E5F6FF]",
+        bio: "She is in the top 0.69% of monkeytype users in WPM."
+    },
+    {
+        name: "Remi Ladia",
+        role: "Project Coordinator",
+        class: "2028",
+        major: "Computer Science",
+        image: "/team/SP26/Remi_Ladia.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: "She has 1,605 unread iMessages."
     },
     {
         name: "Dana Yang",
         role: "Faculty Mentor",
         class: "",
         major: "",
-        image: "/team/Dana_Yang.png",
-        color: "bg-[#E5E7FF]",
+        image: "/team/SP26/Dana_Yang.png",
+        color: "bg-[#FFE5D9]",
         bio: "Dana is an assistant professor at Cornell in the department of statistics and data science."
     },
-    {
-        name: "Melody Qian",
-        role: "Project Lead",
-        class: "2028",
-        major: "Public Policy",
-        image: "/team/Melody_Qian.png",
-        color: "bg-[#E5E7FF]",
-        bio: "She is in the top 0.69% of monkeytype users in WPM."
-    },
-    {
-        name: "Remi Ladia",
-        role: "Project Lead",
-        class: "2028",
-        major: "Computer Science",
-        image: "/team/Remi_Ladia.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: "She has 1,605 unread iMessages."
-    },
-    {
-        name: "Mei Knight",
-        role: "Project Lead",
-        class: "2028",
-        major: "Statistical Science",
-        image: "/team/Mei_Knight.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: "She has literally traveled around the globe."
-    },
-    {
-        name: "Tianyi Chen",
-        role: "Project Lead",
-        class: "2028",
-        major: "Biometry & Statistics",
-        image: "/team/Tianyi_Chen.JPG",
-        color: "bg-[#E5E7FF]",
-        bio: "She has three 6's in her birthday."
-    },
+
+    // PROJECT LEADS
+
     {
         name: "Vivian Guo",
         role: "Project Lead",
         class: "2028",
         major: "Biometry & Statistics",
-        image: "/team/Vivian_Guo.jpeg",
-        color: "bg-[#E5E7FF]",
+        image: "/team/SP26/Vivian_Guo.jpeg",
+        color: "bg-[#F0E5FF]",
         bio: "She has 821 notes on her phone."
-    },
-    {
-        name: "Natalie Miller",
-        role: "Project Lead",
-        class: "2028",
-        major: "Economics & Statistics",
-        image: "/team/Natalie_Miller.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Eden Maynard",
-        role: "Project Lead",
-        class: "2028",
-        major: "Statistics",
-        image: "/team/Eden_Maynard.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: "She is in the top 0.1% of Solange listeners on Spotify."
     },
     {
         name: "Kayla Amkraut",
         role: "Project Lead",
         class: "2028",
         major: "Statistical Science",
-        image: "/team/Kayla_Amkraut.jpeg",
-        color: "bg-[#E5E7FF]",
+        image: "/team/SP26/Kayla_Amkraut.jpeg",
+        color: "bg-[#F0E5FF]",
         bio: "She has lived in 4 states."
     },
     {
-        name: "Marianna Ruggiero",
-        role: "Analyst",
+        name: "Maia Forssman",
+        role: "Project Lead",
+        class: "2027",
+        major: "Computer Science",
+        image: "/team/SP26/Maia_Forssman.JPEG",
+        color: "bg-[#F0E5FF]",
+        bio: "She visits CTB 9 times a week on average."
+    },
+    {
+        name: "Tristan Albano",
+        role: "Project Lead",
+        class: "2029",
+        major: "Information Science",
+        image: "/team/SP26/Tristan_Albano.jpeg",
+        color: "bg-[#F0E5FF]",
+        bio: "He has 3 dogs."
+    },
+    {
+        name: "Benjamin Beer",
+        role: "Project Lead",
         class: "2028",
-        major: "Government",
-        image: "/team/Marianna_Ruggiero.jpeg",
+        major: "Biology",
+        image: "/team/SP26/Benjamin_Beer.jpg",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
     {
-        name: "Arjun Maitra",
+        name: "Suchit Basineni",
+        role: "Project Lead",
+        class: "2029",
+        major: "Computer Science",
+        image: "/team/SP26/Suchit_Basineni.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: "He has 1,594 hours on Brawl Stars."
+    },
+    {
+        name: "Mei Knight",
+        role: "Project Lead",
+        class: "2028",
+        major: "Statistical Science",
+        image: "/team/SP26/Mei_Knight.jpeg",
+        color: "bg-[#E5E7FF]",
+        bio: "She has literally traveled around the globe."
+    },
+    // ANALYSTS
+
+    // {
+    //     name: "Marianna Ruggiero",
+    //     role: "Analyst",
+    //     class: "2028",
+    //     major: "Government",
+    //     image: "/team/SP26/Marianna_Ruggiero.jpeg",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: ""
+    // },
+    {
+        name: "Steven Xu",
         role: "Analyst",
         class: "2028",
-        major: "Mathematics & Statistics",
-        image: "/team/Arjun_Maitra.jpeg",
+        major: "Biometry & Statistics",
+        image: "/team/SP26/Steven_Xu.jpg",
+        color: "bg-[#F0E5FF]",
+        bio: "His basketball jersey number is 15."
+    },
+    {
+        name: "Ivy Liu",
+        role: "Analyst",
+        class: "2028",
+        major: "Information Science",
+        image: "/team/SP26/Ivy_Liu.jpg",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "Her favorite number is 2."
     },
     {
         name: "Emily Fu",
         role: "Analyst",
         class: "2027",
         major: "Statistical Science",
-        image: "/team/Emily_Fu.jpg",
+        image: "/team/SP26/Emily_Fu.jpg",
         color: "bg-[#E5E7FF]",
         bio: "She watched 37 movies last year."
     },
-    {
-        name: "Milo Schilittgen-Li",
-        role: "Project Lead",
-        class: "2027",
-        major: "Mathematics",
-        image: "/team/Milo_Schlittgen-Li.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
     // {
-    //     name: "Aryan Shah",
-    //     role: "Analyst",
-    //     class: "2028",
-    //     major: "Public Policy",
-    //     image: "/team/Aryan_Shah.jpeg",
+    //     name: "Milo Schilittgen-Li",
+    //     role: "Project Lead",
+    //     class: "2027",
+    //     major: "Mathematics",
+    //     image: "/team/SP26/Milo_Schlittgen-Li.jpeg",
     //     color: "bg-[#E5E7FF]",
     //     bio: ""
     // },
-    {
-        name: "Emi Labbe",
-        role: "Analyst",
-        class: "2026",
-        major: "Cognitive & Information Science",
-        image: "/team/Emiline_Labbe.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: "She has read the Harry Potter series 33 times."
-    },
-    // {
-    //     name: "Stella Ma",
-    //     role: "Analyst",
-    //     class: "2028",
-    //     major: "Biometry & Statistics",
-    //     image: "/team/Stella_Ma.png",
-    //     color: "bg-[#E5E7FF]",
-    //     bio: ""
-    // },
-    {
-        name: "Arianna Hsu",
-        role: "Analyst",
-        class: "2028",
-        major: "Information Science, Systems, & Technology",
-        image: "/team/Arianna_Hsu.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: "She has lived in 8 different places."
-    },
     {
         name: "Adam Azevedo",
         role: "Analyst",
         class: "2028",
         major: "Urban & Regional Studies",
-        image: "/team/Adam_Azevedo.jpg",
+        image: "/team/SP26/Adam_Azevedo.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    }, 
+    {
+        name: "Manya Pradeep Narayan",
+        role: "Analyst",
+        class: "2029",
+        major: "Computer Science",
+        image: "/team/SP26/Manya_Pradeep_Narayan.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: "Her step count increased by 151.9% at Cornell."
+    },
+    {
+        name: "Stella Ma",
+        role: "Analyst",
+        class: "2028",
+        major: "Biometry & Statistics",
+        image: "/team/SP26/Stella_Ma.png",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -237,7 +227,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Biometry & Statistics",
-        image: "/team/Anna_Kim.JPG",
+        image: "/team/SP26/Anna_Kim.JPG",
         color: "bg-[#E5E7FF]",
         bio: "Her average typing speed is 140 words per minute."
     },
@@ -246,7 +236,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Computer Science, Mathematics",
-        image: "/team/Elinor_Tu.jpg",
+        image: "/team/SP26/Elinor_Tu.jpg",
         color: "bg-[#E5E7FF]",
         bio: "She has traveled to 10 different countries."
     },
@@ -255,7 +245,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Biometry & Statistics",
-        image: "/team/Eric_Zhu.png",
+        image: "/team/SP26/Eric_Zhu.png",
         color: "bg-[#E5E7FF]",
         bio: "He studied 30,000 flashcards last year."
     },
@@ -264,7 +254,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Information Science",
-        image: "/team/Ethan_Yang.png",
+        image: "/team/SP26/Ethan_Yang.png",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -273,7 +263,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Information Science",
-        image: "/team/Isabella Reyes_Famous.jpeg",
+        image: "/team/SP26/Isabella Reyes_Famous.jpeg",
         color: "bg-[#E5E7FF]",
         bio: "She has a 4.93 rating on Uber."
     },
@@ -282,127 +272,226 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Biometry & Statistics",
-        image: "/team/Isha_Nagireddy.jpg",
+        image: "/team/SP26/Isha_Nagireddy.jpg",
         color: "bg-[#E5E7FF]",
         bio: "She hates the number 3."
-    },
-    {
-        name: "Ivy Liu",
-        role: "Analyst",
-        class: "2028",
-        major: "Information Science",
-        image: "/team/Ivy_Liu.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: "Her favorite number is 2."
-    },
-    {
-        name: "Karl Fadel",
-        role: "Analyst",
-        class: "2028",
-        major: "Information Science",
-        image: "/team/Karl_Fadel.png",
-        color: "bg-[#E5E7FF]",
-        bio: "He sets 6 alarms to wake up."
-    },
-    {
-        name: "Maia Forssman",
-        role: "Analyst",
-        class: "2027",
-        major: "Computer Science",
-        image: "/team/Maia_Forssman.JPEG",
-        color: "bg-[#E5E7FF]",
-        bio: "She visits CTB 9 times a week on average."
-    },
-    {
-        name: "Manya Pradeep Narayan",
-        role: "Analyst",
-        class: "2029",
-        major: "Computer Science",
-        image: "/team/Manya_Pradeep_Narayan.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: "Her step count increased by 151.9% after getting to Cornell."
     },
     {
         name: "Natan Kramskiy",
         role: "Analyst",
         class: "2029",
         major: "Bioengineering",
-        image: "/team/Natan_Kramskiy.jpg",
+        image: "/team/SP26/Natan_Kramskiy.jpg",
         color: "bg-[#E5E7FF]",
         bio: "He has watched the Lord of the Rings trilogy 8 times."
     },
-    {
-        name: "Olivia Yu",
-        role: "Analyst",
-        class: "2029",
-        major: "Computer Science & Math",
-        image: "/team/Olivia_Yu.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: "She has lost her water bottle 38 times this year."
-    },
+    // {
+    //     name: "Olivia Yu",
+    //     role: "Analyst",
+    //     class: "2029",
+    //     major: "Computer Science & Math",
+    //     image: "/team/SP26/Olivia_Yu.jpg",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: "She has lost her water bottle 38 times this year."
+    // },
     {
         name: "Rhea Barot",
         role: "Analyst",
         class: "2029",
         major: "Economics",
-        image: "/team/Rhea_Barot.png",
+        image: "/team/SP26/Rhea_Barot.png",
         color: "bg-[#E5E7FF]",
         bio: "She has been to 15 countries."
     },
     {
-        name: "Steven Xu",
-        role: "Analyst",
-        class: "2028",
-        major: "Biometry & Statistics",
-        image: "/team/Steven_Xu.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: "His basketball jersey number is 15."
-    },
-    {
-        name: "Suchit Basineni",
-        role: "Analyst",
-        class: "2029",
-        major: "Computer Science",
-        image: "/team/Suchit_Basineni.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: "He has 1,594 hours on Brawl Stars."
-    },
-    {
-        name: "Tristan Albano",
-        role: "Analyst",
-        class: "2029",
-        major: "Information Science",
-        image: "/team/Tristan_Albano.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: "He has 3 dogs."
-    },
-    {
-        name: "Winifred Agyei",
+        name: "Ellie Cha",
         role: "Analyst",
         class: "2027",
-        major: "Information Science",
-        image: "/team/Winifred_Agyei.png",
+        major: "Biometry and Statistics",
+        image: "/team/SP26/Ellie_Cha.jpg",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
     {
-        name: "Wonjin Eum",
+        name: "Chloe Kritas",
         role: "Analyst",
-        class: "2029",
-        major: "Information Science",
-        image: "/team/Wonjin_Eum.JPG",
+        class: "2027",
+        major: "Hotel Administration",
+        image: "/team/SP26/Chloe_Kritas.jpeg",
         color: "bg-[#E5E7FF]",
-        bio: "She has been to 6 out of 7 continents"
+        bio: ""
+    },
+    {
+        name: "Rishik Gowrishetti",
+        role: "Analyst",
+        class: "2028",
+        major: "Statistical Science",
+        image: "/team/SP26/Rishik_Gowrishetti.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Jason Wang",
+        role: "Analyst",
+        class: "2027",
+        major: "Computer Science",
+        image: "/team/SP26/Jason_Wang.jpeg",
+        color: "bg-[#E5E7FF]",
+        bio: "He drinks 200% the daily water intake of the average American."
+    },
+    {
+        name: "Cindy Weng",
+        role: "Analyst",
+        class: "2027",
+        major: "Economics and Statistics",
+        image: "/team/SP26/Cindy_Weng.jpeg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
     },
     // {
-    //     name: "Isabella Guan",
+    //     name: "Winifred Agyei",
     //     role: "Analyst",
     //     class: "2027",
-    //     major: "Mathematics & Computer Science",
-    //     image: "/team/Isabella_Guan.jpeg",
+    //     major: "Information Science",
+    //     image: "/team/SP26/Winifred_Agyei.png",
     //     color: "bg-[#E5E7FF]",
     //     bio: ""
     // }
+    {
+        name: "Charlie Graham",
+        role: "Analyst",
+        class: "2029",
+        major: "Information Science",
+        image: "/team/SP26/Charlie_Graham.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Maylani Lee",
+        role: "Analyst",
+        class: "2028",
+        major: "Biometry & Statistics",
+        image: "/team/SP26/Maylani_Lee.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Graco Rossanigo",
+        role: "Analyst",
+        class: "2029",
+        major: "Economics",
+        image: "/team/SP26/Graco_Rossanigo.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Jason Kim",
+        role: "Analyst",
+        class: "2028",
+        major: "ORIE",
+        image: "/team/SP26/Jason_Kim.jpeg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Jarmin Weng",
+        role: "Analyst",
+        class: "2029",
+        major: "Computer Science and Math",
+        image: "/team/SP26/Jarmin_Weng.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Emily Fang",
+        role: "Analyst",
+        class: "2029",
+        major: "Statistical Science",
+        image: "/team/SP26/Emily_Fang.jpeg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Shivani Anand",
+        role: "Analyst",
+        class: "2029",
+        major: "Statistical Science",
+        image: "/team/SP26/Shivani_Anand.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Roma Rangaswamy",
+        role: "Analyst",
+        class: "2029",
+        major: "Computer Science",
+        image: "/team/SP26/Roma_Rangaswamy.jpeg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Sanjana Bajaj",
+        role: "Analyst",
+        class: "2028",
+        major: "Biometry and Statistics",
+        image: "/team/SP26/Sanjana_Bajaj.png",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Elom Eskender",
+        role: "Analyst",
+        class: "2029",
+        major: "Computer Science",
+        image: "/team/SP26/Elom_Eskender.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Caitlin Bochere",
+        role: "Analyst",
+        class: "2028",
+        major: "Statistics",
+        image: "/team/SP26/Caitlin_Bochere.png",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Veronica Ma",
+        role: "Analyst",
+        class: "2028",
+        major: "Comparative Literature",
+        image: "/team/SP26/Veronica_Ma.jpg",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Alannah Dennis",
+        role: "Analyst",
+        class: "2027",
+        major: "Statistics",
+        image: "/team/SP26/Alannah_Dennis.png",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Himashi Balasuriya",
+        role: "Analyst",
+        class: "2029",
+        major: "Earth and Atmospheric Science",
+        image: "/team/SP26/Himashi_Balasuriya.png",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
+        name: "Chris Jeong",
+        role: "Analyst",
+        class: "2028",
+        major: "Environment and Sustainability",
+        image: "/team/SP26/Chris_Jeong.png",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
 ];
 
 const additionalProjectLeads: TeamMember[] = Array(7).fill(null).map((_, i) => ({
@@ -506,20 +595,6 @@ export default function MastheadPage() {
 
     return (
         <main className="container py-12 px-4 sm:px-6 max-w-6xl mx-auto overflow-x-hidden">
-            <h2 className="text-2xl font-eb-garamond mb-6">A Network of People</h2>
-            <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm mb-6">
-                Our club is made up of people of various backgrounds, interacting with one another to produce beautiful storytelling with data.
-                To read more about that interaction, click on the article below:
-            </p>
-
-            <a href="https://nikhilc52.github.io/cdj_networks/" target="_blank">
-                <div className="border-b mb-6 mt-8 border-neutral-200 dark:border-neutral-800 flex items-center justify-center flex-col">
-                    <img className="mb-6" src="images/Masthead_post_role.png" height={250} width={250} />
-                    <h4 className="text-sm text-black dark:text-neutral-400 mb-2 mt-3 font-space-mono uppercase font-bold">Culture</h4>
-                    <h2 className="text-2xl font-space-grotesk mb-6">The Cornell Data Journal Network</h2>
-                </div>
-            </a>
-
             <div className="space-y-12">
                 {/* Executive Board */}
                 <div>
