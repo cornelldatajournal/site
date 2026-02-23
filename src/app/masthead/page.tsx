@@ -168,15 +168,15 @@ const teamMembers: TeamMember[] = [
         color: "bg-[#F0E5FF]",
         bio: "His basketball jersey number is 15."
     },
-    {
-        name: "Ivy Liu",
-        role: "Analyst",
-        class: "2028",
-        major: "Information Science",
-        image: "/team/SP26/Ivy_Liu.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: "Her favorite number is 2."
-    },
+    // {
+    //     name: "Ivy Liu",
+    //     role: "Analyst",
+    //     class: "2028",
+    //     major: "Information Science",
+    //     image: "/team/SP26/Ivy_Liu.jpg",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: "Her favorite number is 2."
+    // },
     {
         name: "Emily Fu",
         role: "Analyst",
@@ -195,15 +195,15 @@ const teamMembers: TeamMember[] = [
     //     color: "bg-[#E5E7FF]",
     //     bio: ""
     // },
-    {
-        name: "Adam Azevedo",
-        role: "Analyst",
-        class: "2028",
-        major: "Urban & Regional Studies",
-        image: "/team/SP26/Adam_Azevedo.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    }, 
+    // {
+    //     name: "Adam Azevedo",
+    //     role: "Analyst",
+    //     class: "2028",
+    //     major: "Urban & Regional Studies",
+    //     image: "/team/SP26/Adam_Azevedo.jpg",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: ""
+    // }, 
     {
         name: "Manya Pradeep Narayan",
         role: "Analyst",
@@ -213,15 +213,15 @@ const teamMembers: TeamMember[] = [
         color: "bg-[#E5E7FF]",
         bio: "Her step count increased by 151.9% at Cornell."
     },
-    {
-        name: "Stella Ma",
-        role: "Analyst",
-        class: "2028",
-        major: "Biometry & Statistics",
-        image: "/team/SP26/Stella_Ma.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
+    // {
+    //     name: "Stella Ma",
+    //     role: "Analyst",
+    //     class: "2028",
+    //     major: "Biometry & Statistics",
+    //     image: "/team/SP26/Stella_Ma.png",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: ""
+    // },
     {
         name: "Anna Kim",
         role: "Analyst",
@@ -249,15 +249,15 @@ const teamMembers: TeamMember[] = [
         color: "bg-[#E5E7FF]",
         bio: "He studied 30,000 flashcards last year."
     },
-    {
-        name: "Ethan Yang",
-        role: "Analyst",
-        class: "2028",
-        major: "Information Science",
-        image: "/team/SP26/Ethan_Yang.png",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
+    // {
+    //     name: "Ethan Yang",
+    //     role: "Analyst",
+    //     class: "2028",
+    //     major: "Information Science",
+    //     image: "/team/SP26/Ethan_Yang.png",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: ""
+    // },
     {
         name: "Isabella Reyes-Famous",
         role: "Analyst",
@@ -267,15 +267,15 @@ const teamMembers: TeamMember[] = [
         color: "bg-[#E5E7FF]",
         bio: "She has a 4.93 rating on Uber."
     },
-    {
-        name: "Isha Nagireddy",
-        role: "Analyst",
-        class: "2029",
-        major: "Biometry & Statistics",
-        image: "/team/SP26/Isha_Nagireddy.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: "She hates the number 3."
-    },
+    // {
+    //     name: "Isha Nagireddy",
+    //     role: "Analyst",
+    //     class: "2029",
+    //     major: "Biometry & Statistics",
+    //     image: "/team/SP26/Isha_Nagireddy.jpg",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: "She hates the number 3."
+    // },
     {
         name: "Natan Kramskiy",
         role: "Analyst",
@@ -303,15 +303,15 @@ const teamMembers: TeamMember[] = [
         color: "bg-[#E5E7FF]",
         bio: "She has been to 15 countries."
     },
-    {
-        name: "Ellie Cha",
-        role: "Analyst",
-        class: "2027",
-        major: "Biometry and Statistics",
-        image: "/team/SP26/Ellie_Cha.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
+    // {
+    //     name: "Ellie Cha",
+    //     role: "Analyst",
+    //     class: "2027",
+    //     major: "Biometry and Statistics",
+    //     image: "/team/SP26/Ellie_Cha.jpg",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: ""
+    // },
     {
         name: "Chloe Kritas",
         role: "Analyst",
@@ -344,7 +344,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2027",
         major: "Economics and Statistics",
-        image: "/team/SP26/Cindy_Weng.jpeg",
+        image: "/team/SP26/Cindy_Weng.jpg",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
