@@ -232,6 +232,15 @@ const teamMembers: TeamMember[] = [
         bio: "Her average typing speed is 140 words per minute."
     },
     {
+        name: "Deborah Biru",
+        role: "Analyst",
+        class: "2028",
+        major: "Biometry & Statistics",
+        image: "/team/SP26/Deborah_Biru.png",
+        color: "bg-[#E5E7FF]",
+        bio: ""
+    },
+    {
         name: "Elinor Tu",
         role: "Analyst",
         class: "2028",
