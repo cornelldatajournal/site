@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable}`}>
       <head>
-        <link rel="icon" href="cdj_icon.png" />
+        <link rel="icon" href="../cdj_icon.png" />
         {/* the above line may cause errors for articles, but is not a big issue */}
         <title>Cornell Data Journal</title></head>
       <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-NT21TJWDVV"></Script>
