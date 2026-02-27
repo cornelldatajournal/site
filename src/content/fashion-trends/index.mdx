@@ -27,9 +27,8 @@ Unlike haute couture, where models wear pieces uniquely ordered, ready-to-wear f
 Since fashion data is hard to define, we web scraped various looks between 2006 to 2024 directly from the official Vogue website. With limited resources, we decided to exclude the years 2018-2020. We then used AI powered tools to analyze each image to provide a detailed description of the looks, including designer, garments, accessories, styles, keywords and so on. Analyzing every image from the runway is unrealistic because there are so many brands and thousands and millions of pictures. Therefore, we randomly sampled 40 brands for each season (fall/spring), giving us a total of 80 brands for each year. Below are examples of the AI generated descriptions we gathered for our looks:
 
 
-<div style={{display:'flex', alignItems:'center'}}>
-    <img style={{height:'350px', width:'auto', marginRight:'20px'}} src = '/images/SP25Fashion_8.png'/>
-    
+<div className="flex items-center max-w-[92vw]">
+    <ImageLoader className="mr-[20px]" imagePath='public/images/SP25Fashion_8.png'/>
 <div>
 Here’s a look taken from Miu Miu’s Fall 2012 Runway:
 
@@ -43,13 +42,12 @@ Style Keywords: Androgynous, bold
 Notes: Mix of patterns, strong color contrast
 </div>
 </div>
-
-<div style={{display:'flex', alignItems:'center'}}>
-    <img style={{height:'350px', width:'auto', marginRight:'20px'}} src = '/images/SP25Fashion_9.png'/>
-    
-<div>
 Here’s another taken from Vivienne Westood’s Fall 2021 Collection:
 
+<div className="flex items-center max-w-[92vw]">
+    <ImageLoader className="mr-[20px]" imagePath='public/images/SP25Fashion_9.png'/>
+    
+<div>
 Brand: Vivienne Westwood  
 Season: Fall 2021  
 Gender Presentation: Androgynous  
@@ -68,8 +66,8 @@ The moment you’ve been waiting for.
 After gathering our data, we then used numbers to represent the descriptions generated. We did this so we could then use a mathematical model to predict future looks based off of the past looks represented with those numbers. We decided to generate two masculine and two feminine looks, one for fall and one for spring. 
 
 
-<div style={{display:'flex', alignItems:'center'}}>
-    <img style={{height:'350px', width:'auto', marginRight:'0px'}} src = '/images/SP25Fashion_12.png'/>
+<div className="flex items-center max-w-[92vw]">
+    <ImageLoader className="mr-[0px]" imagePath='public/images/SP25Fashion_12.png'/>
     
 <div>
 **Masculine Fall Look**
@@ -83,8 +81,8 @@ Notes: casual elegance, monochrome palette
 </div>
 </div>
 
-<div style={{display:'flex', alignItems:'center'}}>
-    <img style={{height:'350px', width:'auto', marginRight:'0px'}} src = '/images/SP25Fashion_4.png'/>
+<div className="flex items-center max-w-[92vw]">
+    <ImageLoader className="mr-[0px]" imagePath='public/images/SP25Fashion_4.png'/>
     
 <div>
 **Masculine Spring Look**
@@ -98,8 +96,8 @@ Notes: Matching set, Subtle pattern
 </div>
 </div>
 
-<div style={{display:'flex', alignItems:'center'}}>
-    <img style={{height:'350px', width:'auto', marginRight:'0px'}} src = '/images/SP25Fashion_5.png'/>
+<div className="flex items-center max-w-[92vw]">
+    <ImageLoader className="mr-[0px]" imagePath='public/images/SP25Fashion_5.png'/>
     
 <div>
 **Feminine Spring Look**
@@ -113,8 +111,8 @@ Notes: V-neckline, bold accessories
 </div>
 </div>
 
-<div style={{display:'flex', alignItems:'center'}}>
-    <img style={{height:'350px', width:'auto', marginRight:'0px'}} src = '/images/SP25Fashion_5.png'/>
+<div className="flex items-center max-w-[92vw]">
+    <ImageLoader className="mr-[0px]" imagePath='public/images/SP25Fashion_5.png'/>
     
 <div>
 **Feminine Fall Look**

@@ -11,6 +11,7 @@ order: 15
 thumbnailCredit: "Nikhil Chinchalkar"
 ---
 
+
 Heart disease is a topic that everyone has heard of in some capacity, but that most of the population doesn’t actively worry about until their experience with it becomes personal. It is the leading cause of death in the United States, but the general perspective towards its prevalence often comes down to the influence of individual factors such as diet or exercise habits. However, this narrative doesn’t reflect how cardiovascular disease truly develops. In reality, cardiovascular disease is shaped by a constellation of factors that overlap and affect one another.
 
 There are a few classically well-known risk factors of heart disease: elevated blood pressure, diabetes, smoking, and high cholesterol. However, the combinations of them that exist might not be as well known. Someone with a moderately high blood pressure might not reach the formal cutoff for “high-risk for heart disease”, but if we take their cholesterol levels and BMI into consideration as well, the entire picture changes. Then, can these high-risk combinations be predicted by recognizing and further examining patterns of disease factors?
@@ -31,7 +32,7 @@ An important distinction to make is that clustering is not predictive. Despite b
 
 After running the algorithm, the following three clusters emerged. Each of these clusters has a risk factor distribution, i.e., the percentage of risk factors in each population group. Let's take a look at each of them: 
 
-<div style={{display:'flex', alignItems:'center'}}>
+<div className="flex items-center">
 <ImageLoader
     imagePath="public/images/FA25_CVRisk_cluster_1_pie.png"
         alt=""
@@ -58,22 +59,22 @@ Systolic blood pressure is the force of blood against the artery walls during th
 
 Low-density lipoproteins, or “bad” cholesterol, are a type of cholesterol that can build up in your arteries, forming plaque that hardens and narrows the arteries. This is dangerous because it restricts – and potentially blocks –  blood flow to the heart and other important organs. 
 
-<div style={{display:'flex', alignItems:'center'}}>
-<div style={{textAlign:'center'}}>
+<div className="flex items-center">
+<div className="text-center">
 Cluster 1:
 <ImageLoader
     imagePath="public/images/FA25_CVRisk_cluster_1_spider.png"
         alt=""
 />
 </div>
-<div style={{textAlign:'center'}}>
+<div className="text-center">
 Cluster 2:
 <ImageLoader
     imagePath="public/images/FA25_CVRisk_cluster_2_spider.png"
         alt=""
 />
 </div>
-<div style={{textAlign:'center'}}>
+<div className="text-center">
 Cluster 3:
 <ImageLoader
     imagePath="public/images/FA25_CVRisk_cluster_3_spider.png"
@@ -124,8 +125,8 @@ Taken together, the two-factor results reveal patterns that mirror the structure
 
 ## Interpretation of additional demographic variables 
 
-<div style={{display:'flex', justifyItems:'center'}}>
-<div style={{marginRight:'4vw'}}>
+<div className="flex justify-center">
+<div className="mr-4">
 <ImageLoader
     imagePath="public/images/FA25_CVRisk_education.png"
         alt=""
@@ -159,12 +160,12 @@ For education (EDUC), we see a clear gradient across different clusters. Cluster
 
 While ethnicity distribution largely reflects national proportions, the slightly higher representation of Non-Hispanic Black individuals in Cluster 3 aligns with the information gained from above about metabolic and cardiovascular risk: there are once again broader disparities in diabetes and hypertension prevalence.
 
-<div style={{display:'flex', alignItems:'center'}}>
+<div className="flex items-center">
 <ImageLoader
     imagePath="public/images/FA25_CVRisk_sex.png"
         alt=""
 />
-<div style={{width:'100%', marginLeft:'4vw'}}>
+<div className="w-[100%] ml-4">
 When looking at how sex is distributed across the three clusters, the differences are small, but a few patterns are shown through the graphs. Men were found to be slightly more represented in higher-risk profiles. 
 </div>
 </div>
