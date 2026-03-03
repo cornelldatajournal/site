@@ -23,17 +23,17 @@ To demonstrate how efficient the University of Rwanda’s geometric pooled testi
 
 However, with the geometric pooling method, we can reduce the number of tests needed to 9. First, let’s organize the samples onto something that resembles a Rubik’s cube. The 3-dimensional cube has a side length of 3.  We cut the cube into three slices in three different directions. In total, we have nine slices to test. 
 
-<ImageLoader imagePath={"public/images/fig1.png"} alt="Basic Rubik's Cube - 1"/>
+<ImageLoader imagePath="public/images/fig1.png" alt="Basic Rubik's Cube - 1"/>
 
-<ImageLoader imagePath={"public/images/fig2.png"} alt="Basic Rubik's Cube - 2"/>
+<ImageLoader imagePath="public/images/fig2.png" alt="Basic Rubik's Cube - 2"/>
 
 Next, we perform a test on each sample. Three slices happen to test positive.
 
-<ImageLoader imagePath={"public/images/fig3.png"} alt="Basic Rubik's Cube - 3"/>
+<ImageLoader imagePath="public/images/fig3.png" alt="Basic Rubik's Cube - 3"/>
 
 Finally, with these nine tests, we can tell which sample is positive by seeing where the positive slices overlap.
 
-<ImageLoader imagePath={"public/images/fig4.png"} alt="Basic Rubik's Cube - 4"/>
+<ImageLoader imagePath="public/images/fig4.png" alt="Basic Rubik's Cube - 4"/>
 
 Using this geometric slicing strategy, we were able to test 27 people with only 9 tests. To curb the spread of COVID-19, a reduction in tests is critical. In Rwanda, where a test can cost a laboratory $50, stepping down from 27 tests to 9 can save $900.
 
@@ -44,82 +44,82 @@ In the same way a 2-dimensional object is a series of 1-dimensional objects and 
 
 For example, a plane, which is 2-dimensional, is a combination of 3 lines, which are 1-dimensional objects. 
 
-<ImageLoader imagePath={"public/images/fig5.png"} alt="Basic Rubik's Cube - 5"/>
+<ImageLoader imagePath="public/images/fig5.png" alt="Basic Rubik's Cube - 5"/>
 
 A cube, which is 3-dimensional, is a combination of 3 planes.
 
-<ImageLoader imagePath={"public/images/fig6.png"} alt="Basic Rubik's Cube - 6"/>
+<ImageLoader imagePath="public/images/fig6.png" alt="Basic Rubik's Cube - 6"/>
 
 Therefore, a 4D hypercube, which is 4-dimensional, should be a combination of 3 cubes, which are 3-dimensional. Here, the w term denotes which subcube a sample is in.
 
 ### W-Axis Cuts
 
-<ImageLoader imagePath={"public/images/fig7.png"} alt="Basic Rubik's Cube - 7"/>
+<ImageLoader imagePath="public/images/fig7.png" alt="Basic Rubik's Cube - 7"/>
 
 Because each cube individually contains 27 samples, the 4D cube will hold 3 times 27 samples, which is equal to 81 samples. 
 Now that we have our 4D hypercube, we can slice it in each principle direction just like how we would slice the 3D cube. To cut the cube in the x-axis, we will cut each cube individually in the x-axis and group together the slices to form the new rearranged cubes. 
 
 ### X-Axis Cuts
 
-<ImageLoader imagePath={"public/images/fig8.png"} alt="Basic Rubik's Cube - 8"/>
+<ImageLoader imagePath="public/images/fig8.png" alt="Basic Rubik's Cube - 8"/>
 
 The same thing can be done in the y-axis and z-axis. 
 
 ### Y-Axis Cuts
 
-<ImageLoader imagePath={"public/images/fig9.png"} alt="Basic Rubik's Cube - 9"/>
+<ImageLoader imagePath="public/images/fig9.png" alt="Basic Rubik's Cube - 9"/>
 
 ### Z-Axis Cuts
 
-<ImageLoader imagePath={"public/images/fig10.png"} alt="Basic Rubik's Cube - 10"/>
+<ImageLoader imagePath="public/images/fig10.png" alt="Basic Rubik's Cube - 10"/>
 
 ## A trickier example
 Let’s now say that we now want to identify two positives in a group of 81 samples. We place the samples on a 4D hypercube and perform the first round of slice tests. We see that in each axis, two of the three slices test positive. 
 
 ### X-Axis Cuts
 
-<ImageLoader imagePath={"public/images/fig11.png"} alt="Basic Rubik's Cube - 11"/>
+<ImageLoader imagePath="public/images/fig11.png" alt="Basic Rubik's Cube - 11"/>
 
 ### Y-Axis Cuts
 
-<ImageLoader imagePath={"public/images/fig12.png"} alt="Basic Rubik's Cube - 12"/>
+<ImageLoader imagePath="public/images/fig12.png" alt="Basic Rubik's Cube - 12"/>
 
 ### Z-Axis Cuts
 
-<ImageLoader imagePath={"public/images/fig13.png"} alt="Basic Rubik's Cube - 13"/>
+<ImageLoader imagePath="public/images/fig13.png" alt="Basic Rubik's Cube - 13"/>
 
 ### W-Axis Cuts
 
-<ImageLoader imagePath={"public/images/fig14.png"} alt="Basic Rubik's Cube - 14"/>
+<ImageLoader imagePath="public/images/fig14.png" alt="Basic Rubik's Cube - 14"/>
 
 Notice that in each principal direction, two out of the three slices test positive. This is different from our 3D example because in that example, only one of three slices tested positive. To determine which samples test positive, another round of testing is needed. The other positive is found by elimination. 
 To find the first positive sample, we take one of the slices and slice it again. For instance, let’s take the cube w=1
 
 ### Slices of the cube w=1
 
-<ImageLoader imagePath={"public/images/fig15.png"} alt="Basic Rubik's Cube - 15"/>
+<ImageLoader imagePath="public/images/fig15.png" alt="Basic Rubik's Cube - 15"/>
 
 We see that sample which corresponds to the slices x=1, y=2, z=2 and w=1 tests positive. With this information, we can update our previous slices by removing the known positive.
 
 ### X-Axis Cuts
 
-<ImageLoader imagePath={"public/images/fig11.png"} alt="Basic Rubik's Cube - 11"/>
+<ImageLoader imagePath="public/images/fig11.png" alt="Basic Rubik's Cube - 11"/>
 
 ### Y-Axis Cuts
 
-<ImageLoader imagePath={"public/images/fig12.png"} alt="Basic Rubik's Cube - 12"/>
+<ImageLoader imagePath="public/images/fig12.png" alt="Basic Rubik's Cube - 12"/>
 
 ### Z-Axis Cuts
 
-<ImageLoader imagePath={"public/images/fig13.png"} alt="Basic Rubik's Cube - 13"/>
+<ImageLoader imagePath="public/images/fig13.png" alt="Basic Rubik's Cube - 13"/>
 
 ### W-Axis Cuts
 
-<ImageLoader imagePath={"public/images/fig14.png"} alt="Basic Rubik's Cube - 14"/>
+<ImageLoader imagePath="public/images/fig14.png" alt="Basic Rubik's Cube - 14"/>
 
 By seeing where the slices intersect, we see that the remaining positive is at slices x=0, y=0, z=1, and w=2. 
 
-<ImageLoader imagePath={"public/images/fig16.png"} alt="Basic Rubik's Cube - 16"/>
+<ImageLoader imagePath="public/images/fig16.png" alt="Basic Rubik's Cube - 16"/>
 
 In total, we screened 81 samples with 21 tests, a significant improvement!
 
@@ -136,11 +136,11 @@ tests would be performed.
 
 Instead of naive pooling, let’s now try the geometric pooling method. First, we split the 5,990 samples onto 74 4D hypercubes with length 3. Each hypercube holds 81 samples.
 
-<ImageLoader imagePath={"public/images/fig17.png"} alt="Basic Rubik's Cube - 17"/>
+<ImageLoader imagePath="public/images/fig17.png" alt="Basic Rubik's Cube - 17"/>
 
 In the first round of testing, each hypercube is tested as a whole. On average, 8.35 hypercubes test positive.
 
-<ImageLoader imagePath={"public/images/fig18.png"} alt="Basic Rubik's Cube - 18"/>
+<ImageLoader imagePath="public/images/fig18.png" alt="Basic Rubik's Cube - 18"/>
 
 99.1% of the time, each positive hypercube only contains 1 positive sample. In this case, 12 tests are performed. The other 0.9% of the time, the hypercube contains 2 positive samples. Here, 21 tests would be needed. There is also the extreme case that each hypercube contains 3 or more positive samples, but the probability of that occurring is negligible. Taking a weighted average of these probabilities, the expected number of testes required per positive cube is
 

@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable}`}>
       <head>
-        <link rel="icon" href="cdj_icon.png" />
+        <link rel="icon" href="../cdj_icon.png" />
         {/* the above line may cause errors for articles, but is not a big issue */}
         <title>Cornell Data Journal</title></head>
       <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-NT21TJWDVV"></Script>
@@ -69,7 +69,7 @@ export default function RootLayout({
         <div className="bg-[#3E32BA] text-white py-2">
           <div className="container max-w-8xl mx-auto px-4">
             <p className="font-space-grotesk text-sm text-center">
-              🫵🏼 Apply by February 4th to be a CDJ <a href="https://docs.google.com/forms/d/e/1FAIpQLSfMUz7iKVFugd6Uv7tRoIZlPJzG3l1pS9ALf0xpNCrAnvgTUA/viewform?usp=dialog" className="underline hover:text-neutral-200">member</a>!
+              🫵🏼 Interested in joining our club? Fill out our <a href="https://forms.gle/GBuqiDWWq5eaBGhV8" className="underline hover:text-neutral-200">interest form</a>!
             </p>
           </div>
         </div>
@@ -135,6 +135,11 @@ export default function RootLayout({
                   className="text-white font-space-grotesk bg-[#3E32BA] hover:bg-[#3E32BA]/90 dark:bg-[#3E32BA] dark:hover:bg-[#3E32BA]/90 px-4 py-2 rounded-md transition-colors"
                 >
                   Get Involved
+                </Link>
+                <Link
+                  href="/honeypot"
+                  className="display: none"
+                >
                 </Link>
               </nav>
             </div>
@@ -303,6 +308,14 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        {pathname === '/honeypot' && (
+          <Script id="honeypot-event" strategy="afterInteractive">
+            {`fetch('https://api.ipify.org?format=json')
+              .then(response=>response.json())
+              .then(data=>gtag('event','honeypot_triggered',{user_ip:data.ip}))
+              .catch(()=>gtag('event','honeypot_triggered',{user_ip:'unknown'}));`}
+          </Script>
+        )}
       </body>
     </html>
   );

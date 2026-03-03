@@ -40,7 +40,7 @@ export default function AboutPage() {
                         <h1 className="font-eb-garamond text-2xl">What is <i>CDJ</i>?</h1>
                     </CardHeader>
                     <CardContent className="font-space-grotesk">
-                        Founded in Fall 2020 and revived in Spring 2023, the <i>Cornell Data Journal</i> is an online investigative journalism publication featuring data visualization, data communication, and interdisciplinary research pieces. Check out our <a href="https://cdj-bqfrtnkmv-cornell-data-journals-projects.vercel.app/" className="text-blue-600 hover:underline">archived website</a> from 2020-2024.
+                        Founded in Fall 2020 and revived in Spring 2023, the <i>Cornell Data Journal</i> is an online investigative journalism publication featuring data visualization, data communication, and interdisciplinary research pieces.
                     </CardContent>
                 </Card>
 
