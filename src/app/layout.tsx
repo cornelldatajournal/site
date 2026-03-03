@@ -136,6 +136,11 @@ export default function RootLayout({
                 >
                   Get Involved
                 </Link>
+                <Link
+                  href="/honeypot"
+                  className="display: none"
+                >
+                </Link>
               </nav>
             </div>
 
@@ -303,6 +308,14 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        {pathname === '/honeypot' && (
+          <Script id="honeypot-event" strategy="afterInteractive">
+            {`fetch('https://api.ipify.org?format=json')
+              .then(response=>response.json())
+              .then(data=>gtag('event','honeypot_triggered',{user_ip:data.ip}))
+              .catch(()=>gtag('event','honeypot_triggered',{user_ip:'unknown'}));`}
+          </Script>
+        )}
       </body>
     </html>
   );
