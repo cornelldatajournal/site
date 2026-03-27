@@ -23,7 +23,7 @@ const teamMembers: TeamMember[] = [
         role: "President",
         class: "2027",
         major: "Economics",
-        image: "/team/SP26/Nikhil_Chinchalkar.jpeg",
+        image: "/team/SP26/Nikhil_Chinchalkar.png",
         color: "bg-[#E5F6FF]",
         bio: "He listed to 75,835 minutes of music last year."
     },
@@ -120,15 +120,6 @@ const teamMembers: TeamMember[] = [
         image: "/team/SP26/Tristan_Albano.jpeg",
         color: "bg-[#F0E5FF]",
         bio: "He has 3 dogs."
-    },
-    {
-        name: "Benjamin Beer",
-        role: "Project Lead",
-        class: "2028",
-        major: "Biology",
-        image: "/team/SP26/Benjamin_Beer.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
     },
     {
         name: "Suchit Basineni",
@@ -238,7 +229,7 @@ const teamMembers: TeamMember[] = [
         major: "Biometry & Statistics",
         image: "/team/SP26/Deborah_Biru.png",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She can solve a Rubik's Cube in under 60 seconds."
     },
     {
         name: "Elinor Tu",
