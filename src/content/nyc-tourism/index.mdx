@@ -16,7 +16,7 @@ order: 1
 The goal of the project was to determine the factors that mostly significantly influence tourism trends in NYC. As one of the most frequently visited cities in the United States, NYC offers an opportunity to analyze what draws people in or deters them from planning a trip. With its renowned landmarks, vibrant nightlife, as well as being a global hub for business and fashion, NYC stands out as a great choice for travelers. However, tourism patterns are shaped by more than just the city’s appeal. In this project, we aimed to explore the factors that drive these patterns by focusing on four key components: Events, weather conditions, crime rates, and transportation accessibility. By analyzing data across these categories, we hope to gain a better understanding of the dynamics that shape travel behavior and influence the rise and fall of visitors to NYC.
 
 <ImageLoader
-    imagePath="public/images/SP25NYC_3.png"
+    imagePath="public/images/SP25/NYC/3.png"
 />
 
 # The Data
@@ -31,11 +31,11 @@ One of our factors we looked at to see its effects on NYC tourism was the crime 
 
 <div className="flex justify-center items-center">
 <ImageLoader
-    imagePath="public/images/SP25NYC_10.png"
+    imagePath="public/images/SP25/NYC/10.png"
     width="350"
 />
 <ImageLoader
-    imagePath="public/images/SP25NYC_6.png"
+    imagePath="public/images/SP25/NYC/6.png"
     width="300"
 />
 </div>
@@ -64,7 +64,7 @@ This DataFrame contains the following columns:
 That being said, we can proceed to move onto visualization and insights. The first visualization we plotted first was the total number of linked passenger trips across all NYC agencies over time among specific types of transportation. Here is the time series plot, with a color-coded legend to indicate the kind of transportation:
 
 <ImageLoader
-    imagePath="public/images/SP25NYC_9.png"
+    imagePath="public/images/SP25/NYC/9.png"
 />
 
 First, let’s break down the acronyms given in the legend:
@@ -85,13 +85,13 @@ It’s worth mentioning how our transportation dataset relates to other datasets
 One of the factors that we analyzed was the influence that weather throughout the years and months has on tourism in NYC. We found a data base from The National Weather Service that provided monthly averages of temperatures from 2000-2024. To narrow down the scope of the study we limited the weather to 2014-2024 to compare it to the tourism rates. From this we calculated the average temperature in Fahrenheit for each month and each year. The temperatures for each month showed standard trends that one would think for each season. 
 
 <ImageLoader
-    imagePath="public/images/SP25NYC_8.png"
+    imagePath="public/images/SP25/NYC/8.png"
 />
 
 The first graph represents the average temperature for each month from 2014-2024. The graph shows trends that there have not been drastic changes in temperature for each month in the last 10 years. The second graph shows the average temperatures for each year from 2015-2016. The past two years are the highest temperatures which makes sense with recent climate reports on all time highs for the past few years. The average temperature shows more variation compared to the other graphs visually. 
 
 <ImageLoader
-    imagePath="public/images/SP25NYC_5.png"
+    imagePath="public/images/SP25/NYC/5.png"
 />
 
 In order to see if there’s a correlation between weather and the number of NYC tourists, we found the Pearson correlation coefficient. For the temperature the correlation coefficient was 0.01153 indicating a very weak correlation that is positive. The correlation is not strong enough to indicate that temperature can account for variation in tourism throughout the year. 
@@ -116,7 +116,7 @@ The fields contained in the dataset consist of: Event ID, Event Name, Start Date
 Plotting the number of events aggregated by month, from January 2008 to July 2025. Aggregated by month means the sum of all the events in a given month (e.g. the number of all the events held in July of 2014). 
 
 <ImageLoader
-    imagePath="public/images/SP25NYC_4.png"
+    imagePath="public/images/SP25/NYC/4.png"
 />
 
 Looking at the graph, we immediately notice lots of vertical movement that appears to suggest some sort of cyclical, seasonal trend. Whenever the graph spikes, this indicates a summer season where lots of events are held in NYC. Whenever the graph dips, this indicates a winter season where not as many events are held in NYC. 
@@ -124,7 +124,7 @@ Looking at the graph, we immediately notice lots of vertical movement that appea
 Analyzing the data further, we can visualize the number of events categorized by NYC Borough (Bronx, Brooklyn, Manhattan, Queens, Staten Island). 
 
 <ImageLoader
-    imagePath="public/images/SP25NYC_7.png"
+    imagePath="public/images/SP25/NYC/7.png"
 />
 
 Looking at the graph, it appears that Manhattan is the borough which holds the most events in NYC every year, then Brooklyn, Queens, Bronx, and Staten Island. Additionally, it appears that the rises and declines in events throughout the years are due to variations in the number of events from ALL the boroughs, not just one borough in particular. Furthermore, one can visually see how Covid impacted the number of events held in NYC, as the years 2019 and 2020 held a moderate amount of events, but then the following years 2021-2033 had soaring event numbers. 
@@ -132,7 +132,7 @@ Looking at the graph, it appears that Manhattan is the borough which holds the m
 Taking a closer look at the types of events in the dataset, the top 10 most popular event types are as follows: 
 
 <ImageLoader
-    imagePath="public/images/SP25NYC_11.png"
+    imagePath="public/images/SP25/NYC/11.png"
 />
 
 **Statistical Significance**
@@ -144,7 +144,7 @@ To answer our initial question of whether or not the number of events held in NY
 After gathering all our data, we merged the data all into one file to conduct an overall analysis between the response variable, the JFK/LGA passenger arrival data, with the predictor variables: Crime data, Transportation Data, Weather Data, and Events data. After merging the data into one file, we conducted the Pearson correlation analysis as mentioned above. Then, we created a scatterplot matrix to better understand and visualize the correlation between each variable.
 
 <ImageLoader
-    imagePath="public/images/SP25NYC_2.png"
+    imagePath="public/images/SP25/NYC/2.png"
 />
 
 # Conclusion

@@ -47,7 +47,7 @@ export const articlePlots: ArticlePlots = {
               xAxis: "xAxis",
               yAxis: "yAxis",
               title: "Heat Map of Self-Reported Top Socialization Spots",
-              imagePath: "public/images/crowdflow-social.png",
+              imagePath: "public/images/FA23/cornell-crowdflow/crowdflow-social.png",
             }
         },
         {
@@ -58,7 +58,7 @@ export const articlePlots: ArticlePlots = {
               xAxis: "xAxis",
               yAxis: "yAxis",
               title: "Heat Map of Self-Reported Top Leisure Spots",
-              imagePath: "public/images/crowdflow-leisure.png",
+              imagePath: "public/images/FA23/cornell-crowdflow/crowdflow-leisure.png",
             }
         },
         {
@@ -69,7 +69,7 @@ export const articlePlots: ArticlePlots = {
               xAxis: "xAxis",
               yAxis: "yAxis",
               title: "Heat Map of Self-Reported Top Studying Spots",
-              imagePath: "public/images/crowdflow-study.png",
+              imagePath: "public/images/FA23/cornell-crowdflow/crowdflow-study.png",
             }
         },
         {
@@ -80,7 +80,7 @@ export const articlePlots: ArticlePlots = {
               xAxis: "xAxis",
               yAxis: "yAxis",
               title: "Heat Map of Self-Reported Top Dining Spots",
-              imagePath: "public/images/crowdflow-eat.png",
+              imagePath: "public/images/FA23/cornell-crowdflow/crowdflow-eat.png",
             }
         },
     ]

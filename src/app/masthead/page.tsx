@@ -494,14 +494,14 @@ const teamMembers: TeamMember[] = [
     },
 ];
 
-const additionalProjectLeads: TeamMember[] = Array(7).fill(null).map((_, i) => ({
-    name: `Project Lead ${i + 1}`,
-    role: "Project Lead",
-    class: `${Math.floor(Math.random() * 4) + 24}`,
-    major: "Various",
-    image: "/images/wall.jpg",
-    color: `bg-[${['#FFE5D9', '#E5F6FF', '#F0E5FF', '#E5FFE9', '#FFE8E5'][i % 5]}]`
-}));
+// const additionalProjectLeads: TeamMember[] = Array(7).fill(null).map((_, i) => ({
+//     name: `Project Lead ${i + 1}`,
+//     role: "Project Lead",
+//     class: `${Math.floor(Math.random() * 4) + 24}`,
+//     major: "Various",
+//     image: "/images/wall.jpg",
+//     color: `bg-[${['#FFE5D9', '#E5F6FF', '#F0E5FF', '#E5FFE9', '#FFE8E5'][i % 5]}]`
+// }));
 
 function TeamMemberCard({ member }: { member: TeamMember }) {
     const bioRef = useRef<HTMLDivElement>(null);

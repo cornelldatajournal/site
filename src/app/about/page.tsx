@@ -7,18 +7,18 @@ import Link from "next/link";
 
 export default function AboutPage() {
     const companies = [
-        { name: "RBC Capital Markets", logo: "/images/logos/rbc.png" },
-        { name: "PwC", logo: "/images/logos/pwc.png" },
-        { name: "EY-Parthenon", logo: "/images/logos/ey.png" },
-        { name: "Business Insider", logo: "/images/logos/bi.png" },
-        { name: "Parsons School of Design", logo: "/images/logos/parsons.png" },
-        { name: "Columbia School of Journalism", logo: "/images/logos/columbia.png" },
-        { name: "IBM", logo: "/images/logos/ibm.png" },
-        { name: "Bank of America", logo: "/images/logos/bofa.png" },
-        { name: "Cerberus Capital Management", logo: "/images/logos/cerberus.png" },
-        { name: "Stripe", logo: "/images/logos/stripe.png" },
-        { name: "Two Sigma", logo: "/images/logos/two-sigma.png" },
-        { name: "MIT CSAIL", logo: "/images/logos/mit.png" }
+        { name: "RBC Capital Markets", logo: "/images/alumni_placement_logos/rbc.png" },
+        { name: "PwC", logo: "/images/alumni_placement_logos/pwc.png" },
+        { name: "EY-Parthenon", logo: "/images/alumni_placement_logos/ey.png" },
+        { name: "Business Insider", logo: "/images/alumni_placement_logos/bi.png" },
+        { name: "Parsons School of Design", logo: "/images/alumni_placement_logos/parsons.png" },
+        { name: "Columbia School of Journalism", logo: "/images/alumni_placement_logos/columbia.png" },
+        { name: "IBM", logo: "/images/alumni_placement_logos/ibm.png" },
+        { name: "Bank of America", logo: "/images/alumni_placement_logos/bofa.png" },
+        { name: "Cerberus Capital Management", logo: "/images/alumni_placement_logos/cerberus.png" },
+        { name: "Stripe", logo: "/images/alumni_placement_logos/stripe.png" },
+        { name: "Two Sigma", logo: "/images/alumni_placement_logos/two-sigma.png" },
+        { name: "MIT CSAIL", logo: "/images/alumni_placement_logos/mit.png" }
     ];
 
     return (
@@ -40,7 +40,7 @@ export default function AboutPage() {
                         <h1 className="font-eb-garamond text-2xl">What is <i>CDJ</i>?</h1>
                     </CardHeader>
                     <CardContent className="font-space-grotesk">
-                        Founded in Fall 2020 and revived in Spring 2023, the <i>Cornell Data Journal</i> is an online investigative journalism publication featuring data visualization, data communication, and interdisciplinary research pieces.
+                        Founded in Fall 2020, the <i>Cornell Data Journal</i> is an online investigative journalism publication featuring data visualization, data communication, and interdisciplinary research pieces.
                     </CardContent>
                 </Card>
 
