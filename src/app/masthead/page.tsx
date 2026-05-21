@@ -23,7 +23,7 @@ const teamMembers: TeamMember[] = [
         role: "President",
         class: "2027",
         major: "Economics",
-        image: "/team/SP26/Nikhil_Chinchalkar.png",
+        image: "/team/SP26/webp/Nikhil_Chinchalkar.webp",
         color: "bg-[#E5F6FF]",
         bio: "He listed to 75,835 minutes of music last year."
     },
@@ -32,7 +32,7 @@ const teamMembers: TeamMember[] = [
         role: "Executive Vice President",
         class: "2028",
         major: "Biometry & Statistics",
-        image: "/team/SP26/Tianyi_Chen.JPG",
+        image: "/team/SP26/webp/Tianyi_Chen.webp",
         color: "bg-[#E5E7FF]",
         bio: "She has three 6's in her birthday."
     },
@@ -42,7 +42,7 @@ const teamMembers: TeamMember[] = [
         specialized_role: "Content Editor",
         class: "2027",
         major: "English",
-        image: "/team/SP26/Jenny_Williams.png",
+        image: "/team/SP26/webp/Jenny_Williams.webp",
         color: "bg-[#FFE5D9]",
         bio: ""
     },
@@ -51,7 +51,7 @@ const teamMembers: TeamMember[] = [
         role: "VP of Internal Affairs",
         class: "2028",
         major: "Statistics",
-        image: "/team/SP26/Eden_Maynard.jpeg",
+        image: "/team/SP26/webp/Eden_Maynard.webp",
         color: "bg-[#E5FFE9]",
         bio: "She is in the top 0.1% of Solange listeners on Spotify."
     },
@@ -60,7 +60,7 @@ const teamMembers: TeamMember[] = [
         role: "VP of External Affairs",
         class: "2028",
         major: "Public Policy",
-        image: "/team/SP26/Melody_Qian.png",
+        image: "/team/SP26/webp/Melody_Qian.webp",
         color: "bg-[#E5F6FF]",
         bio: "She is in the top 0.69% of monkeytype users in WPM."
     },
@@ -69,7 +69,7 @@ const teamMembers: TeamMember[] = [
         role: "Project Coordinator",
         class: "2028",
         major: "Computer Science",
-        image: "/team/SP26/Remi_Ladia.jpg",
+        image: "/team/SP26/webp/Remi_Ladia.webp",
         color: "bg-[#E5E7FF]",
         bio: "She has 1,605 unread iMessages."
     },
@@ -78,7 +78,7 @@ const teamMembers: TeamMember[] = [
         role: "Faculty Mentor",
         class: "",
         major: "",
-        image: "/team/SP26/Dana_Yang.png",
+        image: "/team/SP26/webp/Dana_Yang.webp",
         color: "bg-[#FFE5D9]",
         bio: "Dana is an assistant professor at Cornell in the department of statistics and data science."
     },
@@ -90,7 +90,7 @@ const teamMembers: TeamMember[] = [
         role: "Project Lead",
         class: "2028",
         major: "Biometry & Statistics",
-        image: "/team/SP26/Vivian_Guo.jpeg",
+        image: "/team/SP26/webp/Vivian_Guo.webp",
         color: "bg-[#F0E5FF]",
         bio: "She has 821 notes on her phone."
     },
@@ -99,7 +99,7 @@ const teamMembers: TeamMember[] = [
         role: "Project Lead",
         class: "2028",
         major: "Statistical Science",
-        image: "/team/SP26/Kayla_Amkraut.jpeg",
+        image: "/team/SP26/webp/Kayla_Amkraut.webp",
         color: "bg-[#F0E5FF]",
         bio: "She has lived in 4 states."
     },
@@ -108,7 +108,7 @@ const teamMembers: TeamMember[] = [
         role: "Project Lead",
         class: "2027",
         major: "Computer Science",
-        image: "/team/SP26/Maia_Forssman.JPEG",
+        image: "/team/SP26/webp/Maia_Forssman.webp",
         color: "bg-[#F0E5FF]",
         bio: "She visits CTB 9 times a week on average."
     },
@@ -117,7 +117,7 @@ const teamMembers: TeamMember[] = [
         role: "Project Lead",
         class: "2029",
         major: "Information Science",
-        image: "/team/SP26/Tristan_Albano.jpeg",
+        image: "/team/SP26/webp/Tristan_Albano.webp",
         color: "bg-[#F0E5FF]",
         bio: "He has 3 dogs."
     },
@@ -126,7 +126,7 @@ const teamMembers: TeamMember[] = [
         role: "Project Lead",
         class: "2029",
         major: "Computer Science",
-        image: "/team/SP26/Suchit_Basineni.jpg",
+        image: "/team/SP26/webp/Suchit_Basineni.webp",
         color: "bg-[#E5E7FF]",
         bio: "He has 1,594 hours on Brawl Stars."
     },
@@ -135,7 +135,7 @@ const teamMembers: TeamMember[] = [
         role: "Project Lead",
         class: "2028",
         major: "Statistical Science",
-        image: "/team/SP26/Mei_Knight.jpeg",
+        image: "/team/SP26/webp/Mei_Knight.webp",
         color: "bg-[#E5E7FF]",
         bio: "She has literally traveled around the globe."
     },
@@ -146,7 +146,7 @@ const teamMembers: TeamMember[] = [
     //     role: "Analyst",
     //     class: "2028",
     //     major: "Government",
-    //     image: "/team/SP26/Marianna_Ruggiero.jpeg",
+    //     image: "/team/SP26/webp/Marianna_Ruggiero.webp",
     //     color: "bg-[#E5E7FF]",
     //     bio: ""
     // },
@@ -155,7 +155,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Biometry & Statistics",
-        image: "/team/SP26/Steven_Xu.jpg",
+        image: "/team/SP26/webp/Steven_Xu.webp",
         color: "bg-[#F0E5FF]",
         bio: "His basketball jersey number is 15."
     },
@@ -164,7 +164,7 @@ const teamMembers: TeamMember[] = [
     //     role: "Analyst",
     //     class: "2028",
     //     major: "Information Science",
-    //     image: "/team/SP26/Ivy_Liu.jpg",
+    //     image: "/team/SP26/webp/Ivy_Liu.webp",
     //     color: "bg-[#E5E7FF]",
     //     bio: "Her favorite number is 2."
     // },
@@ -173,7 +173,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2027",
         major: "Statistical Science",
-        image: "/team/SP26/Emily_Fu.jpg",
+        image: "/team/SP26/webp/Emily_Fu.webp",
         color: "bg-[#E5E7FF]",
         bio: "She watched 37 movies last year."
     },
@@ -182,7 +182,7 @@ const teamMembers: TeamMember[] = [
     //     role: "Project Lead",
     //     class: "2027",
     //     major: "Mathematics",
-    //     image: "/team/SP26/Milo_Schlittgen-Li.jpeg",
+    //     image: "/team/SP26/webp/Milo_Schlittgen-Li.webp",
     //     color: "bg-[#E5E7FF]",
     //     bio: ""
     // },
@@ -191,7 +191,7 @@ const teamMembers: TeamMember[] = [
     //     role: "Analyst",
     //     class: "2028",
     //     major: "Urban & Regional Studies",
-    //     image: "/team/SP26/Adam_Azevedo.jpg",
+    //     image: "/team/SP26/webp/Adam_Azevedo.webp",
     //     color: "bg-[#E5E7FF]",
     //     bio: ""
     // }, 
@@ -200,7 +200,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Computer Science",
-        image: "/team/SP26/Manya_Pradeep_Narayan.jpg",
+        image: "/team/SP26/webp/Manya_Pradeep_Narayan.webp",
         color: "bg-[#E5E7FF]",
         bio: "Her step count increased by 151.9% at Cornell."
     },
@@ -209,7 +209,7 @@ const teamMembers: TeamMember[] = [
     //     role: "Analyst",
     //     class: "2028",
     //     major: "Biometry & Statistics",
-    //     image: "/team/SP26/Stella_Ma.png",
+    //     image: "/team/SP26/webp/Stella_Ma.webp",
     //     color: "bg-[#E5E7FF]",
     //     bio: ""
     // },
@@ -218,7 +218,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Biometry & Statistics",
-        image: "/team/SP26/Anna_Kim.JPG",
+        image: "/team/SP26/webp/Anna_Kim.webp",
         color: "bg-[#E5E7FF]",
         bio: "Her average typing speed is 140 words per minute."
     },
@@ -227,7 +227,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Biometry & Statistics",
-        image: "/team/SP26/Deborah_Biru.png",
+        image: "/team/SP26/webp/Deborah_Biru.webp",
         color: "bg-[#E5E7FF]",
         bio: "She can solve a Rubik's Cube in under 60 seconds."
     },
@@ -236,7 +236,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Computer Science, Mathematics",
-        image: "/team/SP26/Elinor_Tu.jpg",
+        image: "/team/SP26/webp/Elinor_Tu.webp",
         color: "bg-[#E5E7FF]",
         bio: "She has traveled to 10 different countries."
     },
@@ -245,7 +245,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Biometry & Statistics",
-        image: "/team/SP26/Eric_Zhu.png",
+        image: "/team/SP26/webp/Eric_Zhu.webp",
         color: "bg-[#E5E7FF]",
         bio: "He studied 30,000 flashcards last year."
     },
@@ -254,7 +254,7 @@ const teamMembers: TeamMember[] = [
     //     role: "Analyst",
     //     class: "2028",
     //     major: "Information Science",
-    //     image: "/team/SP26/Ethan_Yang.png",
+    //     image: "/team/SP26/webp/Ethan_Yang.webp",
     //     color: "bg-[#E5E7FF]",
     //     bio: ""
     // },
@@ -263,7 +263,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Information Science",
-        image: "/team/SP26/Isabella Reyes_Famous.jpeg",
+        image: "/team/SP26/webp/Isabella Reyes_Famous.webp",
         color: "bg-[#E5E7FF]",
         bio: "She has a 4.93 rating on Uber."
     },
@@ -272,7 +272,7 @@ const teamMembers: TeamMember[] = [
     //     role: "Analyst",
     //     class: "2029",
     //     major: "Biometry & Statistics",
-    //     image: "/team/SP26/Isha_Nagireddy.jpg",
+    //     image: "/team/SP26/webp/Isha_Nagireddy.webp",
     //     color: "bg-[#E5E7FF]",
     //     bio: "She hates the number 3."
     // },
@@ -281,7 +281,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Bioengineering",
-        image: "/team/SP26/Natan_Kramskiy.jpg",
+        image: "/team/SP26/webp/Natan_Kramskiy.webp",
         color: "bg-[#E5E7FF]",
         bio: "He has watched the Lord of the Rings trilogy 8 times."
     },
@@ -290,7 +290,7 @@ const teamMembers: TeamMember[] = [
     //     role: "Analyst",
     //     class: "2029",
     //     major: "Computer Science & Math",
-    //     image: "/team/SP26/Olivia_Yu.jpg",
+    //     image: "/team/SP26/webp/Olivia_Yu.webp",
     //     color: "bg-[#E5E7FF]",
     //     bio: "She has lost her water bottle 38 times this year."
     // },
@@ -299,7 +299,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Economics",
-        image: "/team/SP26/Rhea_Barot.png",
+        image: "/team/SP26/webp/Rhea_Barot.webp",
         color: "bg-[#E5E7FF]",
         bio: "She has been to 15 countries."
     },
@@ -308,7 +308,7 @@ const teamMembers: TeamMember[] = [
     //     role: "Analyst",
     //     class: "2027",
     //     major: "Biometry and Statistics",
-    //     image: "/team/SP26/Ellie_Cha.jpg",
+    //     image: "/team/SP26/webp/Ellie_Cha.webp",
     //     color: "bg-[#E5E7FF]",
     //     bio: ""
     // },
@@ -317,16 +317,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2027",
         major: "Hotel Administration",
-        image: "/team/SP26/Chloe_Kritas.jpeg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Rishik Gowrishetti",
-        role: "Analyst",
-        class: "2028",
-        major: "Statistical Science",
-        image: "/team/SP26/Rishik_Gowrishetti.jpg",
+        image: "/team/SP26/webp/Chloe_Kritas.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -335,7 +326,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2027",
         major: "Computer Science",
-        image: "/team/SP26/Jason_Wang.jpeg",
+        image: "/team/SP26/webp/Jason_Wang.webp",
         color: "bg-[#E5E7FF]",
         bio: "He drinks 200% the daily water intake of the average American."
     },
@@ -344,7 +335,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2027",
         major: "Economics and Statistics",
-        image: "/team/SP26/Cindy_Weng.jpg",
+        image: "/team/SP26/webp/Cindy_Weng.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -353,7 +344,7 @@ const teamMembers: TeamMember[] = [
     //     role: "Analyst",
     //     class: "2027",
     //     major: "Information Science",
-    //     image: "/team/SP26/Winifred_Agyei.png",
+    //     image: "/team/SP26/webp/Winifred_Agyei.webp",
     //     color: "bg-[#E5E7FF]",
     //     bio: ""
     // }
@@ -362,7 +353,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Information Science",
-        image: "/team/SP26/Charlie_Graham.jpg",
+        image: "/team/SP26/webp/Charlie_Graham.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -371,7 +362,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Biometry & Statistics",
-        image: "/team/SP26/Maylani_Lee.jpg",
+        image: "/team/SP26/webp/Maylani_Lee.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -380,16 +371,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Economics",
-        image: "/team/SP26/Graco_Rossanigo.jpg",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Jason Kim",
-        role: "Analyst",
-        class: "2028",
-        major: "ORIE",
-        image: "/team/SP26/Jason_Kim.jpeg",
+        image: "/team/SP26/webp/Graco_Rossanigo.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -398,7 +380,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Computer Science and Math",
-        image: "/team/SP26/Jarmin_Weng.jpg",
+        image: "/team/SP26/webp/Jarmin_Weng.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -407,7 +389,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Statistical Science",
-        image: "/team/SP26/Emily_Fang.jpeg",
+        image: "/team/SP26/webp/Emily_Fang.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -416,7 +398,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Statistical Science",
-        image: "/team/SP26/Shivani_Anand.jpg",
+        image: "/team/SP26/webp/Shivani_Anand.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -425,7 +407,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Computer Science",
-        image: "/team/SP26/Roma_Rangaswamy.jpeg",
+        image: "/team/SP26/webp/Roma_Rangaswamy.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -434,7 +416,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Biometry and Statistics",
-        image: "/team/SP26/Sanjana_Bajaj.png",
+        image: "/team/SP26/webp/Sanjana_Bajaj.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -443,7 +425,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Computer Science",
-        image: "/team/SP26/Elom_Eskender.JPG",
+        image: "/team/SP26/webp/Elom_Eskender.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -452,7 +434,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Statistics",
-        image: "/team/SP26/Caitlin_Bochere.png",
+        image: "/team/SP26/webp/Caitlin_Bochere.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -461,7 +443,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Comparative Literature",
-        image: "/team/SP26/Veronica_Ma.jpg",
+        image: "/team/SP26/webp/Veronica_Ma.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -470,7 +452,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2027",
         major: "Statistics",
-        image: "/team/SP26/Alannah_Dennis.png",
+        image: "/team/SP26/webp/Alannah_Dennis.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -479,7 +461,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Earth and Atmospheric Science",
-        image: "/team/SP26/Himashi_Balasuriya.png",
+        image: "/team/SP26/webp/Himashi_Balasuriya.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -488,7 +470,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Environment and Sustainability",
-        image: "/team/SP26/Chris_Jeong.png",
+        image: "/team/SP26/webp/Chris_Jeong.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -499,7 +481,7 @@ const teamMembers: TeamMember[] = [
 //     role: "Project Lead",
 //     class: `${Math.floor(Math.random() * 4) + 24}`,
 //     major: "Various",
-//     image: "/images/wall.jpg",
+//     image: "/images/wall.webp",
 //     color: `bg-[${['#FFE5D9', '#E5F6FF', '#F0E5FF', '#E5FFE9', '#FFE8E5'][i % 5]}]`
 // }));
 

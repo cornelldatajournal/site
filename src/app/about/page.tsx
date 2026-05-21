@@ -7,18 +7,18 @@ import Link from "next/link";
 
 export default function AboutPage() {
     const companies = [
-        { name: "RBC Capital Markets", logo: "/images/alumni_placement_logos/rbc.png" },
-        { name: "PwC", logo: "/images/alumni_placement_logos/pwc.png" },
-        { name: "EY-Parthenon", logo: "/images/alumni_placement_logos/ey.png" },
-        { name: "Business Insider", logo: "/images/alumni_placement_logos/bi.png" },
-        { name: "Parsons School of Design", logo: "/images/alumni_placement_logos/parsons.png" },
-        { name: "Columbia School of Journalism", logo: "/images/alumni_placement_logos/columbia.png" },
-        { name: "IBM", logo: "/images/alumni_placement_logos/ibm.png" },
-        { name: "Bank of America", logo: "/images/alumni_placement_logos/bofa.png" },
-        { name: "Cerberus Capital Management", logo: "/images/alumni_placement_logos/cerberus.png" },
-        { name: "Stripe", logo: "/images/alumni_placement_logos/stripe.png" },
-        { name: "Two Sigma", logo: "/images/alumni_placement_logos/two-sigma.png" },
-        { name: "MIT CSAIL", logo: "/images/alumni_placement_logos/mit.png" }
+        { name: "RBC Capital Markets", logo: "/images/alumni_placement_logos/webp/rbc.webp" },
+        { name: "PwC", logo: "/images/alumni_placement_logos/webp/pwc.webp" },
+        { name: "EY-Parthenon", logo: "/images/alumni_placement_logos/webp/ey.webp" },
+        { name: "Business Insider", logo: "/images/alumni_placement_logos/webp/bi.webp" },
+        { name: "Parsons School of Design", logo: "/images/alumni_placement_logos/webp/parsons.webp" },
+        { name: "Columbia School of Journalism", logo: "/images/alumni_placement_logos/webp/columbia.webp" },
+        { name: "IBM", logo: "/images/alumni_placement_logos/webp/ibm.webp" },
+        { name: "Bank of America", logo: "/images/alumni_placement_logos/webp/bofa.webp" },
+        { name: "Cerberus Capital Management", logo: "/images/alumni_placement_logos/webp/cerberus.webp" },
+        { name: "Stripe", logo: "/images/alumni_placement_logos/webp/stripe.webp" },
+        { name: "Two Sigma", logo: "/images/alumni_placement_logos/webp/two-sigma.webp" },
+        { name: "MIT CSAIL", logo: "/images/alumni_placement_logos/webp/mit.webp" }
     ];
 
     return (
