@@ -11,7 +11,7 @@ export default function AboutPage() {
         { name: "PwC", logo: "/images/alumni_placement_logos/webp/pwc.webp" },
         { name: "EY-Parthenon", logo: "/images/alumni_placement_logos/webp/ey.webp" },
         { name: "Business Insider", logo: "/images/alumni_placement_logos/webp/bi.webp" },
-        { name: "Parsons School of Design", logo: "/images/alumni_placement_logos/webp/parsons.webp" },
+        { name: "The EDF Group", logo: "/images/alumni_placement_logos/edf.svg" },
         { name: "Columbia School of Journalism", logo: "/images/alumni_placement_logos/webp/columbia.webp" },
         { name: "IBM", logo: "/images/alumni_placement_logos/webp/ibm.webp" },
         { name: "Bank of America", logo: "/images/alumni_placement_logos/webp/bofa.webp" },
