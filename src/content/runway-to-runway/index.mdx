@@ -1,0 +1,140 @@
+---
+title: "Runway to Runway: The Data Behind Buying Luxury Abroad"
+description: ""
+author: ["Kayla Amkraut", "Sanjana Bajaj", "Charlie Graham", "Natan Kramskiy", "Roma Rangaswamy"]
+editors: ["Jenny Williams","Nikhil Chinchalkar"]
+publishedDate: "2026-05-27"
+section: "Finance"
+image_path: "public/images/SP26/BeatsBeliefs/Thumb.webp"
+layout: "image"
+order: 14
+thumbnailCredit: "Melody Qian"
+---
+
+Select a country and brand below to see how much you can save on each product when you don’t buy in the U.S. 
+
+<div className="h-[440px]">
+<iframe
+  title="Heatmap"
+  src="/images/SP26/runway-to-runway/table.html"
+  className='h-[133%] w-[133%] scale-[75%] origin-top-left'
+></iframe>
+</div>
+
+Imagine you’re on a family vacation across Europe. It’s the last day of your trip and your final destination is Paris, France. You spent the day touring the city and on your walk back to the hotel something stops you dead in your tracks. 
+
+The handbag of your dreams sitting in the window of Prada.
+
+
+<ImageLoader
+    imagePath="public/images/SP26/runway-to-runway/prada_bag.webp"
+/>
+
+It’s the Aimée medium leather shoulder bag in crimson. There’s no question about it, you need the bag — after all what is a vacation without a souvenir?  Between admiring the bag and admiring how you look in the mirror with the bag, you check the price tag and try to convert it to USD. It’s cheaper than you remember seeing on the Prada website. As you checkout, the sales associate asks for your passport to get a VAT refund. You smile as you watch the price drop. 
+
+As you navigate through the airport the next day, you find yourself in a long line of travelers waiting to claim their vacation purchases. Your mind begins to wander as you wait, receipt and dust bag in hand, and you wonder what the cost of your bag is shaking out to be with all of these added factors. 
+
+A month later you’re back in your hometown and out at lunch with a friend. You bring along your new Prada and your friend is instantly in love. She drags you to the store the second you’re both finished eating. As you stand with her while she checks out, you are appalled to see the number on her receipt. Thinking back to all of the charges on your own credit card bill, you don’t remember paying nearly that much.
+
+### How much do Americans save by buying luxury goods abroad as opposed to domestically?
+
+Luxury goods have long held a powerful allure, symbolizing not only wealth and status, but also high quality and exclusivity. 
+
+While luxury spending within the U.S. has been generally declining, purchases abroad have been increasing. In particular, [Bank of America brick-and-mortar card data](https://institute.bankofamerica.com/economic-insights/luxury-spending.html) reveals that 13% of luxury spending was international in 2024 – up from both 2023 and 2019. A recent [Bain & Company study](https://www.bain.com/insights/finding-a-new-longevity-for-luxury/) also found that despite the broader luxury market experiencing slight declines in Europe and Asia last year, the market for personal luxury goods remained stable, even turning to consistently positive growth. In 2025, Europe maintained its position as the largest market for personal luxury goods, with America and China following. France stands as the largest import market for leather bags in Europe. As the de facto birthplace of luxury leather goods, Italy is another major import market for leather bags. 
+
+As consumers turn more to these global luxury hubs, the appeal is rooted not just in heritage and exclusivity, but also in the real financial advantages. The prices of goods abroad generally include a Value-Added Tax (VAT) that non-resident tourists can recoup when leaving the country.
+
+In China, Italy, and France, the VAT rates are 13%, 22%, and 20%, respectively. In China, the amount that actually gets refunded is 11%. For Italy and France, the true refund amount varies. Tourists online claim to receive an average refund of 12%, but this rate could be slightly lower or potentially higher.
+
+To calculate the amount one saves from purchasing a leather handbag abroad, we used the following formula on a dataset of 10 randomly selected bags from Prada, Gucci, and YSL (30 bags total):
+
+<div className='text-center'>
+<LatexRenderer expression="(\text{US Price} + \text{Sales Tax}) - (\text{Converted Foreign Price} - 
+\text{Vat Refund} + \text{Custom Duty}) = \text{Savings}" />
+</div>
+
+The final U.S. produce price was determined by adding NYC sales tax (8.875%). The final prices for the other countries were calculated by converting the price in that country’s respective currency to USD, subtracting the estimated refund amount, and adding the duty for leather handbags (10% for China, Italy, and France).
+
+### Analyzing Prices through Bar Charts
+
+<ImageLoader
+    imagePath="public/images/SP26/runway-to-runway/prada_barchart.png"
+/>
+
+<ImageLoader
+    imagePath="public/images/SP26/runway-to-runway/gucci_barchart.png"
+/>
+
+<ImageLoader
+    imagePath="public/images/SP26/runway-to-runway/ysl_barchart.png"
+/>
+
+Let’s go back to the Prada store, where your friend is checking out her bag. Was the difference in price just a lucky bargain on your side, or is this a consistent trend among buying luxury goods abroad? 
+
+The total price you paid for the Aimeé shoulder bag in USD when accounting for VAT refund and added custom duty comes out to around $2948.75. In comparison, your friend paid around $3647.31. This means you saved an astonishing $698.56!
+
+Our data suggests that, on average, buying luxury goods internationally, in France, Italy, and China, allows consumers to save more than buying these goods in the United States. We can observe that for all three brands, the adjusted prices for France and Italy remain the same and are consistently lower than the adjusted prices in the United States. Interestingly, while China follows a similar, yet weaker pattern for Prada, certain Gucci and YSL bags appear to have higher prices in China than the United States. Additionally, the prices in China consistently come closer to domestic prices for those bags in which U.S. prices exceed China.
+
+Overall, the data suggests that you’re likely to save more from buying in France or Italy than in the United States. Whereas with China, while you may have some savings, it will be a smaller return.  
+
+### Analyzing Savings Through Boxplots
+
+<ImageLoader
+    imagePath="public/images/SP26/runway-to-runway/prada_boxplot.png"
+/>
+
+<ImageLoader
+    imagePath="public/images/SP26/runway-to-runway/gucci_boxplot.png"
+/>
+
+<ImageLoader
+    imagePath="public/images/SP26/runway-to-runway/ysl_boxplot.png"
+/>
+
+The same general pattern appears in our plots above. For Prada, Gucci, and YSL alike, the median savings in USD is much higher for France and Italy than China. In analyzing the spreads (interquartile ranges) of each bag, it is clear that while the spreads for France and Italy are fairly wide, China shows a tighter distribution. This indicates that savings vary more between different bags for European countries. Consistent with our barcharts, there are values below zero for Gucci bags and YSL bags sold in China demonstrating that not all of the ten bags are cheaper in China compared to the U.S. 
+
+Additionally, for all three brands, the medians and spreads for France and Italy are the same, suggesting that both countries offer similar savings. Our original hypothesis was that the base prices for bags would differ depending on if they were sold in their country of origin, ei. Would a bag manufactured in Italy be cheaper in Italy than France? However, based on the consistency of savings between France and Italy, our hypothesis has been disproved. 
+
+### Analyzing Purchases Through Bump Charts
+
+<ImageLoader
+    imagePath="public/images/SP26/runway-to-runway/prada_bumpchart.png"
+/>
+
+<ImageLoader
+    imagePath="public/images/SP26/runway-to-runway/gucci_bumpchart.png"
+/>
+
+<ImageLoader
+    imagePath="public/images/SP26/runway-to-runway/ysl_bumpchart.png"
+/>
+
+By combining France and Italy into one category since their adjusted prices are the same, we can rank each bag based on which location it is cheapest in.
+
+When you compare the brands side by side, the biggest difference is how rigid their pricing is. Prada appears to follow a strict global pricing hierarchy, where across all ten bags Europe is always the cheapest, followed by China, then the U.S. In comparison, Gucci and YSL allow for some flexibility, with their pricing system being more dependent on the product sold. 
+
+### Luxury Bag With the Greatest Savings
+
+<ImageLoader
+    imagePath="public/images/SP26/runway-to-runway/prada_bag_2.webp"
+/>
+
+Within our dataset, the bag with the greatest savings was the Prada large leather tote bag in sand beige. When bought in France or Italy, an American can save $1,104.72. 
+
+### Luxury Bag With the Least Savings
+
+<ImageLoader
+    imagePath="public/images/SP26/runway-to-runway/gucci_bag.webp"
+/>
+
+Within our dataset, the bag with the least savings was the Gucci borsetto medium boston bag in black leather. When bought in China, an American experiences a loss of $119.90. 
+
+### The Future of International Shopping
+
+Luxury goods have long been a desired status symbol, and with traveling to purchase luxury goods becoming a growing trend, it is important to know how to strategically save money. Consumers who travel abroad with a plan to purchase luxury goods in mind may be curious about the potential savings they could benefit from. Our research hopes to guide those decisions, allowing consumers to select their travel destinations in order to suit their financial needs.
+
+As Bank of America’s data has revealed, luxury spending abroad has continued to rise since 2019. Given the trend’s persistence through the economic stagnation during COVID-19 pandemic, it is likely that luxury spending abroad will continue to increase. For now, it seems traveling abroad to buy luxury items isn’t going anywhere, so while this trend continues to grow, consumers must know how they can save as much money as possible.
+
+
+
+
