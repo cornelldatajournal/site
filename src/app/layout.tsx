@@ -3,7 +3,7 @@ import "./globals.css";
 import { Space_Mono, Space_Grotesk, EB_Garamond } from 'next/font/google';
 import Link from "next/link";
 import Image from "next/image";
-import cdjicon from "../../public/cdj_icon.png";
+import cdjicon from "../../public/cdj_icon.webp";
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
@@ -33,8 +33,8 @@ const ebGaramond = EB_Garamond({
 //   icons: {
 //     icon: [
 //       {
-//         url: "/cdj_icon.png",
-//         href: "/cdj_icon.png",
+//         url: "/cdj_icon.webp",
+//         href: "/cdj_icon.webp",
 //       }
 //     ],
 //   },
@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable}`}>
       <head>
-        <link rel="icon" href="../cdj_icon_square_trans.png" />
+        <link rel="icon" href="../cdj_icon_square_trans.webp" />
         {/* the above line may cause errors for articles, but is not a big issue */}
         <title>Cornell Data Journal</title></head>
       <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-NT21TJWDVV"></Script>
