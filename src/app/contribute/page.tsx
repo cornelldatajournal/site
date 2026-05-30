@@ -3,17 +3,17 @@ export default function GetInvolvedPage() {
         <main className="container py-12 px-4 sm:px-6 max-w-6xl mx-auto overflow-x-hidden items-center mt-12">
             <h1 className="text-2xl font-eb-garamond mb-6">Get Involved</h1>
 
-            <section className="mb-12">
+            <section className="mb-4">
                 <p className="font-space-grotesk">
                     We welcome students of all backgrounds and disciplines to come create with us. Whether you&apos;ve worked with data before or not, anyone is welcome to contribute and publish with us.
                 </p>
             </section>
 
-            <section className="mb-16">
+            <section className="mb-12">
                 <p className="font-space-grotesk">
                     If you&apos;ve never heard of us before,{" "}
                     <a href="/about" className="text-blue-600 hover:underline">
-                        check this out! 
+                        check this out!
                     </a> Or go to our <a href="https://www.instagram.com/cornelldatajournal" className="text-blue-600 hover:underline">Instagram</a> for the most up to date information on events and opportunities.
                 </p>
             </section>

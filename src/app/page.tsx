@@ -12,8 +12,8 @@ export default async function HomePage() {
   // Take only the next X articles, after the main one (6 left, 4 center (5 total), 6 right)
   // Above and below can be changed as need be
   const displayedArticles = otherArticles.slice(0, 17); 
-  console.log(displayedArticles.length)
-  console.log(articles.map(article => [article.title, article.order, article.author]))
+  // console.log(displayedArticles.length)
+  // console.log(articles.map(article => [article.title, article.order, article.author]))
 
   const leftColumnArticles = displayedArticles.slice(0, 6);
   const centerColumnArticles = displayedArticles.slice(6, 10);
