@@ -37,7 +37,7 @@ export default function GetInvolvedPage() {
                         Q: What is Symposium?
                     </p>
                     <p className="font-space-grotesk mb-6">
-                        A: Symposium is CDJ's culminating event. Members create research posters based on their projects, and present their work to other CDJ members, Cornell students, and professors. The event is typically kicked off with an industry-leading guest speaker, to speak about data journalism.
+                        A: Symposium is CDJ&apos;s culminating event. Members create research posters based on their projects, and present their work to other CDJ members, Cornell students, and professors. The event is typically kicked off with an industry-leading guest speaker, to speak about data journalism.
                     </p>
 
                     <p className="font-space-grotesk font-bold mb-4">
