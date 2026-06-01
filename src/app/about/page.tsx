@@ -108,6 +108,23 @@ export default function AboutPage() {
                 </div>
             </div>
 
+            {/* Instagram */}
+            <section className="mb-16">
+                <h2 className="text-2xl font-eb-garamond mb-2">Instagram</h2>
+                <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm">
+                    Our <a href="https://www.instagram.com/cornelldatajournal" className="text-blue-600 hover:underline">Instagram</a> has the most up to date information on events and opportunities.
+                </p>
+                <br />
+                <div className="flex justify-self-center w-[580px] max-w-[100%]">
+                    <iframe 
+                        src="images/embeds/instagram.html" 
+                        className="h-[480px] w-[100%]"
+                    >
+                        Loading…
+                    </iframe>
+                </div>
+            </section>
+
             {/* Alumni Section */}
             <div className="mb-16">
                 <div className="mb-8">
@@ -130,8 +147,10 @@ export default function AboutPage() {
                                     height={96}
                                     className="object-contain"
                                 />
-                                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
-                                    <span className="text-xs font-space-grotesk bg-white dark:bg-black px-2 py-1 rounded-full shadow-sm">
+                                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 
+                                transition-opacity duration-200 w-[96px] text-center text-xs font-space-grotesk bg-white dark:bg-black 
+                                px-2 py-1 rounded-[10px] shadow-sm">
+                                    <span className="">
                                         {company.name}
                                     </span>
                                 </div>
