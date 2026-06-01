@@ -1,57 +1,89 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 export default function GetInvolvedPage() {
     return (
-        <main className="container py-12 px-4 sm:px-6 max-w-6xl mx-auto overflow-x-hidden items-center mt-12">
-            <h1 className="text-2xl font-eb-garamond mb-6">Get Involved</h1>
+        <main className="container py-12 px-4 sm:px-6 max-w-6xl mx-auto overflow-x-hidden items-center">
+            <section className="mb-16">
+                <h1 className="text-2xl font-eb-garamond mb-6">Get Involved</h1>
 
-            <section className="mb-4">
-                <p className="font-space-grotesk">
-                    We welcome students of all backgrounds and disciplines to come create with us. Whether you&apos;ve worked with data before or not, anyone is welcome to contribute and publish with us.
-                </p>
+                <section className="mb-6 bg-[#3E32BA] text-white rounded-lg p-6 shadow-lg">
+                    <p className="font-space-grotesk text-lg font-bold">
+                        Our Spring 2026 applications are closed.
+                    </p>
+                    <p className="font-space-grotesk mt-2">
+                        If you&apos;re interested in joining, you can fill out our {" "}
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScWpsWzd-gD7djdJQxX6knC4uXYAjQ9cRacRf0M2ttKOPNelg/viewform?usp=dialog" className="text-white underline hover:text-neutral-200">
+                            interest form!
+                        </a>
+                    </p>
+                </section>
             </section>
 
-            <section className="mb-12">
-                <p className="font-space-grotesk">
-                    If you&apos;ve never heard of us before,{" "}
-                    <a href="/about" className="text-blue-600 hover:underline">
-                        check this out!
-                    </a> Or go to our <a href="https://www.instagram.com/cornelldatajournal" className="text-blue-600 hover:underline">Instagram</a> for the most up to date information on events and opportunities.
-                </p>
-            </section>
+            <h1 className="text-2xl font-eb-garamond mb-2">FAQ</h1>
 
-            <section className="mb-16 bg-[#3E32BA] text-white rounded-lg p-6 shadow-lg">
-                <p className="font-space-grotesk text-lg font-bold">
-                    Our Spring 2026 applications are closed.
-                </p>
-                <p className="font-space-grotesk mt-2">
-                    If you&apos;re interested in joining, you can fill out our -{" "}
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScWpsWzd-gD7djdJQxX6knC4uXYAjQ9cRacRf0M2ttKOPNelg/viewform?usp=dialog" className="text-white underline hover:text-neutral-200">
-                        interest form!
-                    </a>
-                </p>
-                <p className="font-space-grotesk mt-4 text-sm">
-                    CDJ accepts (and welcomes!) students at Cornell from all backgrounds, majors, and levels of experience. We prioritize learning and exposure to the disciplines of data science, data visualization, and data journalism. Please do not hesitate to apply, even if you have no formal background in those fields—there is a place for everyone in CDJ!
-                </p>
-            </section>
+            <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm mb-6">
+                Below are answers to some common questions about the club and our recruitment process.
+            </p>
+            <Card>
+                <section className="p-6">
+                    <p className="font-space-grotesk font-bold mb-4">
+                        Q: What does a semester look like for a Cornell Data Journal (CDJ) member?
+                    </p>
+                    <p className="font-space-grotesk mb-6">
+                        A: At the start of the semester, members will be placed into project teams based on their preferences. From there, Project Leads will guide members through weekly meetings and checkpoints towards the goal of publishing an article on a selected topic by the end of the semester, and presenting during our Symposium.
+                    </p>
 
-            {/* <section className="mb-16">
-                <h2 className="text-2xl font-eb-garamond mb-6">Newsletter Signup</h2>
-                <p className="font-space-grotesk">
-                    Sign up for our newsletter to stay up to date on all the latest CDJ news, events, and publications!
-                </p>
-                <br />
-                <div className="w-full overflow-hidden">
-                    <iframe 
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSe5yMgZ-Iw9xBZR3F-h5Nal3man5whIw1P6w9fEGqvM4mDcVA/viewform?embedded=true" 
-                        width="100%" 
-                        height="1070" 
-                        frameBorder="0" 
-                        marginHeight={0} 
-                        marginWidth={0}
-                    >
-                        Loading…
-                    </iframe>
-                </div>
-            </section> */}
+                    <p className="font-space-grotesk font-bold mb-4">
+                        Q: What is Symposium?
+                    </p>
+                    <p className="font-space-grotesk mb-6">
+                        A: Symposium is CDJ's culminating event. Members create research posters based on their projects, and present their work to other CDJ members, Cornell students, and professors. The event is typically kicked off with an industry-leading guest speaker, to speak about data journalism.
+                    </p>
+
+                    <p className="font-space-grotesk font-bold mb-4">
+                        Q: How are Project Leads selected?
+                    </p>
+                    <p className="font-space-grotesk mb-6">
+                        A: The Project Lead role is typically reserved for returning members. At the beginning of the semester, they share their ideas with Leadership and–if approved–they pitch their project to the rest of the club. Impactful projects typically seek to answer some question about the world, using data as evidence.
+                    </p>
+
+                    <p className="font-space-grotesk font-bold mb-4">
+                        Q: How does New Member Education (NME) work?
+                    </p>
+                    <p className="font-space-grotesk mb-6">
+                        A: NME consists of 6 hour-long meetings. During each meeting, the instructor will walk through <a href="https://github.com/nikhilc52/cdj_nme" target="_blank" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">interactive notebooks</a> on various data science concepts, with members following along on a forked copy. There are no “take home” assignments, nor is there baseline knowledge required. In addition to NME, there are also optional workshops that teach members miscellaneous coding and writing skills.
+                    </p>
+
+                    <p className="font-space-grotesk font-bold mb-4">
+                        Q: When does G-Body take place?
+                    </p>
+                    <p className="font-space-grotesk mb-6">
+                        A: G-Body is on Mondays, from 5-6pm.
+                    </p>
+
+                    <p className="font-space-grotesk font-bold mb-4">
+                        Q: What does the application process look like?
+                    </p>
+                    <p className="font-space-grotesk mb-6">
+                        A: Within a few days of submitting an application, students that are selected to move forward will be invited to an interview with a handful of current CDJ Leaders and members. After completing all interviews, we will send invites to join CDJ to a select batch of applicants. There will only be one “round” of interviews.
+                    </p>
+
+                    <p className="font-space-grotesk font-bold mb-4">
+                        Q: Is there any technical knowledge required?
+                    </p>
+                    <p className="font-space-grotesk mb-6">
+                        A: No. CDJ accepts students at Cornell from all backgrounds, majors, and levels of experience. We prioritize learning and exposure to the discipline of data journalism. Please do not hesitate to apply, even if you have no formal background in this field–there is a place for everyone in CDJ!
+                    </p>
+
+                    <p className="font-space-grotesk font-bold mb-4">
+                        Q: Are coffee chats available?
+                    </p>
+                    <p className="font-space-grotesk">
+                        A: Yes! A form to submit a coffee chat request will be posted on our <a href="https://www.instagram.com/cornelldatajournal" className="underline hover:text-neutral-900 dark:hover:text-neutral-100">Instagram</a> page and on this site, at the start of the semester. Shortly after submitting the form (within 3 days), a CDJ member or Leader will reach out to you to schedule a meeting time.
+                    </p>
+                </section>
+            </Card>
+
 
             {/* <section>
                 <h2 className="text-2xl font-eb-garamond mb-6">Upcoming Events</h2>
