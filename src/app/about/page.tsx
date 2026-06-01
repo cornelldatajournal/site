@@ -112,7 +112,7 @@ export default function AboutPage() {
             <section className="mb-16">
                 <h2 className="text-2xl font-eb-garamond mb-2">Instagram</h2>
                 <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm">
-                    Our <a href="https://www.instagram.com/cornelldatajournal" className="text-blue-600 hover:underline">Instagram</a> has the most up to date information on events and opportunities.
+                    Our <a href="https://www.instagram.com/cornelldatajournal" className="underline hover:text-neutral-900 dark:hover:text-neutral-100">Instagram</a> has the most up to date information on events and opportunities.
                 </p>
                 <br />
                 <div className="flex justify-self-center w-[580px] max-w-[100%]">
@@ -163,7 +163,7 @@ export default function AboutPage() {
             {/* Equal Opportunity Statement */}
             <div className="text-center mt-16 pt-8 border-t border-neutral-200 dark:border-neutral-800">
                 <p className="text-neutral-500 dark:text-neutral-400 font-space-grotesk text-xs">
-                    <Link href="/equal-education-and-employment-opportunity" className="text-blue-600 hover:underline">
+                    <Link href="/equal-education-and-employment-opportunity" className="underline hover:text-neutral-900 dark:hover:text-neutral-100">
                         Equal Education and Employment Opportunity Statement
                     </Link>
                 </p>

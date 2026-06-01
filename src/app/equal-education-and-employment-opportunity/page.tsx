@@ -1,13 +1,12 @@
 export default function EqualEducationAndEmploymentOpportunityPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        <div className="p-6 rounded-lg border border-neutral-200 bg-white text-neutral-950 shadow-sm dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-50">
+          <h1 className="text-3xl font-space-grotesk font-bold mb-8">
             Equal Education and Employment Opportunity (EEEO) Statement
           </h1>
           
-          <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
+          <div className="text-neutral-600 dark:text-neutral-400 font-helvetica mt-2 max-w-none text-gray-700 space-y-6">
             <p>
               In 1868, Ezra Cornell wrote, &ldquo;I would found an institution where any person can find instruction in any study.&rdquo; 
               More than 150 years later, the &ldquo;... any person ... any study&rdquo; principle continues to guide the university community. 
@@ -36,7 +35,6 @@ export default function EqualEducationAndEmploymentOpportunityPage() {
             </p>
           </div>
         </div>
-      </div>
     </div>
   );
 }
