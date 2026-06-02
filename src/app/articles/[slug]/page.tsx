@@ -13,24 +13,6 @@ export async function generateStaticParams() {
     return articles.map((article) => ({ slug: article.slug }));
 }
 
-// Custom plugin to remove footnote definitions
-// function remarkProcessFootnotes() {
-//     return (tree: any) => {
-//         // Keep footnotes but ensure they're properly formatted
-//         const footnoteDefinitions = tree.children.filter(
-//             (node: any) => node.type === 'footnoteDefinition'
-//         );
-
-//         // Move all footnote definitions to the end of the content
-//         tree.children = [
-//             ...tree.children.filter((node: any) => node.type !== 'footnoteDefinition'),
-//             ...footnoteDefinitions
-//         ];
-
-//         return tree;
-//     };
-// }
-
 interface ArticlePageProps {
     params: Promise<{ slug: string }>;
 }
@@ -49,18 +31,19 @@ const components = {
     ul: (props: any) => <ul className="list-disc list-inside mb-4 ml-4" {...props} />,
     ol: (props: any) => <ol className="list-decimal list-inside mb-4 ml-4" {...props} />,
     // Style links
-    a: (props: any) => (
-        <a
-            className="text-violet-600 hover:text-violet-800 dark:text-violet-600 dark:hover:text-violet-800 decoration-wavy"
-            {...props}
-            // text-blue-600 hover:text-blue-800 dark:text-blue-600 dark:hover:text-blue-800
+    a: (props: any) => {
+        const isFootnotes = props.id?.includes('user-content-fnref-');
+        return isFootnotes ? <a
+            className="text-gray-700 dark:text-gray-700 decoration-underline" {...props}
+        >[{props.children}]</a> : <a
+            className="text-violet-600 hover:text-violet-800 dark:text-violet-600 dark:hover:text-violet-800 decoration-wavy" {...props}
         />
-    ),
+    },
     // Style footnotes
     sup: (props: any) => (
         <sup className="text-sm text-blue-600 dark:text-blue-400" {...props} />
     ),
-    // Hide footnote section (added later in ArticleLayout.tsx)
+    // Hide footnote section (added later in ArticleLayout.tsx) -- maybe fix later, but so many styles to override
     section: (props: any) => {
         // Check if this is the footnotes section
         const isFootnotes = props.className?.includes('footnotes');

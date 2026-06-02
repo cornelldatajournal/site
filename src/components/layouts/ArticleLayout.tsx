@@ -24,11 +24,11 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
     const footnotes = document.querySelectorAll('[id^="user-content-fn-"]');
     // replace links to footnotes with just numbers
     const superscripts: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('[id^="user-content-fnref-"]');
-    Array.from(superscripts).map(sup => sup.href = sup.href.replace('user-content-fn-', ''));
+    Array.from(superscripts).map(sup => sup.href = sup.href.replace('user-content-fn-', 'footnote-'));
 
     const refs: Reference[] = Array.from(footnotes)
       .map((footnote) => {
-        const id = footnote.id.replace('user-content-fn-', '');
+        const id = footnote.id.replace('user-content-fn-', 'footnote-');
 
         return {
           id,
@@ -90,7 +90,7 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
                 {references.map((ref) => (
                   <div id={ref.id} key={ref.id} className="font-space-mono text-sm">
                     <div className="flex gap-4">
-                      <span className="font-bold shrink-0">[{ref.id}]</span>
+                      <span className="font-bold shrink-0">[{ref.id.replace('footnote-','')}]</span>
                       <span className="text-neutral-600 dark:text-neutral-400 break-all overflow-wrap-anywhere">{ref.text}</span>
                     </div>
                   </div>
@@ -99,30 +99,6 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
             </div>
           )}
         </div>
-
-        {/* References Column */}
-        {/* {references.length > 0 && (
-          <aside className="w-[35ch] relative hidden lg:block">
-            <div className="relative">
-              {references.map((ref) => (
-                <div
-                  key={ref.id}
-                  style={{
-                    position: 'absolute',
-                    top: ref.initialPosition,
-                    width: '100%'
-                  }}
-                  className="p-3 rounded-lg font-space-mono text-[12px]"
-                >
-                  <div className="flex gap-4">
-                    <span className="font-bold shrink-0">{ref.id}</span>
-                    <span className="text-neutral-600 dark:text-neutral-400 break-words whitespace-pre-wrap max-w-[26ch]">{ref.text}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </aside>
-        )} */}
       </div>
     </div>
   );

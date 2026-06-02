@@ -49,7 +49,7 @@ export default function RootLayout({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <html lang="en" className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable}`}>
+    <html lang="en" className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable} scroll-pt-[90px]`}>
       <head>
         <link rel="icon" href="../cdj_icon_square_trans.webp" />
         <title>Cornell Data Journal</title>
