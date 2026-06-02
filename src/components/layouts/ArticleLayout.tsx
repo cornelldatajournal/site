@@ -10,7 +10,6 @@ interface ArticleLayoutProps {
 interface Reference {
   id: string;
   text: string;
-  initialPosition: number;
 }
 
 export function ArticleLayout({ article, children }: ArticleLayoutProps) {
@@ -18,88 +17,32 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
   const articleRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Early return if articleRef is not available
+    // Early return if articleRef is not available - check if necessary
     if (!articleRef.current) return;
 
-    // Safely get the article rectangle
-    const articleRect = articleRef.current.getBoundingClientRect();
-
-    // Calculate initial positions for all references
+    // Get all references, parse them into `refs`
     const footnotes = document.querySelectorAll('[id^="user-content-fn-"]');
+    // replace links to footnotes with just numbers
+    const superscripts: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('[id^="user-content-fnref-"]');
+    Array.from(superscripts).map(sup => sup.href = sup.href.replace('user-content-fn-', 'footnote-'));
+
     const refs: Reference[] = Array.from(footnotes)
       .map((footnote) => {
-        const id = footnote.id.replace('user-content-fn-', '');
-        
-        // Safely find the reference element
-        const referenceElement = articleRef.current
-          ? articleRef.current.querySelector(`[id^="user-content-fnref-${id}"]`)
-          : null;
-        
-        let initialPosition = 0;
-        if (referenceElement) {
-          const elementRect = referenceElement.getBoundingClientRect();
-          initialPosition = elementRect.top - articleRect.top;
-        }
+        const id = footnote.id.replace('user-content-fn-', 'footnote-');
 
         return {
           id,
-          text: (footnote.textContent || '').replace('↩', ''),
-          initialPosition
+          text: (footnote.textContent || '').replace('↩', '')
         };
       })
       .filter(ref => ref.text.trim() !== ''); // Remove any empty references
 
-    // Comprehensive overlap resolution
-    const VERTICAL_SPACING = 150;
-    const adjustedRefs: Reference[] = [];
-
-    for (const ref of refs) {
-      let finalPosition = ref.initialPosition;
-      let isOverlapping = true;
-      let iterationCount = 0;
-
-      while (isOverlapping && iterationCount < 100) {
-        // Check against all previously positioned references
-        isOverlapping = adjustedRefs.some(adjustedRef => 
-          Math.abs(adjustedRef.initialPosition - finalPosition) < VERTICAL_SPACING
-        );
-
-        if (isOverlapping) {
-          finalPosition += VERTICAL_SPACING;
-        }
-
-        iterationCount++;
-      }
-
-      adjustedRefs.push({
-        ...ref,
-        initialPosition: finalPosition
-      });
-    }
-
-    setReferences(adjustedRefs);
-
-    // Add click handlers to footnote references
-    const refLinks = document.querySelectorAll('a[href^="#user-content-fn-"]');
-    refLinks.forEach((link) => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-      });
-    });
-
-    // Add scroll listener
-    const handleScroll = () => {
-      // Force a re-render to update reference positions
-      setReferences(prev => [...prev]);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    setReferences(refs)
   }, []);
 
   return (
     <div className="flex justify-center min-h-screen relative">
-      <div className="w-full max-w-[100ch] mx-auto py-8 px-4 sm:px-0 flex gap-16">
+      <div className="w-full max-w-[65ch] mx-auto py-8 px-4 sm:px-0 flex gap-16">
         {/* Main Content */}
         <div className="flex-1 max-w-[65ch]" ref={articleRef}>
           {/* Article Header */}
@@ -139,15 +82,15 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
             {children}
           </article>
 
-          {/* Mobile References */}
+          {/* References (use for Mobile with lg:hidden on outer div if using References Column) */}
           {references.length > 0 && (
-            <div className="mt-12 lg:hidden">
+            <div className="mt-12">
               <h2 className="text-2xl font-eb-garamond mb-6">References</h2>
               <div className="space-y-4">
                 {references.map((ref) => (
-                  <div key={ref.id} className="font-space-mono text-sm">
+                  <div id={ref.id} key={ref.id} className="font-space-mono text-sm">
                     <div className="flex gap-4">
-                      <span className="font-bold shrink-0">[{ref.id}]</span>
+                      <span className="font-bold shrink-0">[{ref.id.replace('footnote-','')}]</span>
                       <span className="text-neutral-600 dark:text-neutral-400 break-all overflow-wrap-anywhere">{ref.text}</span>
                     </div>
                   </div>
@@ -156,30 +99,6 @@ export function ArticleLayout({ article, children }: ArticleLayoutProps) {
             </div>
           )}
         </div>
-
-        {/* References Column */}
-        {references.length > 0 && (
-          <aside className="w-[35ch] relative hidden lg:block">
-            <div className="relative">
-              {references.map((ref) => (
-                <div
-                  key={ref.id}
-                  style={{
-                    position: 'absolute',
-                    top: ref.initialPosition,
-                    width: '100%'
-                  }}
-                  className="p-3 rounded-lg font-space-mono text-[12px]"
-                >
-                  <div className="flex gap-4">
-                    <span className="font-bold shrink-0">{ref.id}</span>
-                    <span className="text-neutral-600 dark:text-neutral-400 break-words whitespace-pre-wrap max-w-[26ch]">{ref.text}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </aside>
-        )}
       </div>
     </div>
   );
