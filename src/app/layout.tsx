@@ -52,8 +52,14 @@ export default function RootLayout({
     <html lang="en" className={`${spaceMono.variable} ${spaceGrotesk.variable} ${ebGaramond.variable}`}>
       <head>
         <link rel="icon" href="../cdj_icon_square_trans.webp" />
-        {/* the above line may cause errors for articles, but is not a big issue */}
-        <title>Cornell Data Journal</title></head>
+        <title>Cornell Data Journal</title>
+        <meta property="og:title" content="Cornell Data Journal" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://cornelldatajournal.org/" />
+        <meta property="og:image" content="https://cornelldatajournal.org/cdj_icon.webp" />
+        <meta property="og:description" content="Cornell's premier data journalism publication, offering data-driven perspectives on current events, academics, politics, and beyond." />
+        <meta name="description" content="Cornell's premier data journalism publication, offering data-driven perspectives on current events, academics, politics, and beyond." />
+      </head>
       <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-NT21TJWDVV"></Script>
       <Script id="google-analytics" strategy="afterInteractive">
         {`
