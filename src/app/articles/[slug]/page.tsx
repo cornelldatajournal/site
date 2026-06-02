@@ -14,22 +14,22 @@ export async function generateStaticParams() {
 }
 
 // Custom plugin to remove footnote definitions
-function remarkProcessFootnotes() {
-    return (tree: any) => {
-        // Keep footnotes but ensure they're properly formatted
-        const footnoteDefinitions = tree.children.filter(
-            (node: any) => node.type === 'footnoteDefinition'
-        );
+// function remarkProcessFootnotes() {
+//     return (tree: any) => {
+//         // Keep footnotes but ensure they're properly formatted
+//         const footnoteDefinitions = tree.children.filter(
+//             (node: any) => node.type === 'footnoteDefinition'
+//         );
 
-        // Move all footnote definitions to the end of the content
-        tree.children = [
-            ...tree.children.filter((node: any) => node.type !== 'footnoteDefinition'),
-            ...footnoteDefinitions
-        ];
+//         // Move all footnote definitions to the end of the content
+//         tree.children = [
+//             ...tree.children.filter((node: any) => node.type !== 'footnoteDefinition'),
+//             ...footnoteDefinitions
+//         ];
 
-        return tree;
-    };
-}
+//         return tree;
+//     };
+// }
 
 interface ArticlePageProps {
     params: Promise<{ slug: string }>;
@@ -53,8 +53,6 @@ const components = {
         <a
             className="text-violet-600 hover:text-violet-800 dark:text-violet-600 dark:hover:text-violet-800 decoration-wavy"
             {...props}
-
-            // text-violet-600 hover:text-violet-800 dark:text-violet-600 dark:hover:text-violet-800 decoration-wavy
             // text-blue-600 hover:text-blue-800 dark:text-blue-600 dark:hover:text-blue-800
         />
     ),
@@ -62,7 +60,7 @@ const components = {
     sup: (props: any) => (
         <sup className="text-sm text-blue-600 dark:text-blue-400" {...props} />
     ),
-    // Hide footnote section
+    // Hide footnote section (added later in ArticleLayout.tsx)
     section: (props: any) => {
         // Check if this is the footnotes section
         const isFootnotes = props.className?.includes('footnotes');
@@ -109,8 +107,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                             options={{
                                 mdxOptions: {
                                     remarkPlugins: [
-                                        remarkGfm,
-                                        remarkProcessFootnotes
+                                        remarkGfm
                                     ],
                                 }
                             }}
