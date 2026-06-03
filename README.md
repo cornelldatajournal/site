@@ -2,7 +2,7 @@ Made by Rishi Gurjar and Rahul Ramarao in three days, finished on Monday Jan 27 
 
 #### Stack- React, Next JS, Tailwind, Shadcn, no backend ez
 
-#### Deployed on GH pages/Vercel, domain on Squarespace, routed from cornelldatajournal.org
+#### Deployed on GH pages/Vercel, domain on porkbun, routed from cornelldatajournal.org
 
 #### Google Analytics for viewership
 
