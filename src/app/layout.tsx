@@ -84,7 +84,7 @@ export default function RootLayout({
           <div className="container max-w-8xl mx-auto px-4 py-6">
             <div className="flex justify-between items-center relative">
               {/* Left Navigation - Hidden on Mobile */}
-              <nav className="hidden lg:flex">
+              <nav className="hidden xl:flex">
                 <Link
                   href="/articles"
                   className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
@@ -94,7 +94,7 @@ export default function RootLayout({
               </nav>
 
               {/* Logo and Title - Left on Mobile, Centered on Desktop */}
-              <div className="absolute left-0 lg:left-1/2 lg:-translate-x-1/2 flex flex-col items-start lg:items-center">
+              <div className="absolute left-0 xl:left-1/2 xl:-translate-x-1/2 flex flex-col items-start xl:items-center">
                 <Link href="/" className="flex items-center gap-2">
                   <Image
                     src={cdjicon}
@@ -103,7 +103,7 @@ export default function RootLayout({
                     width={40}
                     className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
                   />
-                  <h1 className="text-lg sm:text-2xl lg:text-4xl font-helvetica font-medium transition-all whitespace-nowrap">
+                  <h1 className="text-lg sm:text-2xl xl:text-4xl font-helvetica font-medium transition-all whitespace-nowrap">
                     Cornell Data Journal
                   </h1>
                 </Link>
@@ -116,14 +116,14 @@ export default function RootLayout({
 
               {/* Mobile Menu Button - Right Aligned */}
               <button
-                className="lg:hidden p-2 ml-auto"
+                className="xl:hidden p-2 ml-auto"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
 
               {/* Desktop Navigation */}
-              <nav className="hidden lg:flex gap-5 justify-end">
+              <nav className="hidden xl:flex gap-5 justify-end">
                 <Link
                   href="/about"
                   className="text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
@@ -142,17 +142,12 @@ export default function RootLayout({
                 >
                   Get Involved
                 </Link>
-                <Link
-                  href="/honeypot"
-                  className="display: none"
-                >
-                </Link>
               </nav>
             </div>
 
             {/* Mobile Navigation Menu */}
             {isMenuOpen && (
-              <div className="md:hidden py-4 space-y-4">
+              <div className="xl:hidden py-4 space-y-4">
                 <Link
                   href="/articles"
                   className="block text-neutral-600 font-space-grotesk hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100 hover:italic py-2"
@@ -314,14 +309,6 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
-        {pathname === '/honeypot' && (
-          <Script id="honeypot-event" strategy="afterInteractive">
-            {`fetch('https://api.ipify.org?format=json')
-              .then(response=>response.json())
-              .then(data=>gtag('event','honeypot_triggered',{user_ip:data.ip}))
-              .catch(()=>gtag('event','honeypot_triggered',{user_ip:'unknown'}));`}
-          </Script>
-        )}
       </body>
     </html>
   );
