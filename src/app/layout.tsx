@@ -108,7 +108,7 @@ export default function RootLayout({
                   </h1>
                 </Link>
                 {pathname === '/' && (
-                  <h3 className="hidden lg:block text-neutral-600 dark:text-neutral-400 font-space-grotesk text-xs sm:text-sm">
+                  <h3 className="hidden xl:block text-neutral-600 dark:text-neutral-400 font-space-grotesk text-xs sm:text-sm">
                     Ithaca, NY • {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
                   </h3>
                 )}
