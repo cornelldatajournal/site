@@ -25,7 +25,7 @@ const teamMembers: TeamMember[] = [
         major: "Economics",
         image: "/team/SP26/webp/Nikhil_Chinchalkar.webp",
         color: "bg-[#E5F6FF]",
-        bio: "He listed to 75,835 minutes of music last year."
+        bio: "He listened to 75,835 minutes of music last year."
     },
     {
         name: "Tianyi Chen",
