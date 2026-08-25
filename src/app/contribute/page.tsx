@@ -8,10 +8,10 @@ export default function GetInvolvedPage() {
 
                 <section className="mb-6 bg-[#3E32BA] text-white rounded-lg p-6 shadow-lg">
                     <p className="font-space-grotesk text-lg font-bold">
-                        Our Spring 2026 applications are closed.
+                        Our Fall 2026 applications will open soon.
                     </p>
                     <p className="font-space-grotesk mt-2">
-                        If you&apos;re interested in joining, you can fill out our {" "}
+                        In the meantime, if you&apos;re interested in joining, you can fill out our {" "}
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLScWpsWzd-gD7djdJQxX6knC4uXYAjQ9cRacRf0M2ttKOPNelg/viewform?usp=dialog" className="text-white underline hover:text-neutral-200">
                             interest form!
                         </a>
@@ -37,14 +37,14 @@ export default function GetInvolvedPage() {
                         Q: What is Symposium?
                     </p>
                     <p className="font-space-grotesk mb-6">
-                        A: Symposium is CDJ&apos;s culminating event. Members create research posters based on their projects, and present their work to other CDJ members, Cornell students, and professors. The event is typically kicked off with an industry-leading guest speaker, to speak about data journalism.
+                        A: Symposium is CDJ&apos;s culminating event. Members create research posters based on their projects, and present their work to other CDJ members, Cornell students, and professors. The event is typically kicked off with an industry-leading guest speaker, to talk about data journalism. The most recent speaker was <a href="https://en.wikipedia.org/wiki/Paul_Ginsparg" target="_blank" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">Paul Ginsparg</a>, founder of <a href="https://arxiv.org/" target="_blank" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">arXiv.org</a>.
                     </p>
 
                     <p className="font-space-grotesk font-bold mb-4">
                         Q: How are Project Leads selected?
                     </p>
                     <p className="font-space-grotesk mb-6">
-                        A: The Project Lead role is typically reserved for returning members. At the beginning of the semester, they share their ideas with Leadership and–if approved–they pitch their project to the rest of the club. Impactful projects typically seek to answer some question about the world, using data as evidence.
+                        A: The Project Lead role is typically reserved for returning members. At the beginning of the semester, they share their ideas with Leadership and&mdash;if approved&mdash;they pitch their project to the rest of the club. Impactful projects typically seek to answer some question about the world, using data as evidence.
                     </p>
 
                     <p className="font-space-grotesk font-bold mb-4">
@@ -58,28 +58,28 @@ export default function GetInvolvedPage() {
                         Q: When does G-Body take place?
                     </p>
                     <p className="font-space-grotesk mb-6">
-                        A: G-Body is on Mondays, from 5-6pm.
+                        A: G-Body is on Mondays, from 5-6pm. Attendance is required.
                     </p>
 
                     <p className="font-space-grotesk font-bold mb-4">
                         Q: What does the application process look like?
                     </p>
                     <p className="font-space-grotesk mb-6">
-                        A: Within a few days of submitting an application, students that are selected to move forward will be invited to an interview with a handful of current CDJ Leaders and members. After completing all interviews, we will send invites to join CDJ to a select batch of applicants. There will only be one “round” of interviews.
+                        A: Within a few days of submitting an application, students that are selected to move forward will be invited to an interview with a handful of current CDJ Leaders and members. After we complete all interviews, we will send invites to join CDJ to a select batch of applicants. There will only be one “round” of interviews.
                     </p>
 
                     <p className="font-space-grotesk font-bold mb-4">
                         Q: Is there any technical knowledge required?
                     </p>
                     <p className="font-space-grotesk mb-6">
-                        A: No. CDJ accepts students at Cornell from all backgrounds, majors, and levels of experience. We prioritize learning and exposure to the discipline of data journalism. Please do not hesitate to apply, even if you have no formal background in this field–there is a place for everyone in CDJ!
+                        A: No. CDJ accepts students at Cornell from all backgrounds, majors, and levels of experience. We prioritize learning and exposure to the discipline of data journalism. Please do not hesitate to apply, even if you have no formal background in this field&mdash;there is a place for everyone in CDJ!
                     </p>
 
                     <p className="font-space-grotesk font-bold mb-4">
                         Q: Are coffee chats available?
                     </p>
                     <p className="font-space-grotesk">
-                        A: Yes! A form to submit a coffee chat request will be posted on our <a href="https://www.instagram.com/cornelldatajournal" className="underline hover:text-neutral-900 dark:hover:text-neutral-100">Instagram</a> page and on this site, at the start of the semester. Shortly after submitting the form (within 3 days), a CDJ member or Leader will reach out to you to schedule a meeting time.
+                        A: Yes! A form to submit a coffee chat request will be posted on our <a href="https://www.instagram.com/cornelldatajournal" className="underline hover:text-neutral-900 dark:hover:text-neutral-100">Instagram</a> page and on this site, near the start of the semester. Shortly after submitting the form (within 3 days), a CDJ member or Leader will reach out to you to schedule a meeting time.
                     </p>
                 </section>
             </Card>
