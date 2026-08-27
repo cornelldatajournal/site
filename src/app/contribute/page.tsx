@@ -8,13 +8,16 @@ export default function GetInvolvedPage() {
 
                 <section className="mb-6 bg-[#3E32BA] text-white rounded-lg p-6 shadow-lg">
                     <p className="font-space-grotesk text-lg font-bold">
-                        Our Fall 2026 applications will open soon.
+                        Our Fall 2026 applications will open on August 31st.
                     </p>
                     <p className="font-space-grotesk mt-2">
                         In the meantime, if you&apos;re interested in joining, you can fill out our {" "}
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLScWpsWzd-gD7djdJQxX6knC4uXYAjQ9cRacRf0M2ttKOPNelg/viewform?usp=dialog" className="text-white underline hover:text-neutral-200">
-                            interest form!
+                            interest form
                         </a>
+                        {" "}or schedule a{" "}
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6W9SfJyLrCTEnjnFv3mB-ze8zjX5u-S7U7fRE83S06fe71g/viewform?usp=dialog" className="text-white underline hover:text-neutral-200">
+                            coffee chat</a>!
                     </p>
                 </section>
             </section>

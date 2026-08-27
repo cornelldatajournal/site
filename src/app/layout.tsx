@@ -75,7 +75,7 @@ export default function RootLayout({
         <div className="bg-[#3E32BA] text-white py-2">
           <div className="container max-w-8xl mx-auto px-4">
             <p className="font-space-grotesk text-sm text-center">
-              🫵🏼 Interested in joining our club? Fill out our <a href="https://forms.gle/GBuqiDWWq5eaBGhV8" className="underline hover:text-neutral-200">interest form</a>!
+              🫵🏼 Interested in joining our club? Schedule a <a href="https://forms.gle/irqbH9jEjGAiFUhE9" className="underline hover:text-neutral-200">coffee chat</a> with a CDJ member!
             </p>
           </div>
         </div>
