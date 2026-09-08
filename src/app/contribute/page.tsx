@@ -51,7 +51,7 @@ export default function GetInvolvedPage() {
                         Q: How does New Member Education (NME) work?
                     </p>
                     <p className="font-space-grotesk mb-6">
-                        A: NME consists of 6 hour-long meetings. During each meeting, the instructor will walk through <a href="https://github.com/nikhilc52/cdj_nme" target="_blank" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">interactive notebooks</a> on various data science concepts, with members following along on a forked copy. There are no “take home” assignments, nor is there baseline knowledge required. In addition to NME, there are also optional workshops that teach members miscellaneous coding and writing skills.
+                        A: NME consists of 6 weekly hour-long meetings. During each meeting, the instructor will walk through <a href="https://github.com/nikhilc52/cdj_nme" target="_blank" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">interactive notebooks</a> on various data science concepts, with members following along on a forked copy. There are no “take home” assignments, nor is there baseline knowledge required. In addition to NME, there are also optional workshops that teach members miscellaneous coding and writing skills.
                     </p>
 
                     <p className="font-space-grotesk font-bold mb-4">
