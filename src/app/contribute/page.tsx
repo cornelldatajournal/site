@@ -11,9 +11,9 @@ export default function GetInvolvedPage() {
                         Our Fall 2026 applications are now open!
                     </p>
                     <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm mb-4">
-                        Applications are due on September 15th, 2026. To learn more about the club, you can schedule a <a href="https://forms.gle/irqbH9jEjGAiFUhE9" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">coffee chat</a>, or attend an <a href="https://www.instagram.com/p/DdCjwWgibVG/?img_index=1" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">information session</a>.
+                        Applications are due on September 15th, 2026. To learn more about the club, you can visit our <a href="https://www.instagram.com/cornelldatajournal/" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">Instagram</a>.
                     </p>
-                    <a href="/apply" className="inline-block text-white font-space-grotesk bg-[#3E32BA] hover:bg-[#3E32BA]/90 dark:bg-[#3E32BA] dark:hover:bg-[#3E32BA]/90 px-4 py-2 rounded-md transition-colors">
+                    <a href="https://forms.gle/SXH8TGLR8hVaU3ix9" className="inline-block text-white font-space-grotesk bg-[#3E32BA] hover:bg-[#3E32BA]/90 dark:bg-[#3E32BA] dark:hover:bg-[#3E32BA]/90 px-4 py-2 rounded-md transition-colors">
                         Apply
                     </a>
                 </Card>
