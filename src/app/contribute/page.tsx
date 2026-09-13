@@ -8,7 +8,7 @@ export default function GetInvolvedPage() {
 
                 <Card className="mb-6 p-6">
                     <p className="font-space-grotesk text-lg font-bold mb-2">
-                        Our Fall 2026 applications are now open!
+                        Our Fall 2026 applications are open!
                     </p>
                     <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm mb-4">
                         Applications are due on September 15th, 2026. To learn more about the club, you can visit our <a href="https://www.instagram.com/cornelldatajournal/" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">Instagram</a>.
