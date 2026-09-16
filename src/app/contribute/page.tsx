@@ -8,14 +8,14 @@ export default function GetInvolvedPage() {
 
                 <Card className="mb-6 p-6">
                     <p className="font-space-grotesk text-lg font-bold mb-2">
-                        Our Fall 2026 applications are open!
+                        Our Fall 2026 applications are closed.
                     </p>
-                    <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm mb-4">
-                        Applications are due on September 15th, 2026. To learn more about the club, you can visit our <a href="https://www.instagram.com/cornelldatajournal/" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">Instagram</a>.
+                    <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm mb-0">
+                        Applications will open again next spring. In the meantime, visit our <a href="https://www.instagram.com/cornelldatajournal/" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">Instagram</a> to get the latest updates about the club, and fill out our <a href="https://forms.gle/9F9fJRfZqB9ouekj8" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">interest form</a> to be notified when applications open up. 
                     </p>
-                    <a href="https://forms.gle/SXH8TGLR8hVaU3ix9" className="inline-block text-white font-space-grotesk bg-[#3E32BA] hover:bg-[#3E32BA]/90 dark:bg-[#3E32BA] dark:hover:bg-[#3E32BA]/90 px-4 py-2 rounded-md transition-colors">
+                    {/* <a href="https://forms.gle/SXH8TGLR8hVaU3ix9" className="inline-block text-white font-space-grotesk bg-[#3E32BA] hover:bg-[#3E32BA]/90 dark:bg-[#3E32BA] dark:hover:bg-[#3E32BA]/90 px-4 py-2 rounded-md transition-colors">
                         Apply
-                    </a>
+                    </a> */}
                 </Card>
             </section>
 
@@ -76,10 +76,10 @@ export default function GetInvolvedPage() {
                     </p>
 
                     <p className="font-space-grotesk font-bold mb-4">
-                        Q: Are coffee chats available?
+                        Q: How can I learn more about the club?
                     </p>
                     <p className="font-space-grotesk">
-                        A: Yes! A form to submit a coffee chat request will be posted on our <a href="https://www.instagram.com/cornelldatajournal" className="underline hover:text-neutral-900 dark:hover:text-neutral-100">Instagram</a> page and on this site, near the start of the semester. Shortly after submitting the form (within 3 days), a CDJ member or Leader will reach out to you to schedule a meeting time.
+                        A: Information sessions are held at the start of each semester. Details about timing and location will be posted on our <a href="https://www.instagram.com/cornelldatajournal" className="underline hover:text-neutral-900 dark:hover:text-neutral-100">Instagram</a> page and on this site, closer to the event date. You can also schedule a coffee chat with a <a href="/masthead" className="underline hover:text-neutral-900 dark:hover:text-neutral-100">CDJ Leader</a> by sending them an email.
                     </p>
                 </section>
             </Card>
