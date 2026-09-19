@@ -7,10 +7,10 @@ export default function GetInvolvedPage() {
                 <h1 className="text-2xl font-eb-garamond mb-6">Get Involved</h1>
 
                 <Card className="mb-6 p-6">
-                    <p className="font-space-grotesk text-lg font-bold mb-2">
+                    <p className="font-space-grotesk text-lg font-bold mb-4">
                         Our Fall 2026 applications are closed.
                     </p>
-                    <p className="text-neutral-600 dark:text-neutral-400 font-space-grotesk text-sm mb-0">
+                    <p className="font-space-grotesk mb-0">
                         Applications will open again next spring. In the meantime, visit our <a href="https://www.instagram.com/cornelldatajournal/" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">Instagram</a> to get the latest updates about the club, and fill out our <a href="https://forms.gle/9F9fJRfZqB9ouekj8" className="underline hover:text-neutral-950 dark:hover:text-neutral-100">interest form</a> to be notified when applications open up. 
                     </p>
                     {/* <a href="https://forms.gle/SXH8TGLR8hVaU3ix9" className="inline-block text-white font-space-grotesk bg-[#3E32BA] hover:bg-[#3E32BA]/90 dark:bg-[#3E32BA] dark:hover:bg-[#3E32BA]/90 px-4 py-2 rounded-md transition-colors">
