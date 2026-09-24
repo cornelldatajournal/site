@@ -75,12 +75,12 @@ const teamMembers: TeamMember[] = [
     },
     {
         name: "Dana Yang",
-        role: "Faculty Mentor",
+        role: "Faculty Advisor",
         class: "",
-        major: "",
+        major: "Assistant Professor of Statistics",
         image: "/team/FA26/webp/Dana_Yang.webp",
         color: "bg-[#FFE5D9]",
-        bio: "Dana is an assistant professor at Cornell in the department of statistics and data science."
+        bio: "She has been CDJ's advisor since 2024."
     },
 
     // PROJECT LEADS
@@ -435,7 +435,7 @@ const teamMembers: TeamMember[] = [
         major: "ORIE",
         image: "/team/FA26/webp/Sanithu_Kethaka_Parattu_Mohottige.webp",
         color: "bg-[#E5E7FF]",
-        bio: "All the numbers in his birthday are divisible by 5."
+        bio: "His birthdate numbers are all divisible by 5."
     },
     // {
     //     name: "Conner McWilliams",
