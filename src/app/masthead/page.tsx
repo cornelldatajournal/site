@@ -23,7 +23,7 @@ const teamMembers: TeamMember[] = [
         role: "President",
         class: "2027",
         major: "Economics",
-        image: "/team/SP26/webp/Nikhil_Chinchalkar.webp",
+        image: "/team/FA26/webp/Nikhil_Chinchalkar.webp",
         color: "bg-[#E5F6FF]",
         bio: "He listened to 75,835 minutes of music last year."
     },
@@ -32,7 +32,7 @@ const teamMembers: TeamMember[] = [
         role: "Executive Vice President",
         class: "2028",
         major: "Biometry & Statistics",
-        image: "/team/SP26/webp/Tianyi_Chen.webp",
+        image: "/team/FA26/webp/Tianyi_Chen.webp",
         color: "bg-[#E5E7FF]",
         bio: "She has three 6's in her birthday."
     },
@@ -42,16 +42,16 @@ const teamMembers: TeamMember[] = [
         specialized_role: "Content Editor",
         class: "2027",
         major: "English",
-        image: "/team/SP26/webp/Jenny_Williams.webp",
+        image: "/team/FA26/webp/Jenny_Williams.webp",
         color: "bg-[#FFE5D9]",
-        bio: ""
+        bio: "She has had 8 pets in her life."
     },
     {
         name: "Eden Maynard",
         role: "VP of Internal Affairs",
         class: "2028",
         major: "Statistics",
-        image: "/team/SP26/webp/Eden_Maynard.webp",
+        image: "/team/FA26/webp/Eden_Maynard.webp",
         color: "bg-[#E5FFE9]",
         bio: "She is in the top 0.1% of Solange listeners on Spotify."
     },
@@ -60,7 +60,7 @@ const teamMembers: TeamMember[] = [
         role: "VP of External Affairs",
         class: "2028",
         major: "Public Policy",
-        image: "/team/SP26/webp/Melody_Qian.webp",
+        image: "/team/FA26/webp/Melody_Qian.webp",
         color: "bg-[#E5F6FF]",
         bio: "She is in the top 0.69% of monkeytype users in WPM."
     },
@@ -69,7 +69,7 @@ const teamMembers: TeamMember[] = [
         role: "Project Coordinator",
         class: "2028",
         major: "Computer Science",
-        image: "/team/SP26/webp/Remi_Ladia.webp",
+        image: "/team/FA26/webp/Remi_Ladia.webp",
         color: "bg-[#E5E7FF]",
         bio: "She has 1,605 unread iMessages."
     },
@@ -78,7 +78,7 @@ const teamMembers: TeamMember[] = [
         role: "Faculty Mentor",
         class: "",
         major: "",
-        image: "/team/SP26/webp/Dana_Yang.webp",
+        image: "/team/FA26/webp/Dana_Yang.webp",
         color: "bg-[#FFE5D9]",
         bio: "Dana is an assistant professor at Cornell in the department of statistics and data science."
     },
@@ -86,38 +86,20 @@ const teamMembers: TeamMember[] = [
     // PROJECT LEADS
 
     {
-        name: "Vivian Guo",
-        role: "Project Lead",
-        class: "2028",
-        major: "Biometry & Statistics",
-        image: "/team/SP26/webp/Vivian_Guo.webp",
-        color: "bg-[#F0E5FF]",
-        bio: "She has 821 notes on her phone."
-    },
-    {
         name: "Kayla Amkraut",
         role: "Project Lead",
         class: "2028",
         major: "Statistical Science",
-        image: "/team/SP26/webp/Kayla_Amkraut.webp",
+        image: "/team/FA26/webp/Kayla_Amkraut.webp",
         color: "bg-[#F0E5FF]",
         bio: "She has lived in 4 states."
-    },
-    {
-        name: "Maia Forssman",
-        role: "Project Lead",
-        class: "2027",
-        major: "Computer Science",
-        image: "/team/SP26/webp/Maia_Forssman.webp",
-        color: "bg-[#F0E5FF]",
-        bio: "She visits CTB 9 times a week on average."
     },
     {
         name: "Tristan Albano",
         role: "Project Lead",
         class: "2029",
         major: "Information Science",
-        image: "/team/SP26/webp/Tristan_Albano.webp",
+        image: "/team/FA26/webp/Tristan_Albano.webp",
         color: "bg-[#F0E5FF]",
         bio: "He has 3 dogs."
     },
@@ -126,99 +108,98 @@ const teamMembers: TeamMember[] = [
         role: "Project Lead",
         class: "2029",
         major: "Computer Science",
-        image: "/team/SP26/webp/Suchit_Basineni.webp",
+        image: "/team/FA26/webp/Suchit_Basineni.webp",
         color: "bg-[#E5E7FF]",
         bio: "He has 1,594 hours on Brawl Stars."
     },
     {
-        name: "Mei Knight",
+        name: "Elinor Tu",
         role: "Project Lead",
         class: "2028",
-        major: "Statistical Science",
-        image: "/team/SP26/webp/Mei_Knight.webp",
+        major: "Computer Science, Mathematics",
+        image: "/team/FA26/webp/Elinor_Tu.webp",
         color: "bg-[#E5E7FF]",
-        bio: "She has literally traveled around the globe."
+        bio: "She has traveled to 10 different countries."
     },
-    // ANALYSTS
-
-    // {
-    //     name: "Marianna Ruggiero",
-    //     role: "Analyst",
-    //     class: "2028",
-    //     major: "Government",
-    //     image: "/team/SP26/webp/Marianna_Ruggiero.webp",
-    //     color: "bg-[#E5E7FF]",
-    //     bio: ""
-    // },
     {
-        name: "Steven Xu",
-        role: "Analyst",
+        name: "Eric Zhu",
+        role: "Project Lead",
+        class: "2029",
+        major: "Biometry & Statistics",
+        image: "/team/FA26/webp/Eric_Zhu.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "He studied 30,000 flashcards last year."
+    },
+    {
+        name: "Rhea Barot",
+        role: "Project Lead",
+        class: "2029",
+        major: "Economics",
+        image: "/team/FA26/webp/Rhea_Barot.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "She has been to 15 countries."
+    },
+    {
+        name: "Jason Wang",
+        role: "Project Lead",
+        class: "2027",
+        major: "Computer Science",
+        image: "/team/FA26/webp/Jason_Wang.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "He drinks 200% the daily water intake of the average American."
+    },
+    {
+        name: "Maylani Lee",
+        role: "Project Lead",
         class: "2028",
         major: "Biometry & Statistics",
-        image: "/team/SP26/webp/Steven_Xu.webp",
-        color: "bg-[#F0E5FF]",
-        bio: "His basketball jersey number is 15."
+        image: "/team/FA26/webp/Maylani_Lee.webp",
+        color: "bg-[#E5E7FF]",
+        bio: ""
     },
-    // {
-    //     name: "Ivy Liu",
-    //     role: "Analyst",
-    //     class: "2028",
-    //     major: "Information Science",
-    //     image: "/team/SP26/webp/Ivy_Liu.webp",
-    //     color: "bg-[#E5E7FF]",
-    //     bio: "Her favorite number is 2."
-    // },
     {
-        name: "Emily Fu",
-        role: "Analyst",
+        name: "Alannah Dennis",
+        role: "Project Lead",
         class: "2027",
-        major: "Statistical Science",
-        image: "/team/SP26/webp/Emily_Fu.webp",
+        major: "Statistics",
+        image: "/team/FA26/webp/Alannah_Dennis.webp",
         color: "bg-[#E5E7FF]",
-        bio: "She watched 37 movies last year."
+        bio: ""
     },
+    // ANALYSTS
     // {
-    //     name: "Milo Schilittgen-Li",
+    //     name: "Vivian Guo",
     //     role: "Project Lead",
-    //     class: "2027",
-    //     major: "Mathematics",
-    //     image: "/team/SP26/webp/Milo_Schlittgen-Li.webp",
-    //     color: "bg-[#E5E7FF]",
-    //     bio: ""
-    // },
-    // {
-    //     name: "Adam Azevedo",
-    //     role: "Analyst",
-    //     class: "2028",
-    //     major: "Urban & Regional Studies",
-    //     image: "/team/SP26/webp/Adam_Azevedo.webp",
-    //     color: "bg-[#E5E7FF]",
-    //     bio: ""
-    // }, 
-    {
-        name: "Manya Pradeep Narayan",
-        role: "Analyst",
-        class: "2029",
-        major: "Computer Science",
-        image: "/team/SP26/webp/Manya_Pradeep_Narayan.webp",
-        color: "bg-[#E5E7FF]",
-        bio: "Her step count increased by 151.9% at Cornell."
-    },
-    // {
-    //     name: "Stella Ma",
-    //     role: "Analyst",
     //     class: "2028",
     //     major: "Biometry & Statistics",
-    //     image: "/team/SP26/webp/Stella_Ma.webp",
+    //     image: "/team/SP26/webp/Vivian_Guo.webp",
+    //     color: "bg-[#F0E5FF]",
+    //     bio: "She has 821 notes on her phone."
+    // },
+    // {
+    //     name: "Emily Fu",
+    //     role: "Analyst",
+    //     class: "2027",
+    //     major: "Statistical Science",
+    //     image: "/team/SP26/webp/Emily_Fu.webp",
     //     color: "bg-[#E5E7FF]",
-    //     bio: ""
+    //     bio: "She watched 37 movies last year."
+    // },
+    // {
+    //     name: "Manya Pradeep Narayan",
+    //     role: "Analyst",
+    //     class: "2029",
+    //     major: "Computer Science",
+    //     image: "/team/SP26/webp/Manya_Pradeep_Narayan.webp",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: "Her step count increased by 151.9% at Cornell."
     // },
     {
         name: "Anna Kim",
         role: "Analyst",
         class: "2028",
         major: "Biometry & Statistics",
-        image: "/team/SP26/webp/Anna_Kim.webp",
+        image: "/team/FA26/webp/Anna_Kim.webp",
         color: "bg-[#E5E7FF]",
         bio: "Her average typing speed is 140 words per minute."
     },
@@ -227,160 +208,43 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Biometry & Statistics",
-        image: "/team/SP26/webp/Deborah_Biru.webp",
+        image: "/team/FA26/webp/Deborah_Biru.webp",
         color: "bg-[#E5E7FF]",
         bio: "She can solve a Rubik's Cube in under 60 seconds."
     },
-    {
-        name: "Elinor Tu",
-        role: "Analyst",
-        class: "2028",
-        major: "Computer Science, Mathematics",
-        image: "/team/SP26/webp/Elinor_Tu.webp",
-        color: "bg-[#E5E7FF]",
-        bio: "She has traveled to 10 different countries."
-    },
-    {
-        name: "Eric Zhu",
-        role: "Analyst",
-        class: "2029",
-        major: "Biometry & Statistics",
-        image: "/team/SP26/webp/Eric_Zhu.webp",
-        color: "bg-[#E5E7FF]",
-        bio: "He studied 30,000 flashcards last year."
-    },
     // {
-    //     name: "Ethan Yang",
+    //     name: "Isabella Reyes-Famous",
     //     role: "Analyst",
     //     class: "2028",
     //     major: "Information Science",
-    //     image: "/team/SP26/webp/Ethan_Yang.webp",
+    //     image: "/team/SP26/webp/Isabella Reyes_Famous.webp",
     //     color: "bg-[#E5E7FF]",
-    //     bio: ""
-    // },
-    {
-        name: "Isabella Reyes-Famous",
-        role: "Analyst",
-        class: "2028",
-        major: "Information Science",
-        image: "/team/SP26/webp/Isabella Reyes_Famous.webp",
-        color: "bg-[#E5E7FF]",
-        bio: "She has a 4.93 rating on Uber."
-    },
-    // {
-    //     name: "Isha Nagireddy",
-    //     role: "Analyst",
-    //     class: "2029",
-    //     major: "Biometry & Statistics",
-    //     image: "/team/SP26/webp/Isha_Nagireddy.webp",
-    //     color: "bg-[#E5E7FF]",
-    //     bio: "She hates the number 3."
-    // },
-    {
-        name: "Natan Kramskiy",
-        role: "Analyst",
-        class: "2029",
-        major: "Bioengineering",
-        image: "/team/SP26/webp/Natan_Kramskiy.webp",
-        color: "bg-[#E5E7FF]",
-        bio: "He has watched the Lord of the Rings trilogy 8 times."
-    },
-    // {
-    //     name: "Olivia Yu",
-    //     role: "Analyst",
-    //     class: "2029",
-    //     major: "Computer Science & Math",
-    //     image: "/team/SP26/webp/Olivia_Yu.webp",
-    //     color: "bg-[#E5E7FF]",
-    //     bio: "She has lost her water bottle 38 times this year."
-    // },
-    {
-        name: "Rhea Barot",
-        role: "Analyst",
-        class: "2029",
-        major: "Economics",
-        image: "/team/SP26/webp/Rhea_Barot.webp",
-        color: "bg-[#E5E7FF]",
-        bio: "She has been to 15 countries."
-    },
-    // {
-    //     name: "Ellie Cha",
-    //     role: "Analyst",
-    //     class: "2027",
-    //     major: "Biometry and Statistics",
-    //     image: "/team/SP26/webp/Ellie_Cha.webp",
-    //     color: "bg-[#E5E7FF]",
-    //     bio: ""
+    //     bio: "She has a 4.93 rating on Uber."
     // },
     {
         name: "Chloe Kritas",
         role: "Analyst",
         class: "2027",
         major: "Hotel Administration",
-        image: "/team/SP26/webp/Chloe_Kritas.webp",
+        image: "/team/FA26/webp/Chloe_Kritas.webp",
         color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Jason Wang",
-        role: "Analyst",
-        class: "2027",
-        major: "Computer Science",
-        image: "/team/SP26/webp/Jason_Wang.webp",
-        color: "bg-[#E5E7FF]",
-        bio: "He drinks 200% the daily water intake of the average American."
-    },
-    {
-        name: "Cindy Weng",
-        role: "Analyst",
-        class: "2027",
-        major: "Economics and Statistics",
-        image: "/team/SP26/webp/Cindy_Weng.webp",
-        color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She can juggle 4 balls."
     },
     // {
-    //     name: "Winifred Agyei",
+    //     name: "Cindy Weng",
     //     role: "Analyst",
     //     class: "2027",
-    //     major: "Information Science",
-    //     image: "/team/SP26/webp/Winifred_Agyei.webp",
+    //     major: "Economics and Statistics",
+    //     image: "/team/SP26/webp/Cindy_Weng.webp",
     //     color: "bg-[#E5E7FF]",
     //     bio: ""
-    // }
-    {
-        name: "Charlie Graham",
-        role: "Analyst",
-        class: "2029",
-        major: "Information Science",
-        image: "/team/SP26/webp/Charlie_Graham.webp",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Maylani Lee",
-        role: "Analyst",
-        class: "2028",
-        major: "Biometry & Statistics",
-        image: "/team/SP26/webp/Maylani_Lee.webp",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
+    // },
     {
         name: "Graco Rossanigo",
         role: "Analyst",
         class: "2029",
         major: "Economics",
-        image: "/team/SP26/webp/Graco_Rossanigo.webp",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Jarmin Weng",
-        role: "Analyst",
-        class: "2029",
-        major: "Computer Science and Math",
-        image: "/team/SP26/webp/Jarmin_Weng.webp",
+        image: "/team/FA26/webp/Graco_Rossanigo.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -389,7 +253,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Statistical Science",
-        image: "/team/SP26/webp/Emily_Fang.webp",
+        image: "/team/FA26/webp/Emily_Fang.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -398,7 +262,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Statistical Science",
-        image: "/team/SP26/webp/Shivani_Anand.webp",
+        image: "/team/FA26/webp/Shivani_Anand.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -407,7 +271,7 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Computer Science",
-        image: "/team/SP26/webp/Roma_Rangaswamy.webp",
+        image: "/team/FA26/webp/Roma_Rangaswamy.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -416,43 +280,25 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2028",
         major: "Biometry and Statistics",
-        image: "/team/SP26/webp/Sanjana_Bajaj.webp",
+        image: "/team/FA26/webp/Sanjana_Bajaj.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
-    {
-        name: "Elom Eskender",
-        role: "Analyst",
-        class: "2029",
-        major: "Computer Science",
-        image: "/team/SP26/webp/Elom_Eskender.webp",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Caitlin Bochere",
-        role: "Analyst",
-        class: "2028",
-        major: "Statistics",
-        image: "/team/SP26/webp/Caitlin_Bochere.webp",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
+    // {
+    //     name: "Elom Eskender",
+    //     role: "Analyst",
+    //     class: "2029",
+    //     major: "Computer Science",
+    //     image: "/team/SP26/webp/Elom_Eskender.webp",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: ""
+    // },
     {
         name: "Veronica Ma",
         role: "Analyst",
         class: "2028",
         major: "Comparative Literature",
-        image: "/team/SP26/webp/Veronica_Ma.webp",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
-    {
-        name: "Alannah Dennis",
-        role: "Analyst",
-        class: "2027",
-        major: "Statistics",
-        image: "/team/SP26/webp/Alannah_Dennis.webp",
+        image: "/team/FA26/webp/Veronica_Ma.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
     },
@@ -461,19 +307,182 @@ const teamMembers: TeamMember[] = [
         role: "Analyst",
         class: "2029",
         major: "Earth and Atmospheric Science",
-        image: "/team/SP26/webp/Himashi_Balasuriya.webp",
+        image: "/team/FA26/webp/Himashi_Balasuriya.webp",
         color: "bg-[#E5E7FF]",
         bio: ""
+    },
+    // {
+    //     name: "Chris Jeong",
+    //     role: "Analyst",
+    //     class: "2028",
+    //     major: "Environment and Sustainability",
+    //     image: "/team/SP26/webp/Chris_Jeong.webp",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: ""
+    // },
+    {
+        name: "Kynes Cabrera",
+        role: "Analyst",
+        class: "2029",
+        major: "Industrial Labor Relations",
+        image: "/team/FA26/webp/Kynes_Cabrera.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "He is 5 inches shorter than his license claims."
     },
     {
-        name: "Chris Jeong",
+        name: "Clare Gartz",
+        role: "Analyst",
+        class: "2030",
+        major: "Operations Research and Engineering",
+        image: "/team/FA26/webp/Clare_Gartz.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "She has 613 screenshots on her phone from Summer 2026 alone."
+    },
+    {
+        name: "Saanvi Movva",
+        role: "Analyst",
+        class: "2029",
+        major: "ORIE and ISST",
+        image: "/team/FA26/webp/Saanvi_Movva.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "Her average daily step count is 11,718."
+    },
+    {
+        name: "Ethan Gao",
+        role: "Analyst",
+        class: "2030",
+        major: "Economics and Statistical Science",
+        image: "/team/FA26/webp/Ethan_Gao.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "He once drank 4 Red Bulls in one hour."
+    },
+    {
+        name: "Landin Huang",
+        role: "Analyst",
+        class: "2029",
+        major: "Statistical Science",
+        image: "/team/FA26/webp/Landin_Huang.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "He has lived in 3 states."
+    },
+    {
+        name: "Maya Dixit",
+        role: "Analyst",
+        class: "2029",
+        major: "Statistical Science",
+        image: "/team/FA26/webp/Maya_Dixit.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "She plays 3 instruments."
+    },
+    {
+        name: "Abby Childs",
+        role: "Analyst",
+        class: "2029",
+        major: "Environmental Engineering",
+        image: "/team/FA26/webp/Abby_Childs.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "She has collected over 15 nutcrackers."
+    },
+    {
+        name: "Stephanie Bossolina",
+        role: "Analyst",
+        class: "2029",
+        major: "Biometry and Statistics",
+        image: "/team/FA26/webp/Stephanie_Bossolina.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "She twisted her right ankle 3 times in the span of 2 years."
+    },
+    {
+        name: "Rukma Chaudhury",
+        role: "Analyst",
+        class: "2029",
+        major: "Public Policy",
+        image: "/team/FA26/webp/Rukma_Chaudhury.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "She has 162 playlists on Spotify."
+    },
+    {
+        name: "Medha Singitham",
+        role: "Analyst",
+        class: "2030",
+        major: "Cognitive Science + Computer Science",
+        image: "/team/FA26/webp/Medha_Singitham.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "She eats an average of 3 pickle spears per day."
+    },
+    {
+        name: "Sophia Wang",
+        role: "Analyst",
+        class: "2030",
+        major: "Computer Science",
+        image: "/team/FA26/webp/Sophia_Wang.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "Her average book rating on Goodreads is 3.83 stars."
+    },
+    {
+        name: "Jayson Bhoorasingh",
+        role: "Analyst",
+        class: "2030",
+        major: "Statistical Science",
+        image: "/team/FA26/webp/Jayson_Bhoorasingh.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "He has produced a song with over 4 million streams."
+    },
+    {
+        name: "Sanithu Mohottige",
         role: "Analyst",
         class: "2028",
-        major: "Environment and Sustainability",
-        image: "/team/SP26/webp/Chris_Jeong.webp",
+        major: "ORIE",
+        image: "/team/FA26/webp/Sanithu_Kethaka_Parattu_Mohottige.webp",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "All the numbers in his birthday are divisible by 5."
     },
+    // {
+    //     name: "Conner McWilliams",
+    //     role: "Analyst",
+    //     class: "2030",
+    //     major: "Computer Science",
+    //     image: "/team/FA26/webp/Conner_McWilliams.webp",
+    //     color: "bg-[#E5E7FF]",
+    //     bio: "Last summer, he increased his continuous swim distance by 400%."
+    // },
+    {
+        name: "Amanda Harmon",
+        role: "Analyst",
+        class: "2029",
+        major: "Computer Science, Mathematics",
+        image: "/team/FA26/webp/Amanda_Harmon.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "She has 2 scuba diving certifications."
+    },
+    {
+        name: "Emmett Ferguson",
+        role: "Analyst",
+        class: "2030",
+        major: "Applied and Engineering Physics",
+        image: "/team/FA26/webp/Emmett_Ferguson.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "He has a minerals collection with 633 distinct specimens."
+    },
+    {
+        name: "Katrina Lee",
+        role: "Analyst",
+        class: "2029",
+        major: "Mathematics and Economics",
+        image: "/team/FA26/webp/Katrina_Lee.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "Her extreme sudoku best time is 3:03."
+    },
+    {
+        name: "Jahnavi Singh",
+        role: "Analyst",
+        class: "2030",
+        major: "Computer Science",
+        image: "/team/FA26/webp/Jahnavi_Singh.webp",
+        color: "bg-[#E5E7FF]",
+        bio: "She has lived in 6 cities."
+    },
+
 ];
 
 // const additionalProjectLeads: TeamMember[] = Array(7).fill(null).map((_, i) => ({
