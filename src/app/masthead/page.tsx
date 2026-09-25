@@ -164,7 +164,7 @@ const teamMembers: TeamMember[] = [
         major: "Statistics",
         image: "/team/FA26/webp/Alannah_Dennis.webp",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has taken 13 stats courses at Cornell."
     },
     // ANALYSTS
     // {
@@ -273,7 +273,7 @@ const teamMembers: TeamMember[] = [
         major: "Computer Science",
         image: "/team/FA26/webp/Roma_Rangaswamy.webp",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has 20 Koi fish."
     },
     {
         name: "Sanjana Bajaj",
@@ -282,7 +282,7 @@ const teamMembers: TeamMember[] = [
         major: "Biometry and Statistics",
         image: "/team/FA26/webp/Sanjana_Bajaj.webp",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She has 2,109 GamePigeon Word Hunt wins."
     },
     // {
     //     name: "Elom Eskender",
