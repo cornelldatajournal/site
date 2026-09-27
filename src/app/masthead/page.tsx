@@ -155,7 +155,7 @@ const teamMembers: TeamMember[] = [
         major: "Biometry & Statistics",
         image: "/team/FA26/webp/Maylani_Lee.webp",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She can count from 1 to 10 in 4 different languages."
     },
     {
         name: "Alannah Dennis",
@@ -300,7 +300,7 @@ const teamMembers: TeamMember[] = [
         major: "Comparative Literature",
         image: "/team/FA26/webp/Veronica_Ma.webp",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "Her Tetris high score is 798,081."
     },
     {
         name: "Himashi Balasuriya",
