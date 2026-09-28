@@ -255,7 +255,7 @@ const teamMembers: TeamMember[] = [
         major: "Statistical Science",
         image: "/team/FA26/webp/Emily_Fang.webp",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She can fit 7 green grapes in her mouth."
     },
     {
         name: "Shivani Anand",
