@@ -109,7 +109,7 @@ const teamMembers: TeamMember[] = [
         class: "2029",
         major: "Computer Science",
         image: "/team/FA26/webp/Suchit_Basineni.webp",
-        color: "bg-[#E5E7FF]",
+        color: "bg-[#F0E5FF]",
         bio: "He has 1,594 hours on Brawl Stars."
     },
     {
@@ -118,7 +118,7 @@ const teamMembers: TeamMember[] = [
         class: "2028",
         major: "Computer Science, Mathematics",
         image: "/team/FA26/webp/Elinor_Tu.webp",
-        color: "bg-[#E5E7FF]",
+        color: "bg-[#F0E5FF]",
         bio: "She has traveled to 10 different countries."
     },
     {
@@ -127,7 +127,7 @@ const teamMembers: TeamMember[] = [
         class: "2029",
         major: "Biometry & Statistics",
         image: "/team/FA26/webp/Eric_Zhu.webp",
-        color: "bg-[#E5E7FF]",
+        color: "bg-[#F0E5FF]",
         bio: "He studied 30,000 flashcards last year."
     },
     {
@@ -136,12 +136,12 @@ const teamMembers: TeamMember[] = [
         class: "2029",
         major: "Economics",
         image: "/team/FA26/webp/Rhea_Barot.webp",
-        color: "bg-[#E5E7FF]",
+        color: "bg-[#F0E5FF]",
         bio: "She has been to 15 countries."
     },
     {
         name: "Jason Wang",
-        role: "Project Lead",
+        role: "Analyst",
         class: "2027",
         major: "Computer Science",
         image: "/team/FA26/webp/Jason_Wang.webp",
@@ -154,7 +154,7 @@ const teamMembers: TeamMember[] = [
         class: "2028",
         major: "Biometry & Statistics",
         image: "/team/FA26/webp/Maylani_Lee.webp",
-        color: "bg-[#E5E7FF]",
+        color: "bg-[#F0E5FF]",
         bio: "She can count from 1 to 10 in 4 different languages."
     },
     {
@@ -163,9 +163,29 @@ const teamMembers: TeamMember[] = [
         class: "2027",
         major: "Statistics",
         image: "/team/FA26/webp/Alannah_Dennis.webp",
-        color: "bg-[#E5E7FF]",
+        color: "bg-[#F0E5FF]",
         bio: "She has taken 13 stats courses at Cornell."
     },
+    // EDITORS
+    {
+        name: "Zayba Ali",
+        role: "Editor",
+        class: "2029",
+        major: "Applied Economics and Management",
+        image: "/team/FA26/webp/Zayba_Ali.webp",
+        color: "bg-[#E5F6FF]",
+        bio: "She has had 3 concussions in 6 months from horseback riding."
+    },
+    {
+        name: "Emily Liao",
+        role: "Editor",
+        class: "2030",
+        major: "Government",
+        image: "/team/FA26/webp/Emily_Liao.webp",
+        color: "bg-[#E5F6FF]",
+        bio: "She needs at least 3 hours to finish one cup of coffee."
+    },
+
     // ANALYSTS
     // {
     //     name: "Vivian Guo",
@@ -485,15 +505,6 @@ const teamMembers: TeamMember[] = [
 
 ];
 
-// const additionalProjectLeads: TeamMember[] = Array(7).fill(null).map((_, i) => ({
-//     name: `Project Lead ${i + 1}`,
-//     role: "Project Lead",
-//     class: `${Math.floor(Math.random() * 4) + 24}`,
-//     major: "Various",
-//     image: "/images/wall.webp",
-//     color: `bg-[${['#FFE5D9', '#E5F6FF', '#F0E5FF', '#E5FFE9', '#FFE8E5'][i % 5]}]`
-// }));
-
 function TeamMemberCard({ member }: { member: TeamMember }) {
     const bioRef = useRef<HTMLDivElement>(null);
     const avatarRef = useRef<HTMLDivElement>(null);
@@ -608,14 +619,14 @@ export default function MastheadPage() {
                 </div>
 
                 {/* Editorial Team */}
-                {/*<div>
+                <div>
                     <h2 className="text-2xl font-eb-garamond mb-6">Editorial Team</h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-8 gap-6">
                         {editorialteamLeads.map((member) => (
                             <TeamMemberCard key={member.name} member={member} />
                         ))}
                     </div>
-                </div>*/}
+                </div>
 
                 {/* Analysts */}
                 <div>
