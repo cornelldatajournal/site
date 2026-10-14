@@ -223,15 +223,6 @@ const teamMembers: TeamMember[] = [
         color: "bg-[#E5E7FF]",
         bio: "Her average typing speed is 140 words per minute."
     },
-    {
-        name: "Deborah Biru",
-        role: "Analyst",
-        class: "2028",
-        major: "Biometry & Statistics",
-        image: "/team/FA26/webp/Deborah_Biru.webp",
-        color: "bg-[#E5E7FF]",
-        bio: "She can solve a Rubik's Cube in under 60 seconds."
-    },
     // {
     //     name: "Isabella Reyes-Famous",
     //     role: "Analyst",
@@ -259,15 +250,6 @@ const teamMembers: TeamMember[] = [
     //     color: "bg-[#E5E7FF]",
     //     bio: ""
     // },
-    {
-        name: "Graco Rossanigo",
-        role: "Analyst",
-        class: "2029",
-        major: "Economics",
-        image: "/team/FA26/webp/Graco_Rossanigo.webp",
-        color: "bg-[#E5E7FF]",
-        bio: ""
-    },
     {
         name: "Emily Fang",
         role: "Analyst",
