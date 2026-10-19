@@ -266,7 +266,7 @@ const teamMembers: TeamMember[] = [
         major: "Statistical Science",
         image: "/team/FA26/webp/Shivani_Anand.webp",
         color: "bg-[#E5E7FF]",
-        bio: ""
+        bio: "She hiked to an elevation of 17,598 feet in the Himalayas."
     },
     {
         name: "Roma Rangaswamy",
