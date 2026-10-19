@@ -71,7 +71,7 @@ const teamMembers: TeamMember[] = [
         major: "Computer Science",
         image: "/team/FA26/webp/Remi_Ladia.webp",
         color: "bg-[#E5E7FF]",
-        bio: "She has 1,605 unread iMessages."
+        bio: "She has baked cake for 150 people."
     },
     {
         name: "Dana Yang",
